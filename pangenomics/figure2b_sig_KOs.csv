@@ -1,0 +1,31 @@
+"","Function","enrichment_score","unadjusted_p_value","adjusted_q_value","associated_groups","accession","gene_clusters_ids","p_rest","category","Presence","pvalue","Significance","Function_highlight"
+"1","Dissimilatory nitrate reduction, nitrate => ammonia!!!Denitrification, nitrate => nitrogen",13.002,0.002,0.081,"MAG00006","M00530!!!M00529","GC_00004616",0,"KEGG_Module","No",1.09094344214954,"Yes",NA
+"2","Dissimilatory nitrate reduction, nitrate => ammonia!!!Denitrification, nitrate => nitrogen!!!Complete nitrification, comammox, ammonia => nitrite => nitrate",13.002,0.002,0.081,"MAG00006","M00530!!!M00529!!!M00804","GC_00004082, GC_00004610",0,"KEGG_Module","No",1.09094344214954,"Yes",NA
+"163","nitrate reductase gamma subunit [EC:1.7.5.1 1.7.99.-]",13.002,0.002,0.044,"MAG00006","K00374","GC_00004616",0,"KOfam","No",1.36051990077452,"Yes",NA
+"164","CRISPR-associated protein Csm1",13.002,0.002,0.044,"MAG00006","K07016","GC_00003280",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"165","nitrate reductase / nitrite oxidoreductase, alpha subunit [EC:1.7.5.1 1.7.99.-]",13.002,0.002,0.044,"MAG00006","K00370","GC_00004610",0,"KOfam","No",1.36051990077452,"Yes",NA
+"166","CRISPR-associated protein Csm4",13.002,0.002,0.044,"MAG00006","K19139","GC_00004884",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"167","L-malate glycosyltransferase [EC:2.4.1.-]",13.002,0.002,0.044,"MAG00006","K00754","GC_00003595",0,"KOfam","No",1.36051990077452,"Yes",NA
+"168","site-specific DNA-methyltransferase (adenine-specific) [EC:2.1.1.72]",13.002,0.002,0.044,"MAG00006","K00571","GC_00003741",0,"KOfam","No",1.36051990077452,"Yes",NA
+"169","CRISPR-associated protein Csb2",13.002,0.002,0.044,"MAG00006","K19132","GC_00004712",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"170","CRISPR-associated protein Csm2",13.002,0.002,0.044,"MAG00006","K19138","GC_00003998",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"171","CRISPR-associated protein Csm3",13.002,0.002,0.044,"MAG00006","K09002","GC_00002893",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"172","nitrate reductase / nitrite oxidoreductase, beta subunit [EC:1.7.5.1 1.7.99.-]",13.002,0.002,0.044,"MAG00006","K00371","GC_00004082",0,"KOfam","No",1.36051990077452,"Yes",NA
+"173","CRISPR-associated protein Csx17",13.002,0.002,0.044,"MAG00006","K19136","GC_00003243",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"174","CRISPR-associated protein Csx14",13.002,0.002,0.044,"MAG00006","K19135","GC_00004624",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"175","nitrate reductase molybdenum cofactor assembly chaperone NarJ/NarW",13.002,0.002,0.044,"MAG00006","K00373","GC_00004363",0,"KOfam","No",1.36051990077452,"Yes",NA
+"176","DNA-directed RNA polymerase III subunit RPC1 [EC:2.7.7.6]",13.002,0.002,0.044,"MAG00006","K03018","GC_00003603",0,"KOfam","No",1.36051990077452,"Yes",NA
+"177","phosphoenolpyruvate---glycerone phosphotransferase subunit DhaM [EC:2.7.1.121]",13.002,0.002,0.044,"MAG00006","K05881","GC_00002907",0,"KOfam","No",1.36051990077452,"Yes","phosphoenolpyruvate"
+"178","CRISPR-associated protein Csm5",13.002,0.002,0.044,"MAG00006","K19140","GC_00004047",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"179","phosphoenolpyruvate---glycerone phosphotransferase subunit DhaL [EC:2.7.1.121]",13.002,0.002,0.044,"MAG00006","K05879","GC_00002928, GC_00003692",0,"KOfam","No",1.36051990077452,"Yes","phosphoenolpyruvate"
+"180","phosphoenolpyruvate---glycerone phosphotransferase subunit DhaK [EC:2.7.1.121]",13.002,0.002,0.044,"MAG00006","K05878","GC_00003152",0,"KOfam","No",1.36051990077452,"Yes","phosphoenolpyruvate"
+"181","putative DNA primase/helicase",13.002,0.002,0.044,"MAG00006","K06919","GC_00004397",0,"KOfam","No",1.36051990077452,"Yes",NA
+"182","glutathione-independent formaldehyde dehydrogenase [EC:1.2.1.46]",13.002,0.002,0.044,"MAG00006","K00148","GC_00003294",0,"KOfam","No",1.36051990077452,"Yes",NA
+"183","membrane protein HdeD",13.002,0.002,0.044,"MAG00006","K21908","GC_00003643",0,"KOfam","No",1.36051990077452,"Yes",NA
+"184","CRISPR-associated protein Csb1",13.002,0.002,0.044,"MAG00006","K19131","GC_00004774",0,"KOfam","No",1.36051990077452,"Yes","CRISPR"
+"189","aldehyde:ferredoxin oxidoreductase [EC:1.2.7.5]",13.002,0.002,0.044,"Ferroplasma_c","K03738","GC_00003745, GC_00004006",0,"KOfam","No",1.36051990077452,"Yes",NA
+"190","putative molybdopterin biosynthesis protein",13.002,0.002,0.044,"Ferroplasma_c","K07219","GC_00003130",0,"KOfam","No",1.36051990077452,"Yes",NA
+"191","MFS transporter, ACDE family, multidrug resistance protein",13.002,0.002,0.044,"Ferroplasma_c","K08221","GC_00004738",0,"KOfam","No",1.36051990077452,"Yes",NA
+"192","molybdate/tungstate transport system substrate-binding protein",13.002,0.002,0.044,"Ferroplasma_c","K15495","GC_00004635",0,"KOfam","No",1.36051990077452,"Yes",NA
+"193","3alpha(or 20beta)-hydroxysteroid dehydrogenase [EC:1.1.1.53]",13.002,0.002,0.044,"Ferroplasma_c","K00038","GC_00004658",0,"KOfam","No",1.36051990077452,"Yes",NA
+"194","glycerol uptake facilitator protein",13,0.002,0.044,"Ferroplasma_c, MAG00006","K02440","GC_00002565",0,"KOfam","No",1.36051990077452,"Yes","glycerol uptake facilitator protein"

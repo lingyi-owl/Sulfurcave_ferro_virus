@@ -1,0 +1,3 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+185753	Ribosomal_S7	90.1	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+185768	Ribosomal_S11	98.3	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	Ferroplasma acidiphilum

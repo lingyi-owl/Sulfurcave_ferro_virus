@@ -1,0 +1,2 @@
+contigs	hmm_profile	unique_identifier
+c_000000058265_split_00001	28S_rRNA_euk	b704ba48652440e88fa37d79327ddd0597eb4d5827b705317de90061

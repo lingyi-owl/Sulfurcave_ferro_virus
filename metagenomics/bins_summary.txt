@@ -1,0 +1,34 @@
+bins	total_length	num_contigs	N50	GC_content	percent_completion	percent_redundancy	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+SC_Bin_00021	772419	194	5325	29.827688203354846	77.46478873239437	5.633802816901408							
+SC_Bin_00022	5741728	585	17361	64.45908661922576	73.2394366197183	4.225352112676056	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+SC_Bin_00023	1007628	658	1520	44.39570736181685	66.19718309859155	2.816901408450704	Bacteria	Proteobacteria	Gammaproteobacteria	Pseudomonadales	Moraxellaceae	Moraxella	
+SC_Bin_00024	1497468	715	2359	44.592885156340856	67.10526315789474	3.9473684210526314	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+SC_Bin_00025	758735	192	4835	44.51070663038148	61.8421052631579	2.6315789473684212	Archaea	Micrarchaeota	Micrarchaeia	Micrarchaeales	Micrarchaeaceae	Micrarchaeum	Micrarchaeum acidiphilum
+SC_Bin_00026	227091	8	49833	30.674480277518384	59.15492957746479	0.0							
+SC_Bin_00027	1359023	896	1499	71.61401795333107	54.929577464788736	5.633802816901408	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+SC_Bin_00028	3093309	1570	2058	32.213396627871674	84.50704225352112	36.61971830985915	Bacteria	Firmicutes	Bacilli	Staphylococcales	Staphylococcaceae	Staphylococcus	Staphylococcus epidermidis
+SC_Bin_00029	2162482	1126	1955	41.18786458198502	54.929577464788736	18.309859154929576	Bacteria	Firmicutes	Bacilli	Lactobacillales	Streptococcaceae	Streptococcus	
+SC_Bin_00030	1368174	98	23243	64.7428534987318	0.0	0.0	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+SC_Bin_00031	691183	52	19420	29.89986833512762	0.0	0.0							
+SC_Bin_00032	256610	134	2024	44.70954094265404	0.0	0.0	Archaea	Micrarchaeota	Micrarchaeia	Micrarchaeales	Micrarchaeaceae	Micrarchaeum	Micrarchaeum acidiphilum
+SC_Bin_00033	189818	105	1866	44.97966086814094	0.0	0.0							
+SC_MAG_00001	2856672	56	78844	70.02243142071407	100.0	0.0	Bacteria	Proteobacteria	Alphaproteobacteria	Rhodobacterales	Rhodobacteraceae	Paracoccus	Paracoccus aeridis
+SC_MAG_00002	1960426	142	285406	49.64675421427586	100.0	0.0	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+SC_MAG_00003	4334567	460	13808	50.46407364787838	100.0	0.0	Bacteria	Proteobacteria	Gammaproteobacteria	Enterobacterales	Enterobacteriaceae		
+SC_MAG_00004	3472215	479	13420	52.0880366096807	98.59154929577464	0.0	Bacteria	Proteobacteria	Gammaproteobacteria	Acidithiobacillales	Acidithiobacillaceae	Acidithiobacillus	Acidithiobacillus thiooxidans
+SC_MAG_00005	2833963	118	119523	60.07817188142377	98.59154929577464	1.408450704225352	Bacteria	Actinobacteriota	Actinomycetia	Propionibacteriales	Propionibacteriaceae	Cutibacterium	Cutibacterium acnes
+SC_MAG_00006	2221446	207	23015	29.10797125230003	97.36842105263158	1.3157894736842106	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+SC_MAG_00007	2661438	164	30326	67.12957423761938	97.1830985915493	1.408450704225352	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	RAAP-2	PALSA-457	PALSA-457 sp003161575
+SC_MAG_00008	1873789	189	17962	36.09007091976351	96.05263157894737	1.3157894736842106	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+SC_MAG_00009	3340487	1096	3835	64.41953558135637	94.36619718309859	1.408450704225352	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+SC_MAG_00010	1988487	45	60327	55.92064673421323	92.95774647887323	0.0	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	Acidimicrobiaceae	Ferrimicrobium	Ferrimicrobium acidiphilum
+SC_MAG_00011	2807349	376	15541	43.90462487619477	96.05263157894737	3.9473684210526314							
+SC_MAG_00012	3249955	678	7982	62.010643656014594	94.36619718309859	2.816901408450704	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	Bog-793	Palsa-601	Palsa-601 sp003136185
+SC_MAG_00013	7110853	724	13606	50.476849964024154	95.77464788732394	4.225352112676056	Bacteria	Proteobacteria	Gammaproteobacteria	Acidithiobacillales	Acidithiobacillaceae	Acidithiobacillus	Acidithiobacillus thiooxidans
+SC_MAG_00014	6002955	530	23646	54.61256285164706	97.1830985915493	7.042253521126761	Bacteria	Firmicutes	Sulfobacillia	Sulfobacillales	Sulfobacillaceae	Sulfobacillus	Sulfobacillus thermotolerans
+SC_MAG_00015	1859296	321	6622	73.616340435213	94.36619718309859	4.225352112676056	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+SC_MAG_00016	4694972	243	32312	65.47624694020175	94.36619718309859	5.633802816901408	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+SC_MAG_00017	2299122	262	11512	56.20411427331238	90.14084507042253	2.816901408450704	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Corynebacterium	Corynebacterium propinquum
+SC_MAG_00018	2206446	139	48010	39.31337855077219	89.47368421052632	5.2631578947368425	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Cuniculiplasma	Cuniculiplasma divulgatum
+SC_MAG_00019	4668437	304	37013	62.76969364864424	83.09859154929578	4.225352112676056	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+SC_MAG_00020	998605	198	7528	25.93945232096397	83.09859154929578	5.633802816901408	Bacteria	Dependentiae	Babeliae	Babeliales	Babeliaceae	Babela	Babela massiliensis

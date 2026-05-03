@@ -1,0 +1,12 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+92603	Ribosomal_S11	100.0	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+185642	Ribosomal_S2	94.8	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+189338	Ribosomal_L16	96.3	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+192068	Ribosomal_L6	94.0	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+192069	Ribosomal_S8	94.6	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+192078	Ribosomal_S3_C	97.4	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+192079	Ribosomal_L22	93.2	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+192084	Ribosomal_L3	92.5	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+350973	Ribosomal_L13	91.2	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	Ferroplasma acidarmanus
+350974	Ribosomal_S9	93.1	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	
+468269	Ribosomal_S7	94.5	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	Ferroplasma	Ferroplasma acidarmanus

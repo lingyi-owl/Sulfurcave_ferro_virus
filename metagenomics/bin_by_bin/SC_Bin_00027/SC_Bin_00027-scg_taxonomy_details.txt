@@ -1,0 +1,14 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+102274	Ribosomal_L3	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+103417	Ribosomal_L1	99.6	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+206192	Ribosomal_S7	99.2	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Dermacoccus	Dermacoccus abyssi
+213623	Ribosomal_S11	100.0	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Kocuria	Kocuria palustris
+213929	Ribosomal_S6	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+233403	Ribosomal_L9_C	98.6	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+256005	Ribosomal_L21p	98.0	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter indicus
+362677	Ribosomal_S3_C	92.6	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermabacteraceae	Brachybacterium	Brachybacterium paraconglomeratum
+362678	Ribosomal_L16	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+362682	ribosomal_L24	92.7	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+515749	Ribosomal_L13	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+515750	Ribosomal_S9	99.2	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei
+553036	Ribosomal_L17	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Dermatophilaceae	Janibacter	Janibacter hoylei

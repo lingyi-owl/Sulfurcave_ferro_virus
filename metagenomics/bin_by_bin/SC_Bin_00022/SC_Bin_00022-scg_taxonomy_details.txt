@@ -1,0 +1,18 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+26442	Ribosomal_L1	94.2	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium cookii
+68785	Ribosomal_L22	95.1	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+68787	Ribosomal_L2	95.3	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium cookii
+68789	Ribosomal_L4	94.6	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+68790	Ribosomal_L3	94.6	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium celatum
+109261	Ribosomal_S8	96.1	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium branderi
+109266	Ribosomal_L27A	93.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+153171	Ribosomal_S6	97.9	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+253703	Ribosomal_L21p	98.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium kyorinense
+259102	Ribosomal_S20p	98.8	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium sp001673405
+266320	Ribosomal_L20	98.2	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+336715	Ribosomal_L13	91.3	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium fragae
+336716	Ribosomal_S9	97.5	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium sp001984215
+349439	Ribosomal_S7	98.1	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+459690	Ribosomal_L13	98.1	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium branderi
+459703	Ribosomal_L17	98.2	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium branderi
+459706	Ribosomal_S11	97.4	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	

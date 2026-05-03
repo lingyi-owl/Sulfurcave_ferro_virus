@@ -1,0 +1,2181 @@
+locus_tag	ftype	length_bp	gene	EC_number	COG	product
+KNPMNEEE_00001	CDS	381				hypothetical protein
+KNPMNEEE_00002	CDS	255				hypothetical protein
+KNPMNEEE_00003	CDS	141				hypothetical protein
+KNPMNEEE_00004	CDS	129				hypothetical protein
+KNPMNEEE_00005	CDS	99				hypothetical protein
+KNPMNEEE_00006	CDS	405				hypothetical protein
+KNPMNEEE_00007	CDS	516				hypothetical protein
+KNPMNEEE_00008	CDS	279				hypothetical protein
+KNPMNEEE_00009	CDS	306				hypothetical protein
+KNPMNEEE_00010	CDS	549				IS481 family transposase ISFac5
+KNPMNEEE_00011	CDS	735				hypothetical protein
+KNPMNEEE_00012	CDS	720				hypothetical protein
+KNPMNEEE_00013	CDS	2703				hypothetical protein
+KNPMNEEE_00014	CDS	948				hypothetical protein
+KNPMNEEE_00015	CDS	660				hypothetical protein
+KNPMNEEE_00016	CDS	1824				hypothetical protein
+KNPMNEEE_00017	CDS	441				hypothetical protein
+KNPMNEEE_00018	CDS	969	cas1	3.1.-.-	COG1518	CRISPR-associated endonuclease Cas1
+KNPMNEEE_00019	CDS	261	cas2	3.1.-.-	COG1343	CRISPR-associated endoribonuclease Cas2
+	repeat_region	8108				
+KNPMNEEE_00020	CDS	756				hypothetical protein
+KNPMNEEE_00021	CDS	492				hypothetical protein
+KNPMNEEE_00022	CDS	297				hypothetical protein
+KNPMNEEE_00023	CDS	369				hypothetical protein
+KNPMNEEE_00024	CDS	222				hypothetical protein
+KNPMNEEE_00025	CDS	222				hypothetical protein
+KNPMNEEE_00026	CDS	273				hypothetical protein
+KNPMNEEE_00027	CDS	366				hypothetical protein
+KNPMNEEE_00028	CDS	510				hypothetical protein
+KNPMNEEE_00029	CDS	807				IS481 family transposase ISFac5
+KNPMNEEE_00030	CDS	414				hypothetical protein
+KNPMNEEE_00031	CDS	231				hypothetical protein
+KNPMNEEE_00032	CDS	309				hypothetical protein
+KNPMNEEE_00033	CDS	420				hypothetical protein
+KNPMNEEE_00034	CDS	936				hypothetical protein
+KNPMNEEE_00035	CDS	348				hypothetical protein
+KNPMNEEE_00036	CDS	174				hypothetical protein
+KNPMNEEE_00037	CDS	330				hypothetical protein
+KNPMNEEE_00038	CDS	429				IS256 family transposase ISMco4
+KNPMNEEE_00039	CDS	1083	mshA_1	2.4.1.250		D-inositol-3-phosphate glycosyltransferase
+KNPMNEEE_00040	CDS	168				hypothetical protein
+KNPMNEEE_00041	CDS	1056	cugP_1	2.7.7.9		UTP--glucose-1-phosphate uridylyltransferase
+KNPMNEEE_00042	CDS	828	rmlD	1.1.1.133		dTDP-4-dehydrorhamnose reductase
+KNPMNEEE_00043	CDS	987	rffG	4.2.1.46	COG1088	dTDP-glucose 4,6-dehydratase 2
+KNPMNEEE_00044	CDS	540	rfbC	5.1.3.13	COG1898	dTDP-4-dehydrorhamnose 3,5-epimerase
+KNPMNEEE_00045	CDS	741	ppm1_1	2.4.1.-		Polyprenol monophosphomannose synthase
+KNPMNEEE_00046	CDS	93				hypothetical protein
+KNPMNEEE_00047	CDS	897				hypothetical protein
+KNPMNEEE_00048	CDS	129				hypothetical protein
+KNPMNEEE_00049	CDS	891	mshA_2	2.4.1.250		D-inositol-3-phosphate glycosyltransferase
+KNPMNEEE_00050	CDS	939				hypothetical protein
+KNPMNEEE_00051	CDS	183				hypothetical protein
+KNPMNEEE_00052	CDS	648				hypothetical protein
+KNPMNEEE_00053	CDS	126				hypothetical protein
+KNPMNEEE_00054	CDS	405				hypothetical protein
+KNPMNEEE_00055	CDS	873				IS481 family transposase ISFac5
+KNPMNEEE_00056	CDS	264				hypothetical protein
+KNPMNEEE_00057	CDS	963	insK_1		COG2801	Putative transposase InsK for insertion sequence element IS150
+KNPMNEEE_00058	CDS	711				hypothetical protein
+KNPMNEEE_00059	CDS	195				hypothetical protein
+KNPMNEEE_00060	CDS	1242	mshA_3	2.4.1.250		D-inositol-3-phosphate glycosyltransferase
+KNPMNEEE_00061	CDS	1071				hypothetical protein
+KNPMNEEE_00062	CDS	2523				hypothetical protein
+KNPMNEEE_00063	CDS	264				hypothetical protein
+KNPMNEEE_00064	CDS	963	insK_2		COG2801	Putative transposase InsK for insertion sequence element IS150
+KNPMNEEE_00065	CDS	318				hypothetical protein
+KNPMNEEE_00066	CDS	795				hypothetical protein
+KNPMNEEE_00067	CDS	729				hypothetical protein
+KNPMNEEE_00068	CDS	819				hypothetical protein
+KNPMNEEE_00069	CDS	297				hypothetical protein
+KNPMNEEE_00070	CDS	1587				hypothetical protein
+KNPMNEEE_00071	CDS	834				hypothetical protein
+KNPMNEEE_00072	CDS	1239				hypothetical protein
+KNPMNEEE_00073	CDS	1149	mshA_4	2.4.1.250		D-inositol-3-phosphate glycosyltransferase
+KNPMNEEE_00074	CDS	1056	gmd_1	4.2.1.47	COG1089	GDP-mannose 4,6-dehydratase
+KNPMNEEE_00075	CDS	792	perA	2.6.1.102	COG0399	GDP-perosamine synthase
+KNPMNEEE_00076	CDS	249				hypothetical protein
+KNPMNEEE_00077	CDS	912				hypothetical protein
+KNPMNEEE_00078	CDS	1032			COG3385	IS4 family transposase ISFac10
+KNPMNEEE_00079	CDS	270				hypothetical protein
+KNPMNEEE_00080	CDS	762				hypothetical protein
+KNPMNEEE_00081	CDS	630				hypothetical protein
+KNPMNEEE_00082	CDS	1488	mutS_1			DNA mismatch repair protein MutS
+KNPMNEEE_00083	CDS	1515	mutS_2			DNA mismatch repair protein MutS
+KNPMNEEE_00084	CDS	414				IS256 family transposase ISFac8
+KNPMNEEE_00085	CDS	237				hypothetical protein
+KNPMNEEE_00086	CDS	219				hypothetical protein
+KNPMNEEE_00087	CDS	180				hypothetical protein
+KNPMNEEE_00088	CDS	258				hypothetical protein
+KNPMNEEE_00089	CDS	480				IS481 family transposase ISFac5
+KNPMNEEE_00090	CDS	339				hypothetical protein
+KNPMNEEE_00091	CDS	597				hypothetical protein
+KNPMNEEE_00092	CDS	270				hypothetical protein
+KNPMNEEE_00093	CDS	318				IS256 family transposase ISFac8
+KNPMNEEE_00094	CDS	108				hypothetical protein
+KNPMNEEE_00095	CDS	411				hypothetical protein
+KNPMNEEE_00096	CDS	1215				hypothetical protein
+KNPMNEEE_00097	CDS	585				hypothetical protein
+KNPMNEEE_00098	CDS	126				hypothetical protein
+KNPMNEEE_00099	CDS	576	yraA_1	3.2.-.-	COG0693	Putative cysteine protease YraA
+KNPMNEEE_00100	CDS	1083				hypothetical protein
+KNPMNEEE_00101	CDS	975	norW	1.18.1.-		Nitric oxide reductase FlRd-NAD(+) reductase
+KNPMNEEE_00102	CDS	555				hypothetical protein
+KNPMNEEE_00103	CDS	570				hypothetical protein
+KNPMNEEE_00104	CDS	534				hypothetical protein
+KNPMNEEE_00105	CDS	708				hypothetical protein
+KNPMNEEE_00106	CDS	1314	dat_1	2.6.1.76	COG0160	Diaminobutyrate--2-oxoglutarate aminotransferase
+KNPMNEEE_00107	CDS	138				hypothetical protein
+KNPMNEEE_00108	CDS	342				hypothetical protein
+KNPMNEEE_00109	CDS	165				hypothetical protein
+KNPMNEEE_00110	CDS	1602	bepA_1	3.4.-.-		Beta-barrel assembly-enhancing protease
+KNPMNEEE_00111	CDS	96				hypothetical protein
+KNPMNEEE_00112	CDS	93				hypothetical protein
+KNPMNEEE_00113	CDS	363				hypothetical protein
+KNPMNEEE_00114	CDS	822	iaaA	3.4.19.5	COG1446	Isoaspartyl peptidase
+KNPMNEEE_00115	CDS	276				hypothetical protein
+KNPMNEEE_00116	CDS	126				hypothetical protein
+KNPMNEEE_00117	CDS	525				hypothetical protein
+KNPMNEEE_00118	CDS	207				hypothetical protein
+KNPMNEEE_00119	CDS	498				hypothetical protein
+KNPMNEEE_00120	CDS	114				hypothetical protein
+KNPMNEEE_00121	CDS	378				hypothetical protein
+KNPMNEEE_00122	CDS	537				hypothetical protein
+KNPMNEEE_00123	CDS	513				hypothetical protein
+KNPMNEEE_00124	CDS	567				hypothetical protein
+KNPMNEEE_00125	CDS	282				hypothetical protein
+KNPMNEEE_00126	CDS	324				hypothetical protein
+KNPMNEEE_00127	CDS	1191	mshA_5	2.4.1.250		D-inositol-3-phosphate glycosyltransferase
+KNPMNEEE_00128	CDS	1242				hypothetical protein
+KNPMNEEE_00129	CDS	570				hypothetical protein
+KNPMNEEE_00130	CDS	990	hddA_1	2.7.1.168		D-glycero-alpha-D-manno-heptose 7-phosphate kinase
+KNPMNEEE_00131	CDS	309				hypothetical protein
+KNPMNEEE_00132	CDS	1392	mdtD_1			Putative multidrug resistance protein MdtD
+KNPMNEEE_00133	tRNA	76				tRNA-Arg(tcg)
+KNPMNEEE_00134	CDS	1110	yjiB_1	1.14.-.-	COG2124	Putative cytochrome P450 YjiB
+KNPMNEEE_00135	CDS	681	sfsA		COG1489	Sugar fermentation stimulation protein A
+KNPMNEEE_00136	CDS	1194	dapE	3.5.1.18		Succinyl-diaminopimelate desuccinylase
+KNPMNEEE_00137	CDS	195				hypothetical protein
+KNPMNEEE_00138	CDS	1161				hypothetical protein
+KNPMNEEE_00139	CDS	168				hypothetical protein
+KNPMNEEE_00140	CDS	534				hypothetical protein
+KNPMNEEE_00141	CDS	834				hypothetical protein
+KNPMNEEE_00142	CDS	969				hypothetical protein
+KNPMNEEE_00143	CDS	894	IMPDH_1	1.1.1.205		Inosine-5'-monophosphate dehydrogenase
+KNPMNEEE_00144	CDS	1425	glyQS	6.1.1.14		Glycine--tRNA ligase
+KNPMNEEE_00145	CDS	903	ddpD		COG0444	putative D,D-dipeptide transport ATP-binding protein DdpD
+KNPMNEEE_00146	CDS	738	oppF		COG4608	Oligopeptide transport ATP-binding protein OppF
+KNPMNEEE_00147	CDS	1554				hypothetical protein
+KNPMNEEE_00148	CDS	126				hypothetical protein
+KNPMNEEE_00149	CDS	453				hypothetical protein
+KNPMNEEE_00150	CDS	1314	dat_2	2.6.1.76	COG0160	Diaminobutyrate--2-oxoglutarate aminotransferase
+KNPMNEEE_00151	CDS	1398				hypothetical protein
+KNPMNEEE_00152	CDS	570	QRSL1	6.3.5.7		Glutamyl-tRNA(Gln) amidotransferase subunit A, chloroplastic/mitochondrial
+KNPMNEEE_00153	CDS	828	amiD	3.5.1.4	COG0154	Putative amidase AmiD
+KNPMNEEE_00154	CDS	135				hypothetical protein
+KNPMNEEE_00155	CDS	162				hypothetical protein
+KNPMNEEE_00156	CDS	1491	gbsA_1	1.2.1.8	COG1012	Betaine aldehyde dehydrogenase
+KNPMNEEE_00157	CDS	405				hypothetical protein
+KNPMNEEE_00158	CDS	1542	mdlC_1	4.1.1.7		Benzoylformate decarboxylase
+KNPMNEEE_00159	CDS	939		1.1.1.81	COG0111	Hydroxypyruvate reductase
+KNPMNEEE_00160	CDS	438		4.1.2.27	COG0076	putative sphingosine-1-phosphate lyase
+KNPMNEEE_00161	CDS	939		4.1.2.27	COG0076	putative sphingosine-1-phosphate lyase
+KNPMNEEE_00162	CDS	1017	xylB	2.7.1.17		Xylulose kinase
+KNPMNEEE_00163	CDS	411	lsrK	2.7.1.189	COG1070	Autoinducer-2 kinase
+KNPMNEEE_00164	CDS	162				hypothetical protein
+KNPMNEEE_00165	CDS	1251		2.7.1.165	COG2379	D-glycerate 2-kinase
+KNPMNEEE_00166	CDS	1512				hypothetical protein
+KNPMNEEE_00167	CDS	1161	pncB2	6.3.4.21	COG1488	Nicotinate phosphoribosyltransferase pncB2
+KNPMNEEE_00168	CDS	549	rutB	3.5.1.110		Peroxyureidoacrylate/ureidoacrylate amidohydrolase RutB
+KNPMNEEE_00169	CDS	1392	cysS	6.1.1.16	COG0215	Cysteine--tRNA ligase
+KNPMNEEE_00170	CDS	258				hypothetical protein
+KNPMNEEE_00171	CDS	114				hypothetical protein
+KNPMNEEE_00172	CDS	1110				hypothetical protein
+KNPMNEEE_00173	CDS	954	cysK	2.5.1.47		Cysteine synthase
+KNPMNEEE_00174	CDS	1401	hdc	4.1.1.22		Histidine decarboxylase
+KNPMNEEE_00175	CDS	693	racX	5.1.1.10	COG1794	Broad specificity amino-acid racemase RacX
+KNPMNEEE_00176	CDS	1293				hypothetical protein
+KNPMNEEE_00177	CDS	558				hypothetical protein
+KNPMNEEE_00178	CDS	414				hypothetical protein
+KNPMNEEE_00179	CDS	966	pdxA2	1.1.1.409	COG1995	D-erythronate 4-phosphate dehydrogenase
+KNPMNEEE_00180	CDS	1494	mdtD_2			Putative multidrug resistance protein MdtD
+KNPMNEEE_00181	CDS	405				hypothetical protein
+KNPMNEEE_00182	CDS	876				hypothetical protein
+KNPMNEEE_00183	CDS	270				hypothetical protein
+KNPMNEEE_00184	CDS	690				hypothetical protein
+KNPMNEEE_00185	CDS	543				hypothetical protein
+KNPMNEEE_00186	CDS	288				hypothetical protein
+KNPMNEEE_00187	CDS	624	vldH	3.1.3.101		Validoxylamine A 7'-phosphate phosphatase
+KNPMNEEE_00188	CDS	1956	pepO_1	3.4.24.-	COG3590	Neutral endopeptidase
+KNPMNEEE_00189	CDS	210				hypothetical protein
+KNPMNEEE_00190	CDS	1044				hypothetical protein
+KNPMNEEE_00191	CDS	267				hypothetical protein
+KNPMNEEE_00192	CDS	1356	lpdA	1.8.1.4	COG1249	Dihydrolipoyl dehydrogenase
+KNPMNEEE_00193	CDS	270				hypothetical protein
+KNPMNEEE_00194	CDS	282				hypothetical protein
+KNPMNEEE_00195	CDS	969				hypothetical protein
+KNPMNEEE_00196	CDS	1434				hypothetical protein
+KNPMNEEE_00197	CDS	564	yveA_1		COG0531	Aspartate-proton symporter
+KNPMNEEE_00198	CDS	999				IS200/IS605 family transposase ISMma22
+KNPMNEEE_00199	CDS	432				hypothetical protein
+KNPMNEEE_00200	CDS	1215	mdtH			Multidrug resistance protein MdtH
+KNPMNEEE_00201	CDS	138				hypothetical protein
+KNPMNEEE_00202	CDS	1416				hypothetical protein
+KNPMNEEE_00203	CDS	1383	bmr3			Multidrug resistance protein 3
+KNPMNEEE_00204	CDS	1137				IS200/IS605 family transposase ISNma16
+KNPMNEEE_00205	CDS	201				hypothetical protein
+KNPMNEEE_00206	CDS	189				hypothetical protein
+KNPMNEEE_00207	CDS	1101				hypothetical protein
+KNPMNEEE_00208	CDS	1362	cobB	6.3.5.9	COG1797	Hydrogenobyrinate a,c-diamide synthase
+KNPMNEEE_00209	CDS	990	cbiG	3.7.1.12	COG2073	Cobalt-precorrin-5A hydrolase
+KNPMNEEE_00210	CDS	1203	ydjE_1			Inner membrane metabolite transport protein YdjE
+KNPMNEEE_00211	CDS	2004				hypothetical protein
+KNPMNEEE_00212	CDS	684				hypothetical protein
+KNPMNEEE_00213	CDS	1644				hypothetical protein
+KNPMNEEE_00214	tRNA	85				tRNA-Ser(gga)
+KNPMNEEE_00215	CDS	444	asnC		COG1522	Regulatory protein AsnC
+KNPMNEEE_00216	CDS	960	asnS_1	6.1.1.22	COG0017	Asparagine--tRNA ligase
+KNPMNEEE_00217	CDS	324				hypothetical protein
+KNPMNEEE_00218	CDS	963	htrA			Putative serine protease HtrA
+KNPMNEEE_00219	CDS	591				hypothetical protein
+KNPMNEEE_00220	CDS	558				hypothetical protein
+KNPMNEEE_00221	CDS	324				hypothetical protein
+KNPMNEEE_00222	CDS	585				hypothetical protein
+KNPMNEEE_00223	CDS	228				hypothetical protein
+KNPMNEEE_00224	CDS	261				hypothetical protein
+KNPMNEEE_00225	CDS	345				hypothetical protein
+KNPMNEEE_00226	CDS	276				hypothetical protein
+KNPMNEEE_00227	CDS	174				hypothetical protein
+KNPMNEEE_00228	CDS	369	uxuA_1	4.2.1.8	COG1312	Mannonate dehydratase
+KNPMNEEE_00229	CDS	441	uxuA_2	4.2.1.8		Mannonate dehydratase
+KNPMNEEE_00230	CDS	420				hypothetical protein
+KNPMNEEE_00231	CDS	285				hypothetical protein
+KNPMNEEE_00232	CDS	216				hypothetical protein
+KNPMNEEE_00233	CDS	1197	dgoD_1	4.2.1.6	COG4948	D-galactonate dehydratase
+KNPMNEEE_00234	CDS	1077	tdh	1.1.1.103		L-threonine 3-dehydrogenase
+KNPMNEEE_00235	CDS	270				hypothetical protein
+KNPMNEEE_00236	CDS	783	bacC	1.1.1.385		Dihydroanticapsin 7-dehydrogenase
+KNPMNEEE_00237	CDS	1920	acs_1	6.2.1.1	COG0365	Acetyl-coenzyme A synthetase
+KNPMNEEE_00238	CDS	636	satP		COG1584	Succinate-acetate/proton symporter SatP
+KNPMNEEE_00239	CDS	1545				hypothetical protein
+KNPMNEEE_00240	CDS	1425	ribZ_1			Riboflavin transporter RibZ
+KNPMNEEE_00241	CDS	246				hypothetical protein
+KNPMNEEE_00242	CDS	792				hypothetical protein
+KNPMNEEE_00243	CDS	876				hypothetical protein
+KNPMNEEE_00244	CDS	255				hypothetical protein
+KNPMNEEE_00245	CDS	1026				hypothetical protein
+KNPMNEEE_00246	CDS	336				hypothetical protein
+KNPMNEEE_00247	CDS	1086				hypothetical protein
+KNPMNEEE_00248	CDS	621	mobA_1	2.7.7.77		Molybdenum cofactor guanylyltransferase
+KNPMNEEE_00249	CDS	783				hypothetical protein
+KNPMNEEE_00250	CDS	363				hypothetical protein
+KNPMNEEE_00251	CDS	762				hypothetical protein
+KNPMNEEE_00252	CDS	1095				hypothetical protein
+KNPMNEEE_00253	CDS	375	dnaK_1			Chaperone protein DnaK
+KNPMNEEE_00254	CDS	1326	dnaK_2		COG0443	Chaperone protein DnaK
+KNPMNEEE_00255	CDS	1281				hypothetical protein
+KNPMNEEE_00256	CDS	135				hypothetical protein
+KNPMNEEE_00257	CDS	327	hisB_1	3.1.3.15		Histidine biosynthesis bifunctional protein HisB
+KNPMNEEE_00258	CDS	789				hypothetical protein
+KNPMNEEE_00259	CDS	1032			COG3385	IS4 family transposase ISFac10
+KNPMNEEE_00260	CDS	441	moaC2	4.6.1.17	COG0315	Cyclic pyranopterin monophosphate synthase 2
+KNPMNEEE_00261	CDS	501	moaB		COG0521	Molybdenum cofactor biosynthesis protein B
+KNPMNEEE_00262	CDS	897				hypothetical protein
+KNPMNEEE_00263	CDS	870	hbd_1	1.1.1.157	COG1250	3-hydroxybutyryl-CoA dehydrogenase
+KNPMNEEE_00264	CDS	423				hypothetical protein
+KNPMNEEE_00265	CDS	1200	hyuC	3.5.1.87	COG0624	N-carbamoyl-L-amino-acid hydrolase
+KNPMNEEE_00266	CDS	1533	mdlC_2	4.1.1.7		Benzoylformate decarboxylase
+KNPMNEEE_00267	CDS	771				hypothetical protein
+KNPMNEEE_00268	CDS	840				hypothetical protein
+KNPMNEEE_00269	CDS	1164				hypothetical protein
+KNPMNEEE_00270	CDS	963	yajO	1.1.-.-	COG0667	1-deoxyxylulose-5-phosphate synthase YajO
+KNPMNEEE_00271	CDS	186				hypothetical protein
+KNPMNEEE_00272	CDS	1200	yfdE_1	2.8.3.19	COG1804	Acetyl-CoA:oxalate CoA-transferase
+KNPMNEEE_00273	CDS	537	msrAB			Peptide methionine sulfoxide reductase MsrA/MsrB
+KNPMNEEE_00274	CDS	330				hypothetical protein
+KNPMNEEE_00275	CDS	2040	cdhA_1	1.17.5.2		Caffeine dehydrogenase subunit alpha
+KNPMNEEE_00276	CDS	804				hypothetical protein
+KNPMNEEE_00277	CDS	795		1.1.1.391	COG1028	3-beta-hydroxycholanate 3-dehydrogenase (NAD(+)) 1
+KNPMNEEE_00278	CDS	1476	araE		COG0477	Arabinose-proton symporter
+KNPMNEEE_00279	CDS	192				hypothetical protein
+KNPMNEEE_00280	CDS	915	hbd_2	1.1.1.157	COG1250	3-hydroxybutyryl-CoA dehydrogenase
+KNPMNEEE_00281	CDS	666	gph	3.1.3.18		Phosphoglycolate phosphatase
+KNPMNEEE_00282	CDS	1170	naiP_1			Putative niacin/nicotinamide transporter NaiP
+KNPMNEEE_00283	CDS	405				hypothetical protein
+KNPMNEEE_00284	CDS	2274				hypothetical protein
+KNPMNEEE_00285	CDS	954	gfo	1.1.99.28		Glucose--fructose oxidoreductase
+KNPMNEEE_00286	CDS	357				hypothetical protein
+KNPMNEEE_00287	CDS	744				hypothetical protein
+KNPMNEEE_00288	CDS	474				hypothetical protein
+KNPMNEEE_00289	CDS	576	folE	3.5.4.16	COG0302	GTP cyclohydrolase 1
+KNPMNEEE_00290	CDS	645	queE	4.3.99.3	COG0602	7-carboxy-7-deazaguanine synthase
+KNPMNEEE_00291	CDS	420				hypothetical protein
+KNPMNEEE_00292	CDS	201				hypothetical protein
+KNPMNEEE_00293	CDS	573	pdxT	4.3.3.6	COG0311	Pyridoxal 5'-phosphate synthase subunit PdxT
+KNPMNEEE_00294	CDS	993	pdxS	4.3.3.6	COG0214	Pyridoxal 5'-phosphate synthase subunit PdxS
+KNPMNEEE_00295	CDS	969	mdh	1.1.1.37	COG0039	Malate dehydrogenase
+KNPMNEEE_00296	CDS	234				hypothetical protein
+KNPMNEEE_00297	CDS	1404	sdhA	1.3.5.1	COG1053	Succinate dehydrogenase flavoprotein subunit
+KNPMNEEE_00298	CDS	942				hypothetical protein
+KNPMNEEE_00299	CDS	876	sdhE	1.3.5.-	COG2048	8-methylmenaquinol:fumarate reductase membrane anchor subunit
+KNPMNEEE_00300	CDS	348				hypothetical protein
+KNPMNEEE_00301	CDS	945				hypothetical protein
+KNPMNEEE_00302	CDS	1899	korA_1	1.2.7.3	COG0674	2-oxoglutarate oxidoreductase subunit KorA
+KNPMNEEE_00303	CDS	285				hypothetical protein
+KNPMNEEE_00304	CDS	855	sucD	6.2.1.5	COG0074	Succinate--CoA ligase [ADP-forming] subunit alpha
+KNPMNEEE_00305	CDS	1101	sucC	6.2.1.4	COG0045	Succinate--CoA ligase [GDP-forming] subunit beta
+KNPMNEEE_00306	CDS	837				hypothetical protein
+KNPMNEEE_00307	CDS	315				hypothetical protein
+KNPMNEEE_00308	CDS	1332	crhR	3.6.4.13		RNA helicase CrhR
+KNPMNEEE_00309	CDS	726	hprA	1.1.1.29	COG1052	Glycerate dehydrogenase
+KNPMNEEE_00310	CDS	189				hypothetical protein
+KNPMNEEE_00311	CDS	1308		1.1.1.38		NAD-dependent malic enzyme
+KNPMNEEE_00312	CDS	468				hypothetical protein
+KNPMNEEE_00313	CDS	2514	citB	4.2.1.-	COG1048	Aconitate/2-methylaconitate hydratase
+KNPMNEEE_00314	CDS	873	dapA	4.3.3.7	COG0329	4-hydroxy-tetrahydrodipicolinate synthase
+KNPMNEEE_00315	CDS	339				hypothetical protein
+KNPMNEEE_00316	CDS	1152				hypothetical protein
+KNPMNEEE_00317	CDS	1341	menE_1	6.2.1.26		2-succinylbenzoate--CoA ligase
+KNPMNEEE_00318	CDS	720	fabG_1	1.1.1.100		3-oxoacyl-[acyl-carrier-protein] reductase FabG
+KNPMNEEE_00319	CDS	96				hypothetical protein
+KNPMNEEE_00320	CDS	879	rihA	3.2.-.-	COG1957	Pyrimidine-specific ribonucleoside hydrolase RihA
+KNPMNEEE_00321	CDS	453				hypothetical protein
+KNPMNEEE_00322	CDS	963	coaA	2.7.1.33		Pantothenate kinase
+KNPMNEEE_00323	CDS	1476	csbC_1			putative metabolite transport protein CsbC
+KNPMNEEE_00324	CDS	660				hypothetical protein
+KNPMNEEE_00325	CDS	1437				hypothetical protein
+KNPMNEEE_00326	CDS	1086				hypothetical protein
+KNPMNEEE_00327	CDS	1086				hypothetical protein
+KNPMNEEE_00328	CDS	1299	nanT_1			Sialic acid transporter NanT
+KNPMNEEE_00329	CDS	1092	mftC	2.-.-.-	COG0535	Putative mycofactocin radical SAM maturase MftC
+KNPMNEEE_00330	tRNA	74				tRNA-Asp(gtc)
+KNPMNEEE_00331	CDS	228				hypothetical protein
+KNPMNEEE_00332	CDS	1209	hemA	1.2.1.70	COG0373	Glutamyl-tRNA reductase
+KNPMNEEE_00333	CDS	2259				hypothetical protein
+KNPMNEEE_00334	CDS	345				hypothetical protein
+KNPMNEEE_00335	CDS	1518	mctP			Monocarboxylate transport permease protein
+KNPMNEEE_00336	CDS	210				hypothetical protein
+KNPMNEEE_00337	CDS	720	nadE	6.3.1.5		NH(3)-dependent NAD(+) synthetase
+KNPMNEEE_00338	CDS	1287	nhaP			K(+)/H(+) antiporter NhaP
+KNPMNEEE_00339	tRNA	72				tRNA-Ala(ggc)
+KNPMNEEE_00340	CDS	129				hypothetical protein
+KNPMNEEE_00341	CDS	390				IS256 family transposase ISFac8
+KNPMNEEE_00342	CDS	318				IS256 family transposase ISFac8
+KNPMNEEE_00343	CDS	249				hypothetical protein
+KNPMNEEE_00344	CDS	264				IS66 family transposase ISArch19
+KNPMNEEE_00345	CDS	351				hypothetical protein
+KNPMNEEE_00346	CDS	1590				hypothetical protein
+KNPMNEEE_00347	CDS	318				IS256 family transposase ISFac7
+KNPMNEEE_00348	CDS	174				hypothetical protein
+KNPMNEEE_00349	CDS	411				hypothetical protein
+KNPMNEEE_00350	CDS	255				hypothetical protein
+KNPMNEEE_00351	CDS	108				hypothetical protein
+KNPMNEEE_00352	CDS	150				hypothetical protein
+KNPMNEEE_00353	CDS	255				hypothetical protein
+KNPMNEEE_00354	CDS	408				hypothetical protein
+KNPMNEEE_00355	CDS	345				hypothetical protein
+KNPMNEEE_00356	CDS	513				hypothetical protein
+KNPMNEEE_00357	CDS	1293				hypothetical protein
+KNPMNEEE_00358	CDS	324				hypothetical protein
+KNPMNEEE_00359	CDS	966	insK_3		COG2801	Putative transposase InsK for insertion sequence element IS150
+KNPMNEEE_00360	CDS	273				hypothetical protein
+KNPMNEEE_00361	CDS	237				hypothetical protein
+KNPMNEEE_00362	CDS	414				IS256 family transposase ISFac8
+KNPMNEEE_00363	CDS	369				IS256 family transposase ISFac8
+KNPMNEEE_00364	CDS	3078	tri1	3.4.21.-	COG0793	Tricorn protease 
+KNPMNEEE_00365	CDS	141				hypothetical protein
+KNPMNEEE_00366	CDS	5097	dbpA	3.6.4.13		ATP-dependent RNA helicase DbpA
+KNPMNEEE_00367	CDS	2007	cdhA_2	1.17.5.2		Caffeine dehydrogenase subunit alpha
+KNPMNEEE_00368	CDS	480	cutS	1.2.5.3		Carbon monoxide dehydrogenase small chain
+KNPMNEEE_00369	CDS	855	cutM	1.2.5.3		Carbon monoxide dehydrogenase medium chain
+KNPMNEEE_00370	CDS	336	hcaC			3-phenylpropionate/cinnamic acid dioxygenase ferredoxin subunit
+KNPMNEEE_00371	CDS	162				hypothetical protein
+KNPMNEEE_00372	CDS	198				hypothetical protein
+KNPMNEEE_00373	tRNA	74				tRNA-Gly(gcc)
+KNPMNEEE_00374	CDS	945				hypothetical protein
+KNPMNEEE_00375	CDS	918				hypothetical protein
+KNPMNEEE_00376	CDS	1071	ywlC	2.7.7.87	COG0009	Threonylcarbamoyl-AMP synthase
+KNPMNEEE_00377	CDS	990				IS607 family transposase ISTvo1
+KNPMNEEE_00378	CDS	312				IS607 family transposase ISTvo1
+KNPMNEEE_00379	CDS	597				hypothetical protein
+KNPMNEEE_00380	CDS	2388				hypothetical protein
+KNPMNEEE_00381	CDS	477				hypothetical protein
+KNPMNEEE_00382	CDS	90				hypothetical protein
+KNPMNEEE_00383	CDS	1080	IMPDH_2	1.1.1.205		Inosine-5'-monophosphate dehydrogenase
+KNPMNEEE_00384	CDS	1158	glyA_1	2.1.2.1		Serine hydroxymethyltransferase
+KNPMNEEE_00385	CDS	957		2.7.8.-		Cardiolipin synthase
+KNPMNEEE_00386	CDS	381				hypothetical protein
+KNPMNEEE_00387	CDS	219				hypothetical protein
+KNPMNEEE_00388	CDS	330				hypothetical protein
+KNPMNEEE_00389	CDS	405				hypothetical protein
+KNPMNEEE_00390	CDS	1674				hypothetical protein
+KNPMNEEE_00391	CDS	1338	lysA	4.1.1.20	COG0019	Diaminopimelate decarboxylase
+KNPMNEEE_00392	CDS	1611	yveA_2		COG0531	Aspartate-proton symporter
+KNPMNEEE_00393	CDS	165				hypothetical protein
+KNPMNEEE_00394	CDS	1680	acsA_1	6.2.1.1	COG0365	Acetyl-coenzyme A synthetase
+KNPMNEEE_00395	CDS	168				hypothetical protein
+KNPMNEEE_00396	CDS	222				hypothetical protein
+KNPMNEEE_00397	CDS	1128	cefD	5.1.1.17	COG0520	Isopenicillin N epimerase
+KNPMNEEE_00398	CDS	930				hypothetical protein
+KNPMNEEE_00399	tRNA	73				tRNA-Pro(cgg)
+KNPMNEEE_00400	CDS	573	paiB		COG2808	Protease synthase and sporulation protein PAI 2
+KNPMNEEE_00401	CDS	1239	pgk	2.7.2.3	COG0126	Phosphoglycerate kinase
+KNPMNEEE_00402	CDS	402	pfdA			Prefoldin subunit alpha
+KNPMNEEE_00403	CDS	936	ftsY		COG0552	Signal recognition particle receptor FtsY
+KNPMNEEE_00404	CDS	435				hypothetical protein
+KNPMNEEE_00405	CDS	288				hypothetical protein
+KNPMNEEE_00406	CDS	477				hypothetical protein
+KNPMNEEE_00407	CDS	303				hypothetical protein
+KNPMNEEE_00408	CDS	936	hisC_1	2.6.1.9		Histidinol-phosphate aminotransferase
+KNPMNEEE_00409	CDS	453				hypothetical protein
+KNPMNEEE_00410	CDS	2031	pacS	7.2.2.8		putative copper-transporting ATPase PacS
+KNPMNEEE_00411	CDS	135				hypothetical protein
+KNPMNEEE_00412	CDS	519				hypothetical protein
+KNPMNEEE_00413	CDS	324				hypothetical protein
+KNPMNEEE_00414	CDS	825	tatC			Sec-independent protein translocase protein TatC
+KNPMNEEE_00415	CDS	324	tatA			Sec-independent protein translocase protein TatA
+KNPMNEEE_00416	CDS	1053				hypothetical protein
+KNPMNEEE_00417	CDS	1194	petB			Cytochrome b6
+KNPMNEEE_00418	CDS	339				hypothetical protein
+KNPMNEEE_00419	CDS	225				hypothetical protein
+KNPMNEEE_00420	CDS	774	yfdE_2	2.8.3.19	COG1804	Acetyl-CoA:oxalate CoA-transferase
+KNPMNEEE_00421	CDS	219				hypothetical protein
+KNPMNEEE_00422	CDS	786	proC	1.5.1.2	COG0345	Pyrroline-5-carboxylate reductase
+KNPMNEEE_00423	CDS	240				hypothetical protein
+KNPMNEEE_00424	CDS	987				hypothetical protein
+KNPMNEEE_00425	CDS	1755	yveA_3		COG0531	Aspartate-proton symporter
+KNPMNEEE_00426	CDS	507				hypothetical protein
+KNPMNEEE_00427	CDS	648	kynB_1	3.5.1.9	COG1878	Kynurenine formamidase
+KNPMNEEE_00428	CDS	2376	gyrA	5.6.2.2	COG0188	DNA gyrase subunit A
+KNPMNEEE_00429	CDS	1932	gyrB	5.6.2.2	COG0187	DNA gyrase subunit B
+KNPMNEEE_00430	CDS	618				hypothetical protein
+KNPMNEEE_00431	CDS	240				hypothetical protein
+KNPMNEEE_00432	CDS	1644	gluQ	6.1.1.-		Glutamyl-Q tRNA(Asp) synthetase
+KNPMNEEE_00433	CDS	1020	mnmE	3.6.-.-		tRNA modification GTPase MnmE
+KNPMNEEE_00434	CDS	630				hypothetical protein
+KNPMNEEE_00435	CDS	534				hypothetical protein
+KNPMNEEE_00436	CDS	237				hypothetical protein
+KNPMNEEE_00437	CDS	240				hypothetical protein
+KNPMNEEE_00438	CDS	336				hypothetical protein
+KNPMNEEE_00439	CDS	414				hypothetical protein
+KNPMNEEE_00440	CDS	246				hypothetical protein
+KNPMNEEE_00441	CDS	339				hypothetical protein
+KNPMNEEE_00442	CDS	1407	nuoN	7.1.1.-	COG1007	NADH-quinone oxidoreductase subunit N
+KNPMNEEE_00443	CDS	1497	nuoM	7.1.1.-	COG1008	NADH-quinone oxidoreductase subunit M
+KNPMNEEE_00444	CDS	1884	nuoL	7.1.1.-	COG1009	NADH-quinone oxidoreductase subunit L
+KNPMNEEE_00445	CDS	300	ndhE	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit 4L, chloroplastic
+KNPMNEEE_00446	CDS	222				hypothetical protein
+KNPMNEEE_00447	CDS	252	nuoJ	7.1.1.-	COG0839	NADH-quinone oxidoreductase subunit J
+KNPMNEEE_00448	CDS	498	nqo9	7.1.1.-	COG1143	NADH-quinone oxidoreductase subunit 9
+KNPMNEEE_00449	CDS	1056	ndhA	7.1.1.-	COG1005	NAD(P)H-quinone oxidoreductase subunit 1
+KNPMNEEE_00450	CDS	1104	nqo4	7.1.1.-	COG0649	NADH-quinone oxidoreductase subunit 4
+KNPMNEEE_00451	CDS	456	ndhJ	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit J, chloroplastic
+KNPMNEEE_00452	CDS	465	nqo6	7.1.1.-	COG0377	NADH-quinone oxidoreductase subunit 6
+KNPMNEEE_00453	CDS	435	ndhC	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit 3, chloroplastic
+KNPMNEEE_00454	CDS	276				hypothetical protein
+KNPMNEEE_00455	CDS	918				hypothetical protein
+KNPMNEEE_00456	CDS	621	gatB	6.3.5.-	COG0064	Aspartyl/glutamyl-tRNA(Asn/Gln) amidotransferase subunit B
+KNPMNEEE_00457	CDS	1209	ansA	3.5.1.1	COG0252	L-asparaginase 1
+KNPMNEEE_00458	CDS	1134	acdA	1.3.99.-	COG1960	Acyl-CoA dehydrogenase
+KNPMNEEE_00459	CDS	210				hypothetical protein
+KNPMNEEE_00460	CDS	495	sirC	1.3.1.76		Precorrin-2 dehydrogenase
+KNPMNEEE_00461	CDS	636	yecD_1	3.-.-.-	COG1335	Isochorismatase family protein YecD
+KNPMNEEE_00462	CDS	1377				hypothetical protein
+KNPMNEEE_00463	CDS	339				hypothetical protein
+KNPMNEEE_00464	CDS	564				hypothetical protein
+KNPMNEEE_00465	CDS	390				hypothetical protein
+KNPMNEEE_00466	CDS	246				hypothetical protein
+KNPMNEEE_00467	CDS	360				hypothetical protein
+KNPMNEEE_00468	CDS	501				hypothetical protein
+KNPMNEEE_00469	CDS	708	menG	2.1.1.163		Demethylmenaquinone methyltransferase
+KNPMNEEE_00470	CDS	252				hypothetical protein
+KNPMNEEE_00471	CDS	300				hypothetical protein
+KNPMNEEE_00472	CDS	1314				IS66 family transposase ISArch19
+KNPMNEEE_00473	CDS	915	lnrL	3.6.3.-	COG1131	Linearmycin resistance ATP-binding protein LnrL
+KNPMNEEE_00474	CDS	738				hypothetical protein
+KNPMNEEE_00475	CDS	357				hypothetical protein
+KNPMNEEE_00476	CDS	3507				hypothetical protein
+KNPMNEEE_00477	CDS	615				hypothetical protein
+KNPMNEEE_00478	CDS	243				hypothetical protein
+KNPMNEEE_00479	CDS	267				hypothetical protein
+KNPMNEEE_00480	CDS	1062				hypothetical protein
+KNPMNEEE_00481	CDS	1341	glmM	5.4.2.10	COG1109	Phosphoglucosamine mutase
+KNPMNEEE_00482	CDS	606		2.7.8.-	COG0558	Phosphatidylinositol phosphate synthase
+KNPMNEEE_00483	CDS	1281				hypothetical protein
+KNPMNEEE_00484	CDS	789	thiD	2.7.1.49	COG0351	Hydroxymethylpyrimidine/phosphomethylpyrimidine kinase
+KNPMNEEE_00485	CDS	1032	thiL_1	2.7.4.16		Thiamine-monophosphate kinase
+KNPMNEEE_00486	CDS	183				hypothetical protein
+KNPMNEEE_00487	CDS	486	thiE	2.5.1.3		Thiamine-phosphate synthase
+KNPMNEEE_00488	CDS	771				hypothetical protein
+KNPMNEEE_00489	CDS	393	speH	4.1.1.50	COG1586	S-adenosylmethionine decarboxylase proenzyme
+KNPMNEEE_00490	CDS	867				hypothetical protein
+KNPMNEEE_00491	CDS	1479	infB			Translation initiation factor IF-2
+KNPMNEEE_00492	CDS	420	ndk	2.7.4.6	COG0105	Nucleoside diphosphate kinase
+KNPMNEEE_00493	CDS	210				hypothetical protein
+KNPMNEEE_00494	CDS	582				hypothetical protein
+KNPMNEEE_00495	CDS	216				hypothetical protein
+KNPMNEEE_00496	CDS	897	yhjE			Inner membrane metabolite transport protein YhjE
+KNPMNEEE_00497	CDS	528				hypothetical protein
+KNPMNEEE_00498	CDS	1146	bchI	6.6.1.1	COG1239	Magnesium-chelatase 38 kDa subunit
+KNPMNEEE_00499	CDS	3477				hypothetical protein
+KNPMNEEE_00500	CDS	942	hycD		COG0650	Formate hydrogenlyase subunit 4
+KNPMNEEE_00501	CDS	642				hypothetical protein
+KNPMNEEE_00502	CDS	1326	ndhB_1	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit 2, chloroplastic
+KNPMNEEE_00503	CDS	1155	hycE		COG3261	Formate hydrogenlyase subunit 5
+KNPMNEEE_00504	CDS	630	ndhK	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit K, chloroplastic
+KNPMNEEE_00505	CDS	1746	ndhB_2	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit 2, chloroplastic
+KNPMNEEE_00506	CDS	1086				hypothetical protein
+KNPMNEEE_00507	CDS	201				hypothetical protein
+KNPMNEEE_00508	CDS	159				hypothetical protein
+KNPMNEEE_00509	CDS	513				hypothetical protein
+KNPMNEEE_00510	CDS	255				hypothetical protein
+KNPMNEEE_00511	CDS	2250	purL	6.3.5.3	COG0046	Phosphoribosylformylglycinamidine synthase subunit PurL
+KNPMNEEE_00512	CDS	243	purS	6.3.5.3		Phosphoribosylformylglycinamidine synthase subunit PurS
+KNPMNEEE_00513	CDS	318				hypothetical protein
+KNPMNEEE_00514	CDS	954				hypothetical protein
+KNPMNEEE_00515	CDS	156	pcrB	2.5.1.-		Geranylgeranylglyceryl phosphate synthase
+KNPMNEEE_00516	CDS	627		2.5.1.41	COG1646	Geranylgeranylglyceryl phosphate synthase
+KNPMNEEE_00517	CDS	546				hypothetical protein
+KNPMNEEE_00518	CDS	357				hypothetical protein
+KNPMNEEE_00519	CDS	552				hypothetical protein
+KNPMNEEE_00520	CDS	1056	trm1	2.1.1.215		tRNA (guanine(26)-N(2))-dimethyltransferase
+KNPMNEEE_00521	CDS	465				hypothetical protein
+KNPMNEEE_00522	CDS	756	cinA			Putative competence-damage inducible protein
+KNPMNEEE_00523	CDS	1107	rhmD	4.2.1.90	COG4948	L-rhamnonate dehydratase
+KNPMNEEE_00524	CDS	888	yjhH	4.1.2.28	COG0329	putative 2-dehydro-3-deoxy-D-pentonate aldolase YjhH
+KNPMNEEE_00525	CDS	759				hypothetical protein
+KNPMNEEE_00526	CDS	303				hypothetical protein
+KNPMNEEE_00527	CDS	1362	csbC_2			putative metabolite transport protein CsbC
+KNPMNEEE_00528	CDS	762	ycdF	1.1.1.47	COG1028	Glucose 1-dehydrogenase 2
+KNPMNEEE_00529	CDS	714				hypothetical protein
+KNPMNEEE_00530	CDS	351				hypothetical protein
+KNPMNEEE_00531	CDS	927	cugP_2	2.7.7.9		UTP--glucose-1-phosphate uridylyltransferase
+KNPMNEEE_00532	CDS	1314	gabD1	1.2.1.79	COG1012	Succinate-semialdehyde dehydrogenase [NADP(+)] 1
+KNPMNEEE_00533	CDS	1140				hypothetical protein
+KNPMNEEE_00534	CDS	1065				hypothetical protein
+KNPMNEEE_00535	CDS	522				hypothetical protein
+KNPMNEEE_00536	CDS	348				hypothetical protein
+KNPMNEEE_00537	CDS	279				hypothetical protein
+KNPMNEEE_00538	CDS	609				hypothetical protein
+KNPMNEEE_00539	CDS	420				hypothetical protein
+KNPMNEEE_00540	CDS	666	bluB	1.13.11.79	COG0778	5,6-dimethylbenzimidazole synthase
+KNPMNEEE_00541	CDS	1413				hypothetical protein
+KNPMNEEE_00542	CDS	324				hypothetical protein
+KNPMNEEE_00543	CDS	288				hypothetical protein
+KNPMNEEE_00544	CDS	1260	amaB	3.5.1.87		N-carbamoyl-L-amino acid hydrolase
+KNPMNEEE_00545	CDS	1374		3.5.2.-		D-hydantoinase
+KNPMNEEE_00546	CDS	165				hypothetical protein
+KNPMNEEE_00547	CDS	1131				hypothetical protein
+KNPMNEEE_00548	CDS	1512	hutH	4.3.1.3	COG2986	Histidine ammonia-lyase
+KNPMNEEE_00549	CDS	714				hypothetical protein
+KNPMNEEE_00550	CDS	864	nfo	3.1.21.2	COG0648	putative endonuclease 4
+KNPMNEEE_00551	tRNA	75				tRNA-Thr(cgt)
+KNPMNEEE_00552	CDS	213				hypothetical protein
+KNPMNEEE_00553	CDS	252				hypothetical protein
+KNPMNEEE_00554	CDS	315	ytcD		COG1733	putative HTH-type transcriptional regulator YtcD
+KNPMNEEE_00555	CDS	834				hypothetical protein
+KNPMNEEE_00556	CDS	1446	ubiD	4.1.1.98	COG0043	3-octaprenyl-4-hydroxybenzoate carboxy-lyase
+KNPMNEEE_00557	CDS	591	COQ5_1	2.1.1.163		2-methoxy-6-polyprenyl-1,4-benzoquinol methylase, mitochondrial
+KNPMNEEE_00558	CDS	201				hypothetical protein
+KNPMNEEE_00559	CDS	489	mobA_2	2.7.7.77		Molybdenum cofactor guanylyltransferase
+KNPMNEEE_00560	CDS	1131				hypothetical protein
+KNPMNEEE_00561	tRNA	85				tRNA-Leu(aag)
+KNPMNEEE_00562	CDS	2673	recB	3.1.11.5		RecBCD enzyme subunit RecB
+KNPMNEEE_00563	CDS	819	fdhD		COG1526	Sulfur carrier protein FdhD
+KNPMNEEE_00564	CDS	432				hypothetical protein
+KNPMNEEE_00565	CDS	2895		1.17.1.9		Putative formate dehydrogenase
+KNPMNEEE_00566	CDS	597				hypothetical protein
+KNPMNEEE_00567	CDS	459				hypothetical protein
+KNPMNEEE_00568	CDS	546	mobA_3	2.7.7.77		Molybdenum cofactor guanylyltransferase
+KNPMNEEE_00569	CDS	405				hypothetical protein
+KNPMNEEE_00570	CDS	1278				hypothetical protein
+KNPMNEEE_00571	CDS	753	moeA_1	2.10.1.1		Molybdopterin molybdenumtransferase
+KNPMNEEE_00572	CDS	474	moeA_2	2.10.1.1	COG0303	Molybdopterin molybdenumtransferase
+KNPMNEEE_00573	CDS	1653				hypothetical protein
+KNPMNEEE_00574	CDS	1512	bcsA	2.4.1.12	COG1215	Cellulose synthase catalytic subunit [UDP-forming]
+KNPMNEEE_00575	CDS	192				hypothetical protein
+KNPMNEEE_00576	CDS	2466				hypothetical protein
+KNPMNEEE_00577	CDS	714	fdhF_1	1.17.1.9	COG0243	Formate dehydrogenase H
+KNPMNEEE_00578	CDS	1191	fdhF_2	1.17.1.9	COG0243	Formate dehydrogenase H
+KNPMNEEE_00579	CDS	108				hypothetical protein
+KNPMNEEE_00580	CDS	786				hypothetical protein
+KNPMNEEE_00581	CDS	567				hypothetical protein
+KNPMNEEE_00582	CDS	135				hypothetical protein
+KNPMNEEE_00583	CDS	300				IS607 family transposase ISTvo1
+KNPMNEEE_00584	tRNA	73				tRNA-Val(tac)
+KNPMNEEE_00585	CDS	378				hypothetical protein
+KNPMNEEE_00586	CDS	276				hypothetical protein
+KNPMNEEE_00587	CDS	2037	topB	5.6.2.1	COG0550	DNA topoisomerase 3
+KNPMNEEE_00588	CDS	894				hypothetical protein
+KNPMNEEE_00589	CDS	465	purH_1		COG0138	Bifunctional purine biosynthesis protein PurH
+KNPMNEEE_00590	CDS	1047	purH_2			Bifunctional purine biosynthesis protein PurH
+KNPMNEEE_00591	CDS	1176	polX_1		COG1387	DNA polymerase/3'-5' exonuclease PolX
+KNPMNEEE_00592	CDS	543	polX_2		COG1387	DNA polymerase/3'-5' exonuclease PolX
+KNPMNEEE_00593	CDS	393				hypothetical protein
+KNPMNEEE_00594	CDS	456				hypothetical protein
+KNPMNEEE_00595	CDS	777				hypothetical protein
+KNPMNEEE_00596	CDS	1215	mat	2.5.1.6		S-adenosylmethionine synthase
+KNPMNEEE_00597	CDS	393				hypothetical protein
+KNPMNEEE_00598	CDS	402				hypothetical protein
+KNPMNEEE_00599	CDS	990				hypothetical protein
+KNPMNEEE_00600	CDS	1578	ppcA	4.1.1.31		Phosphoenolpyruvate carboxylase
+KNPMNEEE_00601	CDS	258				hypothetical protein
+KNPMNEEE_00602	CDS	327				hypothetical protein
+KNPMNEEE_00603	CDS	2094	fni_1	5.3.3.2		Isopentenyl-diphosphate delta-isomerase
+KNPMNEEE_00604	CDS	1896	purF_1	2.4.2.14		Amidophosphoribosyltransferase
+KNPMNEEE_00605	CDS	1140	yjiB_2	1.14.-.-	COG2124	Putative cytochrome P450 YjiB
+KNPMNEEE_00606	CDS	777				hypothetical protein
+KNPMNEEE_00607	CDS	1854				hypothetical protein
+KNPMNEEE_00608	CDS	969	hemB	4.2.1.24		Delta-aminolevulinic acid dehydratase
+KNPMNEEE_00609	CDS	720	queC	6.3.4.20	COG0603	7-cyano-7-deazaguanine synthase
+KNPMNEEE_00610	CDS	936		1.1.1.-		Putative 2-hydroxyacid dehydrogenase
+KNPMNEEE_00611	CDS	663				hypothetical protein
+KNPMNEEE_00612	CDS	516				hypothetical protein
+KNPMNEEE_00613	CDS	606				hypothetical protein
+KNPMNEEE_00614	CDS	600	pspB_1	3.1.3.3	COG0406	Putative phosphoserine phosphatase 2
+KNPMNEEE_00615	CDS	1560	yveA_4		COG0531	Aspartate-proton symporter
+KNPMNEEE_00616	CDS	1302	arcA_1	3.5.3.6		Arginine deiminase
+KNPMNEEE_00617	CDS	900	argF_1	2.1.3.3	COG0078	Ornithine carbamoyltransferase
+KNPMNEEE_00618	CDS	858	arcC2	2.7.2.2		Carbamate kinase 2
+KNPMNEEE_00619	CDS	639	amt_1			Ammonia channel
+KNPMNEEE_00620	CDS	537	amt_2			Ammonia channel
+KNPMNEEE_00621	tRNA	77				tRNA-Arg(tct)
+KNPMNEEE_00622	CDS	246				hypothetical protein
+KNPMNEEE_00623	CDS	411				hypothetical protein
+KNPMNEEE_00624	CDS	711	dnaJ_1			Chaperone protein DnaJ
+KNPMNEEE_00625	CDS	1230		3.1.-.-	COG1236	Ribonuclease
+KNPMNEEE_00626	CDS	774	mtnP	2.4.2.28	COG0005	S-methyl-5'-thioadenosine phosphorylase
+KNPMNEEE_00627	CDS	729				hypothetical protein
+KNPMNEEE_00628	CDS	420	hldE	2.7.7.70		Bifunctional protein HldE
+KNPMNEEE_00629	CDS	384				hypothetical protein
+KNPMNEEE_00630	CDS	234				hypothetical protein
+KNPMNEEE_00631	CDS	165				hypothetical protein
+KNPMNEEE_00632	CDS	546				hypothetical protein
+KNPMNEEE_00633	CDS	633	nth_1	4.2.99.18	COG0177	Endonuclease III
+KNPMNEEE_00634	CDS	603				hypothetical protein
+KNPMNEEE_00635	CDS	1140	gmd_2	4.2.1.47		GDP-mannose 4,6-dehydratase
+KNPMNEEE_00636	CDS	723	glmU	2.7.7.23		Bifunctional protein GlmU
+KNPMNEEE_00637	CDS	936	ttuA	2.8.1.15	COG0037	tRNA-5-methyluridine(54) 2-sulfurtransferase
+KNPMNEEE_00638	tRNA	75				tRNA-Ile(gat)
+KNPMNEEE_00639	CDS	852	dpnM	2.1.1.72		Modification methylase DpnIIA
+KNPMNEEE_00640	CDS	882				hypothetical protein
+KNPMNEEE_00641	CDS	147				hypothetical protein
+KNPMNEEE_00642	CDS	609				hypothetical protein
+KNPMNEEE_00643	CDS	210				hypothetical protein
+KNPMNEEE_00644	CDS	549	tam	2.1.1.144		Trans-aconitate 2-methyltransferase
+KNPMNEEE_00645	CDS	378				hypothetical protein
+KNPMNEEE_00646	CDS	624				hypothetical protein
+KNPMNEEE_00647	CDS	1677	hutU	4.2.1.49	COG2987	Urocanate hydratase
+KNPMNEEE_00648	CDS	1191	naiP_2			Putative niacin/nicotinamide transporter NaiP
+KNPMNEEE_00649	CDS	90				hypothetical protein
+KNPMNEEE_00650	CDS	1257	glpA	1.1.5.3	COG0578	Anaerobic glycerol-3-phosphate dehydrogenase subunit A
+KNPMNEEE_00651	CDS	450				hypothetical protein
+KNPMNEEE_00652	CDS	825	lysX_1	6.3.2.43	COG0189	Alpha-aminoadipate--LysW ligase LysX
+KNPMNEEE_00653	CDS	951	hisC_2	2.6.1.9	COG0079	Histidinol-phosphate aminotransferase
+KNPMNEEE_00654	CDS	900		2.1.2.5	COG3643	Glutamate formimidoyltransferase
+KNPMNEEE_00655	CDS	432				hypothetical protein
+KNPMNEEE_00656	CDS	294				hypothetical protein
+KNPMNEEE_00657	CDS	423				hypothetical protein
+KNPMNEEE_00658	CDS	522				hypothetical protein
+KNPMNEEE_00659	CDS	219				hypothetical protein
+KNPMNEEE_00660	CDS	1299	csbC_3			putative metabolite transport protein CsbC
+KNPMNEEE_00661	CDS	690	hyuA	3.5.2.-	COG0044	D-phenylhydantoinase
+KNPMNEEE_00662	CDS	633		3.5.2.-		D-hydantoinase
+KNPMNEEE_00663	CDS	144				hypothetical protein
+KNPMNEEE_00664	CDS	330				hypothetical protein
+KNPMNEEE_00665	CDS	825				IS256 family transposase ISFac8
+KNPMNEEE_00666	CDS	237				hypothetical protein
+KNPMNEEE_00667	CDS	258				hypothetical protein
+KNPMNEEE_00668	CDS	4113				hypothetical protein
+KNPMNEEE_00669	CDS	342				hypothetical protein
+KNPMNEEE_00670	CDS	2109			COG1123	putative ABC transporter ATP-binding protein
+KNPMNEEE_00671	CDS	2190				hypothetical protein
+KNPMNEEE_00672	CDS	990	gsiC		COG0601	Glutathione transport system permease protein GsiC
+KNPMNEEE_00673	CDS	744	fabG_2	1.1.1.100		3-oxoacyl-[acyl-carrier-protein] reductase FabG
+KNPMNEEE_00674	CDS	600	betI			HTH-type transcriptional regulator BetI
+KNPMNEEE_00675	CDS	996	fabH	2.3.1.180	COG0332	3-oxoacyl-[acyl-carrier-protein] synthase 3
+KNPMNEEE_00676	CDS	312		6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase FadD13
+KNPMNEEE_00677	CDS	1086	lcfB_1	6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase
+KNPMNEEE_00678	CDS	831	catD	3.1.1.24	COG0596	3-oxoadipate enol-lactonase 2
+KNPMNEEE_00679	CDS	1401	ydjE_2			Inner membrane metabolite transport protein YdjE
+KNPMNEEE_00680	CDS	405				hypothetical protein
+KNPMNEEE_00681	CDS	141				hypothetical protein
+KNPMNEEE_00682	CDS	177				hypothetical protein
+KNPMNEEE_00683	CDS	183				hypothetical protein
+KNPMNEEE_00684	CDS	351				hypothetical protein
+KNPMNEEE_00685	CDS	1179	mdtG			Multidrug resistance protein MdtG
+KNPMNEEE_00686	CDS	258				hypothetical protein
+KNPMNEEE_00687	CDS	1005				hypothetical protein
+KNPMNEEE_00688	CDS	204				hypothetical protein
+KNPMNEEE_00689	CDS	633				hypothetical protein
+KNPMNEEE_00690	CDS	1050				hypothetical protein
+KNPMNEEE_00691	CDS	501				hypothetical protein
+KNPMNEEE_00692	CDS	381				hypothetical protein
+KNPMNEEE_00693	CDS	747	cobS	2.7.8.26		Adenosylcobinamide-GDP ribazoletransferase
+KNPMNEEE_00694	CDS	513	yrdA_1		COG0663	Protein YrdA
+KNPMNEEE_00695	CDS	828	aptA	2.2.1.-	COG3959	Apulose-4-phosphate transketolase subunit A
+KNPMNEEE_00696	CDS	954	aptB	2.2.1.-	COG3958	Apulose-4-phosphate transketolase subunit B
+KNPMNEEE_00697	CDS	672	tal_1	2.2.1.2	COG0176	Transaldolase
+KNPMNEEE_00698	CDS	1914	rnj	3.1.-.-		Ribonuclease J
+KNPMNEEE_00699	CDS	633	prcB	3.4.25.1	COG0638	Proteasome subunit beta
+KNPMNEEE_00700	CDS	483				hypothetical protein
+KNPMNEEE_00701	CDS	258				hypothetical protein
+KNPMNEEE_00702	CDS	1605				hypothetical protein
+KNPMNEEE_00703	CDS	204				hypothetical protein
+KNPMNEEE_00704	CDS	174				hypothetical protein
+KNPMNEEE_00705	CDS	270				hypothetical protein
+KNPMNEEE_00706	CDS	162				hypothetical protein
+KNPMNEEE_00707	CDS	1749	lig	6.5.1.1		DNA ligase
+KNPMNEEE_00708	CDS	495				hypothetical protein
+KNPMNEEE_00709	CDS	258				hypothetical protein
+KNPMNEEE_00710	tRNA	75				tRNA-Met(cat)
+KNPMNEEE_00711	tRNA	74				tRNA-Asn(gtt)
+KNPMNEEE_00712	CDS	393				hypothetical protein
+KNPMNEEE_00713	CDS	1866	dinG	3.1.-.-		3'-5' exonuclease DinG
+KNPMNEEE_00714	CDS	1194				hypothetical protein
+KNPMNEEE_00715	CDS	666		2.4.-.-	COG0463	putative glycosyltransferase
+KNPMNEEE_00716	CDS	618	rnhB	3.1.26.4	COG0164	Ribonuclease HII
+KNPMNEEE_00717	CDS	534				hypothetical protein
+KNPMNEEE_00718	CDS	1677				hypothetical protein
+KNPMNEEE_00719	CDS	198				hypothetical protein
+KNPMNEEE_00720	CDS	492				hypothetical protein
+KNPMNEEE_00721	CDS	900				hypothetical protein
+KNPMNEEE_00722	CDS	768	fabG_3	1.1.1.100		3-oxoacyl-[acyl-carrier-protein] reductase FabG
+KNPMNEEE_00723	CDS	972				hypothetical protein
+KNPMNEEE_00724	CDS	186				hypothetical protein
+KNPMNEEE_00725	CDS	1161				hypothetical protein
+KNPMNEEE_00726	CDS	993	ispB	2.5.1.90	COG0142	Octaprenyl diphosphate synthase
+KNPMNEEE_00727	CDS	294				hypothetical protein
+KNPMNEEE_00728	CDS	390				hypothetical protein
+KNPMNEEE_00729	CDS	252				hypothetical protein
+KNPMNEEE_00730	tRNA	86				tRNA-Leu(taa)
+KNPMNEEE_00731	CDS	1737	mdlC_3	4.1.1.7		Benzoylformate decarboxylase
+KNPMNEEE_00732	tRNA	74				tRNA-Arg(gcg)
+KNPMNEEE_00733	CDS	906	argF_2	2.1.3.3	COG0078	Ornithine carbamoyltransferase
+KNPMNEEE_00734	CDS	786	ahpF	1.8.1.-	COG3634	Alkyl hydroperoxide reductase subunit F
+KNPMNEEE_00735	CDS	195				hypothetical protein
+KNPMNEEE_00736	CDS	1638	groL_1		COG0459	60 kDa chaperonin
+KNPMNEEE_00737	CDS	1554	thyX	2.1.1.148		Flavin-dependent thymidylate synthase
+KNPMNEEE_00738	CDS	843				hypothetical protein
+KNPMNEEE_00739	CDS	468				hypothetical protein
+KNPMNEEE_00740	tRNA	73				tRNA-Gln(ctg)
+KNPMNEEE_00741	CDS	1071	aroC	4.2.3.5	COG0082	Chorismate synthase
+KNPMNEEE_00742	CDS	1728				hypothetical protein
+KNPMNEEE_00743	CDS	1065				hypothetical protein
+KNPMNEEE_00744	CDS	690				hypothetical protein
+KNPMNEEE_00745	CDS	714				hypothetical protein
+KNPMNEEE_00746	CDS	369				hypothetical protein
+KNPMNEEE_00747	CDS	318				hypothetical protein
+KNPMNEEE_00748	CDS	810	acsA_2	6.2.1.1	COG0365	Acetyl-coenzyme A synthetase
+KNPMNEEE_00749	CDS	288	acsA_3	6.2.1.1	COG0365	Acetyl-coenzyme A synthetase
+KNPMNEEE_00750	CDS	483				hypothetical protein
+KNPMNEEE_00751	CDS	585				hypothetical protein
+KNPMNEEE_00752	CDS	975	acs_2	6.2.1.1		Acetyl-coenzyme A synthetase
+KNPMNEEE_00753	CDS	882	fixB_1		COG2025	Protein FixB
+KNPMNEEE_00754	CDS	801	fixA			Protein FixA
+KNPMNEEE_00755	CDS	276				hypothetical protein
+KNPMNEEE_00756	CDS	3306				hypothetical protein
+KNPMNEEE_00757	CDS	603	fchA	3.5.4.9	COG3404	Methenyltetrahydrofolate cyclohydrolase
+KNPMNEEE_00758	CDS	321	fhs_1	6.3.4.3	COG2759	Formate--tetrahydrofolate ligase
+KNPMNEEE_00759	CDS	1314	fhs_2	6.3.4.3	COG2759	Formate--tetrahydrofolate ligase
+KNPMNEEE_00760	CDS	1251	csbC_4			putative metabolite transport protein CsbC
+KNPMNEEE_00761	CDS	450				hypothetical protein
+KNPMNEEE_00762	CDS	1233				hypothetical protein
+KNPMNEEE_00763	CDS	1125	mmgC_1	1.3.99.-	COG1960	Acyl-CoA dehydrogenase
+KNPMNEEE_00764	CDS	1206	tdcB	4.3.1.19	COG1171	L-threonine ammonia-lyase
+KNPMNEEE_00765	CDS	270	acyP	3.6.1.7	COG1254	Acylphosphatase
+KNPMNEEE_00766	CDS	630				hypothetical protein
+KNPMNEEE_00767	CDS	1467	ythA_1	1.10.3.-	COG1271	Putative cytochrome bd menaquinol oxidase subunit I
+KNPMNEEE_00768	CDS	1092				hypothetical protein
+KNPMNEEE_00769	CDS	1083	obg	3.6.5.-		GTPase Obg
+KNPMNEEE_00770	CDS	543	prmC	2.1.1.297		Release factor glutamine methyltransferase
+KNPMNEEE_00771	CDS	2685	smc_1			Chromosome partition protein Smc
+KNPMNEEE_00772	CDS	1119	cpdA	3.1.4.53		3',5'-cyclic adenosine monophosphate phosphodiesterase CpdA
+KNPMNEEE_00773	CDS	1554				hypothetical protein
+KNPMNEEE_00774	CDS	1065				hypothetical protein
+KNPMNEEE_00775	CDS	159				hypothetical protein
+KNPMNEEE_00776	CDS	900				hypothetical protein
+KNPMNEEE_00777	tRNA	73				tRNA-Val(cac)
+KNPMNEEE_00778	CDS	255				hypothetical protein
+KNPMNEEE_00779	CDS	525				hypothetical protein
+KNPMNEEE_00780	CDS	1086				hypothetical protein
+KNPMNEEE_00781	CDS	261				hypothetical protein
+KNPMNEEE_00782	CDS	282				hypothetical protein
+KNPMNEEE_00783	CDS	384				hypothetical protein
+KNPMNEEE_00784	CDS	120				hypothetical protein
+KNPMNEEE_00785	CDS	258				hypothetical protein
+KNPMNEEE_00786	CDS	915				hypothetical protein
+KNPMNEEE_00787	CDS	1389				hypothetical protein
+KNPMNEEE_00788	tRNA	76				tRNA-Glu(ttc)
+KNPMNEEE_00789	CDS	1281	purA	6.3.4.4	COG0104	Adenylosuccinate synthetase
+KNPMNEEE_00790	CDS	690	prcA			Proteasome subunit alpha
+KNPMNEEE_00791	CDS	831				hypothetical protein
+KNPMNEEE_00792	CDS	678				hypothetical protein
+KNPMNEEE_00793	CDS	186				hypothetical protein
+KNPMNEEE_00794	CDS	273				hypothetical protein
+KNPMNEEE_00795	CDS	486				hypothetical protein
+KNPMNEEE_00796	CDS	408				hypothetical protein
+KNPMNEEE_00797	CDS	240				hypothetical protein
+KNPMNEEE_00798	CDS	1038	frbC	2.3.3.19		2-phosphonomethylmalate synthase
+KNPMNEEE_00799	CDS	1119	frc	2.8.3.16		Formyl-CoA:oxalate CoA-transferase
+KNPMNEEE_00800	CDS	1365	ydjE_3			Inner membrane metabolite transport protein YdjE
+KNPMNEEE_00801	CDS	1245	mntH		COG1914	Divalent metal cation transporter MntH
+KNPMNEEE_00802	CDS	318				hypothetical protein
+KNPMNEEE_00803	CDS	114				hypothetical protein
+KNPMNEEE_00804	tRNA	73				tRNA-Pro(ggg)
+KNPMNEEE_00805	CDS	222				hypothetical protein
+KNPMNEEE_00806	CDS	405				hypothetical protein
+KNPMNEEE_00807	CDS	414				hypothetical protein
+KNPMNEEE_00808	CDS	369				hypothetical protein
+KNPMNEEE_00809	CDS	195				hypothetical protein
+KNPMNEEE_00810	CDS	1344	ygcS_1			Inner membrane metabolite transport protein YgcS
+KNPMNEEE_00811	CDS	711	trmJ	2.1.1.-		tRNA (cytidine/uridine/adenosine-2'-O-)-methyltransferase TrmJ
+KNPMNEEE_00812	CDS	774				hypothetical protein
+KNPMNEEE_00813	CDS	1482	Vejahgd	1.2.1.92	COG1012	3,6-anhydro-alpha-L-galactose dehydrogenase
+KNPMNEEE_00814	CDS	1680	pyk	2.7.1.40		Pyruvate kinase
+KNPMNEEE_00815	CDS	1629	argS	6.1.1.19	COG0018	Arginine--tRNA ligase
+KNPMNEEE_00816	CDS	1074	aroB	4.2.3.4	COG0337	3-dehydroquinate synthase
+KNPMNEEE_00817	CDS	789	aroE	1.1.1.25	COG0169	Shikimate dehydrogenase (NADP(+))
+KNPMNEEE_00818	CDS	819	thrB_1	2.7.1.39		Homoserine kinase
+KNPMNEEE_00819	CDS	1272	aroA	2.5.1.19	COG0128	3-phosphoshikimate 1-carboxyvinyltransferase
+KNPMNEEE_00820	rRNA	1429				16S ribosomal RNA
+KNPMNEEE_00821	CDS	219				hypothetical protein
+KNPMNEEE_00822	CDS	897				hypothetical protein
+KNPMNEEE_00823	CDS	1368				hypothetical protein
+KNPMNEEE_00824	CDS	450				hypothetical protein
+KNPMNEEE_00825	CDS	501	bcp_1	1.11.1.15	COG1225	Putative peroxiredoxin bcp
+KNPMNEEE_00826	CDS	147				hypothetical protein
+KNPMNEEE_00827	CDS	303				hypothetical protein
+KNPMNEEE_00828	CDS	957				hypothetical protein
+KNPMNEEE_00829	CDS	645	rplA		COG0081	50S ribosomal protein L1
+KNPMNEEE_00830	CDS	477	rplK		COG0080	50S ribosomal protein L11
+KNPMNEEE_00831	CDS	666	comB	3.1.3.71	COG2045	putative 2-phosphosulfolactate phosphatase
+KNPMNEEE_00832	CDS	675				hypothetical protein
+KNPMNEEE_00833	CDS	1128				hypothetical protein
+KNPMNEEE_00834	CDS	216				hypothetical protein
+KNPMNEEE_00835	CDS	750	yycJ	3.-.-.-	COG1235	Putative metallo-hydrolase YycJ
+KNPMNEEE_00836	CDS	996		1.18.1.2	COG0492	Ferredoxin--NADP reductase
+KNPMNEEE_00837	CDS	1005				hypothetical protein
+KNPMNEEE_00838	CDS	1203	miaB_1	2.8.4.3	COG0621	tRNA-2-methylthio-N(6)-dimethylallyladenosine synthase
+KNPMNEEE_00839	CDS	159				hypothetical protein
+KNPMNEEE_00840	CDS	531				hypothetical protein
+KNPMNEEE_00841	CDS	1413	aspA	4.3.1.1	COG1027	Aspartate ammonia-lyase
+KNPMNEEE_00842	CDS	1122	icd_1	1.1.1.42	COG0538	Isocitrate dehydrogenase [NADP]
+KNPMNEEE_00843	CDS	849				hypothetical protein
+KNPMNEEE_00844	CDS	942				hypothetical protein
+KNPMNEEE_00845	CDS	2607	alaS_1	6.1.1.7	COG0013	Alanine--tRNA ligase
+KNPMNEEE_00846	CDS	519	tadA	3.5.4.33		tRNA-specific adenosine deaminase
+KNPMNEEE_00847	CDS	540				hypothetical protein
+KNPMNEEE_00848	CDS	582				hypothetical protein
+KNPMNEEE_00849	CDS	417				hypothetical protein
+KNPMNEEE_00850	CDS	1014	thrC_1	4.2.3.1	COG0498	Threonine synthase
+KNPMNEEE_00851	CDS	2199	fusA		COG0480	Elongation factor G
+KNPMNEEE_00852	CDS	312	rpsJ		COG0051	30S ribosomal protein S10
+KNPMNEEE_00853	CDS	1281	tuf_1		COG0050	Elongation factor Tu
+KNPMNEEE_00854	CDS	315				hypothetical protein
+KNPMNEEE_00855	CDS	519				hypothetical protein
+KNPMNEEE_00856	CDS	108				hypothetical protein
+KNPMNEEE_00857	CDS	351				hypothetical protein
+KNPMNEEE_00858	CDS	3075	ileS	6.1.1.5	COG0060	Isoleucine--tRNA ligase
+KNPMNEEE_00859	CDS	318				hypothetical protein
+KNPMNEEE_00860	CDS	282				hypothetical protein
+KNPMNEEE_00861	CDS	201				hypothetical protein
+KNPMNEEE_00862	CDS	762	pnp	2.7.7.8		Polyribonucleotide nucleotidyltransferase
+KNPMNEEE_00863	CDS	180				hypothetical protein
+KNPMNEEE_00864	CDS	753				hypothetical protein
+KNPMNEEE_00865	CDS	618				hypothetical protein
+KNPMNEEE_00866	CDS	1266				hypothetical protein
+KNPMNEEE_00867	CDS	267	fdhB1		COG0437	Formate dehydrogenase iron-sulfur subunit
+KNPMNEEE_00868	CDS	1392				hypothetical protein
+KNPMNEEE_00869	CDS	648	gpt	2.4.2.22		Xanthine phosphoribosyltransferase
+KNPMNEEE_00870	CDS	1158	bcd	1.3.8.1	COG1960	Acyl-CoA dehydrogenase, short-chain specific
+KNPMNEEE_00871	CDS	381				hypothetical protein
+KNPMNEEE_00872	CDS	111				hypothetical protein
+KNPMNEEE_00873	CDS	387				hypothetical protein
+KNPMNEEE_00874	CDS	198				hypothetical protein
+KNPMNEEE_00875	CDS	2136	metG_1	6.1.1.10	COG0073	Methionine--tRNA ligase
+KNPMNEEE_00876	CDS	180				hypothetical protein
+KNPMNEEE_00877	CDS	534	yvqK	2.5.1.17	COG2096	Corrinoid adenosyltransferase
+KNPMNEEE_00878	CDS	660	lipB_1	2.3.1.181	COG0321	Octanoyltransferase
+KNPMNEEE_00879	CDS	1290	pdhD	1.8.1.4		Dihydrolipoyl dehydrogenase
+KNPMNEEE_00880	CDS	1161	pdhC	2.3.1.12		Dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex
+KNPMNEEE_00881	CDS	951	bkdA2	1.2.4.4	COG0022	2-oxoisovalerate dehydrogenase subunit beta
+KNPMNEEE_00882	CDS	1035	bfmBAA	1.2.4.4	COG1071	2-oxoisovalerate dehydrogenase subunit alpha
+KNPMNEEE_00883	CDS	855	lipA	2.8.1.8		Lipoyl synthase
+KNPMNEEE_00884	CDS	990				hypothetical protein
+KNPMNEEE_00885	CDS	1410	naiP_3			Putative niacin/nicotinamide transporter NaiP
+KNPMNEEE_00886	CDS	411				hypothetical protein
+KNPMNEEE_00887	CDS	678				hypothetical protein
+KNPMNEEE_00888	CDS	1095	btuD_1	7.6.2.8		Vitamin B12 import ATP-binding protein BtuD
+KNPMNEEE_00889	CDS	1731	mdtD_3			Putative multidrug resistance protein MdtD
+KNPMNEEE_00890	CDS	228				hypothetical protein
+KNPMNEEE_00891	CDS	111				hypothetical protein
+KNPMNEEE_00892	CDS	1872	QTRT1	2.4.2.29		Queuine tRNA-ribosyltransferase catalytic subunit 1
+KNPMNEEE_00893	CDS	636				hypothetical protein
+KNPMNEEE_00894	CDS	507				hypothetical protein
+KNPMNEEE_00895	CDS	645				hypothetical protein
+KNPMNEEE_00896	CDS	906				hypothetical protein
+KNPMNEEE_00897	CDS	1443	iolT			Major myo-inositol transporter IolT
+KNPMNEEE_00898	CDS	888				hypothetical protein
+KNPMNEEE_00899	CDS	639				hypothetical protein
+KNPMNEEE_00900	CDS	729				hypothetical protein
+KNPMNEEE_00901	CDS	705				hypothetical protein
+KNPMNEEE_00902	CDS	969				hypothetical protein
+KNPMNEEE_00903	CDS	669	rpiA	5.3.1.6	COG0120	Ribose-5-phosphate isomerase A
+KNPMNEEE_00904	CDS	897	ubiA	2.5.1.39	COG0382	4-hydroxybenzoate octaprenyltransferase
+KNPMNEEE_00905	CDS	867				hypothetical protein
+KNPMNEEE_00906	CDS	651				hypothetical protein
+KNPMNEEE_00907	CDS	546	ycgJ	2.1.1.-		putative methyltransferase YcgJ
+KNPMNEEE_00908	tRNA	86				tRNA-Leu(tag)
+KNPMNEEE_00909	CDS	576				hypothetical protein
+KNPMNEEE_00910	CDS	1974	pat	2.3.1.-	COG0454	Peptidyl-lysine N-acetyltransferase Pat
+KNPMNEEE_00911	CDS	846	COQ2	2.5.1.39		4-hydroxybenzoate polyprenyltransferase, mitochondrial
+KNPMNEEE_00912	CDS	780				hypothetical protein
+KNPMNEEE_00913	CDS	3243				hypothetical protein
+KNPMNEEE_00914	CDS	333				hypothetical protein
+KNPMNEEE_00915	CDS	1611	pyrG	6.3.4.2		CTP synthase
+KNPMNEEE_00916	CDS	1362	naiP_4			Putative niacin/nicotinamide transporter NaiP
+KNPMNEEE_00917	CDS	495				hypothetical protein
+KNPMNEEE_00918	CDS	1416				hypothetical protein
+KNPMNEEE_00919	CDS	1029				hypothetical protein
+KNPMNEEE_00920	CDS	960	thrC_2	4.2.3.1	COG0498	Threonine synthase
+KNPMNEEE_00921	CDS	774				hypothetical protein
+KNPMNEEE_00922	CDS	1320				hypothetical protein
+KNPMNEEE_00923	CDS	1302	glyA_2	2.1.2.1	COG0112	Serine hydroxymethyltransferase
+KNPMNEEE_00924	CDS	630				hypothetical protein
+KNPMNEEE_00925	CDS	360				hypothetical protein
+KNPMNEEE_00926	CDS	771	paaG	5.3.3.18	COG1024	1,2-epoxyphenylacetyl-CoA isomerase
+KNPMNEEE_00927	CDS	303	rhaM	5.1.3.32		L-rhamnose mutarotase
+KNPMNEEE_00928	CDS	1098	mqnE_1	2.5.1.120	COG1060	Aminodeoxyfutalosine synthase
+KNPMNEEE_00929	CDS	723	mqnA	4.2.1.151		Chorismate dehydratase
+KNPMNEEE_00930	CDS	1101	mqnE_2	2.5.1.120	COG1060	Aminodeoxyfutalosine synthase
+KNPMNEEE_00931	CDS	657	maiA	5.2.1.1	COG3473	Maleate isomerase
+KNPMNEEE_00932	CDS	129				hypothetical protein
+KNPMNEEE_00933	CDS	735	arcB	1.5.1.49		Delta(1)-pyrroline-2-carboxylate reductase
+KNPMNEEE_00934	CDS	564				hypothetical protein
+KNPMNEEE_00935	CDS	609	purN	2.1.2.2	COG0299	Phosphoribosylglycinamide formyltransferase
+KNPMNEEE_00936	CDS	285				hypothetical protein
+KNPMNEEE_00937	CDS	696		1.11.1.15	COG0450	Peroxiredoxin
+KNPMNEEE_00938	CDS	423				hypothetical protein
+KNPMNEEE_00939	tRNA	72				tRNA-Ala(cgc)
+KNPMNEEE_00940	CDS	1206				hypothetical protein
+KNPMNEEE_00941	CDS	630				hypothetical protein
+KNPMNEEE_00942	CDS	180				hypothetical protein
+KNPMNEEE_00943	CDS	336				hypothetical protein
+KNPMNEEE_00944	CDS	405				hypothetical protein
+KNPMNEEE_00945	CDS	1776				hypothetical protein
+KNPMNEEE_00946	CDS	354				hypothetical protein
+KNPMNEEE_00947	CDS	201				hypothetical protein
+KNPMNEEE_00948	CDS	753	soj_1	3.6.-.-	COG1192	Sporulation initiation inhibitor protein Soj
+KNPMNEEE_00949	CDS	276				hypothetical protein
+KNPMNEEE_00950	CDS	510				hypothetical protein
+KNPMNEEE_00951	CDS	180				hypothetical protein
+KNPMNEEE_00952	CDS	615	pinR	3.1.22.-	COG1961	Serine recombinase PinR
+KNPMNEEE_00953	CDS	1071				hypothetical protein
+KNPMNEEE_00954	CDS	1851				hypothetical protein
+KNPMNEEE_00955	CDS	2538				hypothetical protein
+KNPMNEEE_00956	CDS	174				hypothetical protein
+KNPMNEEE_00957	CDS	1458				hypothetical protein
+KNPMNEEE_00958	CDS	378	vapC_1	3.1.-.-		tRNA(fMet)-specific endonuclease VapC
+KNPMNEEE_00959	CDS	213				hypothetical protein
+KNPMNEEE_00960	CDS	156				hypothetical protein
+KNPMNEEE_00961	CDS	228				hypothetical protein
+KNPMNEEE_00962	CDS	459				hypothetical protein
+KNPMNEEE_00963	CDS	216				hypothetical protein
+KNPMNEEE_00964	CDS	552				IS200/IS605 family transposase ISMma22
+KNPMNEEE_00965	CDS	471				hypothetical protein
+KNPMNEEE_00966	CDS	1086				hypothetical protein
+KNPMNEEE_00967	CDS	483				hypothetical protein
+KNPMNEEE_00968	CDS	666				IS200/IS605 family transposase ISHaha7
+KNPMNEEE_00969	CDS	507	ogt	2.1.1.63	COG0350	Methylated-DNA--protein-cysteine methyltransferase
+KNPMNEEE_00970	CDS	1419				hypothetical protein
+KNPMNEEE_00971	CDS	582	yraA_2	3.2.-.-	COG0693	Putative cysteine protease YraA
+KNPMNEEE_00972	CDS	303				hypothetical protein
+KNPMNEEE_00973	CDS	1281	ttuB			Putative tartrate transporter
+KNPMNEEE_00974	CDS	1437				hypothetical protein
+KNPMNEEE_00975	CDS	312				hypothetical protein
+KNPMNEEE_00976	CDS	252				hypothetical protein
+KNPMNEEE_00977	CDS	255				hypothetical protein
+KNPMNEEE_00978	CDS	993			COG3938	putative protein/GBAA_2834/BAS2643
+KNPMNEEE_00979	CDS	1146		3.5.1.47		N-acetyldiaminopimelate deacetylase
+KNPMNEEE_00980	CDS	117				hypothetical protein
+KNPMNEEE_00981	CDS	525				hypothetical protein
+KNPMNEEE_00982	CDS	300				hypothetical protein
+KNPMNEEE_00983	CDS	876				IS256 family transposase ISFac8
+KNPMNEEE_00984	CDS	237				hypothetical protein
+KNPMNEEE_00985	CDS	153				hypothetical protein
+KNPMNEEE_00986	CDS	192				hypothetical protein
+KNPMNEEE_00987	CDS	1155	ycaD			putative MFS-type transporter YcaD
+KNPMNEEE_00988	CDS	165				hypothetical protein
+KNPMNEEE_00989	CDS	147				hypothetical protein
+KNPMNEEE_00990	CDS	762	fadH	1.3.1.34	COG1028	putative 2,4-dienoyl-CoA reductase
+KNPMNEEE_00991	CDS	354				hypothetical protein
+KNPMNEEE_00992	CDS	270				hypothetical protein
+KNPMNEEE_00993	CDS	201				hypothetical protein
+KNPMNEEE_00994	CDS	321				hypothetical protein
+KNPMNEEE_00995	CDS	645	galE1	5.1.3.2	COG1088	UDP-glucose 4-epimerase
+KNPMNEEE_00996	CDS	198				hypothetical protein
+KNPMNEEE_00997	CDS	1290	hisS	6.1.1.21		Histidine--tRNA ligase
+KNPMNEEE_00998	CDS	234				hypothetical protein
+KNPMNEEE_00999	CDS	306				hypothetical protein
+KNPMNEEE_01000	CDS	1038				hypothetical protein
+KNPMNEEE_01001	CDS	975	guaA_1	6.3.5.2		GMP synthase [glutamine-hydrolyzing]
+KNPMNEEE_01002	CDS	603				hypothetical protein
+KNPMNEEE_01003	CDS	867				hypothetical protein
+KNPMNEEE_01004	CDS	498				hypothetical protein
+KNPMNEEE_01005	CDS	1203	lysN	2.6.1.39	COG1167	2-aminoadipate transaminase
+KNPMNEEE_01006	CDS	975		3.6.1.-		Inosine/xanthosine triphosphatase
+KNPMNEEE_01007	CDS	891				hypothetical protein
+KNPMNEEE_01008	CDS	1128				IS200/IS605 family transposase ISHvo24
+KNPMNEEE_01009	CDS	303	sufT			Fe-S protein maturation auxiliary factor SufT
+KNPMNEEE_01010	CDS	606				hypothetical protein
+KNPMNEEE_01011	CDS	1245	truD	5.4.99.27	COG0585	tRNA pseudouridine synthase D
+KNPMNEEE_01012	CDS	222				hypothetical protein
+KNPMNEEE_01013	CDS	198				hypothetical protein
+KNPMNEEE_01014	CDS	1458	guaB	1.1.1.205	COG0516	Inosine-5'-monophosphate dehydrogenase
+KNPMNEEE_01015	CDS	1404				hypothetical protein
+KNPMNEEE_01016	CDS	342				hypothetical protein
+KNPMNEEE_01017	CDS	552				hypothetical protein
+KNPMNEEE_01018	CDS	1110				hypothetical protein
+KNPMNEEE_01019	CDS	117				hypothetical protein
+KNPMNEEE_01020	CDS	1251	leuC	4.2.1.33	COG0065	3-isopropylmalate dehydratase large subunit
+KNPMNEEE_01021	CDS	504	hacB	4.2.1.36	COG0066	Homoaconitase small subunit
+KNPMNEEE_01022	CDS	1170	sotB			sugar efflux transporter
+KNPMNEEE_01023	CDS	690				hypothetical protein
+KNPMNEEE_01024	CDS	225				hypothetical protein
+KNPMNEEE_01025	CDS	234				hypothetical protein
+KNPMNEEE_01026	CDS	1290	arsB		COG1055	Arsenical pump membrane protein
+KNPMNEEE_01027	CDS	1119	leuA_1	2.3.3.13		2-isopropylmalate synthase
+KNPMNEEE_01028	CDS	972	murK	2.7.1.-	COG2971	N-acetylmuramic acid/N-acetylglucosamine kinase
+KNPMNEEE_01029	CDS	417				hypothetical protein
+KNPMNEEE_01030	CDS	984	drrA	3.6.3.-		Daunorubicin/doxorubicin resistance ATP-binding protein DrrA
+KNPMNEEE_01031	CDS	804	drrB			Daunorubicin/doxorubicin resistance ABC transporter permease protein DrrB
+KNPMNEEE_01032	CDS	678	pyrH			Uridylate kinase
+KNPMNEEE_01033	CDS	1239				hypothetical protein
+KNPMNEEE_01034	CDS	993				hypothetical protein
+KNPMNEEE_01035	CDS	2235	ftsH_1	3.4.24.-		ATP-dependent zinc metalloprotease FtsH
+KNPMNEEE_01036	CDS	927	thrB_2	2.7.1.39	COG0083	Homoserine kinase
+KNPMNEEE_01037	CDS	1086	mccB	4.4.1.1	COG0626	Cystathionine gamma-lyase
+KNPMNEEE_01038	CDS	597				hypothetical protein
+KNPMNEEE_01039	CDS	624	sodB	1.15.1.1		Superoxide dismutase [Fe]
+KNPMNEEE_01040	CDS	630	ogg		COG1059	putative N-glycosylase/DNA lyase
+KNPMNEEE_01041	CDS	840	thiI_1	2.8.1.4	COG0301	tRNA sulfurtransferase
+KNPMNEEE_01042	CDS	537	thiI_2	2.8.1.4	COG0301	tRNA sulfurtransferase
+KNPMNEEE_01043	CDS	555		1.-.-.-	COG0431	NAD(P)H-dependent FMN reductase
+KNPMNEEE_01044	CDS	291				hypothetical protein
+KNPMNEEE_01045	CDS	1083	dgoD_2	4.2.1.6	COG4948	D-galactonate dehydratase
+KNPMNEEE_01046	CDS	1929				hypothetical protein
+KNPMNEEE_01047	CDS	243				hypothetical protein
+KNPMNEEE_01048	CDS	108				hypothetical protein
+KNPMNEEE_01049	CDS	651	atpD		COG1394	V-type ATP synthase subunit D
+KNPMNEEE_01050	CDS	1377	ntpB			V-type sodium ATPase subunit B
+KNPMNEEE_01051	CDS	213				hypothetical protein
+KNPMNEEE_01052	CDS	1524	ntpA	7.2.2.1		V-type sodium ATPase catalytic subunit A
+KNPMNEEE_01053	CDS	309	atpF			V-type ATP synthase subunit F
+KNPMNEEE_01054	CDS	1062	atpC			V-type ATP synthase subunit C
+KNPMNEEE_01055	CDS	570	atpE			V-type proton ATPase subunit E
+KNPMNEEE_01056	CDS	228				hypothetical protein
+KNPMNEEE_01057	CDS	1509				hypothetical protein
+KNPMNEEE_01058	CDS	897	btuD_2	7.6.2.8		Vitamin B12 import ATP-binding protein BtuD
+KNPMNEEE_01059	CDS	390				hypothetical protein
+KNPMNEEE_01060	CDS	312				hypothetical protein
+KNPMNEEE_01061	CDS	729				hypothetical protein
+KNPMNEEE_01062	CDS	300				hypothetical protein
+KNPMNEEE_01063	CDS	405				hypothetical protein
+KNPMNEEE_01064	CDS	210				hypothetical protein
+KNPMNEEE_01065	CDS	231				hypothetical protein
+KNPMNEEE_01066	CDS	144				hypothetical protein
+KNPMNEEE_01067	CDS	501				hypothetical protein
+KNPMNEEE_01068	CDS	1050	fni_2	5.3.3.2	COG1304	Isopentenyl-diphosphate delta-isomerase
+KNPMNEEE_01069	CDS	729	proB	2.7.2.11		Glutamate 5-kinase
+KNPMNEEE_01070	CDS	141				hypothetical protein
+KNPMNEEE_01071	CDS	255				hypothetical protein
+KNPMNEEE_01072	CDS	1659				hypothetical protein
+KNPMNEEE_01073	CDS	234				hypothetical protein
+KNPMNEEE_01074	CDS	510				hypothetical protein
+KNPMNEEE_01075	tRNA	74				tRNA-Ala(tgc)
+KNPMNEEE_01076	CDS	1107	gcvT	2.1.2.10	COG0404	Aminomethyltransferase
+KNPMNEEE_01077	CDS	228				hypothetical protein
+KNPMNEEE_01078	tRNA	73				tRNA-Phe(gaa)
+KNPMNEEE_01079	CDS	1167	leuA_2	2.3.3.13		2-isopropylmalate synthase
+KNPMNEEE_01080	CDS	1242	dmdA	4.2.1.85		2,3-dimethylmalate dehydratase large subunit
+KNPMNEEE_01081	CDS	483	DmdB	4.2.1.85		2,3-dimethylmalate dehydratase small subunit
+KNPMNEEE_01082	CDS	1071	hicd	1.1.1.87	COG0473	Homoisocitrate dehydrogenase
+KNPMNEEE_01083	CDS	1236	sqr	1.8.5.4	COG0446	Sulfide-quinone reductase
+KNPMNEEE_01084	CDS	648				hypothetical protein
+KNPMNEEE_01085	tRNA	74				tRNA-Gln(ttg)
+KNPMNEEE_01086	CDS	195				hypothetical protein
+KNPMNEEE_01087	CDS	1284				hypothetical protein
+KNPMNEEE_01088	CDS	333				hypothetical protein
+KNPMNEEE_01089	CDS	936				hypothetical protein
+KNPMNEEE_01090	CDS	1326	glnA	6.3.1.2	COG0174	Glutamine synthetase
+KNPMNEEE_01091	CDS	2319	valS_1	6.1.1.9		Valine--tRNA ligase
+KNPMNEEE_01092	CDS	1284	argH	4.3.2.1		Argininosuccinate lyase
+KNPMNEEE_01093	CDS	1242	argG	6.3.4.5	COG0137	Argininosuccinate synthase
+KNPMNEEE_01094	CDS	591				hypothetical protein
+KNPMNEEE_01095	CDS	435				hypothetical protein
+KNPMNEEE_01096	CDS	1008	purM	6.3.3.1		Phosphoribosylformylglycinamidine cyclo-ligase
+KNPMNEEE_01097	CDS	369				hypothetical protein
+KNPMNEEE_01098	CDS	339				hypothetical protein
+KNPMNEEE_01099	CDS	636		1.11.1.15	COG0450	Peroxiredoxin
+KNPMNEEE_01100	CDS	225				hypothetical protein
+KNPMNEEE_01101	CDS	240				hypothetical protein
+KNPMNEEE_01102	rRNA	2882				23S ribosomal RNA
+KNPMNEEE_01103	CDS	831	apbC		COG0489	Iron-sulfur cluster carrier protein
+KNPMNEEE_01104	CDS	897	rbsK	2.7.1.15	COG0524	Ribokinase
+KNPMNEEE_01105	CDS	426				hypothetical protein
+KNPMNEEE_01106	CDS	582	pyrE_1	2.4.2.10		Orotate phosphoribosyltransferase
+KNPMNEEE_01107	CDS	1524	lysS	6.1.1.6	COG1384	Lysine--tRNA ligase
+KNPMNEEE_01108	CDS	1089				hypothetical protein
+KNPMNEEE_01109	CDS	1914				hypothetical protein
+KNPMNEEE_01110	CDS	261				hypothetical protein
+KNPMNEEE_01111	CDS	348				hypothetical protein
+KNPMNEEE_01112	CDS	456	ppiB	5.2.1.8	COG0652	putative peptidyl-prolyl cis-trans isomerase
+KNPMNEEE_01113	CDS	1410	nanT_2			Sialic acid transporter NanT
+KNPMNEEE_01114	CDS	1011	adhT	1.1.1.1		Alcohol dehydrogenase
+KNPMNEEE_01115	CDS	756	prs	2.7.6.1	COG0462	Ribose-phosphate pyrophosphokinase
+KNPMNEEE_01116	CDS	573				hypothetical protein
+KNPMNEEE_01117	CDS	672				IS200/IS605 family transposase ISHaha7
+KNPMNEEE_01118	CDS	459				hypothetical protein
+KNPMNEEE_01119	CDS	1086				hypothetical protein
+KNPMNEEE_01120	CDS	1086	csbC_5			putative metabolite transport protein CsbC
+KNPMNEEE_01121	CDS	312				hypothetical protein
+KNPMNEEE_01122	CDS	831		3.1.1.99		6-deoxy-6-sulfogluconolactonase
+KNPMNEEE_01123	CDS	318	nagAb			Naphthalene 1,2-dioxygenase/salicylate 5-hydroxylase systems, ferredoxin component
+KNPMNEEE_01124	CDS	1689	fixB_2			Protein FixB
+KNPMNEEE_01125	CDS	582				hypothetical protein
+KNPMNEEE_01126	CDS	474	vapC_2	3.1.-.-		tRNA(fMet)-specific endonuclease VapC
+KNPMNEEE_01127	CDS	771				hypothetical protein
+KNPMNEEE_01128	CDS	768	ttuC	2.7.7.80	COG0476	Sulfur carrier protein adenylyltransferase
+KNPMNEEE_01129	CDS	513				hypothetical protein
+KNPMNEEE_01130	CDS	414				hypothetical protein
+KNPMNEEE_01131	CDS	885		3.4.11.18		Methionine aminopeptidase 1, mitochondrial
+KNPMNEEE_01132	CDS	621	tmk	2.7.4.9		Thymidylate kinase
+KNPMNEEE_01133	CDS	579				hypothetical protein
+KNPMNEEE_01134	CDS	558				hypothetical protein
+KNPMNEEE_01135	CDS	162				hypothetical protein
+KNPMNEEE_01136	CDS	195				hypothetical protein
+KNPMNEEE_01137	CDS	90				hypothetical protein
+KNPMNEEE_01138	CDS	255				IS481 family transposase ISFac5
+KNPMNEEE_01139	CDS	243				hypothetical protein
+KNPMNEEE_01140	CDS	150				hypothetical protein
+KNPMNEEE_01141	CDS	1956	apc3	6.4.1.8	COG0145	Acetophenone carboxylase gamma subunit
+KNPMNEEE_01142	CDS	1419	apc4	6.4.1.8	COG0146	Acetophenone carboxylase delta subunit
+KNPMNEEE_01143	CDS	90				hypothetical protein
+KNPMNEEE_01144	CDS	267				hypothetical protein
+KNPMNEEE_01145	CDS	249				hypothetical protein
+KNPMNEEE_01146	CDS	831	exoA	3.1.11.2	COG0708	Exodeoxyribonuclease
+KNPMNEEE_01147	CDS	1167				IS200/IS605 family transposase ISMma19
+KNPMNEEE_01148	CDS	1086				hypothetical protein
+KNPMNEEE_01149	CDS	609	msrP	1.8.5.-		Protein-methionine-sulfoxide reductase catalytic subunit MsrP
+KNPMNEEE_01150	CDS	168				hypothetical protein
+KNPMNEEE_01151	CDS	456				hypothetical protein
+KNPMNEEE_01152	CDS	237				hypothetical protein
+KNPMNEEE_01153	CDS	1113	oxlT			Oxalate:formate antiporter
+KNPMNEEE_01154	CDS	693				hypothetical protein
+KNPMNEEE_01155	CDS	480				hypothetical protein
+KNPMNEEE_01156	CDS	195				hypothetical protein
+KNPMNEEE_01157	CDS	723	rph_1	2.7.7.56	COG0689	Ribonuclease PH
+KNPMNEEE_01158	CDS	783	rph_2	2.7.7.56		Ribonuclease PH
+KNPMNEEE_01159	CDS	258				hypothetical protein
+KNPMNEEE_01160	CDS	1143				hypothetical protein
+KNPMNEEE_01161	CDS	297				hypothetical protein
+KNPMNEEE_01162	CDS	270				hypothetical protein
+KNPMNEEE_01163	CDS	441				hypothetical protein
+KNPMNEEE_01164	CDS	720	rsmA	2.1.1.182	COG0030	Ribosomal RNA small subunit methyltransferase A
+KNPMNEEE_01165	CDS	846				hypothetical protein
+KNPMNEEE_01166	CDS	1113	mvaS	2.3.3.10	COG3425	Hydroxymethylglutaryl-CoA synthase
+KNPMNEEE_01167	CDS	1173	pcaF	2.3.1.174	COG0183	Beta-ketoadipyl-CoA thiolase
+KNPMNEEE_01168	CDS	342				hypothetical protein
+KNPMNEEE_01169	CDS	810	mqnD_1	4.1.-.-	COG2107	1,4-dihydroxy-6-naphtoate synthase
+KNPMNEEE_01170	CDS	1506	ythA_2	1.10.3.-	COG1271	Putative cytochrome bd menaquinol oxidase subunit I
+KNPMNEEE_01171	CDS	1053				hypothetical protein
+KNPMNEEE_01172	tRNA	73				tRNA-Pro(tgg)
+KNPMNEEE_01173	CDS	420				hypothetical protein
+KNPMNEEE_01174	CDS	891				IS200/IS605 family transposase ISTac1
+KNPMNEEE_01175	CDS	225				hypothetical protein
+KNPMNEEE_01176	CDS	285				hypothetical protein
+KNPMNEEE_01177	CDS	405				hypothetical protein
+KNPMNEEE_01178	CDS	504				hypothetical protein
+KNPMNEEE_01179	CDS	279				hypothetical protein
+KNPMNEEE_01180	CDS	1374	CARKD	4.2.1.136		ATP-dependent (S)-NAD(P)H-hydrate dehydratase
+KNPMNEEE_01181	CDS	1173	menE_2	6.2.1.26		2-succinylbenzoate--CoA ligase
+KNPMNEEE_01182	CDS	477				hypothetical protein
+KNPMNEEE_01183	CDS	357				hypothetical protein
+KNPMNEEE_01184	CDS	258				hypothetical protein
+KNPMNEEE_01185	CDS	300				hypothetical protein
+KNPMNEEE_01186	CDS	633	tdk	2.7.1.21	COG1435	Thymidine kinase
+KNPMNEEE_01187	CDS	783				hypothetical protein
+KNPMNEEE_01188	CDS	483				hypothetical protein
+KNPMNEEE_01189	CDS	516				hypothetical protein
+KNPMNEEE_01190	CDS	1353		5.1.1.21	COG0160	Isoleucine 2-epimerase
+KNPMNEEE_01191	CDS	165				hypothetical protein
+KNPMNEEE_01192	CDS	366				hypothetical protein
+KNPMNEEE_01193	CDS	603				hypothetical protein
+KNPMNEEE_01194	CDS	774	natA	7.2.2.4	COG4555	ABC transporter ATP-binding protein NatA
+KNPMNEEE_01195	CDS	1557				hypothetical protein
+KNPMNEEE_01196	CDS	453				hypothetical protein
+KNPMNEEE_01197	CDS	342				hypothetical protein
+KNPMNEEE_01198	CDS	105				hypothetical protein
+KNPMNEEE_01199	CDS	273				hypothetical protein
+KNPMNEEE_01200	CDS	657				hypothetical protein
+KNPMNEEE_01201	CDS	501	pyrE_2	2.4.2.10	COG0461	Orotate phosphoribosyltransferase
+KNPMNEEE_01202	CDS	585	pyrF			Orotidine 5'-phosphate decarboxylase
+KNPMNEEE_01203	CDS	99				hypothetical protein
+KNPMNEEE_01204	CDS	624	sppA	3.4.21.-	COG0616	Putative signal peptide peptidase SppA
+KNPMNEEE_01205	CDS	285				hypothetical protein
+KNPMNEEE_01206	CDS	1197				hypothetical protein
+KNPMNEEE_01207	CDS	1011				hypothetical protein
+KNPMNEEE_01208	CDS	957	cobD		COG1270	Cobalamin biosynthesis protein CobD
+KNPMNEEE_01209	CDS	1422	cobQ		COG1492	Cobyric acid synthase
+KNPMNEEE_01210	CDS	1029	hisC_3	2.6.1.9	COG0079	Histidinol-phosphate aminotransferase
+KNPMNEEE_01211	CDS	885				hypothetical protein
+KNPMNEEE_01212	CDS	177				hypothetical protein
+KNPMNEEE_01213	CDS	1083	cugP_3	2.7.7.9		UTP--glucose-1-phosphate uridylyltransferase
+KNPMNEEE_01214	CDS	2376				hypothetical protein
+KNPMNEEE_01215	CDS	1158				hypothetical protein
+KNPMNEEE_01216	CDS	822				hypothetical protein
+KNPMNEEE_01217	CDS	1017				hypothetical protein
+KNPMNEEE_01218	CDS	507				hypothetical protein
+KNPMNEEE_01219	CDS	324				hypothetical protein
+KNPMNEEE_01220	CDS	243				hypothetical protein
+KNPMNEEE_01221	CDS	1428	rtcB	6.5.1.-	COG1690	RNA-splicing ligase RtcB
+KNPMNEEE_01222	CDS	783	aroF	2.5.1.54	COG2876	Phospho-2-dehydro-3-deoxyheptonate aldolase
+KNPMNEEE_01223	CDS	714	trpC	4.1.1.48	COG0134	Indole-3-glycerol phosphate synthase
+KNPMNEEE_01224	CDS	561	trpG	4.1.3.27	COG0512	Anthranilate synthase component 2
+KNPMNEEE_01225	CDS	1152	menF	5.4.4.2		Isochorismate synthase MenF
+KNPMNEEE_01226	CDS	606	trpF	5.3.1.24	COG0135	N-(5'-phosphoribosyl)anthranilate isomerase
+KNPMNEEE_01227	CDS	972	trpD	2.4.2.18	COG0547	Anthranilate phosphoribosyltransferase
+KNPMNEEE_01228	CDS	735	trpA	4.2.1.20	COG0159	Tryptophan synthase alpha chain
+KNPMNEEE_01229	CDS	1275	trpB	4.2.1.20	COG0133	Tryptophan synthase beta chain
+KNPMNEEE_01230	CDS	732	tpiA			Triosephosphate isomerase
+KNPMNEEE_01231	CDS	663				hypothetical protein
+KNPMNEEE_01232	tRNA	74				tRNA-Gly(tcc)
+KNPMNEEE_01233	CDS	351				hypothetical protein
+KNPMNEEE_01234	CDS	447				hypothetical protein
+KNPMNEEE_01235	CDS	1398	thrZ	6.1.1.3	COG0441	Threonine--tRNA ligase 2
+KNPMNEEE_01236	CDS	375	gcvH			Glycine cleavage system H protein
+KNPMNEEE_01237	CDS	585	rlmE	2.1.1.166	COG0293	Ribosomal RNA large subunit methyltransferase E
+KNPMNEEE_01238	CDS	210				hypothetical protein
+KNPMNEEE_01239	CDS	618				hypothetical protein
+KNPMNEEE_01240	CDS	921				hypothetical protein
+KNPMNEEE_01241	CDS	606				hypothetical protein
+KNPMNEEE_01242	CDS	903		1.1.1.81	COG0111	Hydroxypyruvate reductase
+KNPMNEEE_01243	CDS	1116		1.12.-.-		Soluble hydrogenase 42 kDa subunit
+KNPMNEEE_01244	CDS	717	alaS_2	6.1.1.7	COG0013	Alanine--tRNA ligase
+KNPMNEEE_01245	CDS	663				hypothetical protein
+KNPMNEEE_01246	tRNA	76				tRNA-Thr(tgt)
+KNPMNEEE_01247	CDS	1209	abo	1.5.3.19		4-methylaminobutanoate oxidase (formaldehyde-forming)
+KNPMNEEE_01248	CDS	261				hypothetical protein
+KNPMNEEE_01249	CDS	654	aroD	4.2.1.10		3-dehydroquinate dehydratase
+KNPMNEEE_01250	CDS	627				hypothetical protein
+KNPMNEEE_01251	CDS	1482				hypothetical protein
+KNPMNEEE_01252	CDS	1287				hypothetical protein
+KNPMNEEE_01253	CDS	426				hypothetical protein
+KNPMNEEE_01254	CDS	615				hypothetical protein
+KNPMNEEE_01255	CDS	288				hypothetical protein
+KNPMNEEE_01256	CDS	366				hypothetical protein
+KNPMNEEE_01257	CDS	774	speE	2.5.1.16	COG0421	Polyamine aminopropyltransferase
+KNPMNEEE_01258	CDS	273	hup		COG0776	DNA-binding protein HU
+KNPMNEEE_01259	CDS	1596	OSGEPL1	2.3.1.234		tRNA N6-adenosine threonylcarbamoyltransferase, mitochondrial
+KNPMNEEE_01260	CDS	549		3.6.1.66	COG0127	dITP/XTP pyrophosphatase
+KNPMNEEE_01261	CDS	390				hypothetical protein
+KNPMNEEE_01262	CDS	1221	selB		COG3276	Selenocysteine-specific elongation factor
+KNPMNEEE_01263	CDS	285				hypothetical protein
+KNPMNEEE_01264	CDS	1155				hypothetical protein
+KNPMNEEE_01265	CDS	396				hypothetical protein
+KNPMNEEE_01266	tRNA	76				tRNA-Lys(ctt)
+KNPMNEEE_01267	CDS	498				hypothetical protein
+KNPMNEEE_01268	CDS	1173	yajR		COG0477	Inner membrane transport protein YajR
+KNPMNEEE_01269	CDS	666				hypothetical protein
+KNPMNEEE_01270	CDS	777				hypothetical protein
+KNPMNEEE_01271	CDS	2217				hypothetical protein
+KNPMNEEE_01272	CDS	1500				hypothetical protein
+KNPMNEEE_01273	CDS	156				hypothetical protein
+KNPMNEEE_01274	CDS	219				hypothetical protein
+KNPMNEEE_01275	CDS	222				hypothetical protein
+KNPMNEEE_01276	CDS	750				hypothetical protein
+KNPMNEEE_01277	CDS	2508				hypothetical protein
+KNPMNEEE_01278	CDS	222				hypothetical protein
+KNPMNEEE_01279	CDS	618				hypothetical protein
+KNPMNEEE_01280	CDS	828	ctaC	1.9.3.1	COG1622	Cytochrome c oxidase subunit 2
+KNPMNEEE_01281	CDS	867	ctaB_1	2.5.1.141	COG0109	Protoheme IX farnesyltransferase
+KNPMNEEE_01282	CDS	528				hypothetical protein
+KNPMNEEE_01283	CDS	159				hypothetical protein
+KNPMNEEE_01284	CDS	153				hypothetical protein
+KNPMNEEE_01285	CDS	165				hypothetical protein
+KNPMNEEE_01286	CDS	465				hypothetical protein
+KNPMNEEE_01287	CDS	216				hypothetical protein
+KNPMNEEE_01288	CDS	291				hypothetical protein
+KNPMNEEE_01289	CDS	882				hypothetical protein
+KNPMNEEE_01290	CDS	183				hypothetical protein
+KNPMNEEE_01291	CDS	993				hypothetical protein
+KNPMNEEE_01292	CDS	771				hypothetical protein
+KNPMNEEE_01293	CDS	249				hypothetical protein
+KNPMNEEE_01294	CDS	699	rplB		COG0090	50S ribosomal protein L2
+KNPMNEEE_01295	CDS	456				hypothetical protein
+KNPMNEEE_01296	CDS	450				hypothetical protein
+KNPMNEEE_01297	CDS	672				hypothetical protein
+KNPMNEEE_01298	CDS	198				hypothetical protein
+KNPMNEEE_01299	CDS	300				hypothetical protein
+KNPMNEEE_01300	CDS	303				hypothetical protein
+KNPMNEEE_01301	CDS	321				hypothetical protein
+KNPMNEEE_01302	CDS	399	rplN			50S ribosomal protein L14
+KNPMNEEE_01303	CDS	717				hypothetical protein
+KNPMNEEE_01304	CDS	525				hypothetical protein
+KNPMNEEE_01305	CDS	390	rpsH		COG0096	30S ribosomal protein S8
+KNPMNEEE_01306	CDS	525	rplF		COG0097	50S ribosomal protein L6
+KNPMNEEE_01307	CDS	345				hypothetical protein
+KNPMNEEE_01308	CDS	477				hypothetical protein
+KNPMNEEE_01309	CDS	474				hypothetical protein
+KNPMNEEE_01310	CDS	666				hypothetical protein
+KNPMNEEE_01311	CDS	495				hypothetical protein
+KNPMNEEE_01312	CDS	408				hypothetical protein
+KNPMNEEE_01313	CDS	1761	secY			Protein translocase subunit SecY
+KNPMNEEE_01314	CDS	543				hypothetical protein
+KNPMNEEE_01315	CDS	687				hypothetical protein
+KNPMNEEE_01316	CDS	528	cmk	2.7.4.25		Cytidylate kinase
+KNPMNEEE_01317	CDS	393				hypothetical protein
+KNPMNEEE_01318	CDS	1056	truB	5.4.99.25		tRNA pseudouridine synthase B
+KNPMNEEE_01319	CDS	558				hypothetical protein
+KNPMNEEE_01320	CDS	1398	purF_2	2.4.2.14	COG0034	Amidophosphoribosyltransferase
+KNPMNEEE_01321	CDS	255				hypothetical protein
+KNPMNEEE_01322	CDS	501				hypothetical protein
+KNPMNEEE_01323	CDS	978				hypothetical protein
+KNPMNEEE_01324	CDS	276				hypothetical protein
+KNPMNEEE_01325	CDS	681				hypothetical protein
+KNPMNEEE_01326	CDS	231				hypothetical protein
+KNPMNEEE_01327	CDS	585				hypothetical protein
+KNPMNEEE_01328	CDS	1263	hemL	5.4.3.8	COG0001	Glutamate-1-semialdehyde 2,1-aminomutase
+KNPMNEEE_01329	CDS	858	hemC	2.5.1.61	COG0181	Porphobilinogen deaminase
+KNPMNEEE_01330	tRNA	76				tRNA-Met(cat)
+KNPMNEEE_01331	CDS	558				hypothetical protein
+KNPMNEEE_01332	CDS	765				hypothetical protein
+KNPMNEEE_01333	CDS	333				hypothetical protein
+KNPMNEEE_01334	CDS	1749	yveA_5		COG0531	Aspartate-proton symporter
+KNPMNEEE_01335	CDS	432	nusA			Transcription termination/antitermination protein NusA
+KNPMNEEE_01336	CDS	1491	rpoC_1	2.7.7.6		DNA-directed RNA polymerase subunit beta'
+KNPMNEEE_01337	CDS	1569	rpoC_2	2.7.7.6	COG0086	DNA-directed RNA polymerase subunit beta'
+KNPMNEEE_01338	CDS	1152	rpoC_3	2.7.7.6	COG0086	DNA-directed RNA polymerase subunit beta'
+KNPMNEEE_01339	CDS	2577	rpoB	2.7.7.6		DNA-directed RNA polymerase subunit beta
+KNPMNEEE_01340	CDS	1065				hypothetical protein
+KNPMNEEE_01341	CDS	261				hypothetical protein
+KNPMNEEE_01342	tRNA	76				tRNA-Lys(ttt)
+KNPMNEEE_01343	CDS	1017	mtnA	5.3.1.23	COG0182	Methylthioribose-1-phosphate isomerase
+KNPMNEEE_01344	CDS	1293				hypothetical protein
+KNPMNEEE_01345	CDS	1329	ygcS_2			Inner membrane metabolite transport protein YgcS
+KNPMNEEE_01346	CDS	939		2.5.-.-		Deoxyhypusine synthase-like protein
+KNPMNEEE_01347	tRNA	73				tRNA-His(gtg)
+KNPMNEEE_01348	CDS	597				hypothetical protein
+KNPMNEEE_01349	CDS	303				hypothetical protein
+KNPMNEEE_01350	CDS	894	ctaB_2	2.5.1.141	COG0109	Protoheme IX farnesyltransferase
+KNPMNEEE_01351	CDS	579				hypothetical protein
+KNPMNEEE_01352	CDS	159				hypothetical protein
+KNPMNEEE_01353	CDS	201				hypothetical protein
+KNPMNEEE_01354	CDS	1575				hypothetical protein
+KNPMNEEE_01355	CDS	1251	mtaD	3.5.4.28	COG0402	5-methylthioadenosine/S-adenosylhomocysteine deaminase
+KNPMNEEE_01356	CDS	165				hypothetical protein
+KNPMNEEE_01357	CDS	390				hypothetical protein
+KNPMNEEE_01358	CDS	864	gbuA	3.5.3.7	COG0010	Guanidinobutyrase
+KNPMNEEE_01359	CDS	510				hypothetical protein
+KNPMNEEE_01360	CDS	375				hypothetical protein
+KNPMNEEE_01361	CDS	147				hypothetical protein
+KNPMNEEE_01362	CDS	1095				hypothetical protein
+KNPMNEEE_01363	CDS	714				hypothetical protein
+KNPMNEEE_01364	CDS	753	truA	5.4.99.12		tRNA pseudouridine synthase A
+KNPMNEEE_01365	CDS	291				hypothetical protein
+KNPMNEEE_01366	CDS	399				hypothetical protein
+KNPMNEEE_01367	CDS	1212				hypothetical protein
+KNPMNEEE_01368	CDS	1347				hypothetical protein
+KNPMNEEE_01369	CDS	726				hypothetical protein
+KNPMNEEE_01370	CDS	1017				hypothetical protein
+KNPMNEEE_01371	CDS	4281				hypothetical protein
+KNPMNEEE_01372	CDS	840				hypothetical protein
+KNPMNEEE_01373	CDS	642				hypothetical protein
+KNPMNEEE_01374	tRNA	72				tRNA-Cys(gca)
+KNPMNEEE_01375	CDS	414				hypothetical protein
+KNPMNEEE_01376	CDS	699				hypothetical protein
+KNPMNEEE_01377	CDS	171				hypothetical protein
+KNPMNEEE_01378	CDS	276				hypothetical protein
+KNPMNEEE_01379	CDS	1182				hypothetical protein
+KNPMNEEE_01380	CDS	582				hypothetical protein
+KNPMNEEE_01381	CDS	1230				hypothetical protein
+KNPMNEEE_01382	CDS	369				hypothetical protein
+KNPMNEEE_01383	CDS	987	htpX_1	3.4.24.-		Protease HtpX
+KNPMNEEE_01384	CDS	669				hypothetical protein
+KNPMNEEE_01385	CDS	243				hypothetical protein
+KNPMNEEE_01386	CDS	303				hypothetical protein
+KNPMNEEE_01387	CDS	1086				hypothetical protein
+KNPMNEEE_01388	CDS	435				hypothetical protein
+KNPMNEEE_01389	CDS	1332				hypothetical protein
+KNPMNEEE_01390	CDS	1026	pqqE	1.21.98.4		PqqA peptide cyclase
+KNPMNEEE_01391	tRNA	74				tRNA-Thr(ggt)
+KNPMNEEE_01392	CDS	1098				hypothetical protein
+KNPMNEEE_01393	CDS	2094				hypothetical protein
+KNPMNEEE_01394	CDS	288				hypothetical protein
+KNPMNEEE_01395	CDS	480	rpsM			30S ribosomal protein S13
+KNPMNEEE_01396	CDS	588				hypothetical protein
+KNPMNEEE_01397	CDS	384	rpsK		COG0100	30S ribosomal protein S11
+KNPMNEEE_01398	CDS	813				hypothetical protein
+KNPMNEEE_01399	CDS	207				hypothetical protein
+KNPMNEEE_01400	CDS	648			COG0730	putative membrane transporter protein
+KNPMNEEE_01401	CDS	567				hypothetical protein
+KNPMNEEE_01402	CDS	816	nadK	2.7.1.23	COG0061	NAD kinase
+KNPMNEEE_01403	CDS	333				hypothetical protein
+KNPMNEEE_01404	CDS	1023				hypothetical protein
+KNPMNEEE_01405	CDS	447				hypothetical protein
+KNPMNEEE_01406	CDS	555	ecdB	2.5.1.129	COG0163	putative UbiX-like flavin prenyltransferase
+KNPMNEEE_01407	CDS	549				hypothetical protein
+KNPMNEEE_01408	CDS	864				hypothetical protein
+KNPMNEEE_01409	CDS	2415				hypothetical protein
+KNPMNEEE_01410	CDS	1029	metE	2.1.1.14	COG0620	5-methyltetrahydropteroyltriglutamate--homocysteine methyltransferase
+KNPMNEEE_01411	CDS	882				hypothetical protein
+KNPMNEEE_01412	CDS	933	ykfA	3.4.16.-	COG1619	putative murein peptide carboxypeptidase
+KNPMNEEE_01413	CDS	1167		3.5.1.47		N-acetyldiaminopimelate deacetylase
+KNPMNEEE_01414	CDS	936	nanK	2.7.1.60	COG1940	N-acetylmannosamine kinase
+KNPMNEEE_01415	CDS	378				IS607 family transposase ISTvo1
+KNPMNEEE_01416	CDS	240				hypothetical protein
+KNPMNEEE_01417	CDS	1311				hypothetical protein
+KNPMNEEE_01418	CDS	1146	metB	2.5.1.48	COG0626	Cystathionine gamma-synthase
+KNPMNEEE_01419	CDS	1284	aspS2	6.1.1.23	COG0017	Aspartate--tRNA(Asp/Asn) ligase
+KNPMNEEE_01420	CDS	282				hypothetical protein
+KNPMNEEE_01421	CDS	663				hypothetical protein
+KNPMNEEE_01422	CDS	438				hypothetical protein
+KNPMNEEE_01423	CDS	1284				hypothetical protein
+KNPMNEEE_01424	CDS	519				hypothetical protein
+KNPMNEEE_01425	CDS	549				hypothetical protein
+KNPMNEEE_01426	CDS	429				hypothetical protein
+KNPMNEEE_01427	CDS	1176	ychF		COG0012	Ribosome-binding ATPase YchF
+KNPMNEEE_01428	CDS	441				hypothetical protein
+KNPMNEEE_01429	CDS	618				hypothetical protein
+KNPMNEEE_01430	CDS	330				hypothetical protein
+KNPMNEEE_01431	CDS	471				hypothetical protein
+KNPMNEEE_01432	CDS	843	xerC		COG4974	Tyrosine recombinase XerC
+KNPMNEEE_01433	CDS	1056				hypothetical protein
+KNPMNEEE_01434	CDS	687				hypothetical protein
+KNPMNEEE_01435	CDS	162				hypothetical protein
+KNPMNEEE_01436	CDS	270				hypothetical protein
+KNPMNEEE_01437	CDS	954	adh	1.1.1.1		Alcohol dehydrogenase
+KNPMNEEE_01438	CDS	651	rpe	5.1.3.1		Ribulose-phosphate 3-epimerase
+KNPMNEEE_01439	CDS	177				hypothetical protein
+KNPMNEEE_01440	CDS	1527	ubiB	2.7.-.-		protein kinase UbiB
+KNPMNEEE_01441	CDS	381				hypothetical protein
+KNPMNEEE_01442	CDS	945	icmF_1	5.4.99.13		Fused isobutyryl-CoA mutase
+KNPMNEEE_01443	CDS	450	icmF_2	5.4.99.13		Fused isobutyryl-CoA mutase
+KNPMNEEE_01444	CDS	1704	mcm	5.4.99.2	COG1884	Methylmalonyl-CoA mutase
+KNPMNEEE_01445	CDS	738				hypothetical protein
+KNPMNEEE_01446	CDS	321				hypothetical protein
+KNPMNEEE_01447	CDS	819				hypothetical protein
+KNPMNEEE_01448	CDS	249				hypothetical protein
+KNPMNEEE_01449	CDS	414				hypothetical protein
+KNPMNEEE_01450	CDS	303				hypothetical protein
+KNPMNEEE_01451	CDS	318				IS256 family transposase ISFac8
+KNPMNEEE_01452	CDS	390				IS256 family transposase ISFac8
+KNPMNEEE_01453	CDS	237				hypothetical protein
+KNPMNEEE_01454	CDS	270				hypothetical protein
+KNPMNEEE_01455	CDS	135				hypothetical protein
+KNPMNEEE_01456	CDS	168				hypothetical protein
+KNPMNEEE_01457	CDS	195				hypothetical protein
+KNPMNEEE_01458	CDS	108				hypothetical protein
+KNPMNEEE_01459	CDS	1827	moaA_1			GTP 3',8-cyclase
+KNPMNEEE_01460	CDS	402				Protein archease
+KNPMNEEE_01461	CDS	2709	valS_2	6.1.1.9		Valine--tRNA ligase
+KNPMNEEE_01462	CDS	540	pdaD	4.1.1.19		Pyruvoyl-dependent arginine decarboxylase
+KNPMNEEE_01463	CDS	2700	srmB	3.6.4.13		ATP-dependent RNA helicase SrmB
+KNPMNEEE_01464	CDS	1629	groL_2			60 kDa chaperonin
+KNPMNEEE_01465	CDS	306				hypothetical protein
+KNPMNEEE_01466	CDS	1332				hypothetical protein
+KNPMNEEE_01467	CDS	1338				hypothetical protein
+KNPMNEEE_01468	CDS	375				hypothetical protein
+KNPMNEEE_01469	CDS	456				hypothetical protein
+KNPMNEEE_01470	CDS	120				hypothetical protein
+KNPMNEEE_01471	CDS	969				hypothetical protein
+KNPMNEEE_01472	CDS	447				hypothetical protein
+KNPMNEEE_01473	CDS	336				hypothetical protein
+KNPMNEEE_01474	CDS	891				hypothetical protein
+KNPMNEEE_01475	CDS	1137	lutB		COG1139	Lactate utilization protein B
+KNPMNEEE_01476	CDS	423				hypothetical protein
+KNPMNEEE_01477	CDS	1251				hypothetical protein
+KNPMNEEE_01478	CDS	2364				hypothetical protein
+KNPMNEEE_01479	CDS	426				hypothetical protein
+KNPMNEEE_01480	CDS	465				hypothetical protein
+KNPMNEEE_01481	CDS	324				hypothetical protein
+KNPMNEEE_01482	CDS	330				hypothetical protein
+KNPMNEEE_01483	CDS	1086				hypothetical protein
+KNPMNEEE_01484	CDS	648	lipB_2	2.3.1.181	COG0321	Octanoyltransferase
+KNPMNEEE_01485	CDS	912				hypothetical protein
+KNPMNEEE_01486	CDS	834				hypothetical protein
+KNPMNEEE_01487	CDS	396	ybhF		COG1131	putative multidrug ABC transporter ATP-binding protein YbhF
+KNPMNEEE_01488	CDS	528				hypothetical protein
+KNPMNEEE_01489	CDS	1452	gghA	3.2.1.74	COG2723	1,4-beta-D-glucan glucohydrolase
+KNPMNEEE_01490	CDS	615				hypothetical protein
+KNPMNEEE_01491	CDS	1287	fpgS	6.3.2.17		Folylpolyglutamate synthase
+KNPMNEEE_01492	CDS	1269				hypothetical protein
+KNPMNEEE_01493	CDS	291				hypothetical protein
+KNPMNEEE_01494	CDS	570				hypothetical protein
+KNPMNEEE_01495	CDS	747	purQ	6.3.5.3		Phosphoribosylformylglycinamidine synthase subunit PurQ
+KNPMNEEE_01496	CDS	150				hypothetical protein
+KNPMNEEE_01497	CDS	1146	fbp	3.1.3.11	COG1980	Fructose-1,6-bisphosphate aldolase/phosphatase
+KNPMNEEE_01498	CDS	993	ndh	1.6.99.3	COG1252	NADH dehydrogenase
+KNPMNEEE_01499	CDS	1068				hypothetical protein
+KNPMNEEE_01500	CDS	681	cbiF	2.1.1.271	COG2875	Cobalt-precorrin-4 C(11)-methyltransferase
+KNPMNEEE_01501	CDS	660	cobIJ		COG1010	Cobalamin biosynthesis protein CobIJ
+KNPMNEEE_01502	CDS	1245	cbiET		COG2241	Cobalamin biosynthesis bifunctional protein CbiET
+KNPMNEEE_01503	CDS	1290	cysG	4.99.1.4		Siroheme synthase
+KNPMNEEE_01504	CDS	1134				hypothetical protein
+KNPMNEEE_01505	CDS	477				hypothetical protein
+KNPMNEEE_01506	CDS	852				hypothetical protein
+KNPMNEEE_01507	CDS	453				hypothetical protein
+KNPMNEEE_01508	CDS	1212	ravA_1	3.6.3.-		ATPase RavA
+KNPMNEEE_01509	CDS	1194				hypothetical protein
+KNPMNEEE_01510	CDS	1332	serS	6.1.1.11		Serine--tRNA ligase
+KNPMNEEE_01511	CDS	765				hypothetical protein
+KNPMNEEE_01512	CDS	1209	eno	4.2.1.11	COG0148	Enolase
+KNPMNEEE_01513	CDS	660				putative protein
+KNPMNEEE_01514	CDS	1974	lon	3.4.21.53		Lon protease
+KNPMNEEE_01515	CDS	423				hypothetical protein
+KNPMNEEE_01516	CDS	891	adoK	2.7.1.20	COG0524	Adenosine kinase
+KNPMNEEE_01517	CDS	1602				hypothetical protein
+KNPMNEEE_01518	CDS	609				hypothetical protein
+KNPMNEEE_01519	CDS	474				hypothetical protein
+KNPMNEEE_01520	CDS	954	ravA_2	3.6.3.-		ATPase RavA
+KNPMNEEE_01521	CDS	1296				hypothetical protein
+KNPMNEEE_01522	CDS	873				hypothetical protein
+KNPMNEEE_01523	CDS	315	yibN		COG0607	putative protein YibN
+KNPMNEEE_01524	CDS	1914				hypothetical protein
+KNPMNEEE_01525	CDS	1833				hypothetical protein
+KNPMNEEE_01526	CDS	1119		2.4.1.11	COG0438	Glycogen synthase
+KNPMNEEE_01527	CDS	1131				hypothetical protein
+KNPMNEEE_01528	tRNA	85				tRNA-Leu(cag)
+KNPMNEEE_01529	CDS	2724				hypothetical protein
+KNPMNEEE_01530	CDS	225				hypothetical protein
+KNPMNEEE_01531	CDS	273				hypothetical protein
+KNPMNEEE_01532	CDS	672				hypothetical protein
+KNPMNEEE_01533	CDS	1068	pyrC	3.5.2.3	COG0044	Dihydroorotase
+KNPMNEEE_01534	CDS	1074		3.4.-.-		putative peptidase
+KNPMNEEE_01535	CDS	1014				hypothetical protein
+KNPMNEEE_01536	CDS	249				hypothetical protein
+KNPMNEEE_01537	CDS	381				hypothetical protein
+KNPMNEEE_01538	CDS	1713		3.6.3.-	COG1132	Putative multidrug export ATP-binding/permease protein
+KNPMNEEE_01539	CDS	1758			COG1132	putative ABC transporter ATP-binding protein
+KNPMNEEE_01540	CDS	387				hypothetical protein
+KNPMNEEE_01541	tRNA	85				tRNA-Leu(caa)
+KNPMNEEE_01542	CDS	207				hypothetical protein
+KNPMNEEE_01543	CDS	870				hypothetical protein
+KNPMNEEE_01544	CDS	225				hypothetical protein
+KNPMNEEE_01545	CDS	918				hypothetical protein
+KNPMNEEE_01546	CDS	741	trmI	2.1.1.220	COG2519	tRNA (adenine(58)-N(1))-methyltransferase TrmI
+KNPMNEEE_01547	CDS	567	guaA_2	6.3.5.2		GMP synthase [glutamine-hydrolyzing]
+KNPMNEEE_01548	CDS	606				hypothetical protein
+KNPMNEEE_01549	CDS	399				hypothetical protein
+KNPMNEEE_01550	CDS	621	pspA	3.1.3.3	COG0406	Phosphoserine phosphatase 1
+KNPMNEEE_01551	CDS	459			COG3385	IS4 family transposase ISFac10
+KNPMNEEE_01552	CDS	555			COG3385	IS4 family transposase ISFac10
+KNPMNEEE_01553	CDS	1917				hypothetical protein
+KNPMNEEE_01554	CDS	1005				hypothetical protein
+KNPMNEEE_01555	CDS	1248	arcA_2	3.5.3.6	COG2235	Arginine deiminase
+KNPMNEEE_01556	CDS	630				hypothetical protein
+KNPMNEEE_01557	tRNA	73				tRNA-Gly(ccc)
+KNPMNEEE_01558	CDS	492				hypothetical protein
+KNPMNEEE_01559	CDS	1251	gdhA	1.4.1.3	COG0334	Glutamate dehydrogenase
+KNPMNEEE_01560	CDS	741				hypothetical protein
+KNPMNEEE_01561	tRNA	77				tRNA-Arg(cct)
+KNPMNEEE_01562	CDS	1230	ahcY	3.3.1.1	COG0499	Adenosylhomocysteinase
+KNPMNEEE_01563	CDS	825	yisK		COG0179	putative protein YisK
+KNPMNEEE_01564	CDS	540	thpR	3.1.4.58		RNA 2',3'-cyclic phosphodiesterase
+KNPMNEEE_01565	CDS	1209	apgM			2,3-bisphosphoglycerate-independent phosphoglycerate mutase
+KNPMNEEE_01566	CDS	939	rbn	3.1.-.-	COG1234	Ribonuclease BN
+KNPMNEEE_01567	CDS	288				hypothetical protein
+KNPMNEEE_01568	CDS	471				hypothetical protein
+KNPMNEEE_01569	CDS	561				hypothetical protein
+KNPMNEEE_01570	CDS	558				hypothetical protein
+KNPMNEEE_01571	CDS	429				hypothetical protein
+KNPMNEEE_01572	CDS	120				hypothetical protein
+KNPMNEEE_01573	CDS	420				hypothetical protein
+KNPMNEEE_01574	CDS	387				hypothetical protein
+KNPMNEEE_01575	CDS	273				hypothetical protein
+KNPMNEEE_01576	CDS	1176				IS200/IS605 family transposase ISMma19
+KNPMNEEE_01577	CDS	648				hypothetical protein
+KNPMNEEE_01578	CDS	189				hypothetical protein
+KNPMNEEE_01579	CDS	231				hypothetical protein
+KNPMNEEE_01580	CDS	1290	gcvPA	1.4.4.2		putative glycine dehydrogenase (decarboxylating) subunit 1
+KNPMNEEE_01581	CDS	1434	gcvPB	1.4.4.2		putative glycine dehydrogenase (decarboxylating) subunit 2
+KNPMNEEE_01582	CDS	1035				hypothetical protein
+KNPMNEEE_01583	CDS	897				hypothetical protein
+KNPMNEEE_01584	CDS	609				hypothetical protein
+KNPMNEEE_01585	CDS	363				hypothetical protein
+KNPMNEEE_01586	CDS	174				hypothetical protein
+KNPMNEEE_01587	CDS	147				hypothetical protein
+KNPMNEEE_01588	CDS	156				hypothetical protein
+KNPMNEEE_01589	CDS	318				hypothetical protein
+KNPMNEEE_01590	CDS	507				hypothetical protein
+KNPMNEEE_01591	CDS	192				hypothetical protein
+KNPMNEEE_01592	CDS	576	rnr	3.1.13.1		Ribonuclease R
+KNPMNEEE_01593	CDS	1314	asnS_2	6.1.1.22		Asparagine--tRNA ligase
+KNPMNEEE_01594	CDS	1008	hemE	4.1.1.37		Uroporphyrinogen decarboxylase
+KNPMNEEE_01595	CDS	882	hemH	4.99.1.1	COG0276	Ferrochelatase
+KNPMNEEE_01596	CDS	900	tuf_2			Elongation factor Tu
+KNPMNEEE_01597	CDS	1278	purD	6.3.4.13		Phosphoribosylamine--glycine ligase
+KNPMNEEE_01598	CDS	417				hypothetical protein
+KNPMNEEE_01599	CDS	1368				hypothetical protein
+KNPMNEEE_01600	CDS	432	dcd	3.5.4.13		dCTP deaminase, dUMP-forming
+KNPMNEEE_01601	CDS	519		2.7.7.1		Nicotinamide-nucleotide adenylyltransferase
+KNPMNEEE_01602	CDS	2334	polB	2.7.7.7	COG0417	DNA polymerase II
+KNPMNEEE_01603	CDS	1095				hypothetical protein
+KNPMNEEE_01604	CDS	1458				hypothetical protein
+KNPMNEEE_01605	CDS	1821				hypothetical protein
+KNPMNEEE_01606	CDS	375				hypothetical protein
+KNPMNEEE_01607	CDS	1503				hypothetical protein
+KNPMNEEE_01608	CDS	327	metG_2	6.1.1.10		Methionine--tRNA ligase
+KNPMNEEE_01609	CDS	1260				hypothetical protein
+KNPMNEEE_01610	CDS	270				hypothetical protein
+KNPMNEEE_01611	CDS	519				hypothetical protein
+KNPMNEEE_01612	CDS	300				hypothetical protein
+KNPMNEEE_01613	CDS	375				hypothetical protein
+KNPMNEEE_01614	CDS	507				hypothetical protein
+KNPMNEEE_01615	tRNA	83				tRNA-Ser(tga)
+KNPMNEEE_01616	CDS	450				hypothetical protein
+KNPMNEEE_01617	CDS	612				hypothetical protein
+KNPMNEEE_01618	CDS	423				hypothetical protein
+KNPMNEEE_01619	CDS	366				hypothetical protein
+KNPMNEEE_01620	CDS	1098	ftsH_2	3.4.24.-		ATP-dependent zinc metalloprotease FtsH
+KNPMNEEE_01621	CDS	453				hypothetical protein
+KNPMNEEE_01622	CDS	897				hypothetical protein
+KNPMNEEE_01623	CDS	498	bar	2.3.1.183		Phosphinothricin N-acetyltransferase
+KNPMNEEE_01624	CDS	1140	cpg2	3.4.17.11		Carboxypeptidase G2
+KNPMNEEE_01625	CDS	1086	menC	4.2.1.113	COG4948	o-succinylbenzoate synthase
+KNPMNEEE_01626	CDS	1824		3.2.1.28	COG3387	Trehalase
+KNPMNEEE_01627	CDS	183				hypothetical protein
+KNPMNEEE_01628	CDS	291				hypothetical protein
+KNPMNEEE_01629	CDS	453	otsA	2.4.1.15	COG0380	Trehalose-6-phosphate synthase
+KNPMNEEE_01630	CDS	735	otsB	3.1.3.12	COG0637	Trehalose-phosphate phosphatase
+KNPMNEEE_01631	CDS	816				hypothetical protein
+KNPMNEEE_01632	CDS	1212				hypothetical protein
+KNPMNEEE_01633	CDS	2355		7.2.2.10	COG0474	Calcium-transporting ATPase
+KNPMNEEE_01634	CDS	582	yecD_2	3.-.-.-	COG1335	Isochorismatase family protein YecD
+KNPMNEEE_01635	CDS	366				hypothetical protein
+KNPMNEEE_01636	CDS	753	soj_2	3.6.-.-	COG1192	Sporulation initiation inhibitor protein Soj
+KNPMNEEE_01637	CDS	786	ucpA	1.-.-.-		Oxidoreductase UcpA
+KNPMNEEE_01638	CDS	372				hypothetical protein
+KNPMNEEE_01639	CDS	90				hypothetical protein
+KNPMNEEE_01640	CDS	201				hypothetical protein
+KNPMNEEE_01641	CDS	1047	lysY	1.2.1.-	COG0002	[LysW]-L-2-aminoadipate 6-phosphate reductase
+KNPMNEEE_01642	CDS	765	lysZ	2.7.2.-	COG0548	[LysW]-aminoadipate kinase
+KNPMNEEE_01643	CDS	1182	lysJ	2.6.1.-	COG4992	[LysW]-aminoadipate semialdehyde transaminase
+KNPMNEEE_01644	CDS	849	lysX_2	6.3.2.43	COG0189	Alpha-aminoadipate--LysW ligase LysX
+KNPMNEEE_01645	CDS	1053	lysK	3.5.1.-	COG0624	[LysW]-lysine hydrolase
+KNPMNEEE_01646	CDS	765				hypothetical protein
+KNPMNEEE_01647	CDS	1929	fadB	5.3.3.8		Fatty acid oxidation complex subunit alpha
+KNPMNEEE_01648	CDS	1578		6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase
+KNPMNEEE_01649	CDS	1176	thlA_1	2.3.1.9	COG0183	Acetyl-CoA acetyltransferase
+KNPMNEEE_01650	CDS	1080	mmgC_2	1.3.99.-	COG1960	Acyl-CoA dehydrogenase
+KNPMNEEE_01651	CDS	987	carC	1.3.1.108	COG1960	Caffeyl-CoA reductase-Etf complex subunit CarC
+KNPMNEEE_01652	CDS	312				hypothetical protein
+KNPMNEEE_01653	CDS	483				hypothetical protein
+KNPMNEEE_01654	CDS	237				hypothetical protein
+KNPMNEEE_01655	CDS	783	ybeM	3.5.1.128		Deaminated glutathione amidase
+KNPMNEEE_01656	CDS	867	mqnD_2	4.1.-.-		1,4-dihydroxy-6-naphtoate synthase
+KNPMNEEE_01657	CDS	330				hypothetical protein
+KNPMNEEE_01658	CDS	195				hypothetical protein
+KNPMNEEE_01659	CDS	126				hypothetical protein
+KNPMNEEE_01660	CDS	264				hypothetical protein
+KNPMNEEE_01661	CDS	963	insK_4		COG2801	Putative transposase InsK for insertion sequence element IS150
+KNPMNEEE_01662	CDS	1188	yfmO			Multidrug efflux protein YfmO
+KNPMNEEE_01663	CDS	303				hypothetical protein
+KNPMNEEE_01664	CDS	246				hypothetical protein
+KNPMNEEE_01665	tRNA	73				tRNA-Val(gac)
+KNPMNEEE_01666	CDS	621				hypothetical protein
+KNPMNEEE_01667	CDS	1056				hypothetical protein
+KNPMNEEE_01668	CDS	639				hypothetical protein
+KNPMNEEE_01669	CDS	573				hypothetical protein
+KNPMNEEE_01670	CDS	966	thiL_2	2.7.4.16	COG0611	Thiamine-monophosphate kinase
+KNPMNEEE_01671	CDS	516	grpE			Protein GrpE
+KNPMNEEE_01672	CDS	1881	dnaK_3		COG0443	Chaperone protein DnaK
+KNPMNEEE_01673	CDS	1104	dnaJ_2		COG0484	Chaperone protein DnaJ
+KNPMNEEE_01674	CDS	924				hypothetical protein
+KNPMNEEE_01675	CDS	732				hypothetical protein
+KNPMNEEE_01676	CDS	1143				hypothetical protein
+KNPMNEEE_01677	CDS	180				hypothetical protein
+KNPMNEEE_01678	CDS	816				hypothetical protein
+KNPMNEEE_01679	CDS	825	recA			Protein RecA
+KNPMNEEE_01680	CDS	780				hypothetical protein
+KNPMNEEE_01681	CDS	3471	smc_2		COG1196	Chromosome partition protein Smc
+KNPMNEEE_01682	CDS	1623	miaB_2	2.8.4.3		tRNA-2-methylthio-N(6)-dimethylallyladenosine synthase
+KNPMNEEE_01683	CDS	183				hypothetical protein
+KNPMNEEE_01684	CDS	990				hypothetical protein
+KNPMNEEE_01685	CDS	279				hypothetical protein
+KNPMNEEE_01686	CDS	1020				hypothetical protein
+KNPMNEEE_01687	CDS	711				hypothetical protein
+KNPMNEEE_01688	CDS	447				hypothetical protein
+KNPMNEEE_01689	CDS	1206	yjhB			Putative metabolite transport protein YjhB
+KNPMNEEE_01690	CDS	918				hypothetical protein
+KNPMNEEE_01691	CDS	1848				hypothetical protein
+KNPMNEEE_01692	CDS	615	mhpC_1	3.7.1.14		2-hydroxy-6-oxononadienedioate/2-hydroxy-6-oxononatrienedioate hydrolase
+KNPMNEEE_01693	CDS	1572				hypothetical protein
+KNPMNEEE_01694	CDS	423	mhqR		COG1846	HTH-type transcriptional regulator MhqR
+KNPMNEEE_01695	CDS	246				hypothetical protein
+KNPMNEEE_01696	CDS	1380	korA_2	1.2.7.3	COG0674	2-oxoglutarate oxidoreductase subunit KorA
+KNPMNEEE_01697	CDS	858				hypothetical protein
+KNPMNEEE_01698	CDS	165				hypothetical protein
+KNPMNEEE_01699	CDS	243				hypothetical protein
+KNPMNEEE_01700	CDS	402				hypothetical protein
+KNPMNEEE_01701	CDS	1317				hypothetical protein
+KNPMNEEE_01702	CDS	777		2.5.1.68	COG0020	(2Z,6E)-farnesyl diphosphate synthase
+KNPMNEEE_01703	CDS	933				hypothetical protein
+KNPMNEEE_01704	CDS	2046				hypothetical protein
+KNPMNEEE_01705	CDS	159				hypothetical protein
+KNPMNEEE_01706	CDS	144				hypothetical protein
+KNPMNEEE_01707	CDS	1368	purB	4.3.2.2		Adenylosuccinate lyase
+KNPMNEEE_01708	CDS	585				hypothetical protein
+KNPMNEEE_01709	CDS	657			COG3253	putative protein/MSMEI_2713
+KNPMNEEE_01710	CDS	357	glpE	2.8.1.1		Thiosulfate sulfurtransferase GlpE
+KNPMNEEE_01711	CDS	231				hypothetical protein
+KNPMNEEE_01712	CDS	438				hypothetical protein
+KNPMNEEE_01713	CDS	597				hypothetical protein
+KNPMNEEE_01714	CDS	1434	csbC_6			putative metabolite transport protein CsbC
+KNPMNEEE_01715	CDS	297				hypothetical protein
+KNPMNEEE_01716	CDS	663				hypothetical protein
+KNPMNEEE_01717	CDS	1365	gadA	4.1.1.15	COG0076	Glutamate decarboxylase
+KNPMNEEE_01718	CDS	612	hisI	3.5.4.19		Histidine biosynthesis bifunctional protein HisIE
+KNPMNEEE_01719	CDS	753	hisF	4.3.2.10	COG0107	Imidazole glycerol phosphate synthase subunit HisF
+KNPMNEEE_01720	CDS	546	priA	5.3.1.16	COG0106	Phosphoribosyl isomerase A
+KNPMNEEE_01721	CDS	99				hypothetical protein
+KNPMNEEE_01722	CDS	570	hisH	4.3.2.10	COG0118	Imidazole glycerol phosphate synthase subunit HisH
+KNPMNEEE_01723	CDS	531	hisB_2	4.2.1.19		Imidazoleglycerol-phosphate dehydratase
+KNPMNEEE_01724	CDS	1128	hisD	1.1.1.23		Histidinol dehydrogenase
+KNPMNEEE_01725	CDS	633	hisG	2.4.2.17	COG0040	ATP phosphoribosyltransferase
+KNPMNEEE_01726	CDS	765	hisZ			ATP phosphoribosyltransferase regulatory subunit
+KNPMNEEE_01727	CDS	165				hypothetical protein
+KNPMNEEE_01728	CDS	1041				hypothetical protein
+KNPMNEEE_01729	CDS	927	nlhH	3.1.1.1	COG0657	Carboxylesterase NlhH
+KNPMNEEE_01730	CDS	468				hypothetical protein
+KNPMNEEE_01731	CDS	1872				hypothetical protein
+KNPMNEEE_01732	CDS	612				hypothetical protein
+KNPMNEEE_01733	CDS	237				hypothetical protein
+KNPMNEEE_01734	CDS	285				hypothetical protein
+KNPMNEEE_01735	CDS	405				hypothetical protein
+KNPMNEEE_01736	CDS	453				hypothetical protein
+KNPMNEEE_01737	CDS	1623				hypothetical protein
+KNPMNEEE_01738	CDS	792	nrtD	7.3.2.4	COG1116	Nitrate import ATP-binding protein NrtD
+KNPMNEEE_01739	CDS	510				hypothetical protein
+KNPMNEEE_01740	CDS	285				hypothetical protein
+KNPMNEEE_01741	CDS	270				hypothetical protein
+KNPMNEEE_01742	CDS	429	sgaA	2.6.1.45	COG0075	Serine--glyoxylate aminotransferase
+KNPMNEEE_01743	CDS	1218	coaBC	6.3.2.5		Coenzyme A biosynthesis bifunctional protein CoaBC
+KNPMNEEE_01744	CDS	1065	dinB	2.7.7.7	COG0389	DNA polymerase IV
+KNPMNEEE_01745	CDS	555				hypothetical protein
+KNPMNEEE_01746	CDS	1446	ribZ_2			Riboflavin transporter RibZ
+KNPMNEEE_01747	CDS	1638	lcfB_2	6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase
+KNPMNEEE_01748	CDS	1452	abfD	4.2.1.120		4-hydroxybutyryl-CoA dehydratase/vinylacetyl-CoA-Delta-isomerase
+KNPMNEEE_01749	CDS	300				hypothetical protein
+KNPMNEEE_01750	CDS	768	crt	4.2.1.150	COG1024	Short-chain-enoyl-CoA hydratase
+KNPMNEEE_01751	CDS	105				hypothetical protein
+KNPMNEEE_01752	CDS	237				hypothetical protein
+KNPMNEEE_01753	CDS	2028	dxs	2.2.1.7		1-deoxy-D-xylulose-5-phosphate synthase
+KNPMNEEE_01754	CDS	399				hypothetical protein
+KNPMNEEE_01755	CDS	135				hypothetical protein
+KNPMNEEE_01756	CDS	1179	icd_2	1.1.1.42	COG0538	Isocitrate dehydrogenase [NADP]
+KNPMNEEE_01757	CDS	243				hypothetical protein
+KNPMNEEE_01758	CDS	1716	yveA_6		COG0531	Aspartate-proton symporter
+KNPMNEEE_01759	CDS	1065	cbiD	2.1.1.195	COG1903	Cobalt-precorrin-5B C(1)-methyltransferase
+KNPMNEEE_01760	CDS	600	cbiC	5.4.99.60	COG2082	Cobalt-precorrin-8 methylmutase
+KNPMNEEE_01761	CDS	753	cbiJ	1.3.1.106	COG2099	Cobalt-precorrin-6A reductase
+KNPMNEEE_01762	CDS	201				hypothetical protein
+KNPMNEEE_01763	CDS	498				hypothetical protein
+KNPMNEEE_01764	CDS	1389				hypothetical protein
+KNPMNEEE_01765	CDS	1467	mdtD_4			Putative multidrug resistance protein MdtD
+KNPMNEEE_01766	CDS	750		4.2.1.150	COG1024	Crotonyl-CoA hydratase
+KNPMNEEE_01767	CDS	336				hypothetical protein
+KNPMNEEE_01768	CDS	378				hypothetical protein
+KNPMNEEE_01769	CDS	357				hypothetical protein
+KNPMNEEE_01770	CDS	948	gloB	3.1.2.6		Hydroxyacylglutathione hydrolase
+KNPMNEEE_01771	CDS	1149	exuT			Hexuronate transporter
+KNPMNEEE_01772	CDS	1512		6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase
+KNPMNEEE_01773	CDS	1647				hypothetical protein
+KNPMNEEE_01774	CDS	774				hypothetical protein
+KNPMNEEE_01775	CDS	588				hypothetical protein
+KNPMNEEE_01776	CDS	258				hypothetical protein
+KNPMNEEE_01777	CDS	924				hypothetical protein
+KNPMNEEE_01778	CDS	1983				hypothetical protein
+KNPMNEEE_01779	CDS	675				hypothetical protein
+KNPMNEEE_01780	CDS	279				hypothetical protein
+KNPMNEEE_01781	CDS	204				hypothetical protein
+KNPMNEEE_01782	CDS	132				hypothetical protein
+KNPMNEEE_01783	CDS	90				hypothetical protein
+KNPMNEEE_01784	CDS	978				hypothetical protein
+KNPMNEEE_01785	CDS	267				hypothetical protein
+KNPMNEEE_01786	CDS	525				hypothetical protein
+KNPMNEEE_01787	CDS	1110				hypothetical protein
+KNPMNEEE_01788	CDS	486	tmung	3.2.2.27	COG1573	Type-4 uracil-DNA glycosylase
+KNPMNEEE_01789	CDS	519				hypothetical protein
+KNPMNEEE_01790	CDS	675				hypothetical protein
+KNPMNEEE_01791	CDS	423				hypothetical protein
+KNPMNEEE_01792	CDS	897	pyrDB	1.3.1.14	COG0167	Dihydroorotate dehydrogenase B (NAD(+)), catalytic subunit
+KNPMNEEE_01793	CDS	744	pyrK		COG0543	Dihydroorotate dehydrogenase B (NAD(+)), electron transfer subunit
+KNPMNEEE_01794	CDS	162				hypothetical protein
+KNPMNEEE_01795	CDS	339				hypothetical protein
+KNPMNEEE_01796	CDS	1011	ilvC	1.1.1.382		Ketol-acid reductoisomerase (NAD(+))
+KNPMNEEE_01797	CDS	315				hypothetical protein
+KNPMNEEE_01798	CDS	1740	ilvB	2.2.1.6	COG0028	Acetolactate synthase large subunit
+KNPMNEEE_01799	CDS	1659	ilvD	4.2.1.9	COG0129	Dihydroxy-acid dehydratase
+KNPMNEEE_01800	CDS	252				hypothetical protein
+KNPMNEEE_01801	CDS	156				hypothetical protein
+KNPMNEEE_01802	CDS	1182	thlA_2	2.3.1.9	COG0183	Acetyl-CoA acetyltransferase
+KNPMNEEE_01803	CDS	1128				IS200/IS605 family transposase ISHvo24
+KNPMNEEE_01804	CDS	297				hypothetical protein
+KNPMNEEE_01805	CDS	168				hypothetical protein
+KNPMNEEE_01806	CDS	138				hypothetical protein
+KNPMNEEE_01807	CDS	168				hypothetical protein
+KNPMNEEE_01808	CDS	1164	thlA_3	2.3.1.9	COG0183	Acetyl-CoA acetyltransferase
+KNPMNEEE_01809	CDS	1194				hypothetical protein
+KNPMNEEE_01810	CDS	519				hypothetical protein
+KNPMNEEE_01811	CDS	492				hypothetical protein
+KNPMNEEE_01812	CDS	306				hypothetical protein
+KNPMNEEE_01813	CDS	729		1.1.1.119	COG1028	Glucose 1-dehydrogenase
+KNPMNEEE_01814	CDS	663	udgb	3.2.2.-	COG1573	Type-5 uracil-DNA glycosylase
+KNPMNEEE_01815	CDS	294				hypothetical protein
+KNPMNEEE_01816	CDS	570				hypothetical protein
+KNPMNEEE_01817	CDS	429				hypothetical protein
+KNPMNEEE_01818	CDS	312				hypothetical protein
+KNPMNEEE_01819	CDS	285				hypothetical protein
+KNPMNEEE_01820	CDS	300				hypothetical protein
+KNPMNEEE_01821	CDS	927	pyrB	2.1.3.2	COG0540	Aspartate carbamoyltransferase catalytic subunit
+KNPMNEEE_01822	CDS	456	pyrI		COG1781	Aspartate carbamoyltransferase regulatory chain
+KNPMNEEE_01823	CDS	630				hypothetical protein
+KNPMNEEE_01824	CDS	390				hypothetical protein
+KNPMNEEE_01825	CDS	357				hypothetical protein
+KNPMNEEE_01826	CDS	612				hypothetical protein
+KNPMNEEE_01827	CDS	132				hypothetical protein
+KNPMNEEE_01828	CDS	378				hypothetical protein
+KNPMNEEE_01829	CDS	450				hypothetical protein
+KNPMNEEE_01830	CDS	900	yxlF	3.6.3.-	COG1131	putative ABC transporter ATP-binding protein YxlF
+KNPMNEEE_01831	CDS	822				hypothetical protein
+KNPMNEEE_01832	CDS	852				hypothetical protein
+KNPMNEEE_01833	tRNA	75				tRNA-Glu(ctc)
+KNPMNEEE_01834	CDS	810				hypothetical protein
+KNPMNEEE_01835	CDS	657	drdA	4.1.2.-		5-deoxy-D-ribulose 1-phosphate aldolase
+KNPMNEEE_01836	CDS	1569		2.3.1.-		tRNA uridine(34) acetyltransferase
+KNPMNEEE_01837	CDS	561				hypothetical protein
+KNPMNEEE_01838	CDS	675				hypothetical protein
+KNPMNEEE_01839	CDS	786	cysM	2.5.1.47	COG0031	Cysteine synthase B
+KNPMNEEE_01840	CDS	612	pspB_2	3.1.3.3	COG0406	Putative phosphoserine phosphatase 2
+KNPMNEEE_01841	CDS	885	purC	6.3.2.6	COG0152	Phosphoribosylaminoimidazole-succinocarboxamide synthase
+KNPMNEEE_01842	CDS	300				hypothetical protein
+KNPMNEEE_01843	CDS	318				IS256 family transposase ISFac8
+KNPMNEEE_01844	CDS	390				IS256 family transposase ISFac8
+KNPMNEEE_01845	CDS	144				hypothetical protein
+KNPMNEEE_01846	CDS	1680	fadD_1	6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase
+KNPMNEEE_01847	CDS	1125	citZ	2.3.3.16	COG0372	Citrate synthase 2
+KNPMNEEE_01848	CDS	426				hypothetical protein
+KNPMNEEE_01849	CDS	708				hypothetical protein
+KNPMNEEE_01850	CDS	1827	fixB_3			Protein FixB
+KNPMNEEE_01851	CDS	1194				hypothetical protein
+KNPMNEEE_01852	CDS	288				hypothetical protein
+KNPMNEEE_01853	CDS	789	ytnP	3.1.1.-	COG0491	putative quorum-quenching lactonase YtnP
+KNPMNEEE_01854	CDS	1593	nfdA	3.5.1.91		N-substituted formamide deformylase
+KNPMNEEE_01855	CDS	684	nth_2	4.2.99.18	COG0177	Endonuclease III
+KNPMNEEE_01856	CDS	3156	carB	6.3.5.5		Carbamoyl-phosphate synthase large chain
+KNPMNEEE_01857	CDS	1047	carA	6.3.5.5		Carbamoyl-phosphate synthase small chain
+KNPMNEEE_01858	CDS	912				hypothetical protein
+KNPMNEEE_01859	CDS	1026				hypothetical protein
+KNPMNEEE_01860	CDS	585	mhpC_2	3.7.1.14		2-hydroxy-6-oxononadienedioate/2-hydroxy-6-oxononatrienedioate hydrolase
+KNPMNEEE_01861	CDS	1221	ppsA_1	2.7.9.2	COG0574	Phosphoenolpyruvate synthase
+KNPMNEEE_01862	CDS	213				hypothetical protein
+KNPMNEEE_01863	CDS	909	ppsA_2	2.7.9.2	COG0574	Phosphoenolpyruvate synthase
+KNPMNEEE_01864	CDS	780				hypothetical protein
+KNPMNEEE_01865	CDS	921		5.1.3.2	COG1088	UDP-glucose 4-epimerase
+KNPMNEEE_01866	CDS	342				hypothetical protein
+KNPMNEEE_01867	CDS	267				hypothetical protein
+KNPMNEEE_01868	CDS	813				hypothetical protein
+KNPMNEEE_01869	CDS	969	hddA_2	2.7.1.168		D-glycero-alpha-D-manno-heptose 7-phosphate kinase
+KNPMNEEE_01870	CDS	570	gmhA1	5.3.1.28	COG0279	Phosphoheptose isomerase 1
+KNPMNEEE_01871	CDS	564				hypothetical protein
+KNPMNEEE_01872	CDS	1764	clcB			Voltage-gated ClC-type chloride channel ClcB
+KNPMNEEE_01873	CDS	672				hypothetical protein
+KNPMNEEE_01874	CDS	810	pheA			Bifunctional chorismate mutase/prephenate dehydratase
+KNPMNEEE_01875	CDS	453				hypothetical protein
+KNPMNEEE_01876	CDS	261				hypothetical protein
+KNPMNEEE_01877	CDS	525	yrdA_2		COG0663	Protein YrdA
+KNPMNEEE_01878	CDS	480	bcp_2	1.11.1.15	COG1225	Putative peroxiredoxin
+KNPMNEEE_01879	CDS	678	tal_2	2.2.1.2	COG0176	Transaldolase
+KNPMNEEE_01880	CDS	231				hypothetical protein
+KNPMNEEE_01881	CDS	510				hypothetical protein
+KNPMNEEE_01882	CDS	720			COG0596	putative protein
+KNPMNEEE_01883	CDS	729				hypothetical protein
+KNPMNEEE_01884	CDS	1236	mvaA	1.1.1.88		3-hydroxy-3-methylglutaryl-coenzyme A reductase
+KNPMNEEE_01885	CDS	807				hypothetical protein
+KNPMNEEE_01886	CDS	354				hypothetical protein
+KNPMNEEE_01887	CDS	846	folD		COG0190	Bifunctional protein FolD protein
+KNPMNEEE_01888	CDS	255				hypothetical protein
+KNPMNEEE_01889	CDS	963				hypothetical protein
+KNPMNEEE_01890	CDS	579	ribA	3.5.4.25	COG0807	GTP cyclohydrolase-2
+KNPMNEEE_01891	CDS	162				hypothetical protein
+KNPMNEEE_01892	tRNA	85				tRNA-Ser(gct)
+KNPMNEEE_01893	CDS	471				hypothetical protein
+KNPMNEEE_01894	CDS	291				hypothetical protein
+KNPMNEEE_01895	CDS	306				hypothetical protein
+KNPMNEEE_01896	CDS	942				hypothetical protein
+KNPMNEEE_01897	CDS	597				hypothetical protein
+KNPMNEEE_01898	CDS	321				hypothetical protein
+KNPMNEEE_01899	CDS	720				hypothetical protein
+KNPMNEEE_01900	CDS	228				hypothetical protein
+KNPMNEEE_01901	CDS	489				hypothetical protein
+KNPMNEEE_01902	CDS	930				hypothetical protein
+KNPMNEEE_01903	CDS	1122				IS110 family transposase ISBth13
+KNPMNEEE_01904	CDS	669				IS200/IS605 family transposase ISFac11
+KNPMNEEE_01905	CDS	672				IS200/IS605 family transposase ISFac11
+KNPMNEEE_01906	CDS	264				hypothetical protein
+KNPMNEEE_01907	CDS	429				hypothetical protein
+KNPMNEEE_01908	CDS	1548				hypothetical protein
+KNPMNEEE_01909	CDS	876	btuD_3	7.6.2.8		Vitamin B12 import ATP-binding protein BtuD
+KNPMNEEE_01910	CDS	825				hypothetical protein
+KNPMNEEE_01911	CDS	888				IS481 family transposase ISFac5
+KNPMNEEE_01912	CDS	423				hypothetical protein
+KNPMNEEE_01913	CDS	1200	yfcJ			putative MFS-type transporter YfcJ
+KNPMNEEE_01914	CDS	150				hypothetical protein
+KNPMNEEE_01915	CDS	516				hypothetical protein
+KNPMNEEE_01916	CDS	285				hypothetical protein
+KNPMNEEE_01917	CDS	675		1.11.1.15	COG0450	Peroxiredoxin
+KNPMNEEE_01918	CDS	420				hypothetical protein
+KNPMNEEE_01919	tRNA	72				tRNA-Ala(cgc)
+KNPMNEEE_01920	CDS	621				hypothetical protein
+KNPMNEEE_01921	CDS	252				hypothetical protein
+KNPMNEEE_01922	CDS	210				hypothetical protein
+KNPMNEEE_01923	CDS	315				hypothetical protein
+KNPMNEEE_01924	CDS	669				IS200/IS605 family transposase ISFac11
+KNPMNEEE_01925	CDS	690				IS200/IS605 family transposase ISFac11
+KNPMNEEE_01926	CDS	171				hypothetical protein
+KNPMNEEE_01927	CDS	141				hypothetical protein
+KNPMNEEE_01928	CDS	153				hypothetical protein
+KNPMNEEE_01929	CDS	1797				hypothetical protein
+KNPMNEEE_01930	CDS	1122				hypothetical protein
+KNPMNEEE_01931	CDS	237				hypothetical protein
+KNPMNEEE_01932	CDS	156				hypothetical protein
+KNPMNEEE_01933	CDS	486				hypothetical protein
+KNPMNEEE_01934	CDS	576				hypothetical protein
+KNPMNEEE_01935	CDS	1332				hypothetical protein
+KNPMNEEE_01936	CDS	270				hypothetical protein
+KNPMNEEE_01937	CDS	90				hypothetical protein
+KNPMNEEE_01938	CDS	498				IS481 family transposase ISFac5
+KNPMNEEE_01939	CDS	93				hypothetical protein
+KNPMNEEE_01940	CDS	1038				hypothetical protein
+KNPMNEEE_01941	CDS	465				hypothetical protein
+KNPMNEEE_01942	CDS	537				hypothetical protein
+KNPMNEEE_01943	CDS	975	htpX_2	3.4.24.-		Protease HtpX
+KNPMNEEE_01944	CDS	558				hypothetical protein
+KNPMNEEE_01945	CDS	123				hypothetical protein
+KNPMNEEE_01946	CDS	138				hypothetical protein
+KNPMNEEE_01947	CDS	1311	npr	1.11.1.1	COG0446	NADH peroxidase
+KNPMNEEE_01948	CDS	756	ppm1_2	2.4.1.-		Polyprenol monophosphomannose synthase
+KNPMNEEE_01949	CDS	804				hypothetical protein
+KNPMNEEE_01950	CDS	234				hypothetical protein
+KNPMNEEE_01951	CDS	588	ahpC	1.11.1.15		Alkyl hydroperoxide reductase C
+KNPMNEEE_01952	CDS	624				hypothetical protein
+KNPMNEEE_01953	CDS	783	smc_3			Chromosome partition protein Smc
+KNPMNEEE_01954	CDS	129				hypothetical protein
+KNPMNEEE_01955	CDS	123				hypothetical protein
+KNPMNEEE_01956	CDS	324				hypothetical protein
+KNPMNEEE_01957	CDS	678				hypothetical protein
+KNPMNEEE_01958	CDS	513				hypothetical protein
+KNPMNEEE_01959	CDS	780	purK_1	6.3.4.18	COG0026	N5-carboxyaminoimidazole ribonucleotide synthase
+KNPMNEEE_01960	CDS	321	purK_2	6.3.4.18	COG0026	N5-carboxyaminoimidazole ribonucleotide synthase
+KNPMNEEE_01961	CDS	327	purE	5.4.99.18	COG0041	N5-carboxyaminoimidazole ribonucleotide mutase
+KNPMNEEE_01962	CDS	1644	namA	1.6.99.1		NADPH dehydrogenase
+KNPMNEEE_01963	CDS	549				hypothetical protein
+KNPMNEEE_01964	CDS	1452	ywrD	2.3.2.2	COG0405	Glutathione hydrolase-like YwrD proenzyme
+KNPMNEEE_01965	CDS	237	moaD			Molybdopterin synthase sulfur carrier subunit
+KNPMNEEE_01966	CDS	447	moaA_2			GTP 3',8-cyclase
+KNPMNEEE_01967	CDS	423	moaA2	4.1.99.22	COG2896	GTP 3',8-cyclase 2
+KNPMNEEE_01968	CDS	723				hypothetical protein
+KNPMNEEE_01969	CDS	840	btuD_4	7.6.2.8		Vitamin B12 import ATP-binding protein BtuD
+KNPMNEEE_01970	CDS	198				hypothetical protein
+KNPMNEEE_01971	CDS	258				hypothetical protein
+KNPMNEEE_01972	CDS	807	surE	3.1.3.5	COG0496	5'-nucleotidase SurE
+KNPMNEEE_01973	CDS	303				hypothetical protein
+KNPMNEEE_01974	CDS	195				hypothetical protein
+KNPMNEEE_01975	CDS	603				hypothetical protein
+KNPMNEEE_01976	CDS	1038				hypothetical protein
+KNPMNEEE_01977	CDS	1392	proS	6.1.1.15	COG0442	Proline--tRNA ligase
+KNPMNEEE_01978	CDS	369				hypothetical protein
+KNPMNEEE_01979	CDS	234				hypothetical protein
+KNPMNEEE_01980	CDS	1023	asd2	1.2.1.11	COG0136	Aspartate-semialdehyde dehydrogenase 2
+KNPMNEEE_01981	CDS	1047				hypothetical protein
+KNPMNEEE_01982	CDS	1206	fadF	1.-.-.-	COG0247	putative iron-sulfur-binding oxidoreductase FadF
+KNPMNEEE_01983	CDS	1413		1.-.-.-	COG0277	putative FAD-linked oxidoreductase
+KNPMNEEE_01984	CDS	1356	xylT			D-xylose transporter
+KNPMNEEE_01985	CDS	411	moaE	2.8.1.12	COG0314	Molybdopterin synthase catalytic subunit
+KNPMNEEE_01986	CDS	429				hypothetical protein
+KNPMNEEE_01987	CDS	357				hypothetical protein
+KNPMNEEE_01988	CDS	957	trxB	1.8.1.9	COG0492	Thioredoxin reductase
+KNPMNEEE_01989	CDS	834				hypothetical protein
+KNPMNEEE_01990	CDS	411				hypothetical protein
+KNPMNEEE_01991	CDS	1290		4.2.1.79		2-methylcitrate dehydratase
+KNPMNEEE_01992	CDS	852	mmgF	4.1.3.-	COG2513	2-methylisocitrate lyase
+KNPMNEEE_01993	CDS	744		2.1.1.272	COG1010	Cobalt-factor III methyltransferase
+KNPMNEEE_01994	CDS	825				IS200/IS605 family transposase ISMma22
+KNPMNEEE_01995	CDS	438				hypothetical protein
+KNPMNEEE_01996	CDS	636				hypothetical protein
+KNPMNEEE_01997	CDS	1689	mdtD_5			Putative multidrug resistance protein MdtD
+KNPMNEEE_01998	CDS	831				hypothetical protein
+KNPMNEEE_01999	CDS	1221				hypothetical protein
+KNPMNEEE_02000	CDS	522	butA	1.1.1.304		Diacetyl reductase [(S)-acetoin forming]
+KNPMNEEE_02001	CDS	234				hypothetical protein
+KNPMNEEE_02002	CDS	282				hypothetical protein
+KNPMNEEE_02003	tRNA	73				tRNA-Arg(ccg)
+KNPMNEEE_02004	CDS	249				hypothetical protein
+KNPMNEEE_02005	CDS	303				hypothetical protein
+KNPMNEEE_02006	CDS	1446				hypothetical protein
+KNPMNEEE_02007	CDS	144				hypothetical protein
+KNPMNEEE_02008	CDS	510				IS200/IS605 family transposase ISHaha7
+KNPMNEEE_02009	CDS	312				hypothetical protein
+KNPMNEEE_02010	CDS	564	yflN	3.-.-.-	COG0491	putative metallo-hydrolase YflN
+KNPMNEEE_02011	CDS	1119	gltA	2.3.3.16	COG0372	Citrate synthase
+KNPMNEEE_02012	CDS	729				hypothetical protein
+KNPMNEEE_02013	CDS	1140	aatA	2.6.1.1	COG0436	Aspartate/prephenate aminotransferase
+KNPMNEEE_02014	CDS	2304				hypothetical protein
+KNPMNEEE_02015	CDS	336				hypothetical protein
+KNPMNEEE_02016	CDS	234				hypothetical protein
+KNPMNEEE_02017	CDS	348				IS200/IS605 family transposase ISTac1
+KNPMNEEE_02018	CDS	1236				hypothetical protein
+KNPMNEEE_02019	CDS	1167		1.13.12.4	COG1304	Lactate 2-monooxygenase
+KNPMNEEE_02020	CDS	828				hypothetical protein
+KNPMNEEE_02021	CDS	1230				hypothetical protein
+KNPMNEEE_02022	CDS	654				hypothetical protein
+KNPMNEEE_02023	CDS	744	sufC		COG0396	Vegetative protein 296
+KNPMNEEE_02024	CDS	1440				hypothetical protein
+KNPMNEEE_02025	CDS	1215	sufB		COG0719	FeS cluster assembly protein SufB
+KNPMNEEE_02026	CDS	1824				hypothetical protein
+KNPMNEEE_02027	CDS	972				hypothetical protein
+KNPMNEEE_02028	CDS	165				hypothetical protein
+KNPMNEEE_02029	CDS	1005				hypothetical protein
+KNPMNEEE_02030	tRNA	85				tRNA-Ser(cga)
+KNPMNEEE_02031	CDS	390	yccU		COG1832	putative protein YccU
+KNPMNEEE_02032	CDS	306				hypothetical protein
+KNPMNEEE_02033	CDS	1371	ffh		COG0541	Signal recognition particle protein
+KNPMNEEE_02034	CDS	1191				hypothetical protein
+KNPMNEEE_02035	CDS	210	ndhI	7.1.1.-		NAD(P)H-quinone oxidoreductase subunit I, chloroplastic
+KNPMNEEE_02036	CDS	1431				hypothetical protein
+KNPMNEEE_02037	CDS	1494	gbsA_2	1.2.1.8	COG1012	Betaine aldehyde dehydrogenase
+KNPMNEEE_02038	CDS	1245	adh1	1.1.1.192	COG1454	Long-chain-alcohol dehydrogenase 1
+KNPMNEEE_02039	CDS	510	ppa	3.6.1.1	COG0221	Inorganic pyrophosphatase
+KNPMNEEE_02040	CDS	90				hypothetical protein
+KNPMNEEE_02041	CDS	1647				hypothetical protein
+KNPMNEEE_02042	CDS	384				hypothetical protein
+KNPMNEEE_02043	CDS	1599	bchE	1.21.98.3		Anaerobic magnesium-protoporphyrin IX monomethyl ester cyclase
+KNPMNEEE_02044	CDS	891	ala	1.4.1.1		Alanine dehydrogenase
+KNPMNEEE_02045	CDS	1692				hypothetical protein
+KNPMNEEE_02046	CDS	318				hypothetical protein
+KNPMNEEE_02047	CDS	1572	murJ			lipid II flippase MurJ
+KNPMNEEE_02048	CDS	270				hypothetical protein
+KNPMNEEE_02049	CDS	909				hypothetical protein
+KNPMNEEE_02050	CDS	918	kynB_2	3.5.1.9		Kynurenine formamidase
+KNPMNEEE_02051	CDS	1941	acs_3	6.2.1.1	COG0365	Acetyl-coenzyme A synthetase
+KNPMNEEE_02052	CDS	1080	hpd	1.13.11.27	COG3185	4-hydroxyphenylpyruvate dioxygenase
+KNPMNEEE_02053	CDS	888				hypothetical protein
+KNPMNEEE_02054	CDS	1149				hypothetical protein
+KNPMNEEE_02055	CDS	672	besC	1.14.99.-		4-chloro-allylglycine synthase
+KNPMNEEE_02056	CDS	303				hypothetical protein
+KNPMNEEE_02057	CDS	1065				hypothetical protein
+KNPMNEEE_02058	CDS	582	ribD		COG0117	Riboflavin biosynthesis protein RibD
+KNPMNEEE_02059	CDS	693	ribBA		COG0108	Riboflavin biosynthesis protein RibBA
+KNPMNEEE_02060	CDS	489				hypothetical protein
+KNPMNEEE_02061	CDS	405	ribH	2.5.1.78	COG0054	6,7-dimethyl-8-ribityllumazine synthase
+KNPMNEEE_02062	CDS	678				hypothetical protein
+KNPMNEEE_02063	CDS	423				hypothetical protein
+KNPMNEEE_02064	CDS	285				hypothetical protein
+KNPMNEEE_02065	CDS	405				hypothetical protein
+KNPMNEEE_02066	CDS	507				hypothetical protein
+KNPMNEEE_02067	CDS	171				hypothetical protein
+KNPMNEEE_02068	CDS	303				hypothetical protein
+KNPMNEEE_02069	CDS	1998	pepO_2	3.4.24.-	COG3590	Neutral endopeptidase
+KNPMNEEE_02070	CDS	1086				hypothetical protein
+KNPMNEEE_02071	CDS	117				hypothetical protein
+KNPMNEEE_02072	CDS	213				hypothetical protein
+KNPMNEEE_02073	CDS	1797	pckG	4.1.1.32	COG1274	Phosphoenolpyruvate carboxykinase [GTP]
+KNPMNEEE_02074	CDS	246				hypothetical protein
+KNPMNEEE_02075	CDS	1290	mdrP			Na(+), Li(+), K(+)/H(+) antiporter
+KNPMNEEE_02076	CDS	1767				hypothetical protein
+KNPMNEEE_02077	CDS	537				hypothetical protein
+KNPMNEEE_02078	CDS	1035				hypothetical protein
+KNPMNEEE_02079	CDS	1179				hypothetical protein
+KNPMNEEE_02080	CDS	741				hypothetical protein
+KNPMNEEE_02081	CDS	153				hypothetical protein
+KNPMNEEE_02082	CDS	99				hypothetical protein
+KNPMNEEE_02083	CDS	1086				hypothetical protein
+KNPMNEEE_02084	CDS	402				hypothetical protein
+KNPMNEEE_02085	CDS	663				hypothetical protein
+KNPMNEEE_02086	CDS	492				hypothetical protein
+KNPMNEEE_02087	CDS	327				hypothetical protein
+KNPMNEEE_02088	CDS	195				hypothetical protein
+KNPMNEEE_02089	CDS	1545	bepA_2	3.4.-.-		Beta-barrel assembly-enhancing protease
+KNPMNEEE_02090	CDS	1107				hypothetical protein
+KNPMNEEE_02091	CDS	414	hit		COG0537	Protein hit
+KNPMNEEE_02092	CDS	117				hypothetical protein
+KNPMNEEE_02093	CDS	1323	rocC		COG0833	Amino-acid permease RocC
+KNPMNEEE_02094	CDS	357				hypothetical protein
+KNPMNEEE_02095	CDS	1257				hypothetical protein
+KNPMNEEE_02096	CDS	390				hypothetical protein
+KNPMNEEE_02097	CDS	1302				hypothetical protein
+KNPMNEEE_02098	CDS	3120				hypothetical protein
+KNPMNEEE_02099	CDS	1692	fadD_2	6.2.1.3	COG0318	Long-chain-fatty-acid--CoA ligase
+KNPMNEEE_02100	CDS	402				hypothetical protein
+KNPMNEEE_02101	CDS	1128				IS200/IS605 family transposase ISHvo24
+KNPMNEEE_02102	CDS	1842		3.2.1.28	COG3387	Trehalase
+KNPMNEEE_02103	CDS	1176				IS200/IS605 family transposase ISMma19
+KNPMNEEE_02104	CDS	177				hypothetical protein
+KNPMNEEE_02105	CDS	1395				hypothetical protein
+KNPMNEEE_02106	CDS	510	COQ5_2	2.1.1.163		2-methoxy-6-polyprenyl-1,4-benzoquinol methylase, mitochondrial
+KNPMNEEE_02107	CDS	252				hypothetical protein
+KNPMNEEE_02108	CDS	744	glpF		COG0580	Glycerol uptake facilitator protein
+KNPMNEEE_02109	CDS	1503	glpK	2.7.1.30	COG0554	Glycerol kinase
+KNPMNEEE_02110	CDS	1854				hypothetical protein
+KNPMNEEE_02111	CDS	198				hypothetical protein
+KNPMNEEE_02112	CDS	1200				hypothetical protein
+KNPMNEEE_02113	CDS	798				hypothetical protein
+KNPMNEEE_02114	CDS	924	btuD_5	7.6.2.8		Vitamin B12 import ATP-binding protein BtuD
+KNPMNEEE_02115	CDS	1911				hypothetical protein
+KNPMNEEE_02116	CDS	276				hypothetical protein
+KNPMNEEE_02117	CDS	1893				hypothetical protein
+KNPMNEEE_02118	CDS	1215	moeA_3	2.10.1.1	COG0303	Molybdopterin molybdenumtransferase
+KNPMNEEE_02119	CDS	840	yihR		COG2017	putative protein YihR
+KNPMNEEE_02120	CDS	360	rutC	1.-.-.-	COG0251	Putative aminoacrylate peracid reductase RutC
+KNPMNEEE_02121	CDS	435				IS481 family transposase ISFac5
+KNPMNEEE_02122	CDS	216				hypothetical protein
+KNPMNEEE_02123	CDS	1122				IS110 family transposase ISBth13
+KNPMNEEE_02124	CDS	162				hypothetical protein
+KNPMNEEE_02125	CDS	96				hypothetical protein
+KNPMNEEE_02126	CDS	1140				hypothetical protein
+KNPMNEEE_02127	CDS	1224				hypothetical protein
+KNPMNEEE_02128	CDS	759				hypothetical protein
+KNPMNEEE_02129	CDS	651				hypothetical protein
+KNPMNEEE_02130	CDS	303				hypothetical protein
+KNPMNEEE_02131	CDS	315				hypothetical protein
+KNPMNEEE_02132	CDS	387				hypothetical protein
+KNPMNEEE_02133	CDS	891				hypothetical protein
+KNPMNEEE_02134	CDS	1218				hypothetical protein
+KNPMNEEE_02135	CDS	213				IS256 family transposase ISFac8
+KNPMNEEE_02136	CDS	2757	rep	3.6.4.12		ATP-dependent DNA helicase Rep
+KNPMNEEE_02137	CDS	594		1.1.1.1		Alcohol dehydrogenase
+KNPMNEEE_02138	CDS	150				hypothetical protein
+KNPMNEEE_02139	CDS	90				hypothetical protein
+KNPMNEEE_02140	CDS	552				hypothetical protein
+KNPMNEEE_02141	CDS	543				hypothetical protein
+KNPMNEEE_02142	CDS	816				hypothetical protein
+KNPMNEEE_02143	CDS	1017	moaA_3			GTP 3',8-cyclase
+KNPMNEEE_02144	CDS	249				hypothetical protein
+KNPMNEEE_02145	CDS	777				hypothetical protein
+KNPMNEEE_02146	CDS	210				hypothetical protein
+KNPMNEEE_02147	CDS	156				hypothetical protein
+KNPMNEEE_02148	CDS	279				hypothetical protein
+KNPMNEEE_02149	CDS	243				hypothetical protein
+KNPMNEEE_02150	CDS	468				IS481 family transposase ISFac5
+KNPMNEEE_02151	CDS	288				hypothetical protein
+KNPMNEEE_02152	CDS	1188				hypothetical protein
+KNPMNEEE_02153	CDS	210				hypothetical protein
+KNPMNEEE_02154	CDS	90				hypothetical protein
+KNPMNEEE_02155	CDS	354				hypothetical protein
+KNPMNEEE_02156	CDS	435				hypothetical protein
+KNPMNEEE_02157	CDS	984				hypothetical protein
+KNPMNEEE_02158	CDS	213				hypothetical protein
+KNPMNEEE_02159	CDS	144				hypothetical protein
+KNPMNEEE_02160	CDS	384				hypothetical protein
+KNPMNEEE_02161	CDS	750	cpnA	1.1.1.163		Cyclopentanol dehydrogenase
+KNPMNEEE_02162	CDS	1032			COG3385	IS4 family transposase ISFac10
+KNPMNEEE_02163	CDS	1662				hypothetical protein
+KNPMNEEE_02164	CDS	189				hypothetical protein
+KNPMNEEE_02165	CDS	195				hypothetical protein
+KNPMNEEE_02166	CDS	309				hypothetical protein
+KNPMNEEE_02167	CDS	186				hypothetical protein
+KNPMNEEE_02168	CDS	1083				hypothetical protein
+KNPMNEEE_02169	CDS	564				hypothetical protein
+KNPMNEEE_02170	CDS	636				hypothetical protein
+KNPMNEEE_02171	CDS	171				hypothetical protein
+KNPMNEEE_02172	CDS	111				hypothetical protein
+KNPMNEEE_02173	CDS	495				hypothetical protein
+KNPMNEEE_02174	CDS	756	haeIIIM	2.1.1.37		Modification methylase HaeIII
+KNPMNEEE_02175	CDS	681	mutY	3.2.2.31		Adenine DNA glycosylase
+KNPMNEEE_02176	CDS	3672				hypothetical protein
+KNPMNEEE_02177	CDS	1791				hypothetical protein
+KNPMNEEE_02178	CDS	3048				hypothetical protein
+KNPMNEEE_02179	CDS	483				hypothetical protein

@@ -1,0 +1,2 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+246237	Ribosomal_S11	95.7	True	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	Acidimicrobiaceae	Ferrimicrobium	Ferrimicrobium acidiphilum

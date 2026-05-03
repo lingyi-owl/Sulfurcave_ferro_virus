@@ -1,0 +1,3 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+380784	Ribosomal_S3_C	93.8	True	Archaea	Micrarchaeota	Micrarchaeia	Micrarchaeales	Micrarchaeaceae	Micrarchaeum	Micrarchaeum acidiphilum
+501186	Ribosomal_S2	92.7	True	Archaea	Micrarchaeota	Micrarchaeia	Micrarchaeales	Micrarchaeaceae	Micrarchaeum	Micrarchaeum acidiphilum

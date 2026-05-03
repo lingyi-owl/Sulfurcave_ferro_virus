@@ -1,0 +1,117 @@
+file	percent	reads	taxon_id	taxon_name
+ERR10036470.out	94.052551	4237866	201174	Actinobacteria
+ERR10036470.out	0.574964	25907	1224	Proteobacteria
+ERR10036470.out	0.182119	8206	1239	Firmicutes
+ERR10036470.out	0.114740	5170	4890	Ascomycota
+ERR10036470.out	0.079230	3570	2283796	Candidatus Thermoplasmatota
+ERR10036470.out	0.048182	2171	5794	Apicomplexa
+ERR10036470.out	0.020751	935	976	Bacteroidetes
+ERR10036470.out	0.017888	806	204428	Chlamydiae
+ERR10036470.out	0.017422	785	5204	Basidiomycota
+ERR10036470.out	0.014648	660	1913637	Mucoromycota
+ERR10036470.out	0.011918	537	1117	Cyanobacteria
+ERR10036470.out	0.010586	477	200795	Chloroflexi
+ERR10036470.out	0.008411	379	28890	Euryarchaeota
+ERR10036470.out	0.007124	321	57723	Acidobacteria
+ERR10036470.out	0.006014	271	203682	Planctomycetes
+ERR10036470.out	0.005282	238	203691	Spirochaetes
+ERR10036470.out	0.004283	193	200918	Thermotogae
+ERR10036470.out	0.003529	159	33682	Euglenozoa
+ERR10036470.out	0.003129	141	3041	Chlorophyta
+ERR10036470.out	0.002064	93	1297	Deinococcus-Thermus
+ERR10036470.out	0.001975	89	74201	Verrucomicrobia
+ERR10036470.out	0.001953	88	28889	Crenarchaeota
+ERR10036470.out	0.001465	66	1655434	Candidatus Lokiarchaeota
+ERR10036470.out	0.001398	63	200938	Chrysiogenetes
+ERR10036470.out	0.001087	49	4762	Oomycota
+ERR10036470.out	0.000999	45	4761	Chytridiomycota
+ERR10036470.out	0.000999	45	142182	Gemmatimonadetes
+ERR10036470.out	0.000888	40	67819	Armatimonadetes
+ERR10036470.out	0.000666	30	1801616	Candidatus Woesearchaeota
+ERR10036470.out	0.000577	26	5878	Ciliophora
+ERR10036470.out	0.000555	25	5752	Heterolobosea
+ERR10036470.out	0.000510	23	2836	Bacillariophyta
+ERR10036470.out	0.000510	23	1913638	Zoopagomycota
+ERR10036470.out	0.000488	22	67812	Candidatus Omnitrophica
+ERR10036470.out	0.000422	19	2497438	Perkinsozoa
+ERR10036470.out	0.000399	18	2763	Rhodophyta
+ERR10036470.out	0.000399	18	1930617	Calditrichaeota
+ERR10036470.out	0.000377	17	1752708	Candidatus Rokubacteria
+ERR10036470.out	0.000355	16	6029	Microsporidia
+ERR10036470.out	0.000355	16	651137	Thaumarchaeota
+ERR10036470.out	0.000355	16	1801631	Candidatus Micrarchaeota
+ERR10036470.out	0.000333	15	29178	Foraminifera
+ERR10036470.out	0.000289	13	40117	Nitrospirae
+ERR10036470.out	0.000266	12	32066	Fusobacteria
+ERR10036470.out	0.000266	12	544448	Tenericutes
+ERR10036470.out	0.000244	11	640293	candidate division NC10
+ERR10036470.out	0.000244	11	928852	Candidatus Bathyarchaeota
+ERR10036470.out	0.000222	10	2052312	Candidatus Dormibacteraeota
+ERR10036470.out	0.000222	10	2605435	Evosea
+ERR10036470.out	0.000200	9	1978152	Candidatus Marsarchaeota
+ERR10036470.out	0.000178	8	555280	Discosea
+ERR10036470.out	0.000155	7	67817	Candidatus Aminicenantes
+ERR10036470.out	0.000155	7	1379697	candidate division Zixibacteria
+ERR10036470.out	0.000155	7	1798710	Candidatus Melainabacteria
+ERR10036470.out	0.000155	7	1855361	Candidatus Kryptonia
+ERR10036470.out	0.000133	6	200940	Thermodesulfobacteria
+ERR10036470.out	0.000133	6	207245	Fornicata
+ERR10036470.out	0.000133	6	1134404	Ignavibacteriae
+ERR10036470.out	0.000133	6	2608109	Haptista
+ERR10036470.out	0.000111	5	200783	Aquificae
+ERR10036470.out	0.000111	5	451459	Blastocladiomycota
+ERR10036470.out	0.000111	5	1752716	Candidatus Dadabacteria
+ERR10036470.out	0.000089	4	1090	Chlorobi
+ERR10036470.out	0.000089	4	5719	Parabasalia
+ERR10036470.out	0.000089	4	62680	Candidatus Marinimicrobia
+ERR10036470.out	0.000089	4	142187	Candidatus Hydrogenedentes
+ERR10036470.out	0.000089	4	256845	Lentisphaerae
+ERR10036470.out	0.000089	4	1619053	Candidatus Peregrinibacteria
+ERR10036470.out	0.000089	4	1706441	Candidatus Thorarchaeota
+ERR10036470.out	0.000089	4	1802339	Candidatus Tectomicrobia
+ERR10036470.out	0.000089	4	1936987	Balneolaeota
+ERR10036470.out	0.000067	3	363464	Candidatus Gracilibacteria
+ERR10036470.out	0.000067	3	1462422	Candidatus Parvarchaeota
+ERR10036470.out	0.000044	2	65842	Fibrobacteres
+ERR10036470.out	0.000044	2	74152	Elusimicrobia
+ERR10036470.out	0.000044	2	134625	Kiritimatiellaeota
+ERR10036470.out	0.000044	2	265317	Candidatus Poribacteria
+ERR10036470.out	0.000044	2	508458	Synergistetes
+ERR10036470.out	0.000044	2	1293497	Nitrospinae
+ERR10036470.out	0.000044	2	1703755	candidate division WOR-3
+ERR10036470.out	0.000044	2	1752722	Candidatus Woesebacteria
+ERR10036470.out	0.000044	2	1752723	Candidatus Roizmanbacteria
+ERR10036470.out	0.000044	2	1817801	Candidatus Eisenbacteria
+ERR10036470.out	0.000044	2	1817916	Candidatus Staskawiczbacteria
+ERR10036470.out	0.000044	2	1915410	Candidatus Verstraetearchaeota
+ERR10036470.out	0.000044	2	1935021	Candidatus Geothermarchaeota
+ERR10036470.out	0.000044	2	2582935	Candidatus Altiarchaeota
+ERR10036470.out	0.000022	1	51967	Candidatus Korarchaeota
+ERR10036470.out	0.000022	1	74015	Candidatus Latescibacteria
+ERR10036470.out	0.000022	1	192989	Nanoarchaeota
+ERR10036470.out	0.000022	1	200930	Deferribacteres
+ERR10036470.out	0.000022	1	456828	Candidatus Cloacimonetes
+ERR10036470.out	0.000022	1	743724	Candidatus Aenigmarchaeota
+ERR10036470.out	0.000022	1	743725	Candidatus Diapherotrites
+ERR10036470.out	0.000022	1	1729712	Candidatus Fermentibacteria
+ERR10036470.out	0.000022	1	1752720	Candidatus Gottesmanbacteria
+ERR10036470.out	0.000022	1	1752721	Candidatus Shapirobacteria
+ERR10036470.out	0.000022	1	1752726	Candidatus Beckwithbacteria
+ERR10036470.out	0.000022	1	1752729	Candidatus Nomurabacteria
+ERR10036470.out	0.000022	1	1752732	Candidatus Uhrbacteria
+ERR10036470.out	0.000022	1	1752733	Candidatus Yanofskybacteria
+ERR10036470.out	0.000022	1	1752735	Candidatus Wolfebacteria
+ERR10036470.out	0.000022	1	1752739	Candidatus Jorgensenbacteria
+ERR10036470.out	0.000022	1	1752740	Candidatus Kuenenbacteria
+ERR10036470.out	0.000022	1	1817811	Candidatus Schekmanbacteria
+ERR10036470.out	0.000022	1	1817911	Candidatus Nealsonbacteria
+ERR10036470.out	0.000022	1	1817919	Candidatus Taylorbacteria
+ERR10036470.out	0.000022	1	1853220	Rhodothermaeota
+ERR10036470.out	0.000022	1	1936272	Candidatus Heimdallarchaeota
+ERR10036470.out	0.000022	1	2138240	Coprothermobacterota
+ERR10036470.out	0.000022	1	2498705	Candidatus Cryosericota
+ERR10036470.out	0.000022	1	2604748	Endomyxa
+ERR10036470.out	0.000022	1	2662611	Preaxostyla
+ERR10036470.out	0.010853	489	10239	Viruses
+ERR10036470.out	0.408491	18406	NA	cannot be assigned to a (non-viral) phylum
+ERR10036470.out	4.373005	197041	NA	unclassified

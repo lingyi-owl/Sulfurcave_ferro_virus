@@ -1,0 +1,7 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+144273	Ribosomal_S2	91.0	True	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	RAAP-2	PALSA-457	PALSA-457 sp003161575
+205209	Ribosomal_L20	90.3	True	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	RAAP-2	PALSA-457	PALSA-457 sp003161575
+225532	Ribosomal_L17	93.6	False	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	UBA8190	UBA8190	UBA8190 sp003453695
+225535	Ribosomal_S11	95.7	False	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	RAAP-2		
+225554	Ribosomal_L16	92.8	False	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	RAAP-2	Bog-515	Bog-515 sp003155135
+225555	Ribosomal_S3_C	95.2	True	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	RAAP-2	PALSA-457	PALSA-457 sp003161575

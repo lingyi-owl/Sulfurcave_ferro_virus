@@ -1,0 +1,10 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+72368	Ribosomal_L22	93.6	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+72369	Ribosomal_S3_C	99.5	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+210521	Ribosomal_L13	92.8	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+210522	Ribosomal_S9	100.0	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+221172	Ribosomal_L1	91.6	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+353859	Ribosomal_S2	99.0	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+422415	Ribosomal_L6	99.2	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+455601	Ribosomal_L16	98.8	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705
+461438	Ribosomal_L3	93.0	True	Archaea	Thermoplasmatota	Thermoplasmata	Thermoplasmatales	Thermoplasmataceae	B-DKE	B-DKE sp002204705

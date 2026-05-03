@@ -1,0 +1,2 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+86674	Ribosomal_S11	94.9	True	Bacteria	Actinobacteriota	Acidimicrobiia	Acidimicrobiales	Bog-793	Palsa-601	Palsa-601 sp003136185

@@ -1,0 +1,23 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+21968	Ribosomal_L9_C	98.7	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+21970	Ribosomal_S6	98.9	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+77309	Ribosomal_S2	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497376	Ribosomal_S9	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497377	Ribosomal_L13	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497391	Ribosomal_L17	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497394	Ribosomal_S11	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497400	Ribosomal_L27A	96.5	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497404	Ribosomal_L6	99.4	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497405	Ribosomal_S8	98.4	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497407	ribosomal_L24	96.2	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497413	Ribosomal_L16	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497414	Ribosomal_S3_C	97.6	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497415	Ribosomal_L22	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497417	Ribosomal_L2	98.2	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497419	Ribosomal_L4	99.5	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497420	Ribosomal_L3	98.5	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497430	Ribosomal_S7	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+497440	Ribosomal_L1	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+507760	Ribosomal_L21p	96.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+507776	Ribosomal_S20p	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis
+507926	Ribosomal_L20	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Lawsonella	Lawsonella clevelandensis

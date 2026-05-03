@@ -1,0 +1,24 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+12911	Ribosomal_L1	98.7	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+95112	Ribosomal_S20p	97.6	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	
+134554	Ribosomal_L27A	95.1	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+134558	Ribosomal_L6	93.1	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+134559	Ribosomal_S8	98.4	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+134561	ribosomal_L24	91.1	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+134565	Ribosomal_L16	99.2	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+134566	Ribosomal_S3_C	97.7	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+134567	Ribosomal_L22	95.4	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+206993	Ribosomal_S9	98.4	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+206994	Ribosomal_L13	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+237629	Ribosomal_S2	96.4	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Kocuria	
+243038	Ribosomal_L21p	98.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+358766	Ribosomal_S2	100.0	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Kocuria	Kocuria palustris
+457959	Ribosomal_L2	94.2	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	
+457961	Ribosomal_L4	98.4	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+457962	Ribosomal_L3	99.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+469241	Ribosomal_L20	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+531153	Ribosomal_S6	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+531156	Ribosomal_L9_C	97.3	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+541501	Ribosomal_S11	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus
+541503	Ribosomal_L17	95.6	False	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus endophyticus
+547413	Ribosomal_S7	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Actinomycetales	Micrococcaceae	Micrococcus	Micrococcus luteus

@@ -1,0 +1,34 @@
+bins,t_domain,t_phylum,t_class,t_order,t_family,t_genus,t_species
+SC_Bin_00021,,,,,,,
+SC_Bin_00022,Bacteria,Actinobacteriota,Actinomycetia,Mycobacteriales,Mycobacteriaceae,Mycobacterium,
+SC_Bin_00023,Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,Moraxellaceae,Moraxella,
+SC_Bin_00024,Archaea,Thermoplasmatota,Thermoplasmata,Thermoplasmatales,Thermoplasmataceae,B-DKE,B-DKE sp002204705
+SC_Bin_00025,Archaea,Micrarchaeota,Micrarchaeia,Micrarchaeales,Micrarchaeaceae,Micrarchaeum,Micrarchaeum acidiphilum
+SC_Bin_00026,,,,,,,
+SC_Bin_00027,Bacteria,Actinobacteriota,Actinomycetia,Actinomycetales,Dermatophilaceae,Janibacter,Janibacter hoylei
+SC_Bin_00028,Bacteria,Firmicutes,Bacilli,Staphylococcales,Staphylococcaceae,Staphylococcus,Staphylococcus epidermidis
+SC_Bin_00029,Bacteria,Firmicutes,Bacilli,Lactobacillales,Streptococcaceae,Streptococcus,
+SC_Bin_00030,Bacteria,Actinobacteriota,Actinomycetia,Mycobacteriales,Mycobacteriaceae,Mycobacterium,
+SC_Bin_00031,,,,,,,
+SC_Bin_00032,Archaea,Micrarchaeota,Micrarchaeia,Micrarchaeales,Micrarchaeaceae,Micrarchaeum,Micrarchaeum acidiphilum
+SC_Bin_00033,,,,,,,
+SC_MAG_00001,Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,Rhodobacteraceae,Paracoccus,Paracoccus aeridis
+SC_MAG_00002,Bacteria,Actinobacteriota,Actinomycetia,Mycobacteriales,Mycobacteriaceae,Lawsonella,Lawsonella clevelandensis
+SC_MAG_00003,Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacterales,Enterobacteriaceae,,
+SC_MAG_00004,Bacteria,Proteobacteria,Gammaproteobacteria,Acidithiobacillales,Acidithiobacillaceae,Acidithiobacillus,Acidithiobacillus thiooxidans
+SC_MAG_00005,Bacteria,Actinobacteriota,Actinomycetia,Propionibacteriales,Propionibacteriaceae,Cutibacterium,Cutibacterium acnes
+SC_MAG_00006,Archaea,Thermoplasmatota,Thermoplasmata,Thermoplasmatales,Thermoplasmataceae,Ferroplasma,
+SC_MAG_00007,Bacteria,Actinobacteriota,Acidimicrobiia,Acidimicrobiales,RAAP-2,PALSA-457,PALSA-457 sp003161575
+SC_MAG_00008,Archaea,Thermoplasmatota,Thermoplasmata,Thermoplasmatales,Thermoplasmataceae,Ferroplasma,
+SC_MAG_00009,Bacteria,Proteobacteria,Alphaproteobacteria,Acetobacterales,Acetobacteraceae,Acidiphilium,Acidiphilium rubrum
+SC_MAG_00010,Bacteria,Actinobacteriota,Acidimicrobiia,Acidimicrobiales,Acidimicrobiaceae,Ferrimicrobium,Ferrimicrobium acidiphilum
+SC_MAG_00011,,,,,,,
+SC_MAG_00012,Bacteria,Actinobacteriota,Acidimicrobiia,Acidimicrobiales,Bog-793,Palsa-601,Palsa-601 sp003136185
+SC_MAG_00013,Bacteria,Proteobacteria,Gammaproteobacteria,Acidithiobacillales,Acidithiobacillaceae,Acidithiobacillus,Acidithiobacillus thiooxidans
+SC_MAG_00014,Bacteria,Firmicutes,Sulfobacillia,Sulfobacillales,Sulfobacillaceae,Sulfobacillus,Sulfobacillus thermotolerans
+SC_MAG_00015,Bacteria,Actinobacteriota,Actinomycetia,Actinomycetales,Micrococcaceae,Micrococcus,Micrococcus luteus
+SC_MAG_00016,Bacteria,Actinobacteriota,Actinomycetia,Mycobacteriales,Mycobacteriaceae,Mycobacterium,
+SC_MAG_00017,Bacteria,Actinobacteriota,Actinomycetia,Mycobacteriales,Mycobacteriaceae,Corynebacterium,Corynebacterium propinquum
+SC_MAG_00018,Archaea,Thermoplasmatota,Thermoplasmata,Thermoplasmatales,Thermoplasmataceae,Cuniculiplasma,Cuniculiplasma divulgatum
+SC_MAG_00019,Bacteria,Actinobacteriota,Actinomycetia,Mycobacteriales,Mycobacteriaceae,Mycobacterium,
+SC_MAG_00020,Bacteria,Dependentiae,Babeliae,Babeliales,Babeliaceae,Babela,Babela massiliensis

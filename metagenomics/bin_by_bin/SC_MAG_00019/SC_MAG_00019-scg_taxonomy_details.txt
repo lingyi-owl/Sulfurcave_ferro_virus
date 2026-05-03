@@ -1,0 +1,17 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+25008	Ribosomal_S6	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+25228	Ribosomal_S2	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+26883	Ribosomal_L21p	97.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium bohemicum
+26921	Ribosomal_S20p	95.3	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium bohemicum
+58174	Ribosomal_L1	97.8	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+98374	Ribosomal_L20	97.3	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+132083	Ribosomal_S7	97.4	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+132099	Ribosomal_L3	95.6	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium sp001673535
+132100	Ribosomal_L4	95.7	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium mantenii
+132102	Ribosomal_L2	96.7	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium sp903927745
+132104	Ribosomal_L22	100.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium saskatchewanense
+132105	Ribosomal_S3_C	97.6	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+132106	Ribosomal_L16	98.4	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+132114	ribosomal_L24	93.4	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+132117	Ribosomal_S8	96.9	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	
+132118	Ribosomal_L6	96.0	True	Bacteria	Actinobacteriota	Actinomycetia	Mycobacteriales	Mycobacteriaceae	Mycobacterium	Mycobacterium bohemicum

@@ -1,0 +1,21 @@
+gene_callers_id	gene_name	percent_identity	supporting_consensus	t_domain	t_phylum	t_class	t_order	t_family	t_genus	t_species
+48380	Ribosomal_S20p	93.0	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+50412	Ribosomal_L17	97.3	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+50414	Ribosomal_S11	99.1	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+96751	Ribosomal_L3	98.3	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+96752	Ribosomal_L4	97.8	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+96754	Ribosomal_L2	98.5	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+153578	Ribosomal_S9	100.0	False	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium sp002279355
+153579	Ribosomal_L13	94.9	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+220136	Ribosomal_S6	92.5	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+220138	Ribosomal_L9_C	93.1	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+328927	Ribosomal_S7	97.4	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+401655	Ribosomal_S2	98.8	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+416864	Ribosomal_L1	99.5	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+475638	Ribosomal_L21p	98.6	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+484442	Ribosomal_L20	99.1	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+532536	Ribosomal_L6	99.4	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+532537	Ribosomal_S8	96.9	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+532540	ribosomal_L24	98.1	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+532544	Ribosomal_L16	100.0	True	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium rubrum
+532545	Ribosomal_S3_C	97.4	False	Bacteria	Proteobacteria	Alphaproteobacteria	Acetobacterales	Acetobacteraceae	Acidiphilium	Acidiphilium sp002255515
