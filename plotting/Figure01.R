@@ -1,153 +1,389 @@
-# SAMPLES_MERGED.COVs <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/contings-coverages/SAMPLES_MERGED-COVs.txt")
-# unlist(lapply(strsplit(CAT$genus,":"), function(x) x[1]))
-# CAT <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/contings-coverages/CAT_run_20230309.contig2classification.names.txt")
-# colnames(CAT)[1]<- "contig"  
-# CAT$genus_clean<-unlist(lapply(strsplit(CAT$genus,":"), function(x) x[1]))
-# CAT$class_clean<-unlist(lapply(strsplit(CAT$class,":"), function(x) x[1]))
-# CAT$superkingdom_clean<-unlist(lapply(strsplit(CAT$superkingdom,":"), function(x) x[1]))
-# CAT$phylum<-unlist(lapply(strsplit(CAT$phylum,":"), function(x) x[1]))
-# 
-# contigs<-Biostrings::readDNAStringSet("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/contings-coverages/SAMPLES_MERGED-CONTIGS.fa")
-# dataframe_contigs_width<-data.frame(names(contigs))
-# colnames(dataframe_contigs_width)[1]<-"contig"
-# dataframe_contigs_width$width<-contigs@ranges@width
-# SAMPLES_MERGED.COVs_cat1<-merge(SAMPLES_MERGED.COVs,dataframe_contigs_width,by="contig", all=T)
-# SAMPLES_MERGED.COVs_cat2<-merge(SAMPLES_MERGED.COVs_cat1,CAT,by="contig", all=T)
-# library(tidyverse)
-# class<-SAMPLES_MERGED.COVs_cat2 %>% group_by(class_clean) %>% summarise(Sample_ERR10036468_m = sum(Sample_ERR10036468)
-#                                                                        ,Sample_ERR10036469_m = sum(Sample_ERR10036469),
-#                                                                        Sample_ERR10036470_m = sum(Sample_ERR10036470))
-# superkingdom_clean<-SAMPLES_MERGED.COVs_cat2 %>% group_by(superkingdom_clean) %>% summarise(Sample_ERR10036468_m = sum(Sample_ERR10036468/width)
-#                                                                        ,Sample_ERR10036469_m = sum(Sample_ERR10036469/width),
-#                                                                        Sample_ERR10036470_m = sum(Sample_ERR10036470/width))
+##########################################
+# KAIJU plots
+##########################################
 
-library(rlang)
+library(dplyr)
 library(ggplot2)
-setwd("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/KAIJU_reads")
-kaiju_reads<-list.files(pattern = "kaiju_ERR")
 
-kaiju_phylum<-c()
-for(i in kaiju_reads[grep("phylum",kaiju_reads)]){
-  temp<-read.delim(i)
-  kaiju_phylum<-rbind(kaiju_phylum,temp)
+setwd("metagenomics/KAIJU_reads")
+kaiju_reads <- list.files(pattern = "kaiju_ERR")
+
+# ── Helper functions ───────────────────────────────────────────────────────────
+
+# Rename sample files to readable names
+rename_samples <- function(fac) {
+  levels(fac)[levels(fac) == "ERR10036468.out"] <- "Biofilm 1"
+  levels(fac)[levels(fac) == "ERR10036469.out"] <- "Biofilm 2"
+  levels(fac)[levels(fac) == "ERR10036470.out"] <- "Lab CH4"
+  as.character(fac)
 }
-kaiju_phylum_fac<-factor(kaiju_phylum$file)
-levels(kaiju_phylum_fac)[levels(kaiju_phylum_fac) == "ERR10036468.out"] <- "Cave biofilm 1"
-levels(kaiju_phylum_fac)[levels(kaiju_phylum_fac) == "ERR10036469.out"] <- "Cave biofilm 2"
-levels(kaiju_phylum_fac)[levels(kaiju_phylum_fac) == "ERR10036470.out"] <- "Lab: CH4"
-kaiju_phylum$Sample_name<-as.character(kaiju_phylum_fac)
-temp<-kaiju_phylum$taxon_name
-temp[which(kaiju_phylum$percent<1)]<-"Below 1%"
-kaiju_phylum$taxon_final<-temp
-kaiju_phylum$taxon_final[kaiju_phylum$taxon_final=="cannot be assigned to a (non-viral) phylum"]<-"unclassified"
-kaiju_phylum$taxon_final[kaiju_phylum$taxon_final=="Candidatus Thermoplasmatota"]<-"Thermoplasmatota"
-colors_p<-c('#66c2a5','#fc8d62','#e78ac3','#a6d854','#8da0cb','#ffd92f')
-kaiju_phylum_ggplot<-ggplot(kaiju_phylum, aes(fill=taxon_final, y=percent, x=Sample_name)) + 
-  geom_bar(position="stack", stat="identity")+scale_fill_manual(values=colors_p)+
-  labs(x="",y="Relative abundance (%)",fill= "Taxonomy (phylum)",subtitle = "", title="Phylum")+
-  theme(text = element_text(size = 24)) + theme(axis.text.x = element_text(angle = 45,vjust=0.5))
+
+# Label taxa below 1% only if they never exceed 1% in any sample
+label_below1 <- function(df, label) {
+  abundant <- df$taxon_name[df$percent >= 1]
+  df$taxon_final <- df$taxon_name
+  df$taxon_final[df$percent < 1 & !df$taxon_name %in% abundant] <- label
+  df
+}
+
+# ── 1. Phylum ──────────────────────────────────────────────────────────────────
+kaiju_phylum <- do.call(rbind, lapply(kaiju_reads[grep("phylum", kaiju_reads)], read.delim))
+kaiju_phylum$Sample_name <- rename_samples(factor(kaiju_phylum$file))
+kaiju_phylum <- label_below1(kaiju_phylum, "Phylum below 1%")
+kaiju_phylum$taxon_final[kaiju_phylum$taxon_final == "cannot be assigned to a (non-viral) phylum"] <- "Viral"
+kaiju_phylum$taxon_final[kaiju_phylum$taxon_name  == "unclassified"]                               <- "Unclassified"
+kaiju_phylum$taxon_final[kaiju_phylum$taxon_final == "Candidatus Thermoplasmatota"]                <- "Thermoplasmatota"
+
+kaiju_phylum_agg <- kaiju_phylum %>%
+  group_by(Sample_name, taxon_final) %>%
+  summarise(percent = sum(percent), .groups = "drop") %>%
+  mutate(taxon_final = factor(taxon_final, levels = c(
+    "Thermoplasmatota", "Actinobacteria", "Proteobacteria",
+    "Firmicutes", "Viral", "Phylum below 1%", "Unclassified"
+  )))
+
+colors_p <- c(
+  "Thermoplasmatota" = '#ffd92f',
+  "Actinobacteria"   = '#66c2a5',
+  "Proteobacteria"   = '#fc8d62',
+  "Firmicutes"       = '#a6d854',
+  "Viral"            = '#e78ac3',
+  "Phylum below 1%"  = '#8da0cb',
+  "Unclassified"     = '#b3b3b3'
+)
+
+kaiju_phylum_ggplot <- ggplot(kaiju_phylum_agg, aes(fill = taxon_final, y = percent, x = Sample_name)) +
+  geom_bar(position = "stack", stat = "identity") +
+  scale_fill_manual(values = colors_p) +
+  labs(x = "", y = "% mapped reads", fill = "Phylum", title = "Phylum") +
+  theme_classic(base_size = 20, base_family = "Arial") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5))
 
 kaiju_phylum_ggplot
-kaiju_genus<-c()
-for(i in kaiju_reads[grep("genus",kaiju_reads)]){
-  temp<-read.delim(i)
-  kaiju_genus<-rbind(kaiju_genus,temp)
-}
-kaiju_genus_fac<-factor(kaiju_genus$file)
-levels(kaiju_genus_fac)[levels(kaiju_genus_fac) == "ERR10036468.out"] <- "Cave biofilm 1"
-levels(kaiju_genus_fac)[levels(kaiju_genus_fac) == "ERR10036469.out"] <- "Cave biofilm 2"
-levels(kaiju_genus_fac)[levels(kaiju_genus_fac) == "ERR10036470.out"] <- "Lab: CH4"
-kaiju_genus$Sample_name<-as.character(kaiju_genus_fac)
-temp<-kaiju_genus$taxon_name
-temp[which(kaiju_genus$percent<1)]<-"Below 1%"
-kaiju_genus$taxon_final<-temp
-kaiju_genus$taxon_final[kaiju_genus$taxon_final=="cannot be assigned to a (non-viral) genus"]<-"unclassified"
-colors_g<-c('#377eb8','#a6d854','#fc8d62','#8da0cb','#66c2a5','#ffd92f')
-kaiju_genus_ggplot<-ggplot(kaiju_genus, aes(fill=taxon_final, y=percent, x=Sample_name)) + 
-  geom_bar(position="stack", stat="identity")+scale_fill_manual(values=colors_g)+
-  labs(x="",y="Relative abundance (%)",fill= "Taxonomy (genus)",subtitle = "", title="Genus")+
-  theme(text = element_text(size = 24))  + theme(axis.text.x = element_text(angle = 45,vjust=0.5))
+
+# ── 2. Genus ───────────────────────────────────────────────────────────────────
+kaiju_genus <- do.call(rbind, lapply(kaiju_reads[grep("genus", kaiju_reads)], read.delim))
+kaiju_genus$Sample_name <- rename_samples(factor(kaiju_genus$file))
+kaiju_genus <- label_below1(kaiju_genus, "Genus below 1%")
+kaiju_genus$taxon_final[kaiju_genus$taxon_final == "cannot be assigned to a (non-viral) genus"] <- "Viral"
+kaiju_genus$taxon_final[kaiju_genus$taxon_name  == "unclassified"]                              <- "Unclassified"
+
+kaiju_genus_agg <- kaiju_genus %>%
+  group_by(Sample_name, taxon_final) %>%
+  summarise(percent = sum(percent), .groups = "drop") %>%
+  mutate(taxon_final = factor(taxon_final, levels = c(
+    "Ferroplasma", "Mycobacterium", "Acidithiobacillus",
+    "Acidiplasma", "Viral", "Genus below 1%", "Unclassified"
+  )))
+
+colors_g <- c(
+  "Ferroplasma"       = '#ffd92f',
+  "Mycobacterium"     = '#66c2a5',
+  "Acidithiobacillus" = '#fc8d62',
+  "Acidiplasma"       = '#377eb8',
+  "Viral"             = '#e78ac3',
+  "Genus below 1%"    = '#8da0cb',
+  "Unclassified"      = '#b3b3b3'
+)
+
+genus_labels <- c(
+  expression(italic("Ferroplasma")),
+  expression(italic("Mycobacterium")),
+  expression(italic("Acidithiobacillus")),
+  expression(italic("Acidiplasma")),
+  "Viral", "Genus below 1%", "Unclassified"
+)
+
+kaiju_genus_ggplot <- ggplot(kaiju_genus_agg, aes(fill = taxon_final, y = percent, x = Sample_name)) +
+  geom_bar(position = "stack", stat = "identity") +
+  scale_fill_manual(values = colors_g, labels = genus_labels) +
+  labs(x = "", y = "% mapped reads", fill = "Taxonomy (genus)", title = "Genus") +
+  theme_classic(base_size = 20, base_family = "Arial") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 0.5))
+
 kaiju_genus_ggplot
 
-# #3
-# library(vegan)
-# test<-transformation(kaiju_genus)
-# ##################
-# 
-# # Calculate row means
-# row_means <- rowMeans(test,na.rm = T)
-# 
-# # Filter rows where the average count is below 10
-# filtered_count_matrix <- test[row_means >= 10, ]
-# filtered_count_matrix[is.na(filtered_count_matrix)] <- 0
-# 
-# richness <- specnumber(t(filtered_count_matrix))
-# shannon <- diversity(t(filtered_count_matrix), index = "shannon")
+##########################################
+# MAG plot
+##########################################
 
-
-#####################
-
-####
-mean_coverage <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/SAMPLES_SUMMARY_SC_MAGS/bins_across_samples/mean_coverage.txt")
-mean_coverage_log10<-apply(mean_coverage[,-1], 2, log10)
-colnames(mean_coverage_log10)<-paste("log10_",colnames(mean_coverage_log10),sep = "")
-mean_coverage<-cbind(mean_coverage,mean_coverage_log10)
-
-abundance <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/SAMPLES_SUMMARY_SC_MAGS/bins_across_samples/abundance.txt")
-relab<-apply(abundance[,-1], 2, function(x) x/sum(x))
-colnames(relab)<-paste("relab_",colnames(relab),sep = "")
-abundance<- cbind(abundance,relab)
-bins_percent_recruitment <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/SAMPLES_SUMMARY_SC_MAGS/bins_across_samples/bins_percent_recruitment.txt")
-detection <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/SAMPLES_SUMMARY_SC_MAGS/bins_across_samples/detection.txt")
-
-bin_sum <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/SAMPLES_SUMMARY_SC_MAGS/bins_summary.txt")
 library(ggrepel)
-mean_cov_all<-merge(mean_coverage,bin_sum,by="bins" )
-theme_set(theme_bw())
-mean_cov_all$MAG_quality<-ifelse(grepl("_MAG_",mean_cov_all$bins)==T,"High","Low")
 
-mean_cov_all$phylum<-factor(mean_cov_all$t_phylum)
-mean_cov_all$phylum[mean_cov_all$phylum==""]<-"unclassified"
-mean_cov_all$genus<-ifelse(mean_cov_all$log10_Sample_ERR10036468>2|mean_cov_all$log10_Sample_ERR10036469>2,mean_cov_all$t_genus,"" )
-#write.csv(mean_cov_all, "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/DNA_mean_cov_all.csv")
+# --- Load data ---
+mean_coverage <- read.delim("metagenomics/bins_across_samples/mean_coverage.txt")
+abundance     <- read.delim("metagenomics/bins_across_samples/abundance.txt")
+bin_sum       <- read.delim("metagenomics/bins_summary.txt")
 
-colors_pB<-c('#66c2a5','#e5c494','#e78ac3',"#e31a1c",'#a6d854','#8da0cb','#ffd92f')
-bins1<-ggplot(mean_cov_all,aes(log10_Sample_ERR10036468, log10_Sample_ERR10036469,  color=log10_Sample_ERR10036470,shape=MAG_quality))+geom_point(size=5)+
-  scale_color_viridis_c()+scale_fill_manual(values=colors_pB)+labs(x="Cave biofilm 1",y="Cave biofilm 2",caption= "Axes and color scale represent the mean DNA coverage (log10).",color= "Lab: CH4")+
-  theme(text = element_text(size = 12)) +
-   guides(
-    fill = guide_legend(
-      override.aes = aes(label = "")
+# --- Transform and merge ---
+mean_coverage_log10 <- apply(mean_coverage[,-1], 2, log10)
+colnames(mean_coverage_log10) <- paste0("log10_", colnames(mean_coverage_log10))
+
+relab <- apply(abundance[,-1], 2, function(x) x / sum(x))
+colnames(relab) <- paste0("relab_", colnames(relab))
+
+mean_cov_all <- merge(
+  cbind(mean_coverage, mean_coverage_log10),
+  bin_sum, by = "bins"
+)
+
+# --- Derived variables ---
+mean_cov_all$MAG_quality  <- ifelse(grepl("_MAG_", mean_cov_all$bins), "High", "Low or medium")
+mean_cov_all$phylum       <- factor(ifelse(mean_cov_all$t_phylum == "", "unclassified", mean_cov_all$t_phylum))
+mean_cov_all$in_culture   <- mean_cov_all$Sample_ERR10036470 > 0
+mean_cov_all$border_color <- ifelse(mean_cov_all$in_culture, "black", "transparent")
+mean_cov_all$size_var     <- ifelse(mean_cov_all$log10_Sample_ERR10036470 > 0,
+                                    mean_cov_all$log10_Sample_ERR10036470, 0)
+
+# --- Relative abundance & genus fill label ---
+samples <- c("Sample_ERR10036468", "Sample_ERR10036469", "Sample_ERR10036470")
+for (s in samples) {
+  mean_cov_all[[paste0("rel_abund_", s)]] <- mean_cov_all[[s]] / sum(mean_cov_all[[s]]) * 100
+}
+
+mean_cov_all$abundant <- !(mean_cov_all$rel_abund_Sample_ERR10036468 < 1 &
+                             mean_cov_all$rel_abund_Sample_ERR10036469 < 1 &
+                             mean_cov_all$rel_abund_Sample_ERR10036470 < 1)
+
+mean_cov_all$genus_fill <- ifelse(
+  mean_cov_all$abundant & !is.na(mean_cov_all$t_genus) & mean_cov_all$t_genus != "",
+  mean_cov_all$t_genus,
+  ifelse(!mean_cov_all$abundant, "MAG below 1%", "Unclassified")
+)
+
+# --- Factor levels and colors ---
+genus_levels <- c("Ferroplasma","Mycobacterium","Acidithiobacillus",
+                  "Cuniculiplasma","Cutibacterium","Lawsonella",
+                  "MAG below 1%","Unclassified")
+mean_cov_all$genus_fill <- factor(mean_cov_all$genus_fill, levels = genus_levels)
+
+colors_genus_fill <- c(
+  "Ferroplasma"       = '#ffd92f',
+  "Mycobacterium"     = '#66c2a5',
+  "Acidithiobacillus" = '#fc8d62',
+  "Cuniculiplasma"    = '#e78ac3',
+  "Cutibacterium"     = '#a6d854',
+  "Lawsonella"        = '#80c1e3',
+  "MAG below 1%"      = '#8da0cb',
+  "Unclassified"      = '#b3b3b3'
+)
+
+# --- Labels and nudges ---
+label_map <- data.frame(
+  bins = c("SC_MAG_00004","SC_MAG_00005","SC_MAG_00006","SC_MAG_00008",
+           "SC_MAG_00013","SC_MAG_00016","SC_MAG_00019","SC_Bin_00030"),
+  marker_label = c("MAG 4","MAG 5","MAG 6","MAG 8",
+                   "MAG 13","MAG 16","MAG 19","Bin 30"),
+  nudge_x = c(0, 0, 0, -0.6, 0, 0, 0, 0),
+  nudge_y = c(0, 0, 0, -0.01, 0, 0, 0, 0)
+)
+mean_cov_all <- merge(mean_cov_all, label_map, by = "bins", all.x = TRUE)
+mean_cov_all$nudge_x[is.na(mean_cov_all$nudge_x)] <- 0
+mean_cov_all$nudge_y[is.na(mean_cov_all$nudge_y)] <- 0
+
+# --- Plot ---
+theme_set(theme_classic(base_size = 20, base_family = "Arial"))
+
+mag_plot <- ggplot(mean_cov_all, aes(log10_Sample_ERR10036468, log10_Sample_ERR10036469)) +
+  annotate("path",
+           x = 1.3 + 0.6 * cos(seq(0, 2*pi, length.out = 100)),
+           y = -1.3 + 0.6 * sin(seq(0, 2*pi, length.out = 100)),
+           color = "blue", linetype = "dashed", linewidth = 1.0
+  ) +
+  geom_point(aes(fill = genus_fill, shape = MAG_quality),
+             color = mean_cov_all$border_color, size = 8, stroke = 1.5
+  ) +
+  geom_point(aes(color = in_culture), size = 3, alpha = 0) +
+  geom_text(aes(label = marker_label),
+            hjust = -0.3, vjust = 0.5, size = 6, family = "Arial", na.rm = TRUE,
+            nudge_x = mean_cov_all$nudge_x, nudge_y = mean_cov_all$nudge_y
+  ) +
+  annotate("segment",
+           x = 0, y = 0, xend = 4, yend = 4,
+           linetype = "dashed", color = "red",
+           linewidth = 1.0   # increase this value for thicker line
+  ) +
+  scale_fill_manual(
+    values = colors_genus_fill, name = "Genus",
+    labels = c(
+      expression(italic("Ferroplasma")),
+      expression(italic("Mycobacterium")),
+      expression(italic("Acidithiobacillus")),
+      expression(italic("Cuniculiplasma")),
+      expression(italic("Cutibacterium")),
+      expression(italic("Lawsonella")),
+      "MAG below 1%",
+      "Unclassified"
     )
-  ) + geom_segment(aes(x = 0, y = 0, xend = 4, yend = 4), linetype="dashed", color = "red")
-bins2<-ggplot(mean_cov_all,aes(log10_Sample_ERR10036468, log10_Sample_ERR10036469,  color=log10_Sample_ERR10036470,shape=MAG_quality))+geom_point(size=5)+
-  scale_color_viridis_c()+scale_fill_manual(values=colors_pB)+labs(x="Cave biofilm 1",y="Cave biofilm 2",caption= "Axes and color scale represent the mean DNA coverage (log10).",color= "Lab: CH4")+
-  theme(text = element_text(size = 12)) +
-  geom_label_repel(box.padding = 0.5, max.overlaps = Inf,aes( label = genus, fill=phylum),color="black",size=3) + guides(
-    fill = guide_legend(
-      override.aes = aes(label = "")
-    )
-  )+ geom_segment(aes(x = 0, y = 0, xend = 4, yend = 4), linetype="dashed", color = "red")
-mean_cov_all$highlight<-""
-mean_cov_all$highlight[match(c("SC_MAG_00008","SC_MAG_00016","SC_MAG_00006"),mean_cov_all$bins)]<-c("Ferroplasma MAG8","C. M. methanotrophicum","Ferroplasma MAG6")
-bins3<-ggplot(mean_cov_all,aes(log10_Sample_ERR10036468, log10_Sample_ERR10036469))+geom_point(aes(color=log10_Sample_ERR10036470,shape=MAG_quality), size=8)+
-  scale_color_viridis_c()+labs(x="Cave biofilm 1 - mean DNA coverage (log10)",y="Cave biofilm 2 - mean DNA coverage (log10)",caption= "",color= "Lab: CH4", shape="MAG quality")+
-  theme(text = element_text(size = 24)) +
-  geom_label_repel(box.padding = 0.5,aes(label = highlight),color="black",size=10, fill = alpha(c("white"),0.5),ylim=c( NA,1),arrow = arrow(
-    length = unit(0.02, "npc"), type = "closed", ends = "first"
-  )) + guides(
-    fill = guide_legend(
-      override.aes = aes(label = "")
-    )
-  )+ geom_segment(aes(x = 0, y = 0, xend = 4, yend = 4), linetype="dashed", color = "red") 
-bins3
+  ) +
+  scale_color_manual(
+    values = c("TRUE" = "transparent", "FALSE" = "black"),
+    name = "MAG in Lab CH4", labels = c("TRUE" = "Absent", "FALSE" = "Present")
+  ) +
+  scale_shape_manual(values = c("High" = 21, "Low or medium" = 24), name = "MAG quality") +
+  labs(x = "Biofilm 1\n mean DNA coverage (log10)", y = "Biofilm 2\n  mean DNA coverage (log10)", title = "Metagenome-assembled genome") +
+  theme(
+    axis.text.x          = element_text(vjust = 0.5),
+    panel.grid.major     = element_line(color = "grey92", linewidth = 0.5),
+    panel.grid.minor     = element_line(color = "grey92", linewidth = 0.5),
+    panel.border         = element_rect(color = "grey85", fill = NA, linewidth = 0.8),
+    legend.position      = "none"
+  ) +
+  scale_x_continuous(breaks = seq(0, 4, by = 1)) +
+  scale_y_continuous(breaks = seq(-2, 4, by = 1)) +
+  coord_equal() +
+  guides(
+    fill  = guide_legend(override.aes = list(shape = 21, color = "white", size = 6)),
+    shape = guide_legend(override.aes = list(fill = "white", color = "black", size = 6)),
+    size  = guide_legend(override.aes = list(fill = "grey50", color = "black", shape = 21)),
+    color = guide_legend(override.aes = list(shape = 21, fill = "grey50", size = 5, alpha = 1, stroke = 1.5))
+  )
+
+mag_plot
+
+##########################################
+# Combine plots
+##########################################
+
 library(patchwork)
-patchwork <- ((kaiju_phylum_ggplot + kaiju_genus_ggplot)+ plot_layout( guides = "collect"))  / bins1
-patchwork + plot_annotation(tag_levels = 'a')
+library(cowplot)
 
-patchwork2 <- ((kaiju_phylum_ggplot + kaiju_genus_ggplot)+ plot_layout( guides = "collect"))  / bins2
-patchwork2 + plot_annotation(tag_levels = 'a')
+# --- Build a dummy data frame for MAG quality legend ---
+quality_legend_df <- data.frame(
+  quality = factor(c("High", "Low or medium"), levels = c("High", "Low or medium")),
+  x = 1, y = 1:2
+)
 
-patchwork <- ((kaiju_phylum_ggplot + kaiju_genus_ggplot)+ plot_layout( guides = "collect"))  + bins3
-patchwork + plot_annotation(tag_levels = 'a')
-ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/figure1.pdf", width =24, height = 10)
+# --- Build MAG quality legend ---
+legend_quality_combined <- get_legend(
+  ggplot(quality_legend_df, aes(x, y, shape = quality)) +
+    geom_point(size = 8, fill = "white", color = "grey", stroke = 1.5) +
+    scale_shape_manual(
+      values = c("High" = 21, "Low or medium" = 24),
+      name   = "MAG quality"
+    ) +
+    theme_void(base_size = 20, base_family = "Arial") +
+    theme(
+      legend.position      = "right",
+      legend.key.spacing.y = unit(6, "pt")
+    )
+)
+
+# CH4 legend
+# --- Build a dummy data frame for Lab CH4 legend ---
+ch4_legend_df <- data.frame(
+  in_culture = factor(c("Present", "Absent"), levels = c("Present", "Absent")),
+  x = 1, y = 1:2
+)
+# --- Build Lab CH4 legend ---
+legend_ch4_combined <- get_legend(
+  ggplot(ch4_legend_df, aes(x, y, color = in_culture)) +
+    geom_point(shape = 22, size = 8, fill = "grey50", stroke = 1.5) +
+    scale_color_manual(
+      values = c("Present" = "black", "Absent" = "transparent"),
+      name   = "MAG in Lab CH4"
+    ) +
+    theme_void(base_size = 20, base_family = "Arial") +
+    theme(
+      legend.position      = "right",
+      legend.key.spacing.y = unit(6, "pt")
+    )
+)
+
+# phylum legend
+# --- Build a dummy data frame for phylum legend ---
+phylum_legend_df <- data.frame(
+  phylum = factor(names(colors_p), levels = names(colors_p)),
+  x = 1, y = seq_along(colors_p)
+)
+
+# --- Build phylum legend using same square style ---
+legend_phylum_combined <- get_legend(
+  ggplot(phylum_legend_df, aes(x, y, fill = phylum)) +
+    geom_point(shape = 22, size = 8, color = "white") +
+    scale_fill_manual(
+      values = colors_p,
+      name   = "Phylum",
+      labels = c(
+        "Thermoplasmatota",
+        "Actinobacteria",
+        "Proteobacteria",
+        "Firmicutes",
+        "Viral",
+        "Phylum below 1%",
+        "Unclassified"
+      )
+    ) +
+    theme_void(base_size = 20, base_family = "Arial") +
+    theme(
+      legend.position      = "right",
+      legend.key.spacing.y = unit(-4, "pt")
+    )
+)
+
+# genus legend
+# --- Combined color map for shared genus legend ---
+colors_genus_combined <- c(
+  "Ferroplasma"       = '#ffd92f',
+  "Mycobacterium"     = '#66c2a5',
+  "Acidithiobacillus" = '#fc8d62',
+  "Cuniculiplasma"    = '#e78ac3',   # from mag_plot only
+  "Cutibacterium"     = '#a6d854',   # from mag_plot only
+  "Lawsonella"        = '#80c1e3',   # from mag_plot only
+  "Acidiplasma"       = '#377eb8',   # from kaiju only
+  "Viral"             = '#e78ac3',   # from kaiju only
+  "Below 1% / MAG below 1%" = '#8da0cb',
+  "Unclassified"      = '#b3b3b3'
+)
+
+# --- Build a dummy data frame covering all genus levels ---
+genus_combined_df <- data.frame(
+  genus = factor(names(colors_genus_combined), levels = names(colors_genus_combined)),
+  x = 1, y = seq_along(colors_genus_combined)
+)
+
+# --- Build legend using kaiju_genus_ggplot point shape (filled circle = 16) ---
+legend_genus_combined <- get_legend(
+  ggplot(genus_combined_df, aes(x, y, fill = genus)) +
+    geom_point(shape = 22, size = 8, color = "white") +
+    scale_fill_manual(
+      values = colors_genus_combined,
+      name   = "Genus",
+      labels = c(
+        expression(italic("Ferroplasma")),
+        expression(italic("Mycobacterium")),
+        expression(italic("Acidithiobacillus")),
+        expression(italic("Cuniculiplasma")),
+        expression(italic("Cutibacterium")),
+        expression(italic("Lawsonella")),
+        expression(italic("Acidiplasma")),
+        "Viral",
+        "Genus/MAG below 1%",
+        "Unclassified"
+      )
+    ) +
+    theme_void(base_size = 20, base_family = "Arial") +
+    theme(
+      legend.position    = "right",
+      legend.key.spacing.y = unit(-4, "pt")  # negative value reduces spacing
+    )
+)
+
+# --- Stack legends ---
+legends_combined <- plot_grid(
+  legend_phylum_combined,
+  legend_genus_combined,
+  legend_quality_combined,
+  legend_ch4_combined,
+  ncol = 1,
+  align = "v",
+  rel_heights = c(1.5, 2.5, 1, 1)
+)
+
+legends_combined
+# --- Combine plots (no legends) ---
+
+plots_ab <- (
+  (kaiju_phylum_ggplot + theme(legend.position = "none")) +
+    (kaiju_genus_ggplot  + theme(legend.position = "none"))
+)
+plots_ab
