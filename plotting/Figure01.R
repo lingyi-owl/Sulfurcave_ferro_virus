@@ -160,7 +160,7 @@ colors_genus_fill <- c(
   "Ferroplasma"       = '#ffd92f',
   "Mycobacterium"     = '#66c2a5',
   "Acidithiobacillus" = '#fc8d62',
-  "Cuniculiplasma"    = '#e78ac3',
+  "Cuniculiplasma"    = '#e5c494',
   "Cutibacterium"     = '#a6d854',
   "Lawsonella"        = '#80c1e3',
   "MAG below 1%"      = '#8da0cb',
@@ -326,7 +326,7 @@ colors_genus_combined <- c(
   "Ferroplasma"       = '#ffd92f',
   "Mycobacterium"     = '#66c2a5',
   "Acidithiobacillus" = '#fc8d62',
-  "Cuniculiplasma"    = '#e78ac3',   # from mag_plot only
+  "Cuniculiplasma"    = '#e5c494',   # from mag_plot only
   "Cutibacterium"     = '#a6d854',   # from mag_plot only
   "Lawsonella"        = '#80c1e3',   # from mag_plot only
   "Acidiplasma"       = '#377eb8',   # from kaiju only
