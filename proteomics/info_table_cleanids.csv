@@ -1,0 +1,36 @@
+ID,Taxonomy,Quality,Alternative_ID
+KDJLIKBO,Mycobacterium Methanotrophicum,complete,SC_MAG_00016
+Crude_2,Mycobacterium MAG2,MAG (original),SC_MAG_00019
+Crude_3,Mycobacterium MAG3,MAG (original),SC_Bin_00022/SC_Bin_00030
+KNPMNEEE,Ferroplasma,complete,SC_MAG_00008
+EKPBOPOH,Cuniculiplasma,complete,SC_MAG_00018
+SC_Bin_00021,bacteria,MAG (new),NA
+SC_Bin_00023,Moraxella,MAG (new),NA
+SC_Bin_00024,B-DKE sp002204705 (archaea),MAG (new),NA
+SC_Bin_00025,Micrarchaeum acidiphilum,MAG (new),NA
+SC_Bin_00026,bacteria,MAG (new),NA
+SC_Bin_00027,Janibacter hoylei,MAG (new),NA
+SC_Bin_00028,Straphylococcus epidermidis,MAG (new),NA
+SC_Bin_00029,Streptococcus,MAG (new),NA
+SC_Bin_00030,Mycobacterium,MAG (new),NA
+SC_Bin_00031,NA,MAG (new),NA
+SC_Bin_00032,Micrarchaeum acidiphilum,MAG (new),NA
+SC_Bin_00033,NA,MAG (new),NA
+SC_MAG_00001,Paracoccus aeridis,MAG (new),NA
+SC_MAG_00002,Lawsonella clevelandensis,MAG (new),NA
+SC_MAG_00003,Enterobacteriaceae,MAG (new),NA
+SC_MAG_00004,Acidithiobacillus thiooxidans,MAG (new),NA
+SC_MAG_00005,Cutibacterium acnes,MAG (new),NA
+SC_MAG_00006,Ferroplasma,MAG (new),NA
+SC_MAG_00007,PALSA-457 sp003161575,MAG (new),NA
+SC_MAG_00008,Ferroplasma,MAG (new),NA
+SC_MAG_00009,Acidiphilium rubrum,MAG (new),NA
+SC_MAG_00010,Ferrimicrobium acidiphilum,MAG (new),NA
+SC_MAG_00011,archaea,MAG (new),NA
+SC_MAG_00012,Palsa-601 sp003136185,MAG (new),NA
+SC_MAG_00013,Acidithiobacillus thiooxidans,MAG (new),NA
+SC_MAG_00014,Sulfobacillus thermotolerans,MAG (new),NA
+SC_MAG_00015,Micrococcus luteus,MAG (new),NA
+SC_MAG_00017,Corynebacterium propinquum,MAG (new),NA
+SC_MAG_00020,Babela massiliensis,MAG (new),NA
+virus,All viral contigs ,best quality filtered contigs,NA
