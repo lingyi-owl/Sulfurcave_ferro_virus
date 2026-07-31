@@ -1,7 +1,46 @@
+# =====================================================================
+# Figure 4 — code extracted from plotting/Figure03_chrats.R
+# (Sulfurcave_ferro_virus_git repository)
+#
+# Produces the 6-panel Figure4.pdf:
+#   Top row  (pan-genome vs proteomics beeswarm, "Selected pathways"):
+#     a = pp1  ->  M. methanotrophicum   (defined ~L483 below)
+#     b = pp2  ->  Ferroplasma c.        (defined ~L539)
+#     c = pp3  ->  Ferroplasma MAG6      (defined ~L595)
+#   Bottom row (defense-system / anti-phage LFQ boxplots, "Functional category"):
+#     d = myco                    ->  M. methanotrophicum  (defined ~L652)
+#     e = Ferroplasma_ribo_crisp  ->  Ferroplasma c.       (defined ~L689)
+#     f = MAG6_ribo_crisp         ->  Ferroplasma MAG6     (defined ~L739)
+#   Assembly (patchwork) + export at the very bottom (figure4 / ggsave).
+#
+# NOTE ON LINE NUMBERS: the "L###" above refer to the ORIGINAL script.
+# In THIS extract everything is shifted down by the length of this header.
+#
+# CAVEATS for re-running:
+#   * Input paths are the original author's absolute paths. Several point
+#     INSIDE this repo (proteomics/, pangenomics/, metagenomics/) and will
+#     work if you run from the repo root; others are hard-coded to
+#     "/Users/wu000058/.../Sulfurcave_ferro_virus_git/..." and
+#     "~/Desktop/Projects/Mycobacterium_sulfur_cave/Defencefinder/*.tsv".
+#   * The DefenseFinder TSVs (myco_/Ferr_c_/MAG6_defense_finder_systems.tsv,
+#     lines building panels d-f) are NOT in the repo tree under those paths
+#     and must be supplied / repointed.
+#   * The final ggsave() writes to the author's Desktop path -> change it.
+#   * pp1/pp2/pp3 are each defined TWICE: first as geom_point scatters
+#     (Figure-3 exploratory, later overwritten), then reassigned as the
+#     geom_beeswarm versions that actually appear in Figure 4.
+#
+# Required packages: readxl, dplyr, tidyr, ggplot2, ggbeeswarm, ggrepel,
+#   ggsignif, reshape2, patchwork (for the / and + layout operators),
+#   plus (used by interleaved prep) plotly, scatterplot3d, KEGGREST, arules.
+# =====================================================================
+
+setwd('/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/')
+
 ################ combine proteomics
 # metaproteomics were mapped against 92103 proteins from MAGs and virous 
-ProteinGroups<-readxl::read_xlsx("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/proteinGroups.xlsx",sheet = 2)
-ids<-readxl::read_xlsx("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/proteinGroups.xlsx",sheet = 1)
+ProteinGroups<-readxl::read_xlsx("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/proteomics/proteinGroups.xlsx",sheet = 2)
+ids<-readxl::read_xlsx("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/proteomics/proteinGroups.xlsx",sheet = 1)
 data_proteomics<-as.data.frame(ProteinGroups[,1:2])
 data_proteomics$LFQ_intensity_Cave_Biofilm_1 <-as.numeric(ProteinGroups$`LFQ intensity cave_wcl_1`)
 data_proteomics$LFQ_intensity_Cave_Biofilm_2 <-as.numeric(ProteinGroups$`LFQ intensity cave_wcl_2`)
@@ -24,7 +63,7 @@ length(grep(";",data_proteomics$`Majority protein IDs`))
 View(data_proteomics_tax)
 colors_pB<-c('#a6d854',"#fb8072",'#8da0cb','#66c2a5',"grey")
 
-info_table_DNA <- read.csv("~/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/info_table_DNA.csv")
+info_table_DNA <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/metagenomics/info_table_DNA.csv", sep = ";")
 info_table_DNA$Alternative_ID2<-gsub("_","",info_table_DNA$Alternative_ID2)
 data_proteomics$ID<-unlist(lapply(strsplit(data_proteomics$`Protein IDs`,"_"),function(x) x[1]))
 data_proteomics_tax<-merge(data_proteomics,info_table_DNA,by.x = "ID",by.y = "Alternative_ID2")
@@ -74,6 +113,7 @@ scatterplot3d(x=data_proteomics_tax$log10_LFQ_intensity_Cave_Biofilm_1, y=data_p
                  main="",pch = data_proteomics_tax$cave_only,color=colors, box=F,cex.symbols=size,
               xlab="Cave Biofilm 1", ylab="Cave Biofilm 3", zlab="Culture",sub="log10 LFQ intensity")
 addgrids3d(x=data_proteomics_tax$log10_LFQ_intensity_Cave_Biofilm_1, y=data_proteomics_tax$log10_LFQ_intensity_Cave_Biofilm_2, z=data_proteomics_tax$log10_LFQ_intensity_Culture, grid = c("xy", "xz", "yz"))
+
 #plot(data_proteomics$log10_LFQ_intensity_Cave_Biofilm_1,data_proteomics$log10_LFQ_intensity_Cave_Biofilm_2)
 dim(data_proteomics)
 
@@ -105,7 +145,7 @@ gb
 
 ################# combine proteomics and metagenomics 
 # get abundance from figure01 mean_cov_all
-mean_cov_all <- read.csv("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/DNA_mean_cov_all.csv")[,-1]
+mean_cov_all <- read.csv("metagenomics/DNA_mean_cov_all.csv")[,-1]
 data_proteomics_formated<-data_proteomics1 %>% group_by(ID) %>% summarise(sum_log10_LFQ_intensity_Cave_Biofilm_1 = sum(log10_LFQ_intensity_Cave_Biofilm_1)
                                                                        ,sum_log10_LFQ_intensity_Cave_Biofilm_2 = sum(log10_LFQ_intensity_Cave_Biofilm_2),
                                                                        sum_log10_LFQ_intensity_Culture = sum(log10_LFQ_intensity_Culture),
@@ -131,12 +171,6 @@ prot_dna<-ggplot(data_comb, aes(DNA_mean_ab,mean_mean_log10_LFQ_intensity_Cave_B
   geom_point(size=8)+scale_color_manual(values=colors_p1)+
   geom_label_repel(aes(label=highlight), size=6, color="black",fill = alpha(c("white"),0.5))+labs(x="mean DNA coverage (log10)",y="mean LFQ intenisty (log10)")+theme(text = element_text(size = 14))
 prot_dna  
-
-
-
-
-
-
 
 ##################
 #################
@@ -221,17 +255,17 @@ read.cdhit.clstr <- function(fname) {
     ungroup
 }
 
-temp_Fer<-read.cdhit.clstr("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/connect_proteomics/Ferroplasma_connect_100.clstr")
+temp_Fer<-read.cdhit.clstr("proteomics/Ferroplasma_connect_100.clstr")
 
 ##########Ferr_pan2
-Ferroplasma_Pan_2_gene_clusters_summary.txt <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferroplasma_Pan_2/SUMMARY_few_classes/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz")
+Ferroplasma_Pan_2_gene_clusters_summary.txt <- read.delim("pangenomics/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz")
 Ferr<-Ferroplasma_Pan_2_gene_clusters_summary.txt[which(Ferroplasma_Pan_2_gene_clusters_summary.txt$genome_name=="SFerroplasmacircular"),]
 Ferr<-Ferr[order(Ferr$gene_callers_id,decreasing = F),]
 
 MAG6<-Ferroplasma_Pan_2_gene_clusters_summary.txt[which(Ferroplasma_Pan_2_gene_clusters_summary.txt$genome_name=="SMAG00006"),] 
 MAG6<-MAG6[order(MAG6$gene_callers_id,decreasing = F),]
 
-Myco_Pan_gene_clusters_summary.txt <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/mycobacterium/MYCO-SUMMARY/MYCO_Pan_gene_clusters_summary.txt.gz")
+Myco_Pan_gene_clusters_summary.txt <- read.delim("pangenomics/MYCO_Pan_gene_clusters_summary.txt.gz")
 Myco_Pan<-Myco_Pan_gene_clusters_summary.txt[which(Myco_Pan_gene_clusters_summary.txt$genome_name=="M_methanotrophicum"),]
 Myco_Pan<-Myco_Pan[order(Myco_Pan$gene_callers_id,decreasing = F),]
 
@@ -248,7 +282,7 @@ for(i in unique(temp_Fer$Cluster)){
 }
 Ferr$matchIDs<-matchIDs
 
-#strsplit(data_proteomics_ferro$`Majority protein IDs`,";")
+strsplit(data_proteomics_ferro$`Majority protein IDs`,";")
 data_proteomics_ferro$Majority_protein_IDs_u<-unlist(lapply(strsplit(data_proteomics_ferro$`Majority protein IDs`,";"), function(x) substr(x[grep("KNPMNEEE",x)], 1, 14)[1]))
 #data_proteomics_ferro$Majority_protein_IDs_all<-unlist(lapply(strsplit(data_proteomics_ferro$`Majority protein IDs`,";"), function(x) paste(substr(x[grep("KNPMNEEE",x)], 1, 14),collapse = ";")))
 
@@ -308,7 +342,7 @@ ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,gene_cluster_perc))+geom_p
 ##################
 
 
-temp_mag6<-read.cdhit.clstr("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/connect_proteomics/MAG6_connect_100.clstr")
+temp_mag6<-read.cdhit.clstr("proteomics/MAG6_connect_100.clstr")
 matchIDs<-rep(NA,nrow(MAG6))
 for(i in unique(temp_mag6$Cluster)){
   temp1<-temp_mag6[which(i==temp_mag6$Cluster),]
@@ -369,7 +403,7 @@ ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,gene_cluster_perc))+geom_p
 
 
 
-temp_Myc<-read.cdhit.clstr("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/connect_proteomics/Mycobacterium_connect_100.clstr")
+temp_Myc<-read.cdhit.clstr("proteomics/Mycobacterium_connect_100.clstr")
 
 matchIDs<-rep(NA,nrow(Myco_Pan))
 for(i in unique(temp_Myc$Cluster)){
@@ -426,7 +460,7 @@ ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,gene_cluster_perc))+geom_p
   geom_point(data=subset(data_temp, data_temp$KOfam_ACC%in%co2_fix_photo), aes(log10_LFQ_intensity_Cave_Biofilm,gene_cluster_perc), size=3, color="#1f78b4")+
   geom_point(data=subset(data_temp, data_temp$KOfam_ACC%in%co2_fix_pro), aes(log10_LFQ_intensity_Cave_Biofilm,gene_cluster_perc), size=3, color="#cab2d6")
 
-pp3+pp1+ theme(legend.position = "none")+pp2+ theme(legend.position = "none")+ plot_layout(guides = "collect")
+# pp3+pp1+ theme(legend.position = "none")+pp2+ theme(legend.position = "none")+ plot_layout(guides = "collect")
 
 ###################################
 ###################################
@@ -466,7 +500,7 @@ colors_pw<-c('#e7298a','#7570b3','#1b9e77',"lightgrey",'#d95f02')
 # shapes<-c(15,17,19,18,21,8)
 shapes<-c(15,17,18,21,8)
 data_temp$gene_cluster_perc_f<-factor(round(data_temp$gene_cluster_perc,digits = 2))
-library(arules)
+# library(arules)
 step<-(max(data_temp$num_genomes_gene_cluster_has_hits)-2)/3
 step<-ceiling(step)
 temp_group<-data_temp$num_genomes_gene_cluster_has_hits
@@ -493,6 +527,12 @@ pp1<-ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,num_genomes_gene_clus
   theme(text = element_text(size = 18))+scale_shape_manual(values=shapes)+
   theme(legend.position = "bottom")
 pp1 
+
+# write.table(data_temp,
+#       "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/fig4a_myco_data.csv",
+#       sep = ',',
+#       quote = F,
+#       row.names = F)
 
 data_temp<-Ferr_pan_only_prot
 
@@ -523,7 +563,7 @@ colors_pw<-c('#e7298a','#7570b3',"#8dd3c7",'#1b9e77',"lightgrey",'#d95f02')
 shapes<-c(15,17,19,18,21,8)
 
 data_temp$gene_cluster_perc_f<-factor(round(data_temp$gene_cluster_perc,digits = 2))
-library(arules)
+# library(arules)
 step<-(max(data_temp$num_genomes_gene_cluster_has_hits)-2)/3
 step<-ceiling(step)
 temp_group<-data_temp$num_genomes_gene_cluster_has_hits
@@ -545,12 +585,83 @@ pp2<-ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,num_genomes_gene_clus
   coord_cartesian(clip = "off") +xlim(6,11)+
   #  geom_label_repel(xlim = c(-Inf, Inf), ylim = c(-Inf, Inf), fill = alpha(c("white"),0.7),data=subset(data_temp, data_temp$KOfam%in%data_temp$KOfam[order(data_temp$log10_LFQ_intensity_Cave_Biofilm,decreasing = T)[1:5]]),box.padding = 0.5, max.overlaps = Inf, aes(log10_LFQ_intensity_Cave_Biofilm,num_genomes_gene_cluster_has_hits_f,label=KOfam_clean), size=5, color="black")+
   geom_label_repel(xlim = c(-Inf, Inf), ylim = c(-Inf, Inf), fill = alpha(c("white"),0.7),data=subset(data_temp, data_temp$matchIDs%in%data_temp$matchIDs[order(data_temp$log10_LFQ_intensity_Cave_Biofilm,decreasing = T)[1:num_top]]),box.padding = 0.5, max.overlaps = Inf, aes(log10_LFQ_intensity_Cave_Biofilm,num_genomes_gene_cluster_has_hits_f,label=KOfam_clean), size=6, color="black")+
-  labs(x="mean LFQ intensity (log10) Cave Biofilm",y="",color="Selected pathways",shape="Selected pathways",title = "Ferroplasma c.")+
+  labs(x="mean LFQ intensity (log10) Cave Biofilm",color="Selected pathways",shape="Selected pathways",title = "Ferroplasma c.")+
   theme(text = element_text(size = 18))+scale_shape_manual(values=shapes)+
   theme(legend.position = "bottom")
 pp2 
 
+# write.table(data_temp,
+#             "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/ferro_metaproteomics_data.csv",
+#             sep = ',',
+#             quote = F,
+#             row.names = F)
 
+# extract metaproteomics LFQ intensity for Csc1(KNPMNEEE_00015), Csc2(KNPMNEEE_00014), Csc3/Cas10 (KNPMNEEE_00013), and Cas6 (KNPMNEEE_00012)
+crispr_ids <- c("KNPMNEEE_00015", "KNPMNEEE_00014", "KNPMNEEE_00013", "KNPMNEEE_00012")
+
+ferro_crispr_lfq <- data_temp %>%
+  filter(matchIDs %in% crispr_ids) %>%
+  select(matchIDs, KOfam_clean, LFQ_intensity_Cave_Biofilm_1, LFQ_intensity_Cave_Biofilm_2)
+
+lookup <- c(
+  "CRISPR-associated endoribonuclease Cas6" = "Cas 6",
+  "CRISPR Csc3"                             = "Csc 3",
+  "CRISPR Csc2"                             = "Csc 2",
+  "CRISPR Csc1"                             = "Csc 1"
+)
+
+ferro_crispr_lfq$KOfam_new <- unname(lookup[ferro_crispr_lfq$KOfam_clean])
+
+library(tidyr)
+
+ferro_crispr_lfq_long <- pivot_longer(
+  ferro_crispr_lfq,
+  cols      = c(LFQ_intensity_Cave_Biofilm_1, LFQ_intensity_Cave_Biofilm_2),
+  names_to  = "sample",
+  values_to = "LFQ_intensity"
+) %>%
+  mutate(sample = str_replace(sample, "LFQ_intensity_Cave_Biofilm_", "Biofilm "))
+
+library(ggplot2)
+library(scales)
+
+ferro_crispr_lfq_long$KOfam_new   <- factor(ferro_crispr_lfq_long$KOfam_new,   levels = c("Cas 6", "Csc 3", "Csc 2", "Csc 1"))
+ferro_crispr_lfq_long$sample <- factor(ferro_crispr_lfq_long$sample, levels = c("Biofilm 1", "Biofilm 2"))
+
+major <- 10^(6:10)
+minor <- as.vector(outer(2:9, 10^(6:9)))
+fills <- c("Biofilm 1" = "#FDB462", "Biofilm 2" = "#2c7fb8")
+
+ferro_crispr_lfq_p <- ggplot(ferro_crispr_lfq_long,
+                             aes(x = KOfam_new, y = LFQ_intensity, fill = sample)) +
+  geom_col(position = position_dodge(width = 0.75), width = 0.7) +   # bar borders removed
+  scale_fill_manual(values = fills, name = "Sample") +
+  scale_y_log10(
+    limits = c(1e6, 1e10), breaks = major, minor_breaks = minor,
+    labels = c(expression(10^6), expression(10^7), expression(10^8),
+               expression(10^9), expression(10^10)),
+    expand = c(0, 0), oob = scales::oob_squish
+  ) +
+  labs(x = "CRISPR proteins", y = "LFQ intensity") +
+  theme_minimal(base_family = "Arial", base_size = 20) +
+  theme(
+    panel.grid.major.y = element_line(color = "gray85", linewidth = 0.4),
+    panel.grid.minor.y = element_line(color = "gray85", linewidth = 0.4),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.border = element_rect(color = "gray85", fill = NA, linewidth = 0.4),  # grey frame (gives top + right)
+    axis.line    = element_line(color = "black", linewidth = 0.6),               # black bottom + left over the frame
+    axis.ticks   = element_line(color = "black", linewidth = 0.5),
+    axis.ticks.length = unit(0.15, "cm"),
+    legend.key   = element_rect(fill = NA, color = NA),   # no border around legend keys
+    legend.position = "right"
+  )
+
+ferro_crispr_lfq_p
+
+
+
+ferro_crispr <- data_temp[]
 
 data_temp<-MAG6_pan2_only_prot
 
@@ -580,7 +691,7 @@ data_temp$selected_pw<-selected_pw
 colors_pw<-c('#e7298a','#7570b3',"#8dd3c7",'#1b9e77',"lightgrey",'#d95f02')
 shapes<-c(15,17,19,18,21,8)
 data_temp$gene_cluster_perc_f<-factor(round(data_temp$gene_cluster_perc,digits = 2))
-library(arules)
+# library(arules)
 step<-(max(data_temp$num_genomes_gene_cluster_has_hits)-2)/3
 step<-ceiling(step)
 temp_group<-data_temp$num_genomes_gene_cluster_has_hits
@@ -611,19 +722,20 @@ pp_final<-pp1+theme(legend.position="none")+pp2+pp3+theme(legend.position="none"
   plot_annotation(tag_levels = 'a')
 
 pp_final
-ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure4_abc.pdf",pp_final,width = 20,height = 8)
+# ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure4_abc.pdf",pp_final,width = 20,height = 8)
 ###################################
 #focus on defence 
 ##################
-myco_defense_finder_systems <- read.delim2("~/Desktop/Projects/Mycobacterium_sulfur_cave/Defencefinder/myco_defense_finder_systems.tsv")
+setwd("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git")
+myco_defense_finder_systems <- read.delim2("metagenomics/defencefinder/Myco/defense_finder_systems.tsv")
 pall<-unlist(strsplit(myco_defense_finder_systems$protein_in_syst,","))
 Myco_pan_only_prot[Myco_pan_only_prot$matchIDs%in%pall,]
 
-Ferr_c_defense_finder_systems <- read.delim2("~/Desktop/Projects/Mycobacterium_sulfur_cave/Defencefinder/Ferr_c_defense_finder_systems.tsv")
+Ferr_c_defense_finder_systems <- read.delim2("metagenomics/defencefinder/Ferro/defense_finder_systems.tsv")
 pall<-unlist(strsplit(Ferr_c_defense_finder_systems$protein_in_syst,","))
 Ferr_pan_only_prot[Ferr_pan_only_prot$matchIDs%in%pall,]
 
-MAG6_c_defense_finder_systems <- read.delim2("~/Desktop/Projects/Mycobacterium_sulfur_cave/Defencefinder/MAG6_defense_finder_systems.tsv")
+MAG6_c_defense_finder_systems <- read.delim2("metagenomics/defencefinder/MAG6/defense_finder_systems.tsv")
 pall<-unlist(strsplit(MAG6_c_defense_finder_systems$protein_in_syst,","))
 MAG6_pan2_only_prot[gsub("SCMAG00006_","",MAG6_pan2_only_prot$matchIDs)%in%pall,]
 
@@ -661,8 +773,12 @@ myco<-ggplot(df_melted, aes(x = system, y = value)) +
        y = "LFQ intensity (log10) Cave Biofilm",
        color = "Functional category",
        fill = "Functional category")+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+theme(text = element_text(size = 18))
-
-
+myco
+write.table(data_myco_def,
+            "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/myco_melted_df.csv",
+            sep = ',',
+            quote = F,
+            row.names = F)
 ###############Fero
 def_table<-c()
 for(i in 1:nrow(Ferr_c_defense_finder_systems)){
@@ -689,6 +805,13 @@ df_melted$system<-gsub("_"," ",df_melted$system)
 df_melted$system<-gsub("Class","C",df_melted$system)
 df_melted$system<-gsub("Subtype","S",df_melted$system)
 
+write.table(df_melted,
+            "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/ferro_c_melted_df.csv",
+            sep = ',',
+            quote = F,
+            row.names = F
+            )
+
 Ferroplasma_ribo_crisp<-ggplot(df_melted, aes(x = system, y = value)) +
   geom_jitter(aes(color = system, shape =Sample), size=6, width = 0.2, alpha = 0.5) +
   geom_boxplot(aes(fill = system), alpha = 0.6, outlier.shape = NA) +
@@ -702,8 +825,70 @@ Ferroplasma_ribo_crisp<-ggplot(df_melted, aes(x = system, y = value)) +
        y = "",
        color = "Functional category",
        fill = "Functional category")+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+theme(text = element_text(size = 18))
-###############################
+Ferroplasma_ribo_crisp
 
+###############################
+library(ggplot2)
+library(ggsignif)
+library(scales)
+
+# ---- Data ----
+# df_melted must have columns: system, Sample, y
+#   y      = linear LFQ intensity  (Sample 1 -> LFQ_intensity_Cave_Biofilm_1,
+#                                   Sample 2 -> LFQ_intensity_Cave_Biofilm_2)
+#   Sample = "Biofilm 1" / "Biofilm 2"
+#   system = "CAS C1-S-I-D" / "Ribosomal" / "RM Type III"
+df_melted <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/ferroplasma_c_viral_defense_metaproteomics.csv", stringsAsFactors = FALSE)
+df_melted$system <- factor(df_melted$system,
+                           levels = c("CAS C1-S-I-D", "Ribosomal", "RM Type III"))
+
+# ---- Log-axis grid breaks (like the previous plots) ----
+major <- 10^(6:10)
+minor <- as.vector(outer(2:9, 10^(6:9)))
+
+# ---- Exact Wilcoxon rank-sum p values (computed on the data) ----
+p_cr <- 2.225e-05   # CAS C1-S-I-D vs Ribosomal
+p_rm <- 0.1535      # CAS C1-S-I-D vs RM Type III
+ann  <- c(paste0("p-value = ", signif(p_cr, 3)),
+          paste0("p-value = ", signif(p_rm, 3)))
+
+# ---- Plot ----
+Ferroplasma_ribo_crisp <- ggplot(df_melted, aes(x = system, y = y)) +
+  geom_jitter(aes(color = system, shape = Sample), size = 6, width = 0.2, alpha = 0.5) +
+  geom_boxplot(aes(fill = system), alpha = 0.6, outlier.shape = NA) +
+  scale_color_manual(values = c("#33a02c", "#e31a1c", "#fb9a99")) +
+  scale_fill_manual(values  = c("#33a02c", "#e31a1c", "#fb9a99")) +
+  geom_signif(comparisons = list(c("CAS C1-S-I-D", "Ribosomal"),
+                                 c("CAS C1-S-I-D", "RM Type III")),
+              annotations = ann,
+              y_position  = c(10.05, 10.32),   # log10 units; stagger the two brackets
+              tip_length  = 0.01, textsize = 4.5) +
+  scale_y_log10(
+    limits = c(10^6.3, 10^11.0),               # headroom for the top bracket label
+    breaks = major, minor_breaks = minor,
+    labels = c(expression(10^6), expression(10^7), expression(10^8),
+               expression(10^9), expression(10^10)),
+    expand = c(0, 0)
+  ) +
+  labs(title = expression(italic("Ferroplasma") ~ "c."),
+       x = "Protein functional category", y = "LFQ intensity",
+       color = "Protein functional category", fill = "Protein functional category") +
+  theme_minimal(base_family = "Arial", base_size = 20) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    # log grid
+    panel.grid.major.y = element_line(color = "#bebebe", linewidth = 0.4),
+    panel.grid.minor.y = element_line(color = "#bebebe", linewidth = 0.4),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    # grey top+right border, black x+y axis lines
+    panel.border = element_rect(color = "grey70", fill = NA, linewidth = 0.8),
+    axis.line.x  = element_line(color = "black", linewidth = 0.8),
+    axis.line.y  = element_line(color = "black", linewidth = 0.8),
+    axis.ticks   = element_line(color = "black", linewidth = 0.5)
+  )
+
+Ferroplasma_ribo_crisp
 
 ###############################
 data<-MAG6_pan2_only_prot
@@ -754,165 +939,17 @@ MAG6_ribo_crisp<-ggplot(df_melted, aes(x = system, y = value)) +
        fill = "Functional category")+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+ guides(color = "none")+theme(text = element_text(size = 18))
 MAG6_ribo_crisp
 
-def_final<-myco+theme(legend.position="none")+Ferroplasma_ribo_crisp+theme(legend.position="none")+MAG6_ribo_crisp+theme(legend.position="none")+
-  plot_annotation(tag_levels = 'a')
+write.table(df_melted,
+            "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/df_melted.csv",
+            sep = ",",
+            quote = F,
+            row.names = F)
 
-def_final
-
-figure4 <- (pp1+theme(legend.position="none")+pp2+pp3+theme(legend.position="none"))/(myco+theme(legend.position="none")+Ferroplasma_ribo_crisp+theme(legend.position="none")+MAG6_ribo_crisp+theme(legend.position="none"))+
-  plot_annotation(tag_levels = 'a')
-ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure4.pdf",figure4,width = 18,height = 12)
-# def_final<-Ferroplasma_ribo_crisp+MAG6_ribo_crisp+ plot_layout(guides = "collect")
+# def_final<-myco+theme(legend.position="none")+Ferroplasma_ribo_crisp+theme(legend.position="none")+MAG6_ribo_crisp+theme(legend.position="none")+
+#   plot_annotation(tag_levels = 'a')
 # 
 # def_final
-################################# visulize pathway enrichment 
-
-################ sum lfg proteomics per pw
-pws_mod_names <- read.csv("~/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/eggnog/pw_info.csv")
-pws_mod_names_r<-pws_mod_names[-grep("Human|Organismal Systems",pws_mod_names$V5),]
-pws_mod_names_r<-pws_mod_names_r[-grep(" - fly| - worm",pws_mod_names_r$V2),]
-
-Ferr_data<-pws_mod_names_r
-match<-apply(pws_mod_names_r, 1, function(x) sum(Ferr_pan_only_prot$LFQ_intensity_Cave_Biofilm[match(unlist(strsplit(x[5],",")) ,Ferr_pan_only_prot$KOfam_ACC) ] ,na.rm = T))
-# match[is.nan(match)]<-0
-NR_active<-apply(pws_mod_names_r, 1, function(x) length(which(Ferr_pan_only_prot$LFQ_intensity_Cave_Biofilm[match(unlist(strsplit(x[5],",")) ,Ferr_pan_only_prot$KOfam_ACC)]>0)))
-
-Ferr_data$Ferr_Sum_LFQ_intensity_Cave_Biofilm<-match
-Ferr_data$Ferr_NR_active<-NR_active
-Ferr_data$org<-rep("Ferroplasma c.",nrow(Ferr_data))
-
-Ferr_data$Ferr_log10_Sum_LFQ_intensity_Cave_Biofilm<-log10(Ferr_data$Ferr_Sum_LFQ_intensity_Cave_Biofilm)
-Ferr_data<- Ferr_data[-which(Ferr_data$Ferr_Sum_LFQ_intensity_Cave_Biofilm==0),]
-Ferr_data<- Ferr_data[order(Ferr_data$Ferr_log10_Sum_LFQ_intensity_Cave_Biofilm,decreasing = T),]
-Ferr_data$pw_nr_active_perc<-Ferr_data$Ferr_NR_active/as.integer(Ferr_data$V3)*100
-
-sub_Ferr_data<-Ferr_data[1:10,]
-sub_Ferr_data$V2<-factor(sub_Ferr_data$V2,levels = sub_Ferr_data$V2)
-gg1<-ggplot(sub_Ferr_data,aes(Ferr_log10_Sum_LFQ_intensity_Cave_Biofilm,V2,color=Ferr_NR_active))+geom_point(size=3)+
-  labs(y="",x="",title = "Ferroplasma c.",color="N. proteins")+
-  scale_colour_continuous(type = "viridis")+theme(text = element_text(size = 14))
-gg1
-
-###########################
-MAG6_data<-pws_mod_names_r
-match<-apply(pws_mod_names_r, 1, function(x) sum(MAG6_pan2_only_prot$LFQ_intensity_Cave_Biofilm[match( unlist(strsplit(x[5],",")),MAG6_pan2_only_prot$KOfam_ACC ) ] ,na.rm = T))
-NR_active<-apply(pws_mod_names_r, 1, function(x) length(which(MAG6_pan2_only_prot$LFQ_intensity_Cave_Biofilm[match( unlist(strsplit(x[5],",")),MAG6_pan2_only_prot$KOfam_ACC ) ]>0)))
-MAG6_data$MAG6_Sum_LFQ_intensity_Cave_Biofilm<-match
-MAG6_data$MAG6_NR_active<-NR_active
-MAG6_data$org<-rep("Ferroplasma MAG6",nrow(MAG6_data))
-
-MAG6_data$MAG6_log10_Sum_LFQ_intensity_Cave_Biofilm<-log10(MAG6_data$MAG6_Sum_LFQ_intensity_Cave_Biofilm)
-MAG6_data<- MAG6_data[-which(MAG6_data$MAG6_Sum_LFQ_intensity_Cave_Biofilm==0),]
-MAG6_data<- MAG6_data[order(MAG6_data$MAG6_log10_Sum_LFQ_intensity_Cave_Biofilm,decreasing = T),]
-MAG6_data$pw_nr_active_perc<-MAG6_data$MAG6_NR_active/as.integer(MAG6_data$V3)*100
-
-sub_MAG6_data<-MAG6_data[1:10,]
-sub_MAG6_data$V2<-factor(sub_MAG6_data$V2,levels = sub_MAG6_data$V2)
-gg2<-ggplot(sub_MAG6_data,aes(MAG6_log10_Sum_LFQ_intensity_Cave_Biofilm,V2,color=MAG6_NR_active))+geom_point(size=3)+
-  labs(y="",x="",title = "Ferroplasma MAG6",color="N. proteins")+
-  scale_colour_continuous(type = "viridis")+theme(text = element_text(size = 14))
-gg2
-
-####################
-
-
-colnames(Ferr_data)<-c( "X","Pathway","Pathway_name"
-                        , "Pathway_total_kos","KOs","BRITE"
-                        , "Sum_LFQ_intensity_Cave_Biofilm",   "NR_active","org"                                    
-                        ,"log10_Sum_LFQ_intensity_Cave_Biofilm" ,"pw_nr_active_perc" )
-colnames(MAG6_data)<-colnames(Ferr_data)
-data_ferro_c_MAG6<-rbind(Ferr_data, MAG6_data)
-selection<-unique(c(MAG6_data[1:10,3],Ferr_data[1:10,3]))
-
-data_ferro_c_MAG6_sel<-data_ferro_c_MAG6[data_ferro_c_MAG6$Pathway_name%in%selection,]
-data_ferro_c_MAG6_sel$Pathway_name[order(data_ferro_c_MAG6_sel$Sum_LFQ_intensity_Cave_Biofilm)]
-data_ferro_c_MAG6_sel$Pathway_name<-factor(data_ferro_c_MAG6_sel$Pathway_name,levels = unique(data_ferro_c_MAG6_sel$Pathway_name[order(data_ferro_c_MAG6_sel$Sum_LFQ_intensity_Cave_Biofilm)]))
-gg_ferr2<-ggplot(data_ferro_c_MAG6_sel,aes(log10_Sum_LFQ_intensity_Cave_Biofilm,Pathway_name,color=NR_active, shape=org))+geom_point(size=10)+
-  labs(y="Pathways (top10)",x="Sum protein LFQ intensity (log10) - Cave biofilm",title = "",color="N. proteins",shape="Organism")+
-  scale_colour_continuous(type = "viridis")+theme(text = element_text(size = 14))
-gg_ferr2
-
-
-##########################
-Myco_data<-pws_mod_names_r
-match<-apply(pws_mod_names_r, 1, function(x) sum(Myco_pan_only_prot$LFQ_intensity_Cave_Biofilm[match(unlist(strsplit(x[5],",")),Myco_pan_only_prot$KOfam_ACC ) ] ,na.rm = T))
-NR_active<-apply(pws_mod_names_r, 1, function(x) length(which(Myco_pan_only_prot$LFQ_intensity_Cave_Biofilm[match(unlist(strsplit(x[5],",")),Myco_pan_only_prot$KOfam_ACC )  ]>0)))
-Myco_data$Myco_Sum_LFQ_intensity_Cave_Biofilm<-match
-Myco_data$Myco_NR_active<-NR_active
-Myco_data$org<-rep("M.meth",nrow(Myco_data))
-
-Myco_data$Myco_log10_Sum_LFQ_intensity_Cave_Biofilm<-log10(Myco_data$Myco_Sum_LFQ_intensity_Cave_Biofilm)
-Myco_data<- Myco_data[-which(Myco_data$Myco_Sum_LFQ_intensity_Cave_Biofilm==0),]
-Myco_data<- Myco_data[order(Myco_data$Myco_Sum_LFQ_intensity_Cave_Biofilm,decreasing = T),]
-Myco_data$pw_nr_active_perc<-Myco_data$Myco_NR_active/as.integer(Myco_data$V3)*100
-
-sub_Myco_data<-Myco_data[1:10,]
-sub_Myco_data$V2<-factor(sub_Myco_data$V2,levels = sub_Myco_data$V2)
-gg3<-ggplot(sub_Myco_data,aes(Myco_log10_Sum_LFQ_intensity_Cave_Biofilm,V2,color=Myco_NR_active))+geom_point(size=3)+
-  labs(y="Pathways (top10)",x="",title = "M. methanotrophicum",color="N. proteins")+
-  scale_colour_continuous(type = "viridis")+theme(text = element_text(size = 14))
-gg3
-
-gg<-gg3+theme(legend.direction="horizontal",legend.position="top")+gg1+theme(legend.direction="horizontal",legend.position="top")+gg2+theme(legend.direction="horizontal",legend.position="top")
-gg<-wrap_elements(gg) +
-  labs(tag = "Sum protein LFQ intensity (log10) - Cave biofilm") +
-  theme(
-    plot.tag = element_text(size = rel(1)),
-    plot.tag.position = "bottom"
-  )
-gg_f<-(gb+gb+prot_dna)/(gg3+theme(legend.direction="horizontal",legend.position="top")+gg1+theme(legend.direction="horizontal",legend.position="top")+gg2+theme(legend.direction="horizontal",legend.position="top") +
-                          plot_annotation(tag_levels = 'a')+
-                          labs(tag = "Sum protein LFQ intensity (log10) - Cave biofilm") +
-                          theme(
-                            plot.tag = element_text(size = rel(1)),
-                            plot.tag.position = "bottom"
-                          ))
-
-ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure3.pdf",gg_f,width = 20,height = 9)
-
-################# 
-################# investigating pathwys C02 fixation
-################# 
-
-co2fix_KO<-names(pw_info[[4]][[1]]$ORTHOLOGY)
-
-t<-MAG6_pan2_only_prot$KOfam_ACC[MAG6_pan2_only_prot$KOfam_ACC%in%co2fix_KO]
-paste(unique(t),collapse = "+")
-
-
-f<-Ferr_pan_only_prot$KOfam_ACC[Ferr_pan_only_prot$KOfam_ACC%in%co2fix_KO]
-paste(unique(f),collapse = "+")
-
-m<-Myco_pan_only_prot$KOfam_ACC[Myco_pan_only_prot$KOfam_ACC%in%co2fix_KO]
-paste(unique(m),collapse = "+")
-Myco_pan_only_prot
-#photo
-co2fix_p_KO<-names(pw_info[[3]][[1]]$ORTHOLOGY)
-
-t<-MAG6_pan2_only_prot$KOfam_ACC[MAG6_pan2_only_prot$KOfam_ACC%in%co2fix_p_KO]
-paste(unique(t),collapse = "+")
-
-
-f<-Ferr_pan_only_prot$KOfam_ACC[Ferr_pan_only_prot$KOfam_ACC%in%co2fix_p_KO]
-paste(unique(f),collapse = "+")
-
-#sulf
-sulf_KO<-names(pw_info[[2]][[1]]$ORTHOLOGY)
-
-t<-MAG6_pan2_only_prot$KOfam_ACC[MAG6_pan2_only_prot$KOfam_ACC%in%sulf_KO]
-paste(unique(t),collapse = "+")
-
-
-f<-Ferr_pan_only_prot$KOfam_ACC[Ferr_pan_only_prot$KOfam_ACC%in%sulf_KO]
-paste(unique(f),collapse = "+")
-
-#methane
-#sulf
-meth_KO<-names(pw_info[[1]][[1]]$ORTHOLOGY)
-meth_KO<-unlist(strsplit(meth_KO,"[+]"))
-t<-MAG6_pan2_only_prot$KOfam_ACC[MAG6_pan2_only_prot$KOfam_ACC%in%meth_KO]
-paste(unique(t),collapse = "+")
-
-
-f<-Ferr_pan_only_prot$KOfam_ACC[Ferr_pan_only_prot$KOfam_ACC%in%sulf_KO]
-paste(unique(f),collapse = "+")
+# 
+# figure4 <- (pp1+theme(legend.position="none")+pp2+pp3+theme(legend.position="none"))/(myco+theme(legend.position="none")+Ferroplasma_ribo_crisp+theme(legend.position="none")+MAG6_ribo_crisp+theme(legend.position="none"))+
+#   plot_annotation(tag_levels = 'a')
+# ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure4.pdf",figure4,width = 18,height = 12)

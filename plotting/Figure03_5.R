@@ -1,5 +1,5 @@
-ProteinGroups<-readxl::read_xlsx("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/proteinGroups.xlsx",sheet = 2)
-ids<-readxl::read_xlsx("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/proteinGroups.xlsx",sheet = 1)
+ProteinGroups<-readxl::read_xlsx("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/proteomics/proteinGroups.xlsx",sheet = 2)
+ids<-readxl::read_xlsx("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/proteomics/proteinGroups.xlsx",sheet = 1)
 data_proteomics<-as.data.frame(ProteinGroups[,1:2])
 data_proteomics$LFQ_intensity_Cave_Biofilm_1 <-as.numeric(ProteinGroups$`LFQ intensity cave_wcl_1`)
 data_proteomics$LFQ_intensity_Cave_Biofilm_2 <-as.numeric(ProteinGroups$`LFQ intensity cave_wcl_2`)
@@ -23,7 +23,7 @@ length(grep(";",data_proteomics$`Majority protein IDs`))
 
 
 data_proteomics$ID<- gsub("_","",data_proteomics$`Majority protein IDs`)
-sulfur_cave_ref_proteins_eggnog.emapper <- read.delim("~/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/eggnog/sulfur_cave_ref_proteins_eggnog.emapper.annotations", header=FALSE, comment.char="#")
+sulfur_cave_ref_proteins_eggnog.emapper <- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/metagenomics/Functional_annotation/sulfur_cave_ref_proteins_eggnog.emapper.annotations", header=FALSE, comment.char="#")
 sulfur_cave_ref_proteins_eggnog.emapper$tax_id <- sapply(
   strsplit(sulfur_cave_ref_proteins_eggnog.emapper$V1, "_"),
   function(x) {
@@ -169,7 +169,7 @@ ferroplasma_rtca_markers
 
 
 colors_pB<-c('#a6d854',"#fb8072",'#8da0cb','#66c2a5',"grey")
-info_table_DNA <- read.csv("~/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/info_table_DNA.csv")
+info_table_DNA <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/metagenomics/info_table_DNA.csv")
 info_table_DNA$Alternative_ID2<-gsub("_","",info_table_DNA$Alternative_ID2)
 data_proteomics_tax_prot<-merge(data_proteomics_prot,info_table_DNA,by.x = "tax_id",by.y = "Alternative_ID2")
 library(dplyr)
@@ -252,26 +252,26 @@ rTCA <- ggplot(df_heat, aes(x = KO_role, y = Genus_MAGID)) +
     title = ""
   )
 rTCA
-ggsave(
-  filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/rTCA.pdf",
-  plot = rTCA,
-  width = 12,        # in inches
-  height = 6,
-  units = "in",
-  dpi = 600,         # high resolution (even though vector)
-  device = cairo_pdf # ensures good font embedding
-)
-
-# 2️⃣ Save as high-resolution PNG (for presentations)
-ggsave(
-  filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/rTCA.png",
-  plot = rTCA,
-  width = 12,
-  height = 6,
-  units = "in",
-  dpi = 600
-)
-#methane
+# ggsave(
+#   filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/rTCA.pdf",
+#   plot = rTCA,
+#   width = 12,        # in inches
+#   height = 6,
+#   units = "in",
+#   dpi = 600,         # high resolution (even though vector)
+#   device = cairo_pdf # ensures good font embedding
+# )
+# 
+# # 2️⃣ Save as high-resolution PNG (for presentations)
+# ggsave(
+#   filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/rTCA.png",
+#   plot = rTCA,
+#   width = 12,
+#   height = 6,
+#   units = "in",
+#   dpi = 600
+# )
+# #methane
 
 
 cave_metabolism_markers_with_KO <- data.frame(
@@ -429,6 +429,10 @@ cave_metabolism_markers_with_KO <- data.frame(
   stringsAsFactors = FALSE
 )
 # Load packages
+# if (!require("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# 
+# BiocManager::install("KEGGREST")
 library(KEGGREST)
 library(dplyr)
 library(tidyr)
@@ -565,24 +569,68 @@ methane_general <- ggplot(df_heat, aes(x = KO_role, y = Genus_MAGID)) +
   )
 methane_general
 
+#############################################
+# Lingyi: Add categorical strip labels to methane_general
+# Add a category column based on Module_names content
 
+length(df_heat$KO_role)
+length(df_heat_new$KO_role)
+length(unique(df_heat_new$KO_role))
 
-ggsave(
-  filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/methane_general.pdf",
-  plot = methane_general,
-  width = 12,        # in inches
-  height = 6,
-  units = "in",
-  dpi = 600,         # high resolution (even though vector)
-  device = cairo_pdf # ensures good font embedding
-)
+# How many unique KO_role per category?
+df_heat_new %>%
+  select(KO_role, category) %>%
+  distinct() %>%
+  count(category)
 
-# 2️⃣ Save as high-resolution PNG (for presentations)
-ggsave(
-  filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/methane_general.png",
-  plot = methane_general,
-  width = 12,
-  height = 6,
-  units = "in",
-  dpi = 600
-)
+df_heat_new <- df_heat %>%
+  mutate(
+    category = case_when(
+      grepl("methanotroph|methane oxidation", Module_names, ignore.case = TRUE) ~ "Methanotroph related",
+      grepl("methanogenesis|methane production", Module_names, ignore.case = TRUE) ~ "Methanogenesis related",
+      TRUE ~ "Other"
+    )
+  )
+
+methane_general <- ggplot(df_heat_new, aes(x = KO_role, y = Genus_MAGID)) +
+  geom_tile(aes(fill = avg_LFQ), color = NA) +
+  geom_tile(
+    data = subset(df_heat, status == "not_detected"),
+    aes(x = KO_role, y = Genus_MAGID),
+    fill = "grey80"
+  ) +
+  scale_fill_viridis_c(na.value = "grey80", name = "Avg log10 LFQ") +
+  # facet groups KOs by category with label strip at the bottom
+  facet_grid(. ~ category, scales = "free_x", space = "free_x",
+             switch = "x") +          # <-- moves strip to bottom
+  theme_minimal() +
+  theme(
+    axis.text.x      = element_text(angle = 45, hjust = 1, size = 8),
+    axis.text.y      = element_text(size = 8),
+    strip.text.x     = element_text(size = 10, face = "bold"),
+    strip.placement  = "outside",     # <-- strip outside axis labels
+    panel.spacing    = unit(0.3, "lines")
+  ) +
+  labs(x = NULL, y = "Taxonomic ID", title = "")
+
+methane_general
+
+# ggsave(
+#   filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/methane_general.pdf",
+#   plot = methane_general,
+#   width = 12,        # in inches
+#   height = 6,
+#   units = "in",
+#   dpi = 600,         # high resolution (even though vector)
+#   device = cairo_pdf # ensures good font embedding
+# )
+# 
+# # 2️⃣ Save as high-resolution PNG (for presentations)
+# ggsave(
+#   filename = "/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/methane_general.png",
+#   plot = methane_general,
+#   width = 12,
+#   height = 6,
+#   units = "in",
+#   dpi = 600
+# )

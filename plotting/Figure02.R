@@ -1,771 +1,532 @@
-#Figure2
-#pan-genome ferroplasma
-library(ggplot2)
+# =============================================================================
+# Figure 2a: UpSet plot of gene cluster intersections (cave pangenome)
+# =============================================================================
+# Builds a genome x gene_cluster_id presence/absence matrix from the anvi'o
+# pangenome summary table, then plots set/intersection sizes with UpSetR.
+# =============================================================================
 
-Ferroplasma <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferroplasma_Pan_2/SUMMARY_few_classes/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz")
-Myco<- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/mycobacterium/MYCO-SUMMARY/MYCO_Pan_gene_clusters_summary.txt.gz")
-CAVE <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/CAVE_R_Pan/CAVE_R-SUMMARY/CAVE_R_Pan_gene_clusters_summary.txt.gz")
-hist(Ferroplasma$num_genomes_gene_cluster_has_hits/13*100)
-hist(Myco$num_genomes_gene_cluster_has_hits/69*100)
-hist(CAVE$num_genomes_gene_cluster_has_hits/21*100)
+library(dplyr)
+library(UpSetR)
+library(ggplotify)
+library(grid)
+library(cowplot)
 
-#################################################################################
-##unique statistics
-#################################################################################
+# -----------------------------------------------------------------------------
+# 1. Load pangenome summary table
+# -----------------------------------------------------------------------------
+data_dir <- "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics"
 
-CAVE_f<-CAVE[CAVE$genome_name == "SFerroplasmacircularcontig",]
-table(CAVE_f$num_genomes_gene_cluster_has_hits)
-annotations<- CAVE_f$KOfam_ACC
-# Calculate percentage
-total_count <- length(annotations)
-annotated_count <- sum(annotations != "")
-percentage_annotated <- (annotated_count / total_count) * 100
-percentage_annotated
-# 45.15%
-# 1   2   3   4   5   6   7   8  10  11  12  13  14  15  18  19  20  21 
-# 479 893 293 414   8   9   4   6   2   2   1   2   1   4   1   1   2   2 
-annotations<- CAVE_f$KOfam_ACC[CAVE_f$num_genomes_gene_cluster_has_hits==1]
-# Calculate percentage
-total_count <- length(annotations)
-annotated_count <- sum(annotations != "")
-percentage_annotated <- (annotated_count / total_count) * 100
-percentage_annotated
-# 16.07
-CAVE_fMAG6<-CAVE[CAVE$genome_name == "SMAG00006",]
-table(CAVE_fMAG6$num_genomes_gene_cluster_has_hits)
-annotations<- CAVE_fMAG6$KOfam_ACC
-# Calculate percentage
-total_count <- length(annotations)
-annotated_count <- sum(annotations != "")
-percentage_annotated <- (annotated_count / total_count) * 100
-percentage_annotated
-# 40.13
-# 1   2   3   4   5   6   7   8  10  11  12  13  15  18  19  20  21 
-# 775 870 280 456  12  26   5   2   3   1   1   3   3   1   1   2   6 
-annotations<- CAVE_fMAG6$KOfam_ACC[CAVE_fMAG6$num_genomes_gene_cluster_has_hits==1]
-# Calculate percentage
-total_count <- length(annotations)
-annotated_count <- sum(annotations != "")
-percentage_annotated <- (annotated_count / total_count) * 100
-percentage_annotated
-#22.06
+CAVE <- read.delim(file.path(data_dir, "CAVE_R_Pan_gene_clusters_summary.txt.gz"))
 
-#################################################################################
-#
-#################################################################################
+# -----------------------------------------------------------------------------
+# 2. Build genome x gene_cluster_id presence/absence matrix
+# -----------------------------------------------------------------------------
+genomes <- unique(CAVE$genome_name)
+gene_clusters <- unique(CAVE$gene_cluster_id)
 
-x1<-data.frame(gene_cluster_freq= Ferroplasma$num_genomes_gene_cluster_has_hits,gene_cluster_freq_perc=Ferroplasma$num_genomes_gene_cluster_has_hits/13*100,Pan_genome=rep("Ferroplasma",nrow(Ferroplasma)))
-x2<-data.frame(gene_cluster_freq= Myco$num_genomes_gene_cluster_has_hits,gene_cluster_freq_perc=Myco$num_genomes_gene_cluster_has_hits/69*100,Pan_genome=rep("Mycobacterium",nrow(Myco)))
-x3<-data.frame(gene_cluster_freq= CAVE$num_genomes_gene_cluster_has_hits,gene_cluster_freq_perc=CAVE$num_genomes_gene_cluster_has_hits/21*100,Pan_genome=rep("Cave community",nrow(CAVE)))
-xx<-rbind(x1,x2,x3)
-library(ggridges)
-ggplot(xx, aes(x = gene_cluster_freq_perc, y = Pan_genome, fill = 0.5 - abs(0.5 - stat(ecdf)))) +
-  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
-  scale_fill_viridis_c(name = "Tail probability", direction = -1)
+# For each genome, the set of gene cluster IDs present in it
+OG_list <- lapply(genomes, function(g) {
+  unique(CAVE$gene_cluster_id[CAVE$genome_name == g])
+})
+names(OG_list) <- genomes
 
-colors_r<-c('#fc8d62','#8da0cb','#66c2a5')
-ggplot(xx, aes(x = gene_cluster_freq_perc, y = Pan_genome, fill = Pan_genome)) +
-  geom_density_ridges(alpha = .6) +labs(x="Gene cluster frequencies (%)",y="Pan-genomes",fill= "")+
-  theme(text = element_text(size = 24)) +scale_fill_manual(values=colors_r) +theme(legend.position = "none")
-ggplot(xx, aes(x = gene_cluster_freq_perc, fill = Pan_genome)) +
-  geom_histogram(binwidth = 3, alpha = 0.7) +labs(x="Gene cluster frequencies (%)",y="Pan-genomes",fill= "")+
-  theme(text = element_text(size = 24))+ facet_wrap(~ Pan_genome, ncol = 1) +scale_fill_manual(values=colors_r) +theme(legend.position = "none")
+# Binary matrix: rows = genomes, columns = gene clusters
+OG_matrix <- t(sapply(OG_list, function(present) as.integer(gene_clusters %in% present)))
+colnames(OG_matrix) <- gene_clusters
+rownames(OG_matrix) <- genomes
 
-ferroplasma_table<- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferroplasma_Pan_2/ferroplasma_table.txt")
-ferroplasma_table$groups<-rep("NA",nrow(ferroplasma_table))
-Group1<-c("SMAG00006","S25910037","S259100318","S259100328")
-Group2<-c("S259100341","SFerroplasmacircular" , "S33314612","S749695")
-Group3<-c("S259100335","S259100337","S259100333","S25910039")
-ferroplasma_table$groups[ferroplasma_table$layer%in%Group1]<-"Group1"
-ferroplasma_table$groups[ferroplasma_table$layer%in%Group2]<-"Group2"
-ferroplasma_table$groups[ferroplasma_table$layer%in%Group3]<-"Group3"
-ferroplasma_tablef<-ferroplasma_table[!ferroplasma_table$groups=="NA",]
+# Cache to disk (uncomment to regenerate; otherwise read cached version below)
+# write.csv(OG_matrix, file.path(data_dir, "OG_matrix_cave.csv"))
+OG_matrix <- read.csv(file.path(data_dir, "OG_matrix_cave.csv"), row.names = "X")
 
-####### perform anivo functional enrichment
-Ferro_cave_un_enriched.KEGG_Module <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferro_cave_un_enriched-KEGG_Module.txt")
-Ferro_cave_un_enriched.KEGG_Module$category <- "KEGG_Module"
-colnames(Ferro_cave_un_enriched.KEGG_Module)[1] <- "Function"
-Ferro_cave_un_enriched.KOfam <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferro_cave_un_enriched-KOfam.txt")
-Ferro_cave_un_enriched.KOfam$category <- "KOfam"
-colnames(Ferro_cave_un_enriched.KOfam)[1] <- "Function"
-data_enrichment <- rbind(Ferro_cave_un_enriched.KEGG_Module[,c(1:7,9,14)],Ferro_cave_un_enriched.KOfam[,c(1:7,10,14)])
+# -----------------------------------------------------------------------------
+# 3. Relabel genomes of interest for plotting
+# -----------------------------------------------------------------------------
+# Sanity check before relabeling by position - confirm row order matches
+# the expected genome identities:
+#   [2]  -> "F. c."                  (Ferroplasma circular contig)
+#   [8]  -> "F. MAG6"                (Ferroplasma MAG6)
+#   [19] -> "M. MAG2"                (Mycobacterium MAG2)
+#   [20] -> "M.MAG3"                 (Mycobacterium MAG3)
+#   [21] -> "C. M. methanotrophicum"
+stopifnot(length(rownames(OG_matrix)) >= 21)
+print(rownames(OG_matrix)[c(2, 8, 19, 20, 21)])  # verify before relabeling
 
-# Create scatterplot
-data_enrichment$Significance <- ifelse(data_enrichment$adjusted_q_value < 0.1 & data_enrichment$p_rest ==0, "Yes", "No")
-
-names_to_label <- c(
-  "phosphoenolpyruvate---glycerone phosphotransferase", 
-  "CRISPR", 
-  "glycerol uptake facilitator protein"
+rownames(OG_matrix)[c(2, 8, 19, 20, 21)] <- c(
+  "F. c.", "F. MAG6", "M. MAG2", "M.MAG3", "C. M. methanotrophicum"
 )
 
+# -----------------------------------------------------------------------------
+# 4. UpSet plot figS2
+# -----------------------------------------------------------------------------
+sets_of_interest <- c("F. c.", "F. MAG6", "M. MAG2", "M.MAG3", "C. M. methanotrophicum")
 
-data_enrichment$Function_highlight<-data_enrichment$Function
-data_enrichment$Function_highlight[-unlist(lapply(names_to_label, function(x) grep(x,data_enrichment$Function)))] <- NA
-data_enrichment$Function_highlight<- unlist(lapply(strsplit(data_enrichment$Function_highlight,"-"), function(x) x[1]))
+# Bar colors, in plotting order (order.by = "freq"):
+#   teal   (#66c2a5) = Mycobacterium-only intersections
+#   yellow (#ffd92f) = Ferroplasma-only intersections
+#   gray   (#a3a3a3) = mixed Ferroplasma + Mycobacterium intersections
+bar_colors <- c(
+  "#66c2a5", "#66c2a5", "#66c2a5", "#ffd92f", "#66c2a5",
+  "#ffd92f", "#ffd92f", "#66c2a5", "#66c2a5", "#66c2a5",
+  "#a3a3a3", "#a3a3a3", "#a3a3a3", "#a3a3a3", "#a3a3a3",
+  "#a3a3a3", "#a3a3a3", "#a3a3a3", "#a3a3a3", "#a3a3a3"
+)
 
-data_enrichment$pvalue<- - log10(data_enrichment$adjusted_q_value)
+# NOTE on font/size: UpSetR is built on grid/base graphics, not a single
+# ggplot object, so there is no one-line ggplot theme() equivalent like
+# theme_classic(base_size = 20, base_family = "Arial"). Two separate settings
+# stand in for it:
+#   - par(family = ...) sets the font family on the graphics device, used by
+#     all text UpSetR draws (axis titles, labels, bar counts, set names).
+#   - text.scale inside upset() scales all text sizes together (not an exact
+#     point size like base_size=20; treat it as a relative multiplier -
+#     2-2.2 is roughly equivalent to size-20-ish text for this plot's bar
+#     count, so left at 2 here, adjust if it still looks small/large).
+par(family = "Arial")
 
-colors_s<-c('#f1a340','#8da0cb')
-f2b<-ggplot(data_enrichment, aes(x = enrichment_score, y = pvalue, color = Significance, shape = category)) +
-  geom_jitter(size = 5, width = 0.3, height = 0.3,alpha=0.7) +
-  theme_minimal() +
-  labs(
-    title = "",
-    x = "Enrichment score",
-    y = "-Log10(pvalue)",
-    color = "Significance",
-    shape = "Category"
-  ) + theme(text = element_text(size = 24)) + scale_color_manual(values = colors_s)
-f2b
-
-KOs_ferro_in_cave <- data_enrichment$accession[which(data_enrichment$Significance=="Yes"& data_enrichment$category=="KOfam")]
-# +
-#   geom_text_repel(
-#     data = data_enrichment[unlist(lapply(names_to_label, function(x) grep(x,data_enrichment$Function))), ],
-#     aes(label = unlist(lapply(strsplit(Function,"-"), function(x) x[1]))),
-#     size = 8,
-#     box.padding = 0.5,
-#     point.padding = 0.3, max.overlaps=50
-#   ) 
-data_table_sig<-data_enrichment[data_enrichment$Significance=="Yes",]
-data_table_sig$enrichment_score <- round(data_table_sig$enrichment_score,digits = 3)
-data_table_sig$unadjusted_p_value <- round(data_table_sig$unadjusted_p_value,digits = 3)
-data_table_sig$adjusted_q_value <- round(data_table_sig$adjusted_q_value,digits = 3)
-#write.csv(data_table_sig,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/figure2b_sig_KOs.csv")
-#cave function plots:
-##################################################################
-# read all eggnog and make a matrix of 1 and 0 for genomes and KOs
-##################################################################
-
-KEGG_KO_list<-list()
-OG_list<-list()
-i<-1
-for(j in unique(CAVE$genome_name)){
-  KEGG_KO_list[[i]]<- unique(CAVE$KOfam_ACC[which(CAVE$genome_name==j)])
-  OG_list[[i]]<- unique(CAVE$gene_cluster_id[which(CAVE$genome_name==j)])
-  i<-i+1
-}
-names(KEGG_KO_list)<-unique(CAVE$genome_name)
-names(OG_list)<-unique(CAVE$genome_name)
-
-KEGG_u_KO<-unique(CAVE$KOfam_ACC)
-KEGG_u_KO<-KEGG_u_KO[-1]
-KO_matrix<-c()
-for (i in 1:length(KEGG_KO_list)){
-  t<-lapply(KEGG_u_KO, function(x)  ifelse(any(grepl(x,KEGG_KO_list[[i]])), 1, 0))
-  KO_matrix<-rbind(KO_matrix, unlist(t))
-}
-colnames(KO_matrix)<-KEGG_u_KO
-rownames(KO_matrix)<-unique(CAVE$genome_name)
-KO_matrix<-as.matrix(KO_matrix)
-
-OG_u<-unique(CAVE$gene_cluster_id)
-OG_matrix<-c()
-for (i in 1:length(OG_list)){
-  t<-lapply(OG_u, function(x)  ifelse(any(grepl(x,OG_list[[i]])), 1, 0))
-  OG_matrix<-rbind(OG_matrix, unlist(t))
-}
-colnames(OG_matrix)<-OG_u
-rownames(OG_matrix)<-unique(CAVE$genome_name)
-OG_matrix<-as.matrix(OG_matrix)
-#write.csv(OG_matrix,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/OG_matrix_cave.csv")
-OG_matrix <- read.csv("~/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/OG_matrix_cave.csv", row.names = "X")
-#write.csv(matrix,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/KO_matrix_cave.csv")
-KO_matrix <- read.csv("~/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/KO_matrix_cave.csv", row.names = "X")
-
-########
-library(UpSetR)
-
-
-# Define a vector of colors for the main bars
-bar_colors <- c("#66c2a5", "#66c2a5", "#66c2a5", "#8da0cb", "#66c2a5", "#8da0cb", "#8da0cb", "#66c2a5", "#66c2a5", "#66c2a5")
-rownames(KO_matrix)[c(2,8,19,20,21)] <- c("F. c.","F. MAG6","M. MAG2", "M.MAG3" , "C. M. methanotrophicum")
-# Create the UpSet plot with differently colored bars
-data_upset <- upset(
-  as.data.frame(t(KO_matrix)),
+upset_plot <- upset(
+  as.data.frame(t(OG_matrix)),
   main.bar.color = bar_colors,
   sets.bar.color = "black",
   order.by = "freq",
   nintersects = NA,
-  nsets = 21,
-  sets =  c("F. c.","F. MAG6","M. MAG2", "M.MAG3" , "C. M. methanotrophicum"),
-  text.scale = 2
+  nsets = length(sets_of_interest),
+  sets = sets_of_interest,
+  keep.order = TRUE,     # <- keeps Set Size bars in 'sets' order instead of
+  #    being dropped/resorted; restores the bottom-left
+  #    "Set Size" side bars matching the 5 named genomes
+  text.scale = 2,
+  mainbar.y.label = "shared COGs between MAGs",
+  sets.x.label = "total number of COGs per MAG"
 )
-data_upset
-library(ggplotify)
-f2c <- as.ggplot(data_upset)
-#ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/figure2c.pdf",f2c, width =16, height = 5)
-###########
-#run figure 1 to get mean_cov_all
-##########
-matrix<-KO_matrix[-which(rownames(KO_matrix)=="SMAG00003"),]
 
-# Load necessary libraries
-library(ggplot2)
-library(factoextra)
+figS2 <- upset_plot
+figS2
 
-# Perform PCA
-# Function to remove columns with all zeros or all ones
-remove_all_zeros_ones_columns <- function(matrix) {
-  non_constant_columns1 <- apply(matrix, 2, function(col) all(col ==1))
-  return(matrix[, !non_constant_columns1, drop = FALSE])
-}
+# -----------------------------------------------------------------------------
+# 5. Composite a manual color legend into the top-left corner
+# -----------------------------------------------------------------------------
+# UpSetR has no native legend for main.bar.color, so it's added here as a
+# separate small ggplot legend, overlaid on the upset plot with cowplot.
+figS2_legend_df <- data.frame(
+  label = factor(
+    c("Ferroplasma unique", "Mycobacterium unique", "Shared"),
+    levels = c("Ferroplasma unique", "Mycobacterium unique", "Shared")
+  ),
+  x = 0, y = 0
+)
 
-# Remove columns with all zeros or all ones
-filtered_matrix <- remove_all_zeros_ones_columns(matrix)
+fig2a_legend_colors <- c(
+  "Ferroplasma unique"   = "#ffd92f",
+  "Mycobacterium unique" = "#66c2a5",
+  "Shared"  = "#a3a3a3"
+)
 
-
-pca_result1 <- prcomp(filtered_matrix)
-
-# Visualize PCA using a biplot
-fviz_pca_ind(pca_result1)
-
-# Print the summary of the PCA
-summary(pca_result1)
-
-# ####################
-# 
-# library(ComplexUpset)
-# upset(CAVE, genome_name, name='genome_name', width_ratio=0.1)
-# # Transform the data for ggupset
-# data_long <- CAVE %>%
-#   group_by(gene_cluster_id) %>%
-#   summarize(genomes = list(genome_name))
-# 
-# # Create the ggupset plot
-# ggplot(data_long, aes(x = genomes)) +
-#   geom_bar() +
-#   scale_x_upset() +
-#   labs(
-#     title = "Gene Cluster Associations with Genomes",
-#     x = "Genomes",
-#     y = "Count"
-#   ) +
-#   theme_minimal()
-
-############# calculate pathway completeness
-
-# Load required library
-# Load required packages for data manipulation
-library(dplyr)  # for data manipulation (filter, group_by, summarise, etc.)
-library(tidyr)  # for splitting and reshaping data
-
-# -------------------------------
-# STEP 1: Prepare unique KEGG ortholog data
-# -------------------------------
-
-# Start with your main dataset 'CAVE'
-# separate_rows() splits KEGG_Module_ACC if multiple modules are in one cell, separated by '|'
-# select() keeps only the relevant columns
-# distinct() removes duplicate rows (same KO-module-genome combination)
-unique_kos <- CAVE %>%
-  separate_rows(KEGG_Module_ACC, sep = "\\|") %>%  # Split multiple modules in one cell
-  select(KOfam_ACC, KEGG_Module_ACC, genome_name)  # Keep relevant columns
-distinct()  # Remove exact duplicates
-
-# -------------------------------
-# STEP 2: Count unique KOfam per KEGG module for each genome
-# -------------------------------
-
-result <- unique_kos %>%
-  group_by(genome_name, KEGG_Module_ACC) %>%  # Group by genome and module
-  summarise(unique_KOs = n_distinct(KOfam_ACC),  # Count unique KOfam IDs
-            .groups = "drop")  # Drop grouping after summarise
-
-# Remove rows where KEGG_Module_ACC is empty
-result <- result[-which(result$KEGG_Module_ACC == ""),]
-
-# -------------------------------
-# STEP 3: Calculate stats per KEGG module across genomes
-# -------------------------------
-
-result_SD <- result %>%
-  group_by(KEGG_Module_ACC) %>%  # Group by KEGG module
-  summarise(
-    # Perform Kruskal-Wallis test across genomes if more than 1 genome
-    p_value = if(length(unique(genome_name)) > 1) {
-      kruskal.test(unique_KOs ~ genome_name)$p.value
-    } else {
-      NA  # If only one genome, test cannot be performed
-    },
-    SD_unique_KOs = sd(unique_KOs, na.rm = TRUE),  # Standard deviation
-    avg_unique_KOs = mean(unique_KOs, na.rm = TRUE),  # Overall mean
-    # Average for Ferroplasma genomes
-    avg_unique_KOs_ferroplasma = mean(unique_KOs[genome_name %in% c("SFerroplasmacircularcontig","SMAG00006")], na.rm = TRUE),
-    # Average for all other genomes
-    avg_unique_KOs_other = mean(unique_KOs[!genome_name %in% c("SFerroplasmacircularcontig","SMAG00006")], na.rm = TRUE),
-    # Logical: is this module more abundant in Ferroplasma than others?
-    is_ferroplasma = avg_unique_KOs_ferroplasma > avg_unique_KOs_other,
-    .groups = "drop"
+fig2a_legend_plot <- ggplot(legend_df, aes(x, y, color = label)) +
+  geom_point(size = 4, shape = 15) +
+  scale_color_manual(values = legend_colors, name = NULL) +
+  theme_void(base_size = 20, base_family = "Arial") +
+  theme(
+    legend.position = "left",
+    legend.justification = "left",
+    legend.text = element_text(size = 20),
+    legend.key = element_blank()
   )
 
-# Replace NaN values (from empty averages) with 0
-result_SD$avg_unique_KOs_ferroplasma[is.nan(result_SD$avg_unique_KOs_ferroplasma)] <- 0
-result_SD$avg_unique_KOs_other[is.nan(result_SD$avg_unique_KOs_other)] <- 0
+figS2_legend_plot
 
-# Replace NA logicals with "NA" string to avoid plotting issues
-result_SD$is_ferroplasma[is.na(result_SD$is_ferroplasma)] <- "NA"
+# =============================================================================
+# Figure 2a: KEGG/KOfam functional enrichment scatterplot
+# =============================================================================
 
-# -------------------------------
-# STEP 4: Retrieve KEGG module information
-# -------------------------------
-library(KEGGREST)
-
-pw_info <- list()  # Initialize empty list to store KEGG info
-for(i in 1:length(result_SD$KEGG_Module_ACC)){
-  tryCatch({
-    # Retrieve module info from KEGG database
-    pw_info[[i]] <- keggGet(result_SD$KEGG_Module_ACC[i])
-  }, error=function(e){
-    message('An Error Occurred')  # Handle errors gracefully
-    print(e)
-    return(NA)
-  })
-}
-
-# -------------------------------
-# STEP 5: Extract module names, class, pathways, and orthology counts
-# -------------------------------
-pws_names <- c()
-for(i in 1:length(pw_info)){
-  temp <- c(
-    pw_info[[i]][[1]]$ENTRY,  # KEGG Module ID
-    pw_info[[i]][[1]]$NAME,   # Module name
-    pw_info[[i]][[1]]$CLASS,  # Functional class
-    unlist(paste(unlist(names(pw_info[[i]][[1]]$PATHWAY)), collapse = ",")),  # Pathway IDs
-    unlist(paste(unlist(pw_info[[i]][[1]]$PATHWAY), collapse = ",")),        # Pathway names
-    length(unique(pw_info[[i]][[1]]$ORTHOLOGY))  # Number of orthologs in module
-  )
-  pws_names <- rbind(pws_names, temp)
-}
-
-# Convert to data.frame and assign column names
-pws_names <- as.data.frame(pws_names)
-colnames(pws_names) <- c("ENTRY","NAME","CLASS","PATHWAY-ID","PATHWAY","NR-ORTHOLOGY")
-
-# -------------------------------
-# STEP 6: Calculate ratio and merge KEGG info
-# -------------------------------
-result_SD$ratio <- result_SD$avg_unique_KOs_ferroplasma / result_SD$avg_unique_KOs_other
-
-# Merge with KEGG module metadata
-result_SD_pw <- merge(result_SD, pws_names, by.x = "KEGG_Module_ACC", by.y = "ENTRY", all.x = TRUE)
-
-# Simplify module class for plotting
-result_SD_pw$class <- unlist(lapply(strsplit(result_SD_pw$CLASS, ";"), function(x) x[2]))
-result_SD_pw$class[is.na(result_SD_pw$class)] <- "Energy metabolism"
-result_SD_pw$SD_unique_KOs[is.na(result_SD_pw$SD_unique_KOs)] <- 0
-
-# Optionally, save or read CSV (commented out or read from previous export)
-# write.csv(result_SD_pw,"/path/to/result_SD_pw.csv")
-result_SD_pw <- read.csv("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/result_SD_pw.csv")
-
-# -------------------------------
-# STEP 7: Plot data with ggplot2 + beeswarm + labels
-# -------------------------------
 library(ggplot2)
 library(ggbeeswarm)
 library(ggrepel)
 
-colors_kegg <- c('#7570b3','#66c2a5')  # Define custom colors
-result_SD_pw$is_ferroplasma <- as.factor(result_SD_pw$is_ferroplasma)  # Convert to factor for coloring
+result_SD_pw <-  read.delim(file.path(data_dir, "result_SD_pw.csv"), sep = ',')
 
-f2c <- ggplot(result_SD_pw, aes(x = SD_unique_KOs, y = class)) +
-  geom_beeswarm(aes(color = is_ferroplasma, size = avg_unique_KOs)) +  # Plot points with beeswarm layout
+result_SD_pw$is_ferroplasma <- factor(result_SD_pw$is_ferroplasma, 
+                                      levels = c(TRUE, FALSE),
+                                      labels = c("Ferroplasma", "Not Ferroplasma"))
+
+f2a <- ggplot(result_SD_pw, aes(x = SD_unique_KOs, y = class)) +
+  geom_beeswarm(aes(color = is_ferroplasma, size = avg_unique_KOs)) +
+  theme_minimal(base_size = 20, base_family = "Arial") +
+  theme(
+    text             = element_text(color = "black", size = 20),
+    panel.grid.major = element_line(color = "grey92", linewidth = 0.5),
+    panel.grid.minor = element_line(color = "grey92", linewidth = 0.5),
+    panel.border     = element_rect(color = "grey85", fill = NA, linewidth = 0.8),
+    axis.line        = element_line(color = "black", linewidth = 0.5),
+    axis.ticks       = element_line(color = "black", linewidth = 0.5),
+    axis.text        = element_text(color = "black")
+  ) +
   labs(
     size = "Average KOs",
-    x = "Std Dev KOs",
-    y = "KEGG Module Functional Class",
-    color = expression(italic("Ferroplasma"))
+    x = "Standard deviation of KOs",
+    y = "KEGG module functional lass",
+    color = "Genome"
   ) +
-  theme(text = element_text(size = 20)) +
-  scale_color_manual(values = colors_kegg)
-# +
-#   geom_label_repel(
-#     data = subset(result_SD_pw, SD_unique_KOs > 3 & is_ferroplasma == TRUE),  # Only label high-variance Ferroplasma modules
-#     aes(label = KEGG_Module_ACC),
-#     max.overlaps = Inf  # Ensure all labels are plotted
-#   )
-
-# Display plot
-f2c
-
-#View(result_SD_pw)
-
-library(patchwork)
-patchwork2 <- (f2a  + f2b) / (f2a  + f2b)
-patchwork2 + plot_annotation(tag_levels = 'a')
-ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/figure2.pdf", width =24, height = 10)
-
-
-##########
-
-
-# #########################
-# #alternative
-# ########################
-# 
-# library(KEGGREST)
-# kegg_KOs<-colnames(matrix)[grep("ko",colnames(matrix))]
-# #remove Global and overview maps
-# to_remove<-c("ko01100","ko01110","ko01120","ko01200","ko01210","ko01212","ko01230","ko01232","ko01250","ko01240","ko01220")
-# kegg_KOs<-kegg_KOs[!kegg_KOs%in%to_remove]
-# pw_info<-list()
-# for(i in 1:length(kegg_KOs)){
-#   tryCatch({
-#     pw_info[[i]]<- keggGet(kegg_KOs[i])
-#     if(is.null(pw_info[[i]][[1]]$ORTHOLOGY)){
-#       module<-list()
-#       for (j in 1:length(pw_info[[i]][[1]]$MODULE)){
-#         module[[j]]<-keggGet(names(pw_info[[i]][[1]]$MODULE)[j])
-#       }
-#       KOs<-lapply(module, function(x) x[[1]]$ORTHOLOGY)
-#       names(KOs)<-lapply(module, function(x) x[[1]]$ENTRY)
-#       pw_info[[i]][[1]]$ORTHOLOGY<-unlist(KOs)
-#     }
-#   }, error=function(e){
-#     message('An Error Occurred')
-#     print(e)
-#     return(NA)
-#   })
-# }
-# #save(pw_info, file = "kegg_KOs_list.RData")
-# pw_info<-load( file = "kegg_KOs_list.RData")
-# pw_info_c <- pw_info[sapply(pw_info, function(x) !is.null(x))]
-# 
-# pws_names<-c()
-# for(i in 1:length(pw_info_c)){
-#   temp<-c(
-#     unlist(paste(unlist(names(pw_info_c[[i]][[1]]$PATHWAY)),collapse = ",")),
-#     unlist(paste(unlist(pw_info_c[[i]][[1]]$PATHWAY),collapse = ",")),
-#     length(unique(pw_info_c[[i]][[1]]$ORTHOLOGY))
-#   )
-#   #print(temp)
-#   pws_names<-rbind(pws_names,temp)
-# }
-# pws_names<-as.data.frame(pws_names)
-# colnames(pws_names)<-c("ID","PATHWAY","Number-KOs")
-# pws_names$`Number-KOs`<-as.integer(pws_names$`Number-KOs`)
-# rm<-which(pws_names$`Number-KOs`==0)
-# pws_names<-pws_names[-rm,]
-# pw_info_c<-pw_info_c[-rm]
-# pws_names$ID
-# 
-# #count kos in pathways
-# pw_matrix<-c()
-# for (i in 1:length(pw_info_c)){
-#   KOs<-paste("ko:",gsub("^M......","",names(pw_info_c[[i]][[1]]$ORTHOLOGY)),sep = "")
-#   t<-unlist(lapply(KEGG_u$KO, function(x) sum(x%in%KOs)))
-#   pw_matrix<-cbind(pw_matrix, t)
-# }
-# rownames(pw_matrix)<-gsub(".eggnog.emapper.annotations","",flist)
-# colnames(pw_matrix)<-pws_names$ID
-# 
-# pw_matrix_comp<-sweep(pw_matrix,2,pws_names$`Number-KOs`,FUN="/")*100
-# write.csv(pw_matrix_comp,"/home/chrats/Desktop/Projects/yeast_bacteria_interactions/chunxu/ANNOATIONS_F/BAC/PW_comp_matrix.csv")
-# #calculate pathway completeness
-# 
-# sd_all<-apply(pw_matrix_comp, 2, function(x) sd(x))
-# pw_matrix_compf<-pw_matrix_comp[,which(sd_all>quantile(sd_all)[4])] #sd > 75% quantile of all sd
-# pw_matrix_compf<-pw_matrix_comp[,colnames(pw_matrix_comp)%in%names(sort(sd_all,decreasing = T)[1:20])] #top 20 in sd
-# library(reshape2)
-# data<-melt(pw_matrix_compf)
-# 
-# 
-# ggplot(data,aes(Var2,Var1))+geom_point(aes(size=value))+
-#   theme(axis.text.x = element_text(angle = 45, hjust = 1))
-# 
-# 
-# # Hierarchical clustering of rows and columns
-# row_order <- hclust(dist(pw_matrix_compf))$order
-# col_order <- hclust(dist(t(pw_matrix_compf)))$order
-# 
-# # Create a ggplot heatmap with clustered rows and columns
-# ggheatmap <- ggplot(data, aes(x = Var2, y = Var1, fill = value)) +
-#   geom_tile() +
-#   geom_text(aes(label = round(value, 2)), vjust = 1) +  # Display labels
-#   scale_fill_gradient(low = "blue", high = "red") +  # Adjust color gradient as needed
-#   labs(title = "Clustered Heatmap Example", x = "Columns", y = "Rows") +
-#   theme_minimal() +
-#   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +  # Rotate x-axis labels
-#   scale_x_discrete(limits = colnames(pw_matrix_compf)[col_order]) +  # Apply column order
-#   scale_y_discrete(limits = rownames(pw_matrix_compf)[row_order])    # Apply row order
-# 
-# # Print the ggplot heatmap
-# print(ggheatmap)
-# exploration of pan-genomics
-
-library(tidyverse)
-
-Ferroplasma <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferroplasma_Pan_2/SUMMARY_few_classes/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz")
-Myco<- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/mycobacterium/MYCO-SUMMARY/MYCO_Pan_gene_clusters_summary.txt.gz")
-CAVE <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/CAVE_R_Pan/CAVE_R-SUMMARY/CAVE_R_Pan_gene_clusters_summary.txt.gz")
-
-CAVE_KOs<-unique(CAVE$KOfam_ACC)
-unique_CAVE_KEGG <- CAVE %>%
-  select(KOfam_ACC,KOfam, KEGG_Module_ACC,  KEGG_Module  ) %>%
-  distinct(KOfam_ACC,KOfam, KEGG_Module_ACC,  KEGG_Module)
-# unique_CAVE_COG <- CAVE %>%
-#   select( COG20_FUNCTION_ACC, COG20_FUNCTION, COG20_CATEGORY_ACC,COG20_CATEGORY   ) %>%
-#   distinct()
-unique_CAVE_KEGG_acc<-unique(unique_CAVE_KEGG$KOfam_ACC)
-unique_CAVE_KEGG_acc<-unique_CAVE_KEGG_acc[-which(unique_CAVE_KEGG_acc=="")]
-CAVE_KOs_prev<-c()
-for(i in unique_CAVE_KEGG_acc){
-  prev<-length(unique(CAVE$genome_name[which(CAVE$KOfam_ACC==i)]))
-  CAVE_KOs_prev<-c(CAVE_KOs_prev,prev)
-}
-CAVE_KOs_prev<-CAVE_KOs_prev/21*100
-cave_ko_prev<-cbind(unique_CAVE_KEGG_acc,CAVE_KOs_prev)
-
-unique_Myco_KOs<-unique(Myco$KOfam_ACC)
-unique_Myco_KOs<-unique_Myco_KOs[-which(unique_Myco_KOs=="")]
-Myco_KOs_prev<-c()
-for(i in unique_Myco_KOs){
-  prev<-length(unique(Myco$genome_name[which(Myco$KOfam_ACC==i)]))
-  Myco_KOs_prev<-c(Myco_KOs_prev,prev)
-}
-Myco_KOs_prev<-Myco_KOs_prev/69*100
-Myco_ko_prev<-cbind(unique_Myco_KOs,Myco_KOs_prev)
-
-cave_myco<-merge(cave_ko_prev,Myco_ko_prev,by.x="unique_CAVE_KEGG_acc",by.y="unique_Myco_KOs", all=T)
-
-unique_Ferroplasma_KOs<-unique(Ferroplasma$KOfam_ACC)
-unique_Ferroplasma_KOs<-unique_Ferroplasma_KOs[-which(unique_Ferroplasma_KOs=="")]
-
-Ferr_KOs_prev<-c()
-for(i in unique_Ferroplasma_KOs){
-  prev<-length(unique(Ferroplasma$genome_name[which(Ferroplasma$KOfam_ACC==i)]))
-  Ferr_KOs_prev<-c(Ferr_KOs_prev,prev)
-}
-Ferr_KOs_prev<-Ferr_KOs_prev/13*100
-Ferr_KOs_prev<-cbind(unique_Ferroplasma_KOs,Ferr_KOs_prev)
-cave_myco_ferro<-merge(cave_myco,Ferr_KOs_prev,by.x="unique_CAVE_KEGG_acc",by.y="unique_Ferroplasma_KOs", all=T)
-
-cave_myco_ferro$CAVE_KOs_prev<-as.numeric(cave_myco_ferro$CAVE_KOs_prev)
-cave_myco_ferro$Myco_KOs_prev<-as.numeric(cave_myco_ferro$Myco_KOs_prev)
-cave_myco_ferro$Ferr_KOs_prev<-as.numeric(cave_myco_ferro$Ferr_KOs_prev)
-cave_myco_ferrof <- cave_myco_ferro %>%
-  mutate(across(everything(), ~replace_na(., 0)))
-
-
-ggplot(cave_myco_ferrof, aes(x=CAVE_KOs_prev,y=Myco_KOs_prev))+geom_jitter()
-
-
-KOs_ferro_in_cave
-KO_Ferro<-CAVE$KOfam_ACC[grep("Amino acid transport and metabolism",CAVE$COG20_CATEGORY[CAVE$genome_name=="SFerroplasmacircularcontig"]) ]
-KO_FMAG6<-CAVE$KOfam_ACC[grep("Amino acid transport and metabolism",CAVE$COG20_CATEGORY[CAVE$genome_name=="SMAG00006"]) ]
-KO_FERRO_AA<- unique(c(KO_Ferro,KO_FMAG6))[-1]
-KO_AA_ALL<-CAVE$KOfam_ACC[grep("Amino acid transport and metabolism",CAVE$COG20_CATEGORY) ]
-KO_AA_ALL_clean<- unique(KO_AA_ALL)[-1]
-
-library(KEGGREST)
-AA_map<-keggGet("map01230")
-modules_AA<-AA_map[[1]]$MODULE
-AA_info<-list()
-for(i in 1:length(names(modules_AA))){
-  tryCatch({
-    AA_info[[i]]<- keggGet(names(modules_AA)[i])
-  }, error=function(e){
-    message('An Error Occurred')
-    print(e)
-    return(NA)
-  })
-}
-AA_modules_names<-c()
-KOsall <-unique(unlist(strsplit(unlist(lapply(AA_info, function(x) names(x[[1]]$ORTHOLOGY))),",|[+]")))
-KOsall_names <- unique(unlist(strsplit(unlist(lapply(AA_info, function(x) x[[1]]$ORTHOLOGY)),",|[+]")))
-
-for(i in 1:length(KOsall)){
-  my_list <- lapply(AA_info,function(x) grep(KOsall[i], names(x[[1]]$ORTHOLOGY)))
   
-  non_empty_indices <- which(sapply(my_list, function(x) is.numeric(x) && length(x) > 0))
-  print(non_empty_indices)
-  if( length(non_empty_indices)<2){
-    temp<-c(
-      KOsall[i],
-      AA_info[[non_empty_indices]][[1]]$ENTRY,
-      AA_info[[non_empty_indices]][[1]]$NAME,
-      AA_info[[non_empty_indices]][[1]]$CLASS,
-      unlist(paste(unlist(names(AA_info[[non_empty_indices]][[1]]$PATHWAY)),collapse = ",")),
-      unlist(paste(unlist(AA_info[[non_empty_indices]][[1]]$PATHWAY),collapse = ",")),
-      length(unique(AA_info[[non_empty_indices]][[1]]$ORTHOLOGY))
+  # ── MODIFIED: Dynamic Legend Formatting & NA Translation ────────────────────
+  scale_color_manual(
+    values = c("Ferroplasma"     = "#ffd92f",
+               "Not Ferroplasma" = "#7570b3"),
+    na.value = "grey50",
+    na.translate = TRUE,      # Forces ggplot to draw the missing data entry
+    breaks = c("Ferroplasma", "Not Ferroplasma", NA), # Sets the explicit order
+    labels = list(
+      expression(italic("Ferroplasma")),
+      expression("Not " * italic("Ferroplasma")), # Keeps "Not " regular and "Ferroplasma" italic
+      expression("NA")
     )
-    #print(temp)
-    AA_modules_names<-rbind(AA_modules_names,temp)
-  }else{
-    for (j in 1:length(non_empty_indices)){
-      temp<-c(
-        KOsall[i],
-        AA_info[[non_empty_indices[j]]][[1]]$ENTRY,
-        AA_info[[non_empty_indices[j]]][[1]]$NAME,
-        AA_info[[non_empty_indices[j]]][[1]]$CLASS,
-        unlist(paste(unlist(names(AA_info[[non_empty_indices[j]]][[1]]$PATHWAY)),collapse = ",")),
-        unlist(paste(unlist(AA_info[[non_empty_indices[j]]][[1]]$PATHWAY),collapse = ",")),
-        length(unique(AA_info[[non_empty_indices[j]]][[1]]$ORTHOLOGY))
-      )
-      #print(temp)
-      AA_modules_names<-rbind(AA_modules_names,temp)
-    }
-   
-  }
-
-}
-AA_modules_names<-as.data.frame(AA_modules_names)
-colnames(AA_modules_names)<-c("KO_NAME","ENTRY","NAME","CLASS","PATHWAY-ID","PATHWAY","NR-ORTHOLOGY")
-modules_AA_sel <- unique(AA_modules_names$ENTRY)
-aa_data_modules <- c()
-for(i in 1:length(modules_AA_sel)){
-  kos<-AA_modules_names$KO_NAME[which(AA_modules_names$ENTRY==modules_AA_sel[i])]
-  data <- cave_myco_ferrof
-  data$AA_KEGG<- data$unique_CAVE_KEGG_acc%in%kos
+  ) +
   
-  data_melted<-reshape2::melt(data)
-  t <- unique(AA_modules_names$NAME[which(AA_modules_names$ENTRY==modules_AA_sel[i])])
-  temp<-data_melted[data_melted$AA_KEGG == T,]
-  if(nrow(temp)>0){
-    temp$AA_module <- t
-    aa_data_modules <- rbind(aa_data_modules,temp)
-  }else{
-    print(paste("module not found: ",    print(i), sep = "") )
-  }
+  # ── MODIFIED: Removed the box container and bumped label text size ──
+  geom_text_repel(
+    data = subset(result_SD_pw, SD_unique_KOs > 3 & is_ferroplasma == "Ferroplasma"),  
+    aes(label = KEGG_Module_ACC),
+    size = 5,             
+    max.overlaps = Inf    
+  ) 
 
+f2a
+# =============================================================================
+# f2c unique amino acid KOs per KEGG module,
+# Ferroplasma vs all other genomes, for one functional class.
+# =============================================================================
 
+## ---- load & subset --------------------------------------------------------
+aa_df <- result_SD_pw %>%
+  mutate(
+    class = trimws(class),
+    fc    = suppressWarnings(as.numeric(avg_unique_KOs_ferroplasma)),
+    ot    = suppressWarnings(as.numeric(avg_unique_KOs_other))
+  ) %>%
+  filter(class == "Amino acid metabolism", !is.na(fc), !is.na(ot))
+
+# order rows by the gap (other - Ferroplasma): largest deficit at the top
+aa_df <- aa_df %>%
+  mutate(gap = ot - fc) %>%
+  arrange(gap) %>%
+  mutate(row = row_number())
+
+n_mod  <- nrow(aa_df)
+n_lower<- sum(aa_df$fc < aa_df$ot)
+mean_fc<- mean(aa_df$fc)
+mean_ot<- mean(aa_df$ot)
+
+colnames(aa_df)
+keep <- c("row", "NAME", "CLASS", "PATHWAY.ID", "PATHWAY", "avg_unique_KOs_ferroplasma", "avg_unique_KOs_other", "gap")
+aa_sub <- aa_df[, keep]
+aa_sub <- aa_sub[order(aa_sub$row, decreasing = TRUE), ]
+num_cols <- sapply(aa_sub, is.numeric)
+aa_sub[num_cols] <- round(aa_sub[num_cols], 2)
+write.csv(aa_sub, 
+          "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/ferro_non_ferro_aa_module_ko_gap.csv", 
+          row.names = F,
+          quote = F)
+unique(aa_sub$PATHWAY)
+## ---- colours (threaded to match the other figures) -----------------------
+C_FC  <- "#ffd92f"   # Ferroplasma
+C_OT  <- "#7570b3"   # all other genomes
+C_SEG <- "#cfd3d9"   # connector
+
+## ---- plot -----------------------------------------------------------------
+# long form for the point legend
+pts <- data.frame(
+  row   = rep(aa_df$row, 2),
+  value = c(aa_df$fc, aa_df$ot),
+  grp   = rep(c("Ferroplasma", "All other genomes*"), each = nrow(aa_df))
+)
+
+pts$grp <- factor(pts$grp, levels = c("Ferroplasma", "All other genomes*"))
+
+f2b <- ggplot() +
+  geom_segment(data = aa_df,
+               aes(x = fc, xend = ot, y = row, yend = row),
+               colour = C_SEG, linewidth = 1.2) +
+  geom_point(data = pts,
+             aes(x = value, y = row, colour = grp), size = 3) +
+  scale_colour_manual(
+    values = c("Ferroplasma" = C_FC, "All other genomes*" = C_OT),
+    breaks = c("Ferroplasma", "All other genomes*"),
+    labels = c(expression(italic("Ferroplasma")), expression("Not " * italic("Ferroplasma"))),
+    name   = "Genome"
+  ) +
+  scale_y_continuous(expand = expansion(mult = c(0.01, 0.02))) +
+  labs(
+    x = "Mean distinct KOs per genome",
+    y = sprintf("%d amino acid metabolism modules\n(sorted by gap)", n_mod)
+  ) +
+  theme_minimal(base_size = 20) +
+  theme(
+    text               = element_text(size = 20, colour = "black"),
+    axis.line          = element_line(colour = "black", linewidth = 1),  # L-shaped x + y axis lines
+    axis.ticks.x       = element_line(colour = "black", linewidth = 1),  # x tick marks
+    panel.grid.major.y = element_blank(),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.x = element_line(colour = "grey90", linewidth = 1),
+    axis.text          = element_text(size = 20, colour = "black"),
+    axis.title         = element_text(size = 20, colour = "black"),
+    axis.text.y        = element_blank(),
+    axis.ticks.y       = element_blank(),
+    legend.title       = element_text(size = 20, colour = "black"),
+    legend.text        = element_text(size = 20, colour = "black"),
+    legend.background  = element_rect(fill = "white", colour = NA),
+    plot.margin        = margin(10, 14, 8, 10)
+  )
+
+f2b
+
+# =============================================================================
+# Figure 2c: KEGG/KOfam functional enrichment barplot
+# =============================================================================
+
+Ferro_cave_un_enriched.KEGG_Module <- read.delim(file.path(data_dir, "Ferro_cave_un_enriched-KEGG_Module.txt"))
+Ferro_cave_un_enriched.KEGG_Module$category <- "KEGG_Module"
+colnames(Ferro_cave_un_enriched.KEGG_Module)[1] <- "Function"
+
+# write.table(data_enrichment,
+#             "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/data_enrichment.txt",
+#             sep = '\t',
+#             quote = F,
+#             col.names = T,
+#             row.names = F
+#             )
+
+data_enrichment <- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/data_enrichment.txt")
+
+## ---- classify each function by which set carries it ----------------------
+# associated_groups lists the genome groups a function is enriched in.
+# The two cave lineages are "Ferroplasma_c" and "MAG00006"; "rest" = reference.
+library(dplyr)
+library(stringr)
+library(ggplot2)
+
+classify_side <- function(g, sig) {
+  in_fc   <- str_detect(g, "Ferroplasma_c")
+  in_mag  <- str_detect(g, "MAG00006")
+  in_ref  <- str_detect(g, "rest")
+  in_cave <- in_fc | in_mag
+  
+  case_when(
+    is.na(g)                           ~ "Shared: reference + both cave",
+    in_cave & in_ref & in_fc & !in_mag ~ "Shared: reference + Ferroplasma_c",
+    in_cave & in_ref & in_mag & !in_fc ~ "Shared: reference + MAG00006",
+    in_cave & in_ref                   ~ "Shared: reference + both cave",
+    in_cave & sig == "Yes"             ~ "Significant cave-only",
+    in_cave & sig == "No"              ~ "Cave-only",
+    in_ref                             ~ "Reference-only",
+    TRUE                               ~ NA_character_
+  )
 }
-#ggplot(aa_data_modules, aes(x = value, y = aa_data_modules, group = variable)) + geom_point()
+# Note: Using your streamlined version here to avoid rowwise vapply issues
+df_enrichment <- data_enrichment %>%
+  mutate(side = classify_side(associated_groups, Significance))
 
+## ---- counts + proportions per layer --------------------------------------
+df_enrichment_counts <- df_enrichment %>%
+  count(category, side, name = "n") %>%
+  group_by(category) %>%
+  mutate(prop = n / sum(n),
+         total = sum(n)) %>%
+  ungroup()
 
+# readable layer labels carrying the per-layer n
+layer_labels <- df_enrichment_counts %>%
+  distinct(category, total) %>%
+  mutate(label = dplyr::recode(category,
+                               KOfam       = paste0("KOs \n(n=", total, ")"),
+                               KEGG_Module = paste0("KEGG modules\n(n=", total, ")")))
 
+# stack order (bottom -> top): Significant cave-only, Cave-only, Shared..., Reference-only
+df_enrichment_counts <- df_enrichment_counts %>%
+  left_join(layer_labels %>% select(category, label), by = "category") %>%
+  mutate(
+    label = factor(label, levels = layer_labels$label[order(-layer_labels$total)]),
+    side  = factor(side, levels = c("Significant cave-only",
+                                    "Cave-only", 
+                                    "Shared: reference + Ferroplasma_c",
+                                    "Shared: reference + MAG00006",
+                                    "Shared: reference + both cave",
+                                    "Reference-only")),
+    
+    # ── FIX 1: Only keep labels for Cave-only and Reference-only ──────────────
+    seg_label = ifelse(
+      side %in% c("Cave-only", "Reference-only"),
+      paste0(round(prop * 100), "%\n(n=", n, ")"),
+      "" # Leaves the shared segments blank
+    )
+  )
 
-cave_myco_ferrof$unique_Ferro_cave <- cave_myco_ferrof$unique_CAVE_KEGG_acc%in%KOs_ferro_in_cave
-cave_myco_ferrof$AA_Ferro<- cave_myco_ferrof$unique_CAVE_KEGG_acc%in%KO_FERRO_AA
-cave_myco_ferrof$AA<- cave_myco_ferrof$unique_CAVE_KEGG_acc%in%KO_AA_ALL_clean
-cave_myco_ferrof$AA_KEGG<- cave_myco_ferrof$unique_CAVE_KEGG_acc%in%KOsall
+# Compute label y-positions explicitly
+df_enrichment_counts <- df_enrichment_counts %>%
+  arrange(category, desc(side)) %>%      
+  group_by(category) %>%
+  mutate(ymax = cumsum(prop),
+         ymid = ymax - prop / 2) %>%
+  ungroup()
 
-ggplot(cave_myco_ferrof, aes(x=CAVE_KOs_prev,y=Ferr_KOs_prev, color=AA))+geom_jitter()
+## ---- palette -------------------------------------------------------------
+pal <- c("Significant cave-only" = "#dd1c77", 
+         "Cave-only" = "#ffd92f", 
+         "Shared: reference + Ferroplasma_c" = "#66c2a5",
+         "Shared: reference + MAG00006" = "#fc8d62",
+         "Shared: reference + both cave" = "#b8bfc9", 
+         "Reference-only" = "#7570b3"
+)
 
-library(beeswarm)
-ggplot(cave_myco_ferrof, aes(x=CAVE_KOs_prev,y=Myco_KOs_prev, color=AA))+geom_jitter()
+# ── FIX 2: Correct string matching for text coloring ────────────────────────
+df_enrichment_counts <- df_enrichment_counts %>% 
+  mutate(txt_col = ifelse(str_detect(side, "Shared"), "#444444", "white"))
 
+## ---- plot -----------------------------------------------------------------
+library(ggrepel)
 
-cave_myco_ferrof_melted<-reshape2::melt(cave_myco_ferrof)
-ggplot(cave_myco_ferrof_melted[cave_myco_ferrof_melted$unique_Ferro_cave == T,], 
-       aes(x = variable, y = value, group = unique_CAVE_KEGG_acc)) +
-  geom_point(aes(color = variable), 
-             position = position_jitter(width = 0.2, height = 0), 
-             alpha = 0.6, size = 6) +  # Added jitter and transparency
-  geom_line(color = "grey", linetype = "dashed", alpha = 0.2) +  # Dashed, transparent line
-  theme_minimal() +  # Clean background
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),  # Tilt x-axis labels
-        text = element_text(size = 24), 
-        legend.position = "none") +  # Remove legend
-  scale_x_discrete(labels = c("Cave", expression(italic("Mycobacterium")), expression(italic("Ferroplasma")))) +  # Update x-axis labels
-  labs(title = "", x = "Pangenomes", y = "Prevalence (%)") + # Title and labels
-scale_color_manual(values = c('#fc8d62','#66c2a5','#8da0cb'))
+# ── DATA PREP (assuming context from previous steps) ─────────────────────────
 
-  # K00373 K00371 K00374 K00370 K21908 K00038 high in mycobacterium
-#check on which myco are present 
-Myco_data_enriched_cave_Ferro<-Myco[Myco$KOfam_ACC%in%KOs_ferro_in_cave,]
+# 1. Update seg_label to include "Significant cave-only"
+# We update the upstream mutate call where seg_label was created:
+# The user already added "Significant cave-only" in previous interactions.
+# We modify the logical check so labels are generated for these three groups.
 
-mycoKOs_unique<-unique(Myco_data_enriched_cave_Ferro$KOfam_ACC)
-for (i in mycoKOs_unique){
-  tempdata_m<-Myco_data_enriched_cave_Ferro[which(Myco_data_enriched_cave_Ferro$KOfam_ACC==i),]
-  tempdata_m_cave_index<-tempdata_m$genome_name%in%c("M_methanotrophicum","M_Bin2","M_Bin3")
-  print(table(tempdata_m_cave_index))
-}
+df_enrichment_counts <- df_enrichment_counts %>%
+  mutate(
+    # Updated logical check to include the new category
+    seg_label = ifelse(
+      side %in% c("Cave-only", "Reference-only", "Significant cave-only"),
+      paste0(round(prop * 100), "%\n(n=", n, ")"),
+      "" # Leaves other segments blank
+    ),
+    
+    # Text coloring rule (Shared is light, others are dark)
+    txt_col = ifelse(str_detect(side, "Shared"), "#444444", "white")
+  )
 
+# 2. Re-compute explicit positions (ensure sorting matches factor levels)
+# Stack order (bottom -> top): Significant -> Cave-only -> Shared... -> Reference-only
+df_enrichment_counts <- df_enrichment_counts %>%
+  left_join(layer_labels %>% select(category, label), by = "category") %>%
+  mutate(
+    label = factor(label, levels = layer_labels$label[order(-layer_labels$total)]),
+    side  = factor(side, levels = c(
+      "Significant cave-only",
+      "Cave-only", 
+      "Shared: reference + Ferroplasma_c",
+      "Shared: reference + MAG00006",
+      "Shared: reference + both cave",
+      "Reference-only"
+    ))
+  ) %>%
+  arrange(category, desc(side)) %>% # forces cumulative sum logic to match factor stack
+  group_by(category) %>%
+  mutate(ymax = cumsum(prop),
+         ymid = ymax - prop / 2) %>%
+  ungroup()
 
-KOs_cave_functions<-cave_myco_ferrof$unique_CAVE_KEGG_acc[cave_myco_ferrof$CAVE_KOs_prev >30 & cave_myco_ferrof$Myco_KOs_prev<10 & cave_myco_ferrof$Ferr_KOs_prev< 10]
-KOs_cavehigh_lowmycoFerroplasma<- CAVE[CAVE$KOfam_ACC%in%KOs_cave_functions,]
-CAVE[CAVE$KOfam_ACC%in%c("K17713", "K00754" , "K00148" , "K05878", "K05879","K05881","K06919","K08221"),]
+# ── DEFINE PALETTE ────────────────────────────────────────────────────────────
+pal <- c(
+  "Significant cave-only" = "#e31a1c", # Distinct RED for significance
+  "Cave-only" = "#ffd92f", 
+  "Shared: reference + Ferroplasma_c" = "#66c2a5",
+  "Shared: reference + MAG00006" = "#fc8d62",
+  "Shared: reference + both cave" = "#b8bfc9", 
+  "Reference-only" = "#2c7fb8"
+)
 
+# ── THE NEW PLOT IMPLEMENTATION ──────────────────────────────────────────────
+f2c <- ggplot(df_enrichment_counts, aes(x = label, y = prop, fill = side)) +
+  geom_col(width = 0.62, colour = "white", linewidth = 0.6) +
+  
+  # ── Layer 1: Internal Labels (Standard Cave and Reference-Only) ──────────────
+  geom_text(
+    data = subset(df_enrichment_counts, side %in% c("Cave-only", "Reference-only")),
+    aes(y = ymid, label = seg_label, color = txt_col),
+    size = 5, fontface = "bold", lineheight = 0.9,
+    show.legend = FALSE
+  ) +
+  
+  # ── Layer 2: External Linking Arrows (Significant Cave-Only) ────────────────
+  # Draws a physical link line from the thin segment out into clear canvas space
+  geom_segment(
+    data = subset(df_enrichment_counts, side == "Significant cave-only" & seg_label != ""),
+    aes(
+      x = as.numeric(label),        # Start line right at the bar's x-coordinate
+      xend = as.numeric(label) + 0.43, # Extend the line out to the right side
+      y = ymid,                     # Track exactly centered within the segment
+      yend = ymid
+    ),
+    color = "black",
+    linewidth = 0.5,
+    arrow = arrow(length = unit(0.015, "npc"), type = "closed", ends = "first"), # Arrow heads pointing at the slice
+    inherit.aes = FALSE            # Prevents aesthetic inheritance conflicts
+  ) +
+  
+  # ── Layer 3: Fixed External Text Labels (Significant Cave-Only) ──────────────
+  # Places the label safely directly next to the end tip of our custom linking line
+  geom_text(
+    data = subset(df_enrichment_counts, side == "Significant cave-only" & seg_label != ""),
+    aes(
+      x = as.numeric(label) + 0.45, # Positions text just past the arrow pointer line termination
+      y = ymid, 
+      label = seg_label
+    ),
+    color = "black",                # Solid crisp black text for out-of-bar canvas regions
+    size = 4.5, 
+    fontface = "bold", 
+    lineheight = 0.9,
+    hjust = 0,                      # Left-align text box start for neat alignments
+    inherit.aes = FALSE
+  ) +
+  
+  # ── Remainder of your standard plotting layers remain identical ──────────────
+  scale_fill_manual(
+    values = pal, 
+    breaks = c(
+      "Significant cave-only",
+      "Cave-only", 
+      "Shared: reference + Ferroplasma_c", 
+      "Shared: reference + MAG00006",
+      "Shared: reference + both cave",
+      "Reference-only"
+    ),
+    labels = list(
+      expression("Significant cave-only (" * italic("Ferroplasma") ~ "c. and/or MAG 6)"),
+      expression("Cave-only (" * italic("Ferroplasma") ~ "c. and/or MAG 6)"),
+      expression("Shared: reference + " * italic("Ferroplasma") ~ "c."),
+      expression("Shared: reference + MAG 6"),
+      expression("Shared: reference + both cave "* italic("Ferroplasma")),
+      expression("Reference-only")
+    ),
+    name = "Functional enrichment distribution"
+  ) +
+  scale_colour_identity() +
+  scale_y_continuous(
+    labels = scales::percent_format(accuracy = 1),
+    expand = expansion(mult = c(0, 0.02))
+  ) +
+  labs(
+    x = NULL, y = "Share of enriched functions"
+  ) +
+  theme_minimal(base_size = 20) + 
+  theme(
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.y = element_line(colour = "grey88", linewidth = 0.3),
+    
+    axis.ticks.x       = element_blank(),
+    axis.line          = element_line(color = "black"), 
+    
+    legend.position    = "right", 
+    
+    text               = element_text(color = "black"),
+    axis.text          = element_text(color = "black"),
+    axis.title         = element_text(color = "black"),
+    legend.text        = element_text(color = "black"),
+    legend.title       = element_text(color = "black"),
+    
+    plot.margin        = margin(10, 50, 10, 10) # Expanded right margin margin to prevent labels cutting off
+  )
 
-
-ggplot(cave_myco_ferrof_melted[cave_myco_ferrof_melted$AA_KEGG==T,], aes(x=variable,y=value))+geom_boxplot()
-
-data<-cave_myco_ferrof
-rownames(data)<-data[,1]
-library(apcluster)
-## compute similarity matrix and run affinity propagation 
-## (p defaults to median of similarity)
-apres <- apcluster(negDistMat(r=2), data[,-1], details=TRUE)
-
-## show details of clustering results
-show(apres)
-
-## plot clustering result
-plot(apres, x)
-
-
-
-library(plotly)
-plot_ly(cave_myco_ferrof, x = ~CAVE_KOs_prev, y = ~Myco_KOs_prev, z = ~Ferr_KOs_prev) %>%
-  add_markers(size =0.5) %>%
-  layout(scene = list(
-    xaxis = list(title = 'Cave'),
-    yaxis = list(title = 'Myco'),
-    zaxis = list(title = 'Ferro')
-  ))
-
-##################cog
-############################
-
-
-
-unique_CAVE_COG <- CAVE %>%
-  select( COG20_FUNCTION_ACC, COG20_FUNCTION, COG20_CATEGORY_ACC,COG20_CATEGORY   ) %>%
-  distinct()
-
-unique_CAVE_COG<-unique_CAVE_COG[-which(unique_CAVE_COG$COG20_FUNCTION_ACC==""),]
-CAVE_KOs_prev<-c()
-for(i in unique_CAVE_COG$COG20_FUNCTION_ACC){
-  prev<-length(unique(CAVE$genome_name[which(CAVE$COG20_FUNCTION_ACC==i)]))
-  CAVE_KOs_prev<-c(CAVE_KOs_prev,prev)
-}
-CAVE_KOs_prev<-CAVE_KOs_prev/21*100
-cave_cog_prev<-cbind(unique_CAVE_COG,CAVE_KOs_prev)
-
-unique_Myco_COG <- Myco %>%
-  select( COG20_FUNCTION_ACC, COG20_FUNCTION, COG20_CATEGORY_ACC,COG20_CATEGORY   ) %>%
-  distinct()
-unique_Myco_COG<-unique_Myco_COG[-which(unique_Myco_COG$COG20_FUNCTION_ACC==""),]
-Myco_KOs_prev<-c()
-for(i in unique_Myco_COG$COG20_FUNCTION_ACC){
-  prev<-length(unique(Myco$genome_name[which(Myco$COG20_FUNCTION_ACC==i)]))
-  Myco_KOs_prev<-c(Myco_KOs_prev,prev)
-}
-Myco_KOs_prev<-Myco_KOs_prev/69*100
-Myco_cog_prev<-cbind(unique_Myco_COG,Myco_KOs_prev)
-
-cave_myco_cog<-merge(cave_cog_prev,Myco_cog_prev,by.x="COG20_FUNCTION_ACC",by.y="COG20_FUNCTION_ACC", all=T)
-
-unique_Ferroplasma_cog <- Ferroplasma %>%
-  select( COG20_FUNCTION_ACC, COG20_FUNCTION, COG20_CATEGORY_ACC,COG20_CATEGORY   )%>%
-  distinct()
-unique_Ferroplasma_cog<-unique_Ferroplasma_cog[-which(unique_Ferroplasma_cog$COG20_FUNCTION_ACC==""),]
-Ferr_KOs_prev<-c()
-for(i in unique_Ferroplasma_cog$COG20_FUNCTION_ACC){
-  prev<-length(unique(Ferroplasma$genome_name[which(Ferroplasma$COG20_FUNCTION_ACC==i)]))
-  Ferr_KOs_prev<-c(Ferr_KOs_prev,prev)
-}
-Ferr_KOs_prev<-Ferr_KOs_prev/13*100
-Ferr_cog_prev<-cbind(unique_Ferroplasma_cog,Ferr_KOs_prev)
-cave_myco_ferro_cog<-merge(cave_myco_cog,Ferr_cog_prev,by.x="COG20_FUNCTION_ACC",by.y="COG20_FUNCTION_ACC", all=T)
-
-cave_myco_ferro_cog_f<-cave_myco_ferro_cog %>%
-  mutate(COG20_FUNCTION = coalesce(COG20_FUNCTION.x, COG20_FUNCTION.y, COG20_FUNCTION))%>%
-  mutate(COG20_CATEGORY_ACC = coalesce(COG20_CATEGORY_ACC.x, COG20_CATEGORY_ACC.y, COG20_CATEGORY_ACC))%>%
-  mutate(COG20_CATEGORY = coalesce(COG20_CATEGORY.x, COG20_CATEGORY.y, COG20_CATEGORY))%>%
-  distinct(COG20_FUNCTION_ACC,COG20_FUNCTION,COG20_CATEGORY_ACC,COG20_CATEGORY,CAVE_KOs_prev,Myco_KOs_prev,Ferr_KOs_prev, .keep_all = FALSE) %>%
-  select(COG20_FUNCTION_ACC,COG20_FUNCTION,COG20_CATEGORY_ACC,COG20_CATEGORY,CAVE_KOs_prev,Myco_KOs_prev,Ferr_KOs_prev)
-cave_myco_ferro_cog_f <- cave_myco_ferro_cog_f %>%
-  mutate(across(everything(), ~replace_na(., 0)))
-
-plot_ly(cave_myco_ferro_cog_f, x = ~CAVE_KOs_prev, y = ~Myco_KOs_prev, z = ~Ferr_KOs_prev) %>%
-  add_markers() %>%
-  layout(scene = list(
-    xaxis = list(title = 'Cave'),
-    yaxis = list(title = 'Myco'),
-    zaxis = list(title = 'Ferro')
-  ))
+f2c
