@@ -1,0 +1,34 @@
+﻿bins;MAG_domain;MAG_phylum;MAG_class;MAG_order;MAG_family;MAG_genus;MAG_species
+SC_Bin_00021;;;;;;;
+SC_Bin_00022;Bacteria;Actinobacteriota;Actinomycetia;Mycobacteriales;Mycobacteriaceae;;
+SC_Bin_00023;Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;Moraxellaceae;;
+SC_Bin_00024;Archaea;Thermoplasmatota;Thermoplasmata;Thermoplasmatales;Thermoplasmataceae;;B-DKE sp002204705
+SC_Bin_00025;Archaea;Micrarchaeota;Micrarchaeia;Micrarchaeales;Micrarchaeaceae;;Micrarchaeum acidiphilum
+SC_Bin_00026;;;;;;;
+SC_Bin_00027;Bacteria;Actinobacteriota;Actinomycetia;Actinomycetales;Dermatophilaceae;;Janibacter hoylei
+SC_Bin_00028;Bacteria;Firmicutes;Bacilli;Staphylococcales;Staphylococcaceae;;Staphylococcus epidermidis
+SC_Bin_00029;Bacteria;Firmicutes;Bacilli;Lactobacillales;Streptococcaceae;;
+SC_Bin_00030;Bacteria;Actinobacteriota;Actinomycetia;Mycobacteriales;Mycobacteriaceae;Bin 30 Mycobacterium;
+SC_Bin_00031;;;;;;;
+SC_Bin_00032;Archaea;Micrarchaeota;Micrarchaeia;Micrarchaeales;Micrarchaeaceae;;Micrarchaeum acidiphilum
+SC_Bin_00033;;;;;;;
+SC_MAG_00001;Bacteria;Proteobacteria;Alphaproteobacteria;Rhodobacterales;Rhodobacteraceae;;Paracoccus aeridis
+SC_MAG_00002;Bacteria;Actinobacteriota;Actinomycetia;Mycobacteriales;Mycobacteriaceae;MAG 2 Lawsonella;Lawsonella clevelandensis
+SC_MAG_00003;Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Enterobacteriaceae;;
+SC_MAG_00004;;;;;;MAG 4 Acidithiobacillus;
+SC_MAG_00005;Bacteria;Actinobacteriota;Actinomycetia;Propionibacteriales;Propionibacteriaceae;MAG 5 Cutibacterium;Cutibacterium acnes
+SC_MAG_00006;Archaea;Thermoplasmatota;Thermoplasmata;Thermoplasmatales;Thermoplasmataceae;MAG 6 Ferroplasma;
+SC_MAG_00007;Bacteria;Actinobacteriota;Acidimicrobiia;Acidimicrobiales;RAAP-2;;PALSA-457 sp003161575
+SC_MAG_00008;Archaea;Thermoplasmatota;Thermoplasmata;Thermoplasmatales;Thermoplasmataceae;MAG 8 Ferroplasma;
+SC_MAG_00009;Bacteria;Proteobacteria;Alphaproteobacteria;Acetobacterales;Acetobacteraceae;;Acidiphilium rubrum
+SC_MAG_00010;Bacteria;Actinobacteriota;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;;Ferrimicrobium acidiphilum
+SC_MAG_00011;;;;;;;
+SC_MAG_00012;Bacteria;Actinobacteriota;Acidimicrobiia;Acidimicrobiales;Bog-793;;Palsa-601 sp003136185
+SC_MAG_00013;;;;;;MAG 13 Acidithiobacillus;
+SC_MAG_00014;Bacteria;Firmicutes;Sulfobacillia;Sulfobacillales;Sulfobacillaceae;;Sulfobacillus thermotolerans
+SC_MAG_00015;Bacteria;Actinobacteriota;Actinomycetia;Actinomycetales;Micrococcaceae;;Micrococcus luteus
+SC_MAG_00016;Bacteria;Actinobacteriota;Actinomycetia;Mycobacteriales;Mycobacteriaceae;MAG 16 Mycobacterium;
+SC_MAG_00017;Bacteria;Actinobacteriota;Actinomycetia;Mycobacteriales;Mycobacteriaceae;;Corynebacterium propinquum
+SC_MAG_00018;Archaea;Thermoplasmatota;Thermoplasmata;Thermoplasmatales;Thermoplasmataceae;MAG 18 Cuniculiplasma;Cuniculiplasma divulgatum
+SC_MAG_00019;Bacteria;Actinobacteriota;Actinomycetia;Mycobacteriales;Mycobacteriaceae;MAG 19 Mycobacterium;
+SC_MAG_00020;Bacteria;Dependentiae;Babeliae;Babeliales;Babeliaceae;;Babela massiliensis

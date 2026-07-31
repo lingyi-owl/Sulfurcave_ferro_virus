@@ -1,36 +1,36 @@
-"ID","Taxonomy","Genus","Quality","Alternative_ID","Alternative_ID2"
-"SC_MAG_00016","Mycobacterium Methanotrophicum","Mycobacterium","complete/MAG (original)","KDJLIKBO","KDJLIKBO"
-"SC_MAG_00019","Mycobacterium MAG2","Mycobacterium","MAG (original)","Crude_2","Crude_2"
-"SC_Bin_00022","Mycobacterium MAG3","Mycobacterium","MAG (original)","Crude_3","Crude_3"
-"SC_Bin_00030","Mycobacterium MAG3","Mycobacterium","MAG (original)","Crude_3","Crude_3"
-"SC_MAG_00008","Ferroplasma","Ferroplasma","complete/MAG (original)","KNPMNEEE","KNPMNEEE"
-"SC_MAG_00018","Cuniculiplasma","Cuniculiplasma","complete/MAG (original)","EKPBOPOH","EKPBOPOH"
-"SC_Bin_00021","bacteria","NA","MAG (new)","NA","SC_Bin_00021"
-"SC_Bin_00023","Moraxella","Moraxella","MAG (new)","NA","SC_Bin_00023"
-"SC_Bin_00024","B-DKE sp002204705 (archaea)","NA","MAG (new)","NA","SC_Bin_00024"
-"SC_Bin_00025","Micrarchaeum acidiphilum","Micrarchaeum ","MAG (new)","NA","SC_Bin_00025"
-"SC_Bin_00026","bacteria","NA","MAG (new)","NA","SC_Bin_00026"
-"SC_Bin_00027","Janibacter hoylei","Janibacter ","MAG (new)","NA","SC_Bin_00027"
-"SC_Bin_00028","Straphylococcus epidermidis","Straphylococcus ","MAG (new)","NA","SC_Bin_00028"
-"SC_Bin_00029","Streptococcus","Streptococcus","MAG (new)","NA","SC_Bin_00029"
-"SC_Bin_00030","Mycobacterium","Mycobacterium","MAG (new)","NA","SC_Bin_00030"
-"SC_Bin_00031","NA","NA","MAG (new)","NA","SC_Bin_00031"
-"SC_Bin_00032","Micrarchaeum acidiphilum","Micrarchaeum","MAG (new)","NA","SC_Bin_00032"
-"SC_Bin_00033","NA","NA","MAG (new)","NA","SC_Bin_00033"
-"SC_MAG_00001","Paracoccus aeridis","Paracoccus","MAG (new)","NA","SC_MAG_00001"
-"SC_MAG_00002","Lawsonella clevelandensis","Lawsonella","MAG (new)","NA","SC_MAG_00002"
-"SC_MAG_00003","Enterobacteriaceae","Enterobacteriaceae","MAG (new)","NA","SC_MAG_00003"
-"SC_MAG_00004","Acidithiobacillus thiooxidans","Acidithiobacillus","MAG (new)","NA","SC_MAG_00004"
-"SC_MAG_00005","Cutibacterium acnes","Cutibacterium","MAG (new)","NA","SC_MAG_00005"
-"SC_MAG_00006","Ferroplasma","Ferroplasma","MAG (new)","NA","SC_MAG_00006"
-"SC_MAG_00007","PALSA-457 sp003161575","NA","MAG (new)","NA","SC_MAG_00007"
-"SC_MAG_00009","Acidiphilium rubrum","Acidiphilium","MAG (new)","NA","SC_MAG_00009"
-"SC_MAG_00010","Ferrimicrobium acidiphilum","Ferrimicrobium","MAG (new)","NA","SC_MAG_00010"
-"SC_MAG_00011","archaea","NA","MAG (new)","NA","SC_MAG_00011"
-"SC_MAG_00012","Palsa-601 sp003136185","NA","MAG (new)","NA","SC_MAG_00012"
-"SC_MAG_00013","Acidithiobacillus thiooxidans","Acidithiobacillus","complete/MAG (new)","Acidithiobacillus","SC_MAG_00013"
-"SC_MAG_00014","Sulfobacillus thermotolerans","Sulfobacillus","MAG (new)","NA","SC_MAG_00014"
-"SC_MAG_00015","Micrococcus luteus","Micrococcus","MAG (new)","NA","SC_MAG_00015"
-"SC_MAG_00017","Corynebacterium propinquum","Corynebacterium","MAG (new)","NA","SC_MAG_00017"
-"SC_MAG_00020","Babela massiliensis","Babela","MAG (new)","NA","SC_MAG_00020"
-"virus","Unique viral contigs ","Virus","best quality filtered contigs","NA","virus"
+ID;Alternative_ID3;Taxonomy;Genus;Quality;Alternative_ID;Alternative_ID2
+SC_MAG_00016;MAG 16;Mycobacterium Methanotrophicum;Mycobacterium;complete/MAG (original);KDJLIKBO;KDJLIKBO
+SC_MAG_00019;MAG 19;Mycobacterium MAG2;Mycobacterium;MAG (original);Crude_2;Crude_2
+SC_Bin_00022;MAG 22;Mycobacterium MAG3;Mycobacterium;MAG (original);Crude_3;Crude_3
+SC_Bin_00030;MAG 30;Mycobacterium MAG3;Mycobacterium;MAG (original);Crude_3;Crude_3
+SC_MAG_00008;MAG 8;Ferroplasma;Ferroplasma;complete/MAG (original);KNPMNEEE;KNPMNEEE
+SC_MAG_00018; MAG 18;Cuniculiplasma;Cuniculiplasma;complete/MAG (original);EKPBOPOH;EKPBOPOH
+SC_Bin_00021;MAG 21 ;bacteria;NA;MAG (new);NA;SC_Bin_00021
+SC_Bin_00023;MAG 23;Moraxella;Moraxella;MAG (new);NA;SC_Bin_00023
+SC_Bin_00024;MAG 24;B-DKE sp002204705 (archaea);NA;MAG (new);NA;SC_Bin_00024
+SC_Bin_00025;MAG 25;Micrarchaeum acidiphilum;Micrarchaeum ;MAG (new);NA;SC_Bin_00025
+SC_Bin_00026;MAG 26;bacteria;NA;MAG (new);NA;SC_Bin_00026
+SC_Bin_00027;MAG 27;Janibacter hoylei;Janibacter ;MAG (new);NA;SC_Bin_00027
+SC_Bin_00028;MAG 28;Straphylococcus epidermidis;Straphylococcus ;MAG (new);NA;SC_Bin_00028
+SC_Bin_00029;MAG 29;Streptococcus;Streptococcus;MAG (new);NA;SC_Bin_00029
+SC_Bin_00030;MAG 30;Mycobacterium;Mycobacterium;MAG (new);NA;SC_Bin_00030
+SC_Bin_00031;MAG 31;NA;NA;MAG (new);NA;SC_Bin_00031
+SC_Bin_00032;MAG 32;Micrarchaeum acidiphilum;Micrarchaeum;MAG (new);NA;SC_Bin_00032
+SC_Bin_00033;MAG 33;NA;NA;MAG (new);NA;SC_Bin_00033
+SC_MAG_00001;MAG 1;Paracoccus aeridis;Paracoccus;MAG (new);NA;SC_MAG_00001
+SC_MAG_00002;MAG 2;Lawsonella clevelandensis;Lawsonella;MAG (new);NA;SC_MAG_00002
+SC_MAG_00003;MAG 3;Enterobacteriaceae;Enterobacteriaceae;MAG (new);NA;SC_MAG_00003
+SC_MAG_00004;MAG 4;Acidithiobacillus thiooxidans;Acidithiobacillus;MAG (new);NA;SC_MAG_00004
+SC_MAG_00005;MAG 5;Cutibacterium acnes;Cutibacterium;MAG (new);NA;SC_MAG_00005
+SC_MAG_00006;MAG 6;Ferroplasma;Ferroplasma;MAG (new);NA;SC_MAG_00006
+SC_MAG_00007;MAG 7;PALSA-457 sp003161575;NA;MAG (new);NA;SC_MAG_00007
+SC_MAG_00009;MAG 9;Acidiphilium rubrum;Acidiphilium;MAG (new);NA;SC_MAG_00009
+SC_MAG_00010;MAG 10;Ferrimicrobium acidiphilum;Ferrimicrobium;MAG (new);NA;SC_MAG_00010
+SC_MAG_00011;MAG 11;archaea;NA;MAG (new);NA;SC_MAG_00011
+SC_MAG_00012;MAG 12;Palsa-601 sp003136185;NA;MAG (new);NA;SC_MAG_00012
+SC_MAG_00013;MAG 13;Acidithiobacillus thiooxidans;Acidithiobacillus;complete/MAG (new);Acidithiobacillus;SC_MAG_00013
+SC_MAG_00014;MAG 14;Sulfobacillus thermotolerans;Sulfobacillus;MAG (new);NA;SC_MAG_00014
+SC_MAG_00015;MAG 15;Micrococcus luteus;Micrococcus;MAG (new);NA;SC_MAG_00015
+SC_MAG_00017;MAG 17;Corynebacterium propinquum;Corynebacterium;MAG (new);NA;SC_MAG_00017
+SC_MAG_00020; MAG 20;Babela massiliensis;Babela;MAG (new);NA;SC_MAG_00020
+virus;Unique viral contigs;Unique viral contigs ;Virus;best quality filtered contigs;NA;virus
