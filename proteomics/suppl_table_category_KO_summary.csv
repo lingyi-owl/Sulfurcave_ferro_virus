@@ -1,0 +1,7 @@
+Category,KEGG definition source,N KOs in definition,N KOs detected (Ferroplasma),Example detected gene symbols
+Ribosomal proteins,"KEGG BRITE ko03011 — ""Ribosomal proteins"" section (bacterial + archaeal + eukaryotic small/large subunit)",188,51,"RP-L1, MRPL1, rplA, RP-L10, MRPL10, rplJ, RP-L10e, RPL10, RP-L11, MRPL11, rplK, RP-L12, rpl12, RP-L13, MRPL13, rplM, RP-L14, MRPL14, rplN, RP-L15, MRPL15, rplO, RP-L15e, RPL15, RP-L18, MRPL18, rplR, RP-L18e, RPL18, RP-L19e, RPL19 …"
+Translation factors,"KEGG BRITE ko03012 — initiation, elongation and release factors (prokaryotic + eukaryotic)",109,13,"DRG1, RBG1, EEF1A, EEF1B, EEF2, EIF1, SUI1, EIF1A, EIF2B1, EIF2S1, EIF2S2, EIF2S3, EIF6, ETF1, ERF1 …"
+Aminoacyl-tRNA synthetases,"KEGG BRITE ko01007 — ""Aminoacyl-tRNA synthetase"" section (+ map00970 orthologs)",67,20,"AARS, alaS, CARS, cysS, EARS, gltX, FARSA, pheS, GARS, glyS1, HARS, hisS, IARS, ileS, LARS, leuS, MARS, metG, NARS, asnS, PARS, proS, RARS, argS …"
+Ribosome biogenesis,KEGG BRITE ko03009 — ribosome biogenesis / rRNA maturation factors,597,19,"ABCE1, Rli1, AK6, FAP7, DKC1, NOLA4, CBF5, EMG1, NEP1, KRR1, NOG1, NOP10, NOLA3, NOP56, RIOK1, SDO1, SBDS, VCP, CDC48, flpA …"
+DNA replication,"KEGG BRITE ko03032 — DNA replication proteins (replisome, polymerases, primase, helicases, clamp)",197,13,"FEN1, RAD2, LIG1, PCNA, RFA1, RPA1, rpa, dnaG, gyrA, gyrB, hupB, mcm, pol, polC, rnhB …"
+Cell division,"Curated KEGG-verified division/septation orthologs (Fts, Min, Zap, Par, Mur/Ddl); Ferroplasma uses FtsZ-based division",18,1,"parA, soj"

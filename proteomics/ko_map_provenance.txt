@@ -1,0 +1,91 @@
+================================================================================
+ko_category_map.csv — provenance
+================================================================================
+Purpose
+  Maps KEGG Orthology (KO) identifiers to the six growth-machinery functional
+  categories used in the Ferroplasma / Mycobacterium proteome-allocation
+  analysis. Read by proteome_allocation.R and proteome_allocation_by_sample.R
+  so that category definitions are fixed and the analysis needs no live network
+  calls at runtime.
+
+Format
+  Two columns, comma-separated, with header:  KO,category
+  1176 rows (one KO per row); each KO is assigned to exactly ONE category.
+
+--------------------------------------------------------------------------------
+Category definitions and sources
+--------------------------------------------------------------------------------
+All KO sets were retrieved from the KEGG REST API (https://rest.kegg.jp) by
+downloading the relevant KEGG BRITE hierarchy flat file (get/br:<id>) and
+parsing the KO identifiers under the indicated section.
+
+  Ribosomal proteins        KEGG BRITE ko03011, "Ribosomal proteins" section
+                            (bacterial + archaeal + eukaryotic small/large
+                            subunit). Ribosomal-RNA and biogenesis subsections
+                            of ko03011 were excluded.                    188 KOs
+
+  Translation factors       KEGG BRITE ko03012 (initiation, elongation and
+                            release factors; prokaryotic + eukaryotic).  109 KOs
+
+  Aminoacyl-tRNA synthetases KEGG BRITE ko01007, aminoacyl-tRNA synthetase
+                            section, unioned with the map00970 ortholog
+                            link.                                         67 KOs
+
+  Ribosome biogenesis       KEGG BRITE ko03009 (ribosome biogenesis / rRNA
+                            maturation factors; largely eukaryote-specific,
+                            so only a small subset is detectable in an
+                            archaeon).                                    597 KOs
+
+  DNA replication           KEGG BRITE ko03032 (replisome, DNA polymerases,
+                            primase, helicases, sliding clamp).           197 KOs
+
+  Cell division             CURATED set (KEGG has no clean archaeal cell-
+                            division hierarchy). 18 KEGG-verified division /
+                            septation orthologs. Ferroplasma
+                            (Thermoplasmatales) divides via an FtsZ-based
+                            mechanism, NOT the archaeal Cdv system, so Cdv
+                            genes were deliberately excluded; MreB (K03569,
+                            cell shape, not division) was also excluded.   18 KOs
+
+  Cell-division KO list (18):
+    K03531 ftsZ    K03590 ftsA    K03589 ftsQ    K03587 ftsI    K03466 ftsK
+    K03591 ftsN    K05589 ftsB    K03588 ftsW    K03610 minC    K03609 minD
+    K09888 zapA    K03497 parB    K03496 parA    K01924 murC    K01925 murD
+    K01928 murE    K01929 murF    K01921 ddlB
+
+--------------------------------------------------------------------------------
+Mutually-exclusive assignment
+--------------------------------------------------------------------------------
+A KO can appear in more than one BRITE hierarchy. To avoid double-counting
+proteome mass, each KO was assigned to a single category using the priority
+order (highest wins):
+
+  Ribosomal proteins > Aminoacyl-tRNA synthetases > Translation factors >
+  Ribosome biogenesis > DNA replication > Cell division
+
+Overlaps removed by this rule: Translation factors -1 KO, Ribosome biogenesis
+-5, DNA replication -6 (each reassigned to the higher-priority category).
+Final total after deduplication: 1176 KOs.
+
+--------------------------------------------------------------------------------
+Per-category KO counts (definition sizes, NOT detected counts)
+--------------------------------------------------------------------------------
+  Ribosome biogenesis          597
+  DNA replication              197
+  Ribosomal proteins           188
+  Translation factors          109
+  Aminoacyl-tRNA synthetases    67
+  Cell division                 18
+  ------------------------------------
+  TOTAL                       1176
+
+--------------------------------------------------------------------------------
+Notes
+--------------------------------------------------------------------------------
+- Definition sizes above are the reference KO sets screened against, not the
+  number of KOs actually detected in the metaproteome. For example, only ~19 of
+  the 597 ribosome-biogenesis KOs are detected in Ferroplasma, because most are
+  eukaryote-specific assembly factors — expected, not under-detection.
+- Confirm the eggNOG-mapper version and KEGG release used for the ORF KO
+  annotations before publication; KO membership of BRITE hierarchies can change
+  between KEGG releases.
