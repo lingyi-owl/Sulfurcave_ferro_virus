@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "Sulfurcave_ferro_virus: analysis code for the Sulfur Cave biofilm multi-omics study"
+type: software
+license: MIT
+repository-code: "https://github.com/lingyi-owl/Sulfurcave_ferro_virus"
+version: "1.0-submission"
+date-released: "2026-11-08"   # TODO: set to the release date
+authors:
+  - {given-names: "Ling-Yi", family-names: "Wu"}
+  - {given-names: "Varada Milind", family-names: "Khot"}
+  - {given-names: "James", family-names: "Gallant"}
+  - {given-names: "Jean-François", family-names: "Flot"}
+  - {given-names: "Vasile D.", family-names: "Gherman"}
+  - {given-names: "Paul", family-names: "Bodelier"}
+  - {given-names: "Serban M.", family-names: "Sarbu"}
+  - {given-names: "Wilbert", family-names: "Bitter"}
+  - {given-names: "Bas E.", family-names: "Dutilh"}
+  - {given-names: "Chrats", family-names: "Melkonian"}
+# TODO: add ORCIDs, and a preferred-citation block (type: article) once the DOI exists

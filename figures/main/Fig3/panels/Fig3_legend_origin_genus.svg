@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='648.00pt' height='576.00pt' viewBox='0 0 648.00 576.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw1NzYuMDA=)'>
+<text x='137.44' y='152.64' style='font-size: 36.00px; font-weight: bold; font-family: "Arial";' textLength='112.00px' lengthAdjust='spacingAndGlyphs'>Genus</text>
+<circle cx='153.03' cy='189.36' r='9.70' style='stroke-width: 2.32; stroke: #FC8D62; fill: #FC8D62;' />
+<circle cx='153.03' cy='221.04' r='9.70' style='stroke-width: 2.32; stroke: #E5C494; fill: #E5C494;' />
+<circle cx='153.03' cy='252.72' r='9.70' style='stroke-width: 2.32; stroke: #FFD92F; fill: #FFD92F;' />
+<circle cx='153.03' cy='284.40' r='9.70' style='stroke-width: 2.32; stroke: #66C2A5; fill: #66C2A5;' />
+<circle cx='153.03' cy='316.08' r='9.70' style='stroke-width: 2.32; stroke: #BEBEBE; fill: #BEBEBE;' />
+<text x='186.56' y='202.04' style='font-size: 36.00px; font-style: italic; font-family: "Arial";' textLength='256.11px' lengthAdjust='spacingAndGlyphs'>Acidithiobacillus</text>
+<text x='186.56' y='230.57' style='font-size: 36.00px; font-style: italic; font-family: "Arial";' textLength='244.08px' lengthAdjust='spacingAndGlyphs'>Cuniculiplasma</text>
+<text x='186.56' y='262.03' style='font-size: 36.00px; font-style: italic; font-family: "Arial";' textLength='202.02px' lengthAdjust='spacingAndGlyphs'>Ferroplasma</text>
+<text x='186.56' y='293.50' style='font-size: 36.00px; font-style: italic; font-family: "Arial";' textLength='244.03px' lengthAdjust='spacingAndGlyphs'>Mycobacterium</text>
+<text x='186.56' y='328.97' style='font-size: 36.00px; font-family: "Arial";' textLength='108.02px' lengthAdjust='spacingAndGlyphs'>Others</text>
+<text x='137.44' y='367.85' style='font-size: 36.00px; font-weight: bold; font-family: "Arial";' textLength='105.98px' lengthAdjust='spacingAndGlyphs'>Origin</text>
+<circle cx='153.03' cy='404.57' r='9.70' style='stroke-width: 2.32; stroke: #BEBEBE; fill: #FFFFFF;' />
+<polygon points='153.03,448.40 165.19,436.25 153.03,424.10 140.88,436.25 ' style='stroke-width: 2.32; stroke: #BEBEBE; fill: #FFFFFF;' />
+<text x='186.56' y='417.46' style='font-size: 36.00px; font-family: "Arial";' textLength='292.09px' lengthAdjust='spacingAndGlyphs'>Both cave biofilms</text>
+<text x='186.56' y='449.14' style='font-size: 36.00px; font-family: "Arial";' textLength='174.08px' lengthAdjust='spacingAndGlyphs'>Not in both</text>
+</g>
+</g>
+</svg>

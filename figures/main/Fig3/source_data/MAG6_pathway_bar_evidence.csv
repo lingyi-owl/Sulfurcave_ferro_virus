@@ -1,0 +1,5 @@
+"source","KO","enzyme","LFQ","note"
+"KEGG bar: Peroxisome (ko04146)","K04564","Fe-Mn superoxide dismutase",3.2274e+10,"oxidative-stress"
+"KEGG bar: Peroxisome (ko04146)","K00031","isocitrate dehydrogenase",3516200000,"metabolic (cross-annotation)"
+"KEGG bar: Peroxisome (ko04146)","K00830","glyoxylate aminotransferase",900790000,"metabolic (cross-annotation)"
+"KEGG bar: FoxO signaling (ko04068)","K04564","Fe-Mn superoxide dismutase",3.2274e+10,"same SOD as above (double-counted)"

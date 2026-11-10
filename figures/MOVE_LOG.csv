@@ -1,0 +1,77 @@
+old_path,new_path,note
+SupplementaryFigures/Fig2b_size_adjusted.png,figures/main/Fig2/drafts/Fig2b_size_adjusted.png,Fig 2b variant (genome-size-adjusted); caption describes unadjusted means
+SupplementaryFigures/Fig2b_size_adjusted.svg,figures/main/Fig2/drafts/Fig2b_size_adjusted.svg,Fig 2b variant (genome-size-adjusted); caption describes unadjusted means
+fig3_out/fig3a.pdf,figures/main/Fig3/panels/Fig3a_3D_LFQ_scatter.pdf,panel a in old layout = Fig 3a in manuscript
+fig3_out/fig3a.svg,figures/main/Fig3/panels/Fig3a_3D_LFQ_scatter.svg,panel a in old layout = Fig 3a in manuscript
+fig3_out/fig3a_preview.png,figures/main/Fig3/drafts/Fig3a_3D_LFQ_scatter_preview.png,preview
+fig3_out/fig3b.pdf,figures/main/Fig3/panels/Fig3c_protein_groups_per_MAG.pdf,panel b in old layout = Fig 3c in manuscript
+fig3_out/fig3b.svg,figures/main/Fig3/panels/Fig3c_protein_groups_per_MAG.svg,panel b in old layout = Fig 3c in manuscript
+fig3_out/fig3b_preview.png,figures/main/Fig3/drafts/Fig3c_protein_groups_per_MAG_preview.png,preview
+fig3_out/fig3c.pdf,figures/main/Fig3/panels/Fig3e_LFQ_vs_DNA_coverage.pdf,panel c in old layout = Fig 3e in manuscript
+fig3_out/fig3c.svg,figures/main/Fig3/panels/Fig3e_LFQ_vs_DNA_coverage.svg,panel c in old layout = Fig 3e in manuscript
+fig3_out/fig3c_matched.pdf,figures/main/Fig3/panels/Fig3e_LFQ_vs_DNA_coverage_matched.pdf,panel c in old layout = Fig 3e in manuscript
+fig3_out/fig3c_matched.svg,figures/main/Fig3/panels/Fig3e_LFQ_vs_DNA_coverage_matched.svg,panel c in old layout = Fig 3e in manuscript
+fig3_out/fig3c_preview.png,figures/main/Fig3/drafts/Fig3e_LFQ_vs_DNA_coverage_preview.png,preview
+fig3_out/fig3d.pdf,figures/main/Fig3/panels/Fig3b_pathways_Mmethanotrophicum.pdf,panel d in old layout = Fig 3b in manuscript
+fig3_out/fig3d.svg,figures/main/Fig3/panels/Fig3b_pathways_Mmethanotrophicum.svg,panel d in old layout = Fig 3b in manuscript
+fig3_out/fig3d_matched.pdf,figures/main/Fig3/panels/Fig3b_pathways_Mmethanotrophicum_matched.pdf,panel d in old layout = Fig 3b in manuscript
+fig3_out/fig3d_matched.svg,figures/main/Fig3/panels/Fig3b_pathways_Mmethanotrophicum_matched.svg,panel d in old layout = Fig 3b in manuscript
+fig3_out/fig3d_preview.png,figures/main/Fig3/drafts/Fig3b_pathways_Mmethanotrophicum_preview.png,preview
+fig3_out/fig3e.pdf,figures/main/Fig3/panels/Fig3d_pathways_Ferroplasma_c_MAG8.pdf,panel e in old layout = Fig 3d in manuscript
+fig3_out/fig3e.svg,figures/main/Fig3/panels/Fig3d_pathways_Ferroplasma_c_MAG8.svg,panel e in old layout = Fig 3d in manuscript
+fig3_out/fig3e_matched.pdf,figures/main/Fig3/panels/Fig3d_pathways_Ferroplasma_c_MAG8_matched.pdf,panel e in old layout = Fig 3d in manuscript
+fig3_out/fig3e_matched.svg,figures/main/Fig3/panels/Fig3d_pathways_Ferroplasma_c_MAG8_matched.svg,panel e in old layout = Fig 3d in manuscript
+fig3_out/fig3e_preview.png,figures/main/Fig3/drafts/Fig3d_pathways_Ferroplasma_c_MAG8_preview.png,preview
+fig3_out/fig3f.pdf,figures/main/Fig3/panels/Fig3f_pathways_Ferroplasma_MAG6.pdf,panel f in old layout = Fig 3f in manuscript
+fig3_out/fig3f.svg,figures/main/Fig3/panels/Fig3f_pathways_Ferroplasma_MAG6.svg,panel f in old layout = Fig 3f in manuscript
+fig3_out/fig3f_matched.pdf,figures/main/Fig3/panels/Fig3f_pathways_Ferroplasma_MAG6_matched.pdf,panel f in old layout = Fig 3f in manuscript
+fig3_out/fig3f_matched.svg,figures/main/Fig3/panels/Fig3f_pathways_Ferroplasma_MAG6_matched.svg,panel f in old layout = Fig 3f in manuscript
+fig3_out/fig3f_preview.png,figures/main/Fig3/drafts/Fig3f_pathways_Ferroplasma_MAG6_preview.png,preview
+fig3_out/fig3_legend_nproteins.pdf,figures/main/Fig3/panels/Fig3_legend_nproteins.pdf,legend
+fig3_out/fig3_legend_nproteins.svg,figures/main/Fig3/panels/Fig3_legend_nproteins.svg,legend
+fig3_out/fig3_legend_nproteins_preview.png,figures/main/Fig3/drafts/Fig3_legend_nproteins_preview.png,preview
+fig3_out/fig3_legend_origin_genus.pdf,figures/main/Fig3/panels/Fig3_legend_origin_genus.pdf,legend
+fig3_out/fig3_legend_origin_genus.svg,figures/main/Fig3/panels/Fig3_legend_origin_genus.svg,legend
+fig3_out/fig3_legend_origin_genus_preview.png,figures/main/Fig3/drafts/Fig3_legend_origin_genus_preview.png,preview
+fig3_out/Fig3_Arial36.pdf,figures/main/Fig3/drafts/Fig3_assembled_old_layout_Arial36.pdf,assembled Fig 3 in older panel layout
+fig3_out/Fig3_Arial36.png,figures/main/Fig3/drafts/Fig3_assembled_old_layout_Arial36.png,assembled Fig 3 in older panel layout
+fig3_out/Fig3_Arial36.svg,figures/main/Fig3/drafts/Fig3_assembled_old_layout_Arial36.svg,assembled Fig 3 in older panel layout
+fig3_out/Fig3_Arial36_preview.png,figures/main/Fig3/drafts/Fig3_assembled_old_layout_Arial36_preview.png,preview
+fig3_out/_test_embed.pdf,figures/main/Fig3/drafts/_test_embed_Fig3b.pdf,font-embedding test of the M. methanotrophicum pathway panel
+fig3_out/orig_panelc.png,figures/main/Fig3/drafts/Fig3e_orig_panelc_old_layout.png,earlier version of LFQ-vs-coverage panel
+metagenomics/KAIJU_reads/proteomics_3d_scatter.pdf,figures/main/Fig3/drafts/Fig3a_3D_scatter_early.pdf,early version of Fig 3a
+fig3_out/MAG6_pathway_bar_evidence.csv,figures/main/Fig3/source_data/MAG6_pathway_bar_evidence.csv,data table found in fig3_out
+fig3_out/MAG6_redox_enzyme_complement.csv,figures/main/Fig3/source_data/MAG6_redox_enzyme_complement.csv,data table found in fig3_out
+fig_ferro_ribo_crispr.png,figures/main/Fig4/drafts/fig_ferro_ribo_crispr.png,early Ferroplasma c. CRISPR/ribosomal LFQ boxplot (cf. Fig 4d)
+figures/Fig6_acd.svg,figures/main/Fig6/panels/Fig6_acd.svg,"Fig 6 panels a, c, d"
+plotting/fig6_paired_d_radar.pdf,figures/main/Fig6/panels/Fig6b_aa_radar.pdf,Fig 6b radar
+plotting/fig6_paired_d_radar.png,figures/main/Fig6/panels/Fig6b_aa_radar.png,Fig 6b radar
+plotting/fig6_paired_d_radar.svg,figures/main/Fig6/panels/Fig6b_aa_radar.svg,Fig 6b radar
+SupplementaryPlotting/rTCA_heatmap_MAGid_complexheatmap.pdf,figures/supplementary/FigS04/FigS04_rTCA_heatmap.pdf,matches manuscript layout
+SupplementaryPlotting/methane_general_MAGid_complexheatmap.pdf,figures/supplementary/FigS05/FigS05_methane_heatmap.pdf,
+SupplementaryPlotting/rTCA_methane_combined.pdf,figures/supplementary/FigS04_S05_combined/FigS04-S05_rTCA_methane_combined.pdf,S4 + S5 on one page
+SupplementaryPlotting/rTCA_heatmap_MAGid_complexheatmap.png,figures/supplementary/FigS04/FigS04_rTCA_heatmap.png,matches manuscript layout
+SupplementaryPlotting/methane_general_MAGid_complexheatmap.png,figures/supplementary/FigS05/FigS05_methane_heatmap.png,
+SupplementaryPlotting/rTCA_methane_combined.png,figures/supplementary/FigS04_S05_combined/FigS04-S05_rTCA_methane_combined.png,S4 + S5 on one page
+SupplementaryPlotting/rTCA_heatmap_MAGid_complexheatmap.svg,figures/supplementary/FigS04/FigS04_rTCA_heatmap.svg,matches manuscript layout
+SupplementaryPlotting/methane_general_MAGid_complexheatmap.svg,figures/supplementary/FigS05/FigS05_methane_heatmap.svg,
+SupplementaryPlotting/rTCA_methane_combined.svg,figures/supplementary/FigS04_S05_combined/FigS04-S05_rTCA_methane_combined.svg,S4 + S5 on one page
+SupplementaryPlotting/rTCA_heatmap_MAGid.pdf,figures/supplementary/FigS04/drafts/FigS04_rTCA_heatmap_ggplot.pdf,earlier ggplot2 version
+SupplementaryPlotting/rTCA_heatmap_MAGid.png,figures/supplementary/FigS04/drafts/FigS04_rTCA_heatmap_ggplot.png,earlier ggplot2 version
+GrowthRate/reproduced_allocation_R/FigS15_GrowthRates.svg,figures/supplementary/FigS06/FigS06_proteome_allocation.svg,newer version (robust protein-group LFQ label)
+GrowthRate/reproduced_allocation_R/FigS15_GrowthRates.png,figures/supplementary/FigS06/FigS06_proteome_allocation.png,newer version (robust protein-group LFQ label)
+SupplementaryFigures/FigS15_GrowthRates.svg,figures/supplementary/FigS06/drafts/FigS06_proteome_allocation_old_ylabel.svg,older y-axis label
+plotting/allocation_split_by_sample.pdf,figures/supplementary/FigS06/drafts/allocation_split_by_sample.pdf,precursor of S6
+plotting/ribosomal_allocation.pdf,figures/supplementary/FigS06/drafts/ribosomal_allocation.pdf,precursor of S6
+plotting/ribosome_growth_state.pdf,figures/supplementary/FigS06/drafts/ribosome_growth_state.pdf,precursor of S6
+plotting/allocation_split_by_sample.png,figures/supplementary/FigS06/drafts/allocation_split_by_sample.png,precursor of S6
+plotting/ribosomal_allocation.png,figures/supplementary/FigS06/drafts/ribosomal_allocation.png,precursor of S6
+plotting/ribosome_growth_state.png,figures/supplementary/FigS06/drafts/ribosome_growth_state.png,precursor of S6
+allocation_split_by_sample.pdf,figures/supplementary/FigS06/drafts/allocation_split_by_sample_rootcopy.pdf,top-level copy; differs from plotting/ copy
+SupplementaryFigures/FigS9_physiochemical_features_paired.svg,figures/supplementary/FigS10/FigS10_physicochemical_features_paired.svg,file was numbered S9
+SupplementaryFigures/FigS10_aa_percentage_radar_paired.pdf,figures/supplementary/FigS11/FigS11_aa_composition_radar.pdf,file was numbered S10
+SupplementaryFigures/FigS10_aa_percentage_radar_paired.svg,figures/supplementary/FigS11/FigS11_aa_composition_radar.svg,file was numbered S10
+SupplementaryFigures/FigS11_general_features_heatmap.svg,figures/supplementary/FigS12/FigS12_physicochemical_effect_size_heatmap.svg,file was numbered S11
+SupplementaryFigures/FigS12_aa_heatmap.svg,figures/supplementary/FigS13/FigS13_aa_effect_size_heatmap.svg,file was numbered S12
+SupplementaryFigures/myco_tm_pI_paired_violin.svg,figures/supplementary/FigS14/FigS14_myco_TM_pI_paired_violin.svg,
+metagenomics/KAIJU_reads/protein_property_violin_plots.pdf,figures/unassigned/protein_property_violin_plots.pdf,no matching manuscript figure
