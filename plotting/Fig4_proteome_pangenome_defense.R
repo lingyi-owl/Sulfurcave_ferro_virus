@@ -17,15 +17,12 @@
 # In THIS extract everything is shifted down by the length of this header.
 #
 # CAVEATS for re-running:
-#   * Input paths are the original author's absolute paths. Several point
-#     INSIDE this repo (proteomics/, pangenomics/, metagenomics/) and will
-#     work if you run from the repo root; others are hard-coded to
-#     "/Users/wu000058/.../Sulfurcave_ferro_virus_git/..." and
-#     "~/Desktop/Projects/Mycobacterium_sulfur_cave/Defencefinder/*.tsv".
+#   * Paths are built from REPO (repository root) and EXTERNAL (inputs not
+#     shipped in the repo; default <repo>/external_data). See the README.
 #   * The DefenseFinder TSVs (myco_/Ferr_c_/MAG6_defense_finder_systems.tsv,
-#     lines building panels d-f) are NOT in the repo tree under those paths
-#     and must be supplied / repointed.
-#   * The final ggsave() writes to the author's Desktop path -> change it.
+#     lines building panels d-f) are read from EXTERNAL/Defencefinder/;
+#     the repo copies live in metagenomics/defencefinder/ under other names.
+#   * The final ggsave() calls are commented out; uncomment to write to figures/.
 #   * pp1/pp2/pp3 are each defined TWICE: first as geom_point scatters
 #     (Figure-3 exploratory, later overwritten), then reassigned as the
 #     geom_beeswarm versions that actually appear in Figure 4.
@@ -35,12 +32,16 @@
 #   plus (used by interleaved prep) plotly, scatterplot3d, KEGGREST, arules.
 # =====================================================================
 
-setwd('/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/')
+# ---- Paths (see README, "Running the scripts") ----
+REPO     <- Sys.getenv("SULFURCAVE_REPO", unset = here::here())  # repository root
+EXTERNAL <- Sys.getenv("SULFURCAVE_EXTERNAL", unset = file.path(REPO, "external_data"))  # inputs not shipped in the repo
+
+setwd(REPO)
 
 ################ combine proteomics
 # metaproteomics were mapped against 92103 proteins from MAGs and virous 
-ProteinGroups<-readxl::read_xlsx("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/proteomics/proteinGroups.xlsx",sheet = 2)
-ids<-readxl::read_xlsx("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/proteomics/proteinGroups.xlsx",sheet = 1)
+ProteinGroups<-readxl::read_xlsx(file.path(REPO, "proteomics/proteinGroups.xlsx"),sheet = 2)
+ids<-readxl::read_xlsx(file.path(REPO, "proteomics/proteinGroups.xlsx"),sheet = 1)
 data_proteomics<-as.data.frame(ProteinGroups[,1:2])
 data_proteomics$LFQ_intensity_Cave_Biofilm_1 <-as.numeric(ProteinGroups$`LFQ intensity cave_wcl_1`)
 data_proteomics$LFQ_intensity_Cave_Biofilm_2 <-as.numeric(ProteinGroups$`LFQ intensity cave_wcl_2`)
@@ -63,7 +64,7 @@ length(grep(";",data_proteomics$`Majority protein IDs`))
 View(data_proteomics_tax)
 colors_pB<-c('#a6d854',"#fb8072",'#8da0cb','#66c2a5',"grey")
 
-info_table_DNA <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/metagenomics/info_table_DNA.csv", sep = ";")
+info_table_DNA <- read.csv(file.path(REPO, "metagenomics/info_table_DNA.csv"), sep = ";")
 info_table_DNA$Alternative_ID2<-gsub("_","",info_table_DNA$Alternative_ID2)
 data_proteomics$ID<-unlist(lapply(strsplit(data_proteomics$`Protein IDs`,"_"),function(x) x[1]))
 data_proteomics_tax<-merge(data_proteomics,info_table_DNA,by.x = "ID",by.y = "Alternative_ID2")
@@ -297,7 +298,7 @@ library(ggbeeswarm)
 ggplot(Ferr_pan_only_prot,aes(num_genomes_gene_cluster_has_hits,log10_LFQ_intensity_Cave_Biofilm))+geom_beeswarm()
 Ferr_pan_only_prot$gene_cluster_perc<-Ferr_pan_only_prot$num_genomes_gene_cluster_has_hits/13*100
 
-#write.csv(Ferr_pan_only_prot,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/Combined_data/Ferr_pan_only_prot.csv")
+#write.csv(Ferr_pan_only_prot,file.path(EXTERNAL, "METAPROTEOMICS/Combined_data/Ferr_pan_only_prot.csv"))
 methane_metabolism<-names(pw_info[[1]][[1]]$ORTHOLOGY)
 sulfor_metabolism<-names(pw_info[[2]][[1]]$ORTHOLOGY)
 co2_fix_photo<-names(pw_info[[3]][[1]]$ORTHOLOGY)
@@ -371,7 +372,7 @@ MAG6_pan2_only_prot$LFQ_intensity_Cave_Biofilm<-rowMeans(MAG6_pan2_only_prot[,c(
 # MAG6_pan2_only_prot$LFQ_intensity_Cave_Biofilm<- rowMeans(MAG6_pan2_only_prot[,30:31],na.rm = T)
 #MAG6_pan2_only_prot_reduced<-MAG6_pan2_only_prot[apply(MAG6_pan2_only_prot[,33:34], 1, function(x) ( all(x>0))),]
 library(ggbeeswarm)
-#write.csv(MAG6_pan2_only_prot,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/METAPROTEOMICS/Combined_data/MAG6_pan2_only_prot.csv")
+#write.csv(MAG6_pan2_only_prot,file.path(EXTERNAL, "METAPROTEOMICS/Combined_data/MAG6_pan2_only_prot.csv"))
 
 ggplot(MAG6_pan2_only_prot,aes(num_genomes_gene_cluster_has_hits,log10_LFQ_intensity_Cave_Biofilm))+geom_beeswarm()
 MAG6_pan2_only_prot$gene_cluster_perc<-MAG6_pan2_only_prot$num_genomes_gene_cluster_has_hits/13*100
@@ -529,7 +530,7 @@ pp1<-ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,num_genomes_gene_clus
 pp1 
 
 # write.table(data_temp,
-#       "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/fig4a_myco_data.csv",
+#       file.path(EXTERNAL, "figures/Fig4/fig4a_myco_data.csv"),
 #       sep = ',',
 #       quote = F,
 #       row.names = F)
@@ -591,7 +592,7 @@ pp2<-ggplot(data_temp,aes(log10_LFQ_intensity_Cave_Biofilm,num_genomes_gene_clus
 pp2 
 
 # write.table(data_temp,
-#             "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/ferro_metaproteomics_data.csv",
+#             file.path(EXTERNAL, "figures/Fig4/ferro_metaproteomics_data.csv"),
 #             sep = ',',
 #             quote = F,
 #             row.names = F)
@@ -722,11 +723,11 @@ pp_final<-pp1+theme(legend.position="none")+pp2+pp3+theme(legend.position="none"
   plot_annotation(tag_levels = 'a')
 
 pp_final
-# ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure4_abc.pdf",pp_final,width = 20,height = 8)
+# ggsave(file.path(REPO, "figures/main/Fig4/drafts", "Figure4_abc.pdf"),pp_final,width = 20,height = 8)
 ###################################
 #focus on defence 
 ##################
-setwd("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git")
+setwd(REPO)
 myco_defense_finder_systems <- read.delim2("metagenomics/defencefinder/Myco/defense_finder_systems.tsv")
 pall<-unlist(strsplit(myco_defense_finder_systems$protein_in_syst,","))
 Myco_pan_only_prot[Myco_pan_only_prot$matchIDs%in%pall,]
@@ -775,7 +776,7 @@ myco<-ggplot(df_melted, aes(x = system, y = value)) +
        fill = "Functional category")+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+theme(text = element_text(size = 18))
 myco
 write.table(data_myco_def,
-            "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/myco_melted_df.csv",
+            file.path(EXTERNAL, "figures/Fig4/myco_melted_df.csv"),
             sep = ',',
             quote = F,
             row.names = F)
@@ -806,7 +807,7 @@ df_melted$system<-gsub("Class","C",df_melted$system)
 df_melted$system<-gsub("Subtype","S",df_melted$system)
 
 write.table(df_melted,
-            "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/ferro_c_melted_df.csv",
+            file.path(EXTERNAL, "figures/Fig4/ferro_c_melted_df.csv"),
             sep = ',',
             quote = F,
             row.names = F
@@ -838,7 +839,7 @@ library(scales)
 #                                   Sample 2 -> LFQ_intensity_Cave_Biofilm_2)
 #   Sample = "Biofilm 1" / "Biofilm 2"
 #   system = "CAS C1-S-I-D" / "Ribosomal" / "RM Type III"
-df_melted <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/ferroplasma_c_viral_defense_metaproteomics.csv", stringsAsFactors = FALSE)
+df_melted <- read.csv(file.path(EXTERNAL, "figures/Fig4/ferroplasma_c_viral_defense_metaproteomics.csv"), stringsAsFactors = FALSE)
 df_melted$system <- factor(df_melted$system,
                            levels = c("CAS C1-S-I-D", "Ribosomal", "RM Type III"))
 
@@ -940,7 +941,7 @@ MAG6_ribo_crisp<-ggplot(df_melted, aes(x = system, y = value)) +
 MAG6_ribo_crisp
 
 write.table(df_melted,
-            "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/Fig4/df_melted.csv",
+            file.path(EXTERNAL, "figures/Fig4/df_melted.csv"),
             sep = ",",
             quote = F,
             row.names = F)
@@ -952,4 +953,4 @@ write.table(df_melted,
 # 
 # figure4 <- (pp1+theme(legend.position="none")+pp2+pp3+theme(legend.position="none"))/(myco+theme(legend.position="none")+Ferroplasma_ribo_crisp+theme(legend.position="none")+MAG6_ribo_crisp+theme(legend.position="none"))+
 #   plot_annotation(tag_levels = 'a')
-# ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/Figure4.pdf",figure4,width = 18,height = 12)
+# ggsave(file.path(REPO, "figures/main/Fig4/drafts", "Figure4.pdf"),figure4,width = 18,height = 12)

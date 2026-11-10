@@ -1,0 +1,56 @@
+lineage,category,frac,n_detected,n_robust,sample
+Mycobacterium,Aminoacyl-tRNA synthetases,8.747907077962497e-4,631,599,Biofilm_1
+Mycobacterium,Cell division,0.004229083697082359,631,599,Biofilm_1
+Mycobacterium,DNA replication,0.004094424418052357,631,599,Biofilm_1
+Mycobacterium,Ribosomal proteins,0.03016001390212062,631,599,Biofilm_1
+Mycobacterium,Ribosome biogenesis,3.225462832743301e-4,631,599,Biofilm_1
+Mycobacterium,Translation factors,0.021070956583667207,631,599,Biofilm_1
+SC_MAG_00006,Aminoacyl-tRNA synthetases,0.015573979642515536,866,847,Biofilm_1
+SC_MAG_00006,Cell division,2.8615438634448467e-4,866,847,Biofilm_1
+SC_MAG_00006,DNA replication,0.05419431807517211,866,847,Biofilm_1
+SC_MAG_00006,Ribosomal proteins,0.04603482916014709,866,847,Biofilm_1
+SC_MAG_00006,Ribosome biogenesis,0.011834078304156377,866,847,Biofilm_1
+SC_MAG_00006,Translation factors,0.03662900974991721,866,847,Biofilm_1
+SC_MAG_00008,Aminoacyl-tRNA synthetases,0.00365962860265919,308,294,Biofilm_1
+SC_MAG_00008,Cell division,3.6361615275830767e-4,308,294,Biofilm_1
+SC_MAG_00008,DNA replication,0.023356532801412967,308,294,Biofilm_1
+SC_MAG_00008,Ribosomal proteins,0.030526325323650075,308,294,Biofilm_1
+SC_MAG_00008,Ribosome biogenesis,0.004722090134153446,308,294,Biofilm_1
+SC_MAG_00008,Translation factors,0.017836294507675175,308,294,Biofilm_1
+Mycobacterium,CRISPR-Cas,0,631,599,Biofilm_1
+SC_MAG_00006,CRISPR-Cas,0.024260682770140853,866,847,Biofilm_1
+SC_MAG_00008,CRISPR-Cas,0.13193611603439367,308,294,Biofilm_1
+Mycobacterium,Aminoacyl-tRNA synthetases,0.0011794806158133893,720,704,Biofilm_2
+Mycobacterium,Cell division,0.0035022217434255323,720,704,Biofilm_2
+Mycobacterium,DNA replication,0.0072007874695681545,720,704,Biofilm_2
+Mycobacterium,Ribosomal proteins,0.01519166472656834,720,704,Biofilm_2
+Mycobacterium,Ribosome biogenesis,2.2197875553722207e-4,720,704,Biofilm_2
+Mycobacterium,Translation factors,0.01504632183273666,720,704,Biofilm_2
+SC_MAG_00006,Aminoacyl-tRNA synthetases,0.014279168380542995,964,951,Biofilm_2
+SC_MAG_00006,Cell division,4.055179117300112e-4,964,951,Biofilm_2
+SC_MAG_00006,DNA replication,0.04099490914356093,964,951,Biofilm_2
+SC_MAG_00006,Ribosomal proteins,0.05111666457652849,964,951,Biofilm_2
+SC_MAG_00006,Ribosome biogenesis,0.01222564134477975,964,951,Biofilm_2
+SC_MAG_00006,Translation factors,0.03445516829990387,964,951,Biofilm_2
+SC_MAG_00008,Aminoacyl-tRNA synthetases,0.0020763916170397985,353,333,Biofilm_2
+SC_MAG_00008,Cell division,3.841364411626357e-4,353,333,Biofilm_2
+SC_MAG_00008,DNA replication,0.018721076349173565,353,333,Biofilm_2
+SC_MAG_00008,Ribosomal proteins,0.022274845835444222,353,333,Biofilm_2
+SC_MAG_00008,Ribosome biogenesis,0.00314171208483558,353,333,Biofilm_2
+SC_MAG_00008,Translation factors,0.017673007668931175,353,333,Biofilm_2
+Mycobacterium,CRISPR-Cas,0,720,704,Biofilm_2
+SC_MAG_00006,CRISPR-Cas,0.016044109984121164,964,951,Biofilm_2
+SC_MAG_00008,CRISPR-Cas,0.2517439417288866,353,333,Biofilm_2
+Mycobacterium,Aminoacyl-tRNA synthetases,6.907971228608633e-4,468,465,Culture
+Mycobacterium,Cell division,0.03249074647306681,468,465,Culture
+Mycobacterium,DNA replication,0.010049818290745027,468,465,Culture
+Mycobacterium,Ribosomal proteins,0.0528886814856191,468,465,Culture
+Mycobacterium,Ribosome biogenesis,4.4333132405480533e-4,468,465,Culture
+Mycobacterium,Translation factors,0.009535008067460573,468,465,Culture
+SC_MAG_00006,DNA replication,0.21334976095790031,59,16,Culture
+SC_MAG_00008,DNA replication,0.011447280045382468,56,50,Culture
+SC_MAG_00008,Ribosomal proteins,0.0025474547028169073,56,50,Culture
+SC_MAG_00008,Translation factors,0.04222977743207258,56,50,Culture
+Mycobacterium,CRISPR-Cas,0,468,465,Culture
+SC_MAG_00006,CRISPR-Cas,0,59,16,Culture
+SC_MAG_00008,CRISPR-Cas,0,56,50,Culture

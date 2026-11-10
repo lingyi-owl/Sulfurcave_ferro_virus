@@ -1,10 +1,14 @@
 #Figure2
 #pan-genome ferroplasma
+# ---- Paths (see README, "Running the scripts") ----
+REPO     <- Sys.getenv("SULFURCAVE_REPO", unset = here::here())  # repository root
+EXTERNAL <- Sys.getenv("SULFURCAVE_EXTERNAL", unset = file.path(REPO, "external_data"))  # inputs not shipped in the repo
+
 library(ggplot2)
 
-Ferroplasma <- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz")
-Myco<- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/MYCO_Pan_gene_clusters_summary.txt.gz")
-CAVE <- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/CAVE_R_Pan_gene_clusters_summary.txt.gz")
+Ferroplasma <- read.delim(file.path(REPO, "pangenomics/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz"))
+Myco<- read.delim(file.path(REPO, "pangenomics/MYCO_Pan_gene_clusters_summary.txt.gz"))
+CAVE <- read.delim(file.path(REPO, "pangenomics/CAVE_R_Pan_gene_clusters_summary.txt.gz"))
 hist(Ferroplasma$num_genomes_gene_cluster_has_hits/13*100)
 hist(Myco$num_genomes_gene_cluster_has_hits/69*100)
 hist(CAVE$num_genomes_gene_cluster_has_hits/21*100)
@@ -71,7 +75,7 @@ ggplot(xx, aes(x = gene_cluster_freq_perc, fill = Pan_genome)) +
   geom_histogram(binwidth = 3, alpha = 0.7) +labs(x="Gene cluster frequencies (%)",y="Pan-genomes",fill= "")+
   theme(text = element_text(size = 24))+ facet_wrap(~ Pan_genome, ncol = 1) +scale_fill_manual(values=colors_r) +theme(legend.position = "none")
 
-ferroplasma_table<- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/ferroplasma_table.txt")
+ferroplasma_table<- read.delim(file.path(REPO, "pangenomics/ferroplasma_table.txt"))
 ferroplasma_table$groups<-rep("NA",nrow(ferroplasma_table))
 Group1<-c("SMAG00006","S25910037","S259100318","S259100328")
 Group2<-c("S259100341","SFerroplasmacircular" , "S33314612","S749695")
@@ -82,10 +86,10 @@ ferroplasma_table$groups[ferroplasma_table$layer%in%Group3]<-"Group3"
 ferroplasma_tablef<-ferroplasma_table[!ferroplasma_table$groups=="NA",]
 
 ####### perform anivo functional enrichment
-Ferro_cave_un_enriched.KEGG_Module <- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/Ferro_cave_un_enriched-KEGG_Module.txt")
+Ferro_cave_un_enriched.KEGG_Module <- read.delim(file.path(REPO, "pangenomics/Ferro_cave_un_enriched-KEGG_Module.txt"))
 Ferro_cave_un_enriched.KEGG_Module$category <- "KEGG_Module"
 colnames(Ferro_cave_un_enriched.KEGG_Module)[1] <- "Function"
-Ferro_cave_un_enriched.KOfam <- read.delim("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/Ferro_cave_un_enriched-KOfam.txt")
+Ferro_cave_un_enriched.KOfam <- read.delim(file.path(REPO, "pangenomics/Ferro_cave_un_enriched-KOfam.txt"))
 Ferro_cave_un_enriched.KOfam$category <- "KOfam"
 colnames(Ferro_cave_un_enriched.KOfam)[1] <- "Function"
 data_enrichment <- rbind(Ferro_cave_un_enriched.KEGG_Module[,c(1:7,9,14)],Ferro_cave_un_enriched.KOfam[,c(1:7,10,14)])
@@ -132,7 +136,7 @@ data_table_sig<-data_enrichment[data_enrichment$Significance=="Yes",]
 data_table_sig$enrichment_score <- round(data_table_sig$enrichment_score,digits = 3)
 data_table_sig$unadjusted_p_value <- round(data_table_sig$unadjusted_p_value,digits = 3)
 data_table_sig$adjusted_q_value <- round(data_table_sig$adjusted_q_value,digits = 3)
-#write.csv(data_table_sig,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/figure2b_sig_KOs.csv")
+#write.csv(data_table_sig,file.path(EXTERNAL, "PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/figure2b_sig_KOs.csv"))
 #cave function plots:
 ##################################################################
 # read all eggnog and make a matrix of 1 and 0 for genomes and KOs
@@ -169,10 +173,10 @@ for (i in 1:length(OG_list)){
 colnames(OG_matrix)<-OG_u
 rownames(OG_matrix)<-unique(CAVE$genome_name)
 OG_matrix<-as.matrix(OG_matrix)
-#write.csv(OG_matrix,"/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/OG_matrix_cave.csv")
-OG_matrix <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/OG_matrix_cave.csv", row.names = "X")
-#write.csv(matrix,"/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/KO_matrix_cave.csv")
-KO_matrix <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/KO_matrix_cave.csv", row.names = "X")
+#write.csv(OG_matrix,file.path(REPO, "pangenomics/OG_matrix_cave.csv"))
+OG_matrix <- read.csv(file.path(REPO, "pangenomics/OG_matrix_cave.csv"), row.names = "X")
+#write.csv(matrix,file.path(EXTERNAL, "PANGENOMES/KO_matrix_cave.csv"))
+KO_matrix <- read.csv(file.path(REPO, "pangenomics/KO_matrix_cave.csv"), row.names = "X")
 
 ########
 library(UpSetR)
@@ -195,7 +199,7 @@ data_upset <- upset(
 data_upset
 library(ggplotify)
 f2c <- as.ggplot(data_upset)
-#ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/figure2c.pdf",f2c, width =16, height = 5)
+#ggsave(file.path(REPO, "figures/main/Fig2/drafts", "figure2c.pdf"),f2c, width =16, height = 5)
 ###########
 #run figure 1 to get mean_cov_all
 ##########
@@ -359,7 +363,7 @@ result_SD_pw$SD_unique_KOs[is.na(result_SD_pw$SD_unique_KOs)] <- 0
 
 # Optionally, save or read CSV (commented out or read from previous export)
 # write.csv(result_SD_pw,"/path/to/result_SD_pw.csv")
-result_SD_pw <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/result_SD_pw.csv")
+result_SD_pw <- read.csv(file.path(REPO, "pangenomics/result_SD_pw.csv"))
 
 # -------------------------------
 # STEP 7: Plot data with ggplot2 + beeswarm + labels
@@ -390,7 +394,7 @@ f2c <- ggplot(result_SD_pw, aes(x = SD_unique_KOs, y = class)) +
 #################################
 # new plot with new legen 2026-05-18
 # 1. Load the data
-result_SD_pw <- read.csv("/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/Sulfurcave_ferro_virus_git/pangenomics/result_SD_pw.csv")
+result_SD_pw <- read.csv(file.path(REPO, "pangenomics/result_SD_pw.csv"))
 # Step 1: convert logical to factor directly using logical values
 result_SD_pw$is_ferroplasma <- factor(result_SD_pw$is_ferroplasma, 
                                       levels = c(TRUE, FALSE),
@@ -416,7 +420,7 @@ f2c
 library(patchwork)
 patchwork2 <- (f2a  + f2b) / (f2a  + f2b)
 patchwork2 + plot_annotation(tag_levels = 'a')
-ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/figure2.pdf", width =24, height = 10)
+ggsave(file.path(REPO, "figures/main/Fig2/drafts", "figure2.pdf"), width =24, height = 10)
 
 
 ##########
@@ -483,7 +487,7 @@ ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/fi
 # colnames(pw_matrix)<-pws_names$ID
 # 
 # pw_matrix_comp<-sweep(pw_matrix,2,pws_names$`Number-KOs`,FUN="/")*100
-# write.csv(pw_matrix_comp,"/home/chrats/Desktop/Projects/yeast_bacteria_interactions/chunxu/ANNOATIONS_F/BAC/PW_comp_matrix.csv")
+# write.csv(pw_matrix_comp,file.path(REPO, "pangenomics", "PW_comp_matrix.csv"))
 # #calculate pathway completeness
 # 
 # sd_all<-apply(pw_matrix_comp, 2, function(x) sd(x))
@@ -518,9 +522,9 @@ ggsave("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/FIGURES/FINAL/fi
 
 library(tidyverse)
 
-Ferroplasma <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferroplasma_Pan_2/SUMMARY_few_classes/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz")
-Myco<- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/mycobacterium/MYCO-SUMMARY/MYCO_Pan_gene_clusters_summary.txt.gz")
-CAVE <- read.delim("/home/chrats/Desktop/Projects/Mycobacterium_sulfur_cave/PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/CAVE_R_Pan/CAVE_R-SUMMARY/CAVE_R_Pan_gene_clusters_summary.txt.gz")
+Ferroplasma <- read.delim(file.path(EXTERNAL, "PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/Ferroplasma/Ferroplasma_Pan_2/SUMMARY_few_classes/Ferroplasma_Pan_2_gene_clusters_summary.txt.gz"))
+Myco<- read.delim(file.path(EXTERNAL, "PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/mycobacterium/MYCO-SUMMARY/MYCO_Pan_gene_clusters_summary.txt.gz"))
+CAVE <- read.delim(file.path(EXTERNAL, "PANGENOMES/Thermoplasmatales_order/Genomes_selection_clean/cave/CAVE_R_Pan/CAVE_R-SUMMARY/CAVE_R_Pan_gene_clusters_summary.txt.gz"))
 
 CAVE_KOs<-unique(CAVE$KOfam_ACC)
 unique_CAVE_KEGG <- CAVE %>%

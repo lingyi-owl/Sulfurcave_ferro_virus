@@ -1,16 +1,26 @@
+# =============================================================================
+# Fig. S8 — virus class / host genus alluvial without MAGs
+# Figure numbering follows the manuscript (Cave_Ferro_Virus, Nov 2026).
+# Same code as Fig. 5a, with the without-MAGs host predictions.
+# =============================================================================
+
+# ---- Paths (see README, "Running the scripts") ----
+REPO     <- Sys.getenv("SULFURCAVE_REPO", unset = here::here())  # repository root
+EXTERNAL <- Sys.getenv("SULFURCAVE_EXTERNAL", unset = file.path(REPO, "external_data"))  # inputs not shipped in the repo
+
 library(ggplot2)
 library(ggalluvial)
 library(dplyr)
 library(tidyr)
 
 # --- 1. DATA LOADING & PREPARATION ---
-no_mags_file <- '/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/vcat_iphop_abundance_202602/vcat_iphop_abundance_no_mags.txt'
-with_mags_file <- '/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/vcat_iphop_abundance_202602/vcat_iphop_abundance_with_mags.txt'
+no_mags_file <- file.path(EXTERNAL, "vcat_iphop_abundance_202602/vcat_iphop_abundance_no_mags.txt")
+with_mags_file <- file.path(EXTERNAL, "vcat_iphop_abundance_202602/vcat_iphop_abundance_with_mags.txt")
   
 df_no_mags <- read.csv2(no_mags_file, sep = '\t')
 df_with_mags <- read.csv2(with_mags_file, sep = '\t')
 
-df <- df_no_mags
+df <- df_no_mags   # Fig. S8: without MAGs
 
 df <- df %>%
   mutate(across(starts_with("Sample"), ~ as.numeric(as.character(.x))))
@@ -107,7 +117,7 @@ p <- ggplot(lodes_all,
 p
 
 # ggsave(
-#   filename = "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/figures/virus_taxa_host_abundance_202602/no_mags_color_legend.svg", 
+#   filename = file.path(REPO, "figures", "no_mags_color_legend.svg"), 
 #   plot = p, 
 #   device = "svg", 
 #   width = 16, 

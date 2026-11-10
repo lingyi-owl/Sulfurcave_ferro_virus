@@ -11,11 +11,15 @@
 #         confidence interval, and the codon-usage diagnostics.
 # ------------------------------------------------------------------
 
+# ---- Paths (see README, "Running the scripts") ----
+REPO     <- Sys.getenv("SULFURCAVE_REPO", unset = here::here())  # repository root
+EXTERNAL <- Sys.getenv("SULFURCAVE_EXTERNAL", unset = file.path(REPO, "external_data"))  # inputs not shipped in the repo
+
 ## ---- 0. One-time install (uncomment to run once) -----------------
-if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
-BiocManager::install(c("Biostrings", "coRdon"))
-install.packages(c("matrixStats", "devtools"))
-devtools::install_github("jlw-ecoevo/gRodon2")   # v2: adds metagenome_v2 + eukaryote support
+# if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+# BiocManager::install(c("Biostrings", "coRdon"))
+# install.packages(c("matrixStats", "devtools"))
+# devtools::install_github("jlw-ecoevo/gRodon2")   # v2: adds metagenome_v2 + eukaryote support
 
 suppressPackageStartupMessages({
   library(gRodon)
@@ -26,7 +30,7 @@ suppressPackageStartupMessages({
 # CASE A — a single genome / MAG
 # ================================================================
 
-ffn_path <- "/Users/wu000058/Library/Mobile Documents/com~apple~CloudDocs/Projects/SulfurCave/sulfur_cave_data/complete_genomes/Ferroplasma_complete_genome/Ferroplasma_Prokka/PROKKA_04262022.ffn"           # <-- your Prokka .ffn file
+ffn_path <- file.path(EXTERNAL, "sulfur_cave_data/complete_genomes/Ferroplasma_complete_genome/Ferroplasma_Prokka/PROKKA_04262022.ffn")           # <-- your Prokka .ffn file
 
 genes <- readDNAStringSet(ffn_path)
 

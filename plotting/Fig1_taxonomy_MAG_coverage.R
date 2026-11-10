@@ -1,3 +1,13 @@
+# =============================================================================
+# Fig. 1 — taxonomy (a, b: Kaiju reads) and MAG coverage scatter (c)
+# Figure numbering follows the manuscript (Cave_Ferro_Virus, Nov 2026).
+# The Lab CH4-coloured coverage scatter is Fig. S1 (FigS01_MAG_coverage_LabCH4.R).
+# =============================================================================
+
+# ---- Paths (see README, "Running the scripts") ----
+REPO     <- Sys.getenv("SULFURCAVE_REPO", unset = here::here())  # repository root
+setwd(REPO)
+
 ##########################################
 # KAIJU plots
 ##########################################
@@ -102,6 +112,8 @@ kaiju_genus_ggplot <- ggplot(kaiju_genus_agg, aes(fill = taxon_final, y = percen
   theme(axis.text.x = element_text(angle = 45, vjust = 0.5))
 
 kaiju_genus_ggplot
+
+setwd(REPO)  # back to the repository root after the Kaiju section
 
 ##########################################
 # MAG plot
@@ -248,56 +260,6 @@ mag_plot <- ggplot(mean_cov_all, aes(log10_Sample_ERR10036468, log10_Sample_ERR1
 
 mag_plot
 
-# color the markers by abundance in the Lab CH4 sample
-# --- handle -Inf (from log10(0)) before plotting ---
-mean_cov_all$log10_Sample_ERR10036470[is.infinite(mean_cov_all$log10_Sample_ERR10036470)] <- NA
-
-mag_plot_color_abundance <- ggplot(mean_cov_all, aes(log10_Sample_ERR10036468, log10_Sample_ERR10036469)) +
-  annotate("path",
-           x = 1.3 + 0.6 * cos(seq(0, 2*pi, length.out = 100)),
-           y = -1.3 + 0.6 * sin(seq(0, 2*pi, length.out = 100)),
-           color = "blue", linetype = "dashed", linewidth = 1.0
-  ) +
-  geom_point(aes(fill = log10_Sample_ERR10036470, shape = MAG_quality),
-             color = mean_cov_all$border_color, size = 8, stroke = 1.5
-  ) +
-  geom_point(aes(color = in_culture), size = 3, alpha = 0) +
-  geom_text(aes(label = marker_label),
-            hjust = -0.3, vjust = 0.5, size = 6, family = "Arial", na.rm = TRUE,
-            nudge_x = mean_cov_all$nudge_x, nudge_y = mean_cov_all$nudge_y
-  ) +
-  annotate("segment",
-           x = 0, y = 0, xend = 4, yend = 4,
-           linetype = "dashed", color = "red",
-           linewidth = 1.0   # increase this value for thicker line
-  ) +
-  scale_fill_viridis_c(
-    name = "Lab CH4\nmean DNA coverage (log10)",
-    na.value = "grey80"
-  ) +
-  scale_color_manual(
-    values = c("TRUE" = "transparent", "FALSE" = "black"),
-    name = "MAG in Lab CH4", labels = c("TRUE" = "Absent", "FALSE" = "Present")
-  ) +
-  scale_shape_manual(values = c("High" = 21, "Low or medium" = 24), name = "MAG quality") +
-  labs(x = "Biofilm 1\n mean DNA coverage (log10)", y = "Biofilm 2\n  mean DNA coverage (log10)", title = "Metagenome-assembled genome") +
-  theme(
-    axis.text.x          = element_text(vjust = 0.5),
-    panel.grid.major     = element_line(color = "grey92", linewidth = 0.5),
-    panel.grid.minor     = element_line(color = "grey92", linewidth = 0.5),
-    panel.border         = element_rect(color = "grey85", fill = NA, linewidth = 0.8),
-    # legend.position      = "none"
-  ) +
-  scale_x_continuous(breaks = log_major, minor_breaks = log_minor, labels = log_labels) +
-  scale_y_continuous(breaks = log_major, minor_breaks = log_minor, labels = log_labels) +
-  coord_equal() +
-  guides(
-    shape = guide_legend(override.aes = list(fill = "white", color = "black", size = 6)),
-    size  = guide_legend(override.aes = list(fill = "grey50", color = "black", shape = 21)),
-    color = guide_legend(override.aes = list(shape = 21, fill = "grey50", size = 5, alpha = 1, stroke = 1.5))
-  )
-
-mag_plot_color_abundance
 
 library(cowplot)
 

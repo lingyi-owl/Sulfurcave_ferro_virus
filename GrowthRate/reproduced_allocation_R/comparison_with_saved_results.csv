@@ -1,0 +1,145 @@
+lineage,sample,reproduced,previous,reference,metric,difference,matches
+Mycobacterium,Biofilm_1,0.03016001390212062,0.03016001390212062,proteomics/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00006,Biofilm_1,0.04603482916014709,0.04603482916014709,proteomics/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00008,Biofilm_1,0.030526325323650075,0.03052632532365007,proteomics/allocation_by_sample.csv,Ribosomal proteins,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_2,0.01519166472656834,0.01519166472656834,proteomics/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00006,Biofilm_2,0.05111666457652849,0.05111666457652849,proteomics/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00008,Biofilm_2,0.022274845835444222,0.02227484583544422,proteomics/allocation_by_sample.csv,Ribosomal proteins,3.469446951953614e-18,TRUE
+Mycobacterium,Culture,0.0528886814856191,0.0528886814856191,proteomics/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00006,Culture,0,0,proteomics/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00008,Culture,0.0025474547028169073,0.0025474547028169,proteomics/allocation_by_sample.csv,Ribosomal proteins,7.37257477290143e-18,TRUE
+Mycobacterium,Biofilm_1,0.021070956583667207,0.0210709565836672,proteomics/allocation_by_sample.csv,Translation factors,6.938893903907228e-18,TRUE
+SC_MAG_00006,Biofilm_1,0.03662900974991721,0.03662900974991721,proteomics/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00008,Biofilm_1,0.017836294507675175,0.01783629450767517,proteomics/allocation_by_sample.csv,Translation factors,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_2,0.01504632183273666,0.01504632183273666,proteomics/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00006,Biofilm_2,0.03445516829990387,0.03445516829990387,proteomics/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00008,Biofilm_2,0.017673007668931175,0.01767300766893117,proteomics/allocation_by_sample.csv,Translation factors,6.938893903907228e-18,TRUE
+Mycobacterium,Culture,0.009535008067460573,0.00953500806746057,proteomics/allocation_by_sample.csv,Translation factors,3.469446951953614e-18,TRUE
+SC_MAG_00006,Culture,0,0,proteomics/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00008,Culture,0.04222977743207258,0.04222977743207258,proteomics/allocation_by_sample.csv,Translation factors,0,TRUE
+Mycobacterium,Biofilm_1,8.747907077962497e-4,8.747907077962497e-4,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+SC_MAG_00006,Biofilm_1,0.015573979642515536,0.01557397964251553,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,5.204170427930421e-18,TRUE
+SC_MAG_00008,Biofilm_1,0.00365962860265919,0.00365962860265919,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+Mycobacterium,Biofilm_2,0.0011794806158133893,0.00117948061581338,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,9.324138683375338e-18,TRUE
+SC_MAG_00006,Biofilm_2,0.014279168380542995,0.01427916838054299,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,5.204170427930421e-18,TRUE
+SC_MAG_00008,Biofilm_2,0.0020763916170397985,0.00207639161703979,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,8.673617379884035e-18,TRUE
+Mycobacterium,Culture,6.907971228608633e-4,6.907971228608633e-4,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+SC_MAG_00006,Culture,0,0,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+SC_MAG_00008,Culture,0,0,proteomics/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+Mycobacterium,Biofilm_1,3.225462832743301e-4,3.225462832743301e-4,proteomics/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00006,Biofilm_1,0.011834078304156377,0.01183407830415637,proteomics/allocation_by_sample.csv,Ribosome biogenesis,6.938893903907228e-18,TRUE
+SC_MAG_00008,Biofilm_1,0.004722090134153446,0.00472209013415344,proteomics/allocation_by_sample.csv,Ribosome biogenesis,6.071532165918825e-18,TRUE
+Mycobacterium,Biofilm_2,2.2197875553722207e-4,2.2197875553722207e-4,proteomics/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00006,Biofilm_2,0.01222564134477975,0.01222564134477975,proteomics/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00008,Biofilm_2,0.00314171208483558,0.00314171208483558,proteomics/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+Mycobacterium,Culture,4.4333132405480533e-4,4.433313240548054e-4,proteomics/allocation_by_sample.csv,Ribosome biogenesis,-5.421010862427522e-20,TRUE
+SC_MAG_00006,Culture,0,0,proteomics/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00008,Culture,0,0,proteomics/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+Mycobacterium,Biofilm_1,0.004094424418052357,0.00409442441805235,proteomics/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+SC_MAG_00006,Biofilm_1,0.05419431807517211,0.05419431807517211,proteomics/allocation_by_sample.csv,DNA replication,0,TRUE
+SC_MAG_00008,Biofilm_1,0.023356532801412967,0.02335653280141296,proteomics/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_2,0.0072007874695681545,0.00720078746956815,proteomics/allocation_by_sample.csv,DNA replication,4.336808689942018e-18,TRUE
+SC_MAG_00006,Biofilm_2,0.04099490914356093,0.04099490914356093,proteomics/allocation_by_sample.csv,DNA replication,0,TRUE
+SC_MAG_00008,Biofilm_2,0.018721076349173565,0.01872107634917356,proteomics/allocation_by_sample.csv,DNA replication,3.469446951953614e-18,TRUE
+Mycobacterium,Culture,0.010049818290745027,0.01004981829074502,proteomics/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+SC_MAG_00006,Culture,0.21334976095790031,0.21334976095790031,proteomics/allocation_by_sample.csv,DNA replication,0,TRUE
+SC_MAG_00008,Culture,0.011447280045382468,0.01144728004538246,proteomics/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_1,0.004229083697082359,0.00422908369708235,proteomics/allocation_by_sample.csv,Cell division,8.673617379884035e-18,TRUE
+SC_MAG_00006,Biofilm_1,2.8615438634448467e-4,2.8615438634448467e-4,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00008,Biofilm_1,3.6361615275830767e-4,3.6361615275830767e-4,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+Mycobacterium,Biofilm_2,0.0035022217434255323,0.00350222174342553,proteomics/allocation_by_sample.csv,Cell division,2.168404344971009e-18,TRUE
+SC_MAG_00006,Biofilm_2,4.055179117300112e-4,4.055179117300112e-4,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00008,Biofilm_2,3.841364411626357e-4,3.841364411626357e-4,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+Mycobacterium,Culture,0.03249074647306681,0.03249074647306681,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00006,Culture,0,0,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00008,Culture,0,0,proteomics/allocation_by_sample.csv,Cell division,0,TRUE
+Mycobacterium,Biofilm_1,631,631,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00006,Biofilm_1,866,866,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00008,Biofilm_1,308,308,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+Mycobacterium,Biofilm_2,720,720,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00006,Biofilm_2,964,964,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00008,Biofilm_2,353,353,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+Mycobacterium,Culture,468,468,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00006,Culture,59,59,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00008,Culture,56,56,proteomics/allocation_by_sample.csv,n_detected,0,TRUE
+Mycobacterium,Biofilm_1,599,599,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00006,Biofilm_1,847,847,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00008,Biofilm_1,294,294,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+Mycobacterium,Biofilm_2,704,704,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00006,Biofilm_2,951,951,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00008,Biofilm_2,333,333,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+Mycobacterium,Culture,465,465,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00006,Culture,16,16,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00008,Culture,50,50,proteomics/allocation_by_sample.csv,n_robust,0,TRUE
+Mycobacterium,Biofilm_1,0.03016001390212062,0.03016001390212062,plotting/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00006,Biofilm_1,0.04603482916014709,0.04603482916014709,plotting/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00008,Biofilm_1,0.030526325323650075,0.03052632532365007,plotting/allocation_by_sample.csv,Ribosomal proteins,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_2,0.01519166472656834,0.01519166472656834,plotting/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00006,Biofilm_2,0.05111666457652849,0.05111666457652849,plotting/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00008,Biofilm_2,0.022274845835444222,0.02227484583544422,plotting/allocation_by_sample.csv,Ribosomal proteins,3.469446951953614e-18,TRUE
+Mycobacterium,Culture,0.0528886814856191,0.0528886814856191,plotting/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00006,Culture,0,0,plotting/allocation_by_sample.csv,Ribosomal proteins,0,TRUE
+SC_MAG_00008,Culture,0.0025474547028169073,0.0025474547028169,plotting/allocation_by_sample.csv,Ribosomal proteins,7.37257477290143e-18,TRUE
+Mycobacterium,Biofilm_1,0.021070956583667207,0.0210709565836672,plotting/allocation_by_sample.csv,Translation factors,6.938893903907228e-18,TRUE
+SC_MAG_00006,Biofilm_1,0.03662900974991721,0.03662900974991721,plotting/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00008,Biofilm_1,0.017836294507675175,0.01783629450767517,plotting/allocation_by_sample.csv,Translation factors,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_2,0.01504632183273666,0.01504632183273666,plotting/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00006,Biofilm_2,0.03445516829990387,0.03445516829990387,plotting/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00008,Biofilm_2,0.017673007668931175,0.01767300766893117,plotting/allocation_by_sample.csv,Translation factors,6.938893903907228e-18,TRUE
+Mycobacterium,Culture,0.009535008067460573,0.00953500806746057,plotting/allocation_by_sample.csv,Translation factors,3.469446951953614e-18,TRUE
+SC_MAG_00006,Culture,0,0,plotting/allocation_by_sample.csv,Translation factors,0,TRUE
+SC_MAG_00008,Culture,0.04222977743207258,0.04222977743207258,plotting/allocation_by_sample.csv,Translation factors,0,TRUE
+Mycobacterium,Biofilm_1,8.747907077962497e-4,8.747907077962497e-4,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+SC_MAG_00006,Biofilm_1,0.015573979642515536,0.01557397964251553,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,5.204170427930421e-18,TRUE
+SC_MAG_00008,Biofilm_1,0.00365962860265919,0.00365962860265919,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+Mycobacterium,Biofilm_2,0.0011794806158133893,0.00117948061581338,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,9.324138683375338e-18,TRUE
+SC_MAG_00006,Biofilm_2,0.014279168380542995,0.01427916838054299,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,5.204170427930421e-18,TRUE
+SC_MAG_00008,Biofilm_2,0.0020763916170397985,0.00207639161703979,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,8.673617379884035e-18,TRUE
+Mycobacterium,Culture,6.907971228608633e-4,6.907971228608633e-4,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+SC_MAG_00006,Culture,0,0,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+SC_MAG_00008,Culture,0,0,plotting/allocation_by_sample.csv,Aminoacyl-tRNA synthetases,0,TRUE
+Mycobacterium,Biofilm_1,3.225462832743301e-4,3.225462832743301e-4,plotting/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00006,Biofilm_1,0.011834078304156377,0.01183407830415637,plotting/allocation_by_sample.csv,Ribosome biogenesis,6.938893903907228e-18,TRUE
+SC_MAG_00008,Biofilm_1,0.004722090134153446,0.00472209013415344,plotting/allocation_by_sample.csv,Ribosome biogenesis,6.071532165918825e-18,TRUE
+Mycobacterium,Biofilm_2,2.2197875553722207e-4,2.2197875553722207e-4,plotting/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00006,Biofilm_2,0.01222564134477975,0.01222564134477975,plotting/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00008,Biofilm_2,0.00314171208483558,0.00314171208483558,plotting/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+Mycobacterium,Culture,4.4333132405480533e-4,4.433313240548054e-4,plotting/allocation_by_sample.csv,Ribosome biogenesis,-5.421010862427522e-20,TRUE
+SC_MAG_00006,Culture,0,0,plotting/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+SC_MAG_00008,Culture,0,0,plotting/allocation_by_sample.csv,Ribosome biogenesis,0,TRUE
+Mycobacterium,Biofilm_1,0.004094424418052357,0.00409442441805235,plotting/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+SC_MAG_00006,Biofilm_1,0.05419431807517211,0.05419431807517211,plotting/allocation_by_sample.csv,DNA replication,0,TRUE
+SC_MAG_00008,Biofilm_1,0.023356532801412967,0.02335653280141296,plotting/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_2,0.0072007874695681545,0.00720078746956815,plotting/allocation_by_sample.csv,DNA replication,4.336808689942018e-18,TRUE
+SC_MAG_00006,Biofilm_2,0.04099490914356093,0.04099490914356093,plotting/allocation_by_sample.csv,DNA replication,0,TRUE
+SC_MAG_00008,Biofilm_2,0.018721076349173565,0.01872107634917356,plotting/allocation_by_sample.csv,DNA replication,3.469446951953614e-18,TRUE
+Mycobacterium,Culture,0.010049818290745027,0.01004981829074502,plotting/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+SC_MAG_00006,Culture,0.21334976095790031,0.21334976095790031,plotting/allocation_by_sample.csv,DNA replication,0,TRUE
+SC_MAG_00008,Culture,0.011447280045382468,0.01144728004538246,plotting/allocation_by_sample.csv,DNA replication,6.938893903907228e-18,TRUE
+Mycobacterium,Biofilm_1,0.004229083697082359,0.00422908369708235,plotting/allocation_by_sample.csv,Cell division,8.673617379884035e-18,TRUE
+SC_MAG_00006,Biofilm_1,2.8615438634448467e-4,2.8615438634448467e-4,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00008,Biofilm_1,3.6361615275830767e-4,3.6361615275830767e-4,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+Mycobacterium,Biofilm_2,0.0035022217434255323,0.00350222174342553,plotting/allocation_by_sample.csv,Cell division,2.168404344971009e-18,TRUE
+SC_MAG_00006,Biofilm_2,4.055179117300112e-4,4.055179117300112e-4,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00008,Biofilm_2,3.841364411626357e-4,3.841364411626357e-4,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+Mycobacterium,Culture,0.03249074647306681,0.03249074647306681,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00006,Culture,0,0,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+SC_MAG_00008,Culture,0,0,plotting/allocation_by_sample.csv,Cell division,0,TRUE
+Mycobacterium,Biofilm_1,631,631,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00006,Biofilm_1,866,866,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00008,Biofilm_1,308,308,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+Mycobacterium,Biofilm_2,720,720,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00006,Biofilm_2,964,964,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00008,Biofilm_2,353,353,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+Mycobacterium,Culture,468,468,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00006,Culture,59,59,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+SC_MAG_00008,Culture,56,56,plotting/allocation_by_sample.csv,n_detected,0,TRUE
+Mycobacterium,Biofilm_1,599,599,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00006,Biofilm_1,847,847,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00008,Biofilm_1,294,294,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+Mycobacterium,Biofilm_2,704,704,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00006,Biofilm_2,951,951,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00008,Biofilm_2,333,333,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+Mycobacterium,Culture,465,465,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00006,Culture,16,16,plotting/allocation_by_sample.csv,n_robust,0,TRUE
+SC_MAG_00008,Culture,50,50,plotting/allocation_by_sample.csv,n_robust,0,TRUE

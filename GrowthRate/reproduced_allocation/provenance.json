@@ -1,0 +1,19 @@
+{
+  "project": ".",
+  "min_groups": 50,
+  "sheet": "ProteinGroups",
+  "workbook_groups": 3583,
+  "qc_removed": 307,
+  "qc_retained": 3276,
+  "KO_map_entries": 1176,
+  "inputs": {
+    "proteomics/proteinGroups.xlsx": "2729562e2f044e8182268ab3a5f2e204f1b8021d7d6b37a0fcd7218f4d28cbf7",
+    "metagenomics/Functional_annotation/sulfur_cave_ref_proteins_eggnog.emapper.annotations": "d7069ef3f00783ecdabbb4431c666b7cb1867a2fab32b41c185520f889609ff7",
+    "proteomics/ko_category_map.csv": "10dab1f43cdd5ad0263b9a1e15ce725a5171f5ab1d3bf1b4ea60298382fbfa54",
+    "metagenomics/defencefinder/Ferro/defense_finder_systems.tsv": "2ca41a1b7e2b71f56f4a6c6ffc4691d52a133d9fda2bb9624fcc319725d2036c",
+    "metagenomics/defencefinder/MAG6/defense_finder_systems.tsv": "130fc0c752b7e3370615bf4707639a08b54c75cd7de995664d74daf535ebd6a6",
+    "metagenomics/defencefinder/Myco/defense_finder_systems.tsv": "2ca41a1b7e2b71f56f4a6c6ffc4691d52a133d9fda2bb9624fcc319725d2036c"
+  },
+  "existing_export_checks": 216,
+  "existing_export_mismatches": 0
+}
