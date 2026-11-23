@@ -116,7 +116,7 @@ KEGGREST. GitHub: ggradar (ricardo-bion/ggradar), gRodon2
 
 Raw reads are not stored here. Biofilm metagenomes: ENA BioProject
 PRJEB45004 (runs ERR10036468–ERR10036470). Enrichment-culture reads and
-assembly: NCBI BioProject PRJNA837300. Proteomics: PRIDE <!-- TODO: PXD accession -->.
+assembly: NCBI BioProject PRJNA837300. Proteomics: PRIDE identifier PXD087821 and 10.6019/PXD087821
 
 ## Licence and citation
 
